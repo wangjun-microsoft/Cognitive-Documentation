@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Recommendations
 LinkLabel: API Reference
-ExternalLink: https://oxfordibiza.portal.azure-api.net/docs/services/56e7b18bd97e8a169c94cadf/
+ExternalLink: https://westus.dev.cognitive.microsoft.com/docs/services/Recommendations.V4.0
 Weight: 15
 -->
 
