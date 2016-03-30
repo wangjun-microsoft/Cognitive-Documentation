@@ -9,6 +9,9 @@ Weight: 99
 To make it easy to get started with Face API, the Jupyter notebook linked below shows you how to use the API in Python and how to visualize your results using some popular libraries. 
 
 [Link to notebook in GitHub](https://github.com/Microsoft/ProjectOxford-ClientSDK-Dev/blob/master/Face/Python/Jupyter%20Notebook/Face%20Detection%20Example.ipynb)
+
+https://github.com/Microsoft/ProjectOxford-ClientSDK/blob/master/Face/Python/Jupyter%20Notebook/Face%20Detection%20Example.ipynb 
+
 ###Using the Jupyter Notebook
 
 To use the notebook interactively, you will need to clone it and run it in Jupyter. To learn how to get started with interactive Jupyter notebooks, follow the instructions at http://jupyter.readthedocs.org/en/latest/install.html. 
