@@ -223,5 +223,5 @@ The remainder of error values are listed [here](https://dev.projectoxford.ai/doc
 
 These are the basic functionalities of the Computer Vision API: how you can upload images and retrieve valuable metadata in return.
 
-To use the REST API, go to [Computer Vision API Reference](./APIReference.md).
+To use the REST API, go to [Computer Vision API Reference](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739).
  
