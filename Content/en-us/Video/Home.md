@@ -42,7 +42,7 @@ A video thumbnail lets people see a preview or snapshot of your video. When a vi
 
 Microsoft Video API applies computer vision intelligence to identify the characteristics of your video’s content. It will select the most representative scenes from your video to create a thumbnail. Selection criteria is also based on video quality, diversity, and stability of the footage. Video API creates an index of the best video scenes and marks the duration in seconds. Based on this index, a user may opt to select a set of scenes to create the thumbnail. The other option is to let Video API generate the thumbnail based on its algorithms.
 
-For more details about how to use video thumbnail, refer to the [Video API reference guide](https://dev.projectoxford.ai/docs/services/565d6516778daf15800928d5/operations/565d6517778daf0978c45e35).
+For more details about how to use video thumbnail, refer to the [Video API reference guide](https://dev.projectoxford.ai/docs/services/565d6516778daf15800928d5/operations/56f8acb0778daf23d8ec6738).
 
 
 
