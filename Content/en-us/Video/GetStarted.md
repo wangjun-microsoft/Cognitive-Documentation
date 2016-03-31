@@ -40,9 +40,13 @@ Explore a basic Windows application that uses Microsoft Cognitive Services (form
 ## <a name="Step3">Step 3: Run the example</a>
 1.	After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.  
 2.	Locate the window with the **text edit box** reading "**Paste your subscription key here to start**" as shown in below screenshot. Paste your subscription key into the text box. You can choose to persist your subscription key on your PC or laptop by clicking the "**Save Key**" button. When you want to delete the subscription key from the system, click "**Delete Key**" to remove it from your PC or laptop.
+
 ![Video API UI](./Images/VideoAPI.PNG)
-3.	Under "**Select Scenario**" click to use either of the three scenarios, “**Video Stabilization**”, “**Motion Tracking**” or “**Face Detection**”.  
+
+3.	Under "**Select Scenario**" click to use either of the three scenarios, “**Video Stabilization**”, “**Motion Tracking**” or “**Face Detection**”. 
+
 ![Video API Running Films](./Images/VideoAPiInterface.PNG)  
+
 4.	Click the “**Load Video**” button to browse to a video file stored on your PC, laptop or local network. Video must be in mp4, mov, or wmv format. Expect to wait a minute or two for the file to load.
   * **Video stabilization:** Click the rectangular start button to run your video. Your original video will run in the left window and a stabilized version in the right window.
   * **Motion Tracking:** Original video will run in the left window. If motion is detected, a red rectangle will frame your video. In the right window, Json will be displayed indicating the region (at this point there is only one, the entire frame) and duration of movements.
@@ -55,7 +59,7 @@ Explore a basic Windows application that uses Microsoft Cognitive Services (form
 ![Video code snippet](./Images/VideoCodesnippet.PNG)  
 Code snippets with suggestions on how to extend and and customize your video app, coming in the near future. Check back soon!   
 ## <a name="Related">Related topics</a>
-* [Emotion API](../../Emotion-api/documentation)
+* [Emotion API](./../Emotion-api/documentation)
 * [Face API](../../Face-API/documentation)
 * [Computer Vision API](./../Computer-Vision-api/documentation)
 
