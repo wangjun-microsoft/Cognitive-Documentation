@@ -72,7 +72,7 @@ As a text service, the best way to visualize the functionality is creating an in
 </Grid>
  ```
  
-### <a nmae="step-5-proceed-to-add-entity-linking-intelligence-service">Step 5: Proceed to add Entity Linking Intelligence Service</a>
+### <a name="step-5-proceed-to-add-entity-linking-intelligence-service">Step 5: Proceed to add Entity Linking Intelligence Service</a>
  
 The user interface is now created. Before using the Entity Linking service, we need to add the button-Click handler. Open **MainPage.xaml** from **Solution Explorer**. Add a button_Click handler in the end of the button.
  
@@ -99,7 +99,7 @@ Now you are ready to run your first natural language processing Entity Linking A
  
  ![UWP Sample result](./Images/DemoCodeResult.png)
  
-### <a name="Summary">Summary</a>
+### <a name="summary">Summary</a>
  
 In this tutorial you’ve learned how to create an application to leverage Entity Linking Intelligence Service Client Library with just a few lines of C# and XAML code. 
 
