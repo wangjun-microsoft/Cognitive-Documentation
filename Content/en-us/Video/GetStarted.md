@@ -59,7 +59,7 @@ Explore a basic Windows application that uses Microsoft Cognitive Services (form
 ![Video code snippet](./Images/VideoCodesnippet.PNG)  
 Code snippets with suggestions on how to extend and and customize your video app, coming in the near future. Check back soon!   
 ## <a name="Related">Related topics</a>
-* [Emotion API]
-* [Face API]
-* [Computer Vision API]
+* Emotion API
+* Face API
+* Computer Vision API
 
