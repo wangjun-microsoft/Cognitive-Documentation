@@ -3,7 +3,7 @@ NavPath: Computer Vision API
 LinkLabel: 86categories
 Url: Computer-Vision-API/documentation/Images/86-categories
 Weight: 100
--->Enter file contents here
+-->
 
 ###86-Categories Taxonomy
 
