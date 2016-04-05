@@ -36,7 +36,7 @@ Computer Vision API detects human faces within a picture and generates face coor
 ###Demonstration images 
 #### The 86-category concept
 
-Based on a list of 86 concepts seen in the below diagram, visual features found in an image can be categorized ranging from broad to specific. 
+Based on a list of 86 concepts seen in the below diagram, visual features found in an image can be categorized ranging from broad to specific. For the full taxonomy in text format, go [here](./Images/86categories.md).
 
 ![Analyze Categories](./Images/analyze_categories.jpg)  
 
