@@ -179,5 +179,4 @@ trans_car
 
 trans_trainstation
 
- * Back to [How to Call Computer Vision API](./.HowToCallVisionAPI.md)
- * Back to [Analyze an Image](./.AnalyzeImage.md)
+
