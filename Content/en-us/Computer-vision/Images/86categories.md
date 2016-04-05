@@ -179,5 +179,5 @@ trans_car
 
 trans_trainstation
 
- * Back to [How to Call Computer Vision API](/Computer-Vision/HowToCallVisionAPI.md)
- * Back to [Analyze an Image](/.Computer-Vision/.AnalyzeImage.md)
+ * Back to [How to Call Computer Vision API](/(Computer-Vision)(HowToCallVisionAPI.md))
+ * Back to [Analyze an Image](/..Computer-Vision/AnalyzeImage.md)
