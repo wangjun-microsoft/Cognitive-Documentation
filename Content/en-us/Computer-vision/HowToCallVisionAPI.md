@@ -36,7 +36,7 @@ In the examples below, the following features are demonstrated:
 Features are broken down on:
 
   * **Option One:** Scoped Analysis - Analyze only a given model
-  * **Option Two:** Enhanced Analysis - Analyze to provide additional details with 86-categories taxonomy
+  * **Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](./Images/86categories.md)
   
 ###<a name="Step1">Step 1: Authorize the API call</a> 
 Every call to the Computer Vision API requires a subscription key. This key needs to be either passed through a query string parameter or specified in the request header. 
@@ -105,13 +105,13 @@ For this option, all other query parameters {visualFeatures, details} are not va
 GET https://api.projectoxford.ai/vision/v1.0/models 
 var models = await visionClient.ListModelsAsync();
 ```
-**Option Two:** Enhanced Analysis - Analyze to provide additional details with 86-categories taxonomy
+**Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](./Images/86categories.md)
 
 For applications where you want to get generic image analysis in addition to details from one or more domain-specific models, we extend the v1 API with the models query parameter.
 ```
 POST https://api.projectoxford.ai/vision/v1.0/analyze?details=celebrities
 ```
-When this method is invoked, we will call the 86-category classifier first. If any of the categories match that of a known/matching model, a second pass of classifier invocations will occur. For example, if "details=all", or "details" include ‘celebrities’, we will call the celebrities model after the 86-category classifier is called and the result includes the category person. This will increase latency for users interested in celebrities, compared to Option One.
+When this method is invoked, we will call the 86-category classifier first. If any of the categories match that of a known/matching model, a second pass of classifier invocations will occur. For example, if "details=all", or "details" include ‘celebrities’, we will call the celebrities model after the [86-category](./Images/86categories.md) classifier is called and the result includes the category person. This will increase latency for users interested in celebrities, compared to Option One.
 
 All v1 query parameters will behave the same in this case.  If visualFeatures=categories is not specified, it will be implicitly enabled.
 
@@ -203,7 +203,7 @@ For domain-specific models using Option Two (Enhanced Analysis), the categories 
   }
 ```
 
-The categories field is a list of one or more of the 86-categories in the original taxonomy. Note also that categories ending in an underscore will match that category and its children (for example, people_ as well as people_group, for celebrities model).
+The categories field is a list of one or more of the [86-categories](./Images/86categories.md) in the original taxonomy. Note also that categories ending in an underscore will match that category and its children (for example, people_ as well as people_group, for celebrities model).
 
 Field	| Type	| Content
 ------|------|------|
