@@ -82,7 +82,7 @@ Eventhandlers are already pointed out in the code in form of code comments.
 **MaskedInverseTextNormalizationResult**  |  The recognized phrase with inverse text normalization and profanity masking applied, but no capitalization or punctuation. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user. Inverse Text Normalization (ITN) has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that use the unmasked ITN results but also need to display the command or query to the user.
 
 ### <a name="Related">Related Topics</a>
-* Get Started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1
-* Get started with Speech Recognition in C Sharp for .Net Universal Apps on Windows 10 (including Phone)
-* Get started with Speech Recognition and/or intent in Java on Android
-* Get started with Speech Recognition and/or intent in Objective C on iOS
+* [Get Started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
+* [Get started with Speech Recognition in C Sharp for .Net Universal Apps on Windows 10 (including Phone)](GetStartedCSharpWin10.md) 
+* [Get started with Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
+* [Get started with Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md) 
