@@ -179,5 +179,4 @@ trans_car
 
 trans_trainstation
 
-[Link to Analyze an Image](./Computer-Vision/AnalyzeImage.md)
-[Link]( ../Computer-Vision/AnalyzeImage.md)
+[Link to Analyze an Image](../AnalyzeImage.md)
