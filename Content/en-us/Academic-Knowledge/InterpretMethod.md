@@ -22,7 +22,7 @@ To provide an interactive experience, you can call this method repeatedly after 
 Name     | Value | Required?  | Description
 ---------|---------|---------|---------
 **query**    | Text string | Yes | Query entered by user.  If complete is set to 1, query will be interpreted as a prefix for generating query auto-completion suggestions.        
-**model**    | Text string | No  | Name of the model that you wish to query.  Currently, the value defaults to *beta-2015*.        
+**model**    | Text string | No  | Name of the model that you wish to query.  Currently, the value defaults to *latest*.        
 **complete** | 0 or 1 | No<br>default:0  | 1 means that auto-completion suggestions are generated based on the grammar and graph data.         
 **count**    | Number | No<br>default:10 | Maximum number of interpretations to return.         
 **offset**   | Number | No<br>default:0  | Index of the first interpretation to return. For example, *count=2&offset=0* returns interpretations 0 and 1. *count=2&offset=2* returns interpretations 2 and 3.       

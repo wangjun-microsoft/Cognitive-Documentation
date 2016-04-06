@@ -1,6 +1,6 @@
 <!--
 NavPath: Knowledge Exploration Service/Web API Interface
-LinkLabel: Interpret Method
+LinkLabel: interpret Method
 Url: kes/documentation/interpretmethod
 Weight: 30
 -->
