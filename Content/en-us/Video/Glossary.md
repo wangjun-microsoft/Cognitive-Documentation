@@ -123,3 +123,7 @@ Video API is a cloud-based API that provides the most advanced algorithms for st
 ## Y
 
 ## Z
+
+ * [Link back to Overview](Home.md)
+ * [Link back to Get Started with Video API](GetStarted.md)
+ * [Link back to How to Call Video API](../How-to/HowtoCallVideoAPIs.md)
