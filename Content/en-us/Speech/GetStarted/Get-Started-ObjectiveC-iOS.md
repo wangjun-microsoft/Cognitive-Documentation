@@ -173,8 +173,8 @@ Run the application with the chosen clients, recognition modes and event handler
 
 ### <a name="Related">Related topics</a>
 
- * Get started with Speech Recognition in C Sharp for .Net on Windows Desktop
- * Get Started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1
- * Get started with Speech Recognition in C Sharp for .Net Universal Apps on Windows 10 (including Phone)
- * Get started with Speech Recognition and/or intent in Java on Android
+ * [Get started with Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md) 
+ * [Get Started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
+ * [Get started with Speech Recognition in C Sharp for .Net Universal Apps on Windows 10 (including Phone)](GetStartedCSharpWin10.md)
+ * [Get started with Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
 
