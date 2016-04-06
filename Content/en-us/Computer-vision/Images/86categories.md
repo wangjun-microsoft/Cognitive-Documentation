@@ -179,5 +179,5 @@ trans_car
 
 trans_trainstation
 
-[Link to Analyze an Image](../AnalyzeImage.md)
-[Link to How to Call Vision API](../HowToCallVisionAPI.md)
+ * [Link to Analyze an Image](../AnalyzeImage.md)
+ * [Link to How to Call Vision API](../HowToCallVisionAPI.md)
