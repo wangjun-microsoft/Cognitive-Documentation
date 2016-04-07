@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Speech API/Get Started with Speech API
 LinkLabel: Get started with Speech Recognition and/or intent in Java on Android
-Url: Speech-api/documentation/GetStarted/Get-Started-Java-Android
+Url: Speech-api/documentation/GetStarted/GetStartedJavaAndroid
 Weight: 70
 -->
 
