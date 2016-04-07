@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Video API
 LinkLabel: Get Started with Video API in C#
-Url: Video-api/documentation/Get-Started
+Url: Video-api/documentation/GetStarted
 Weight: 95
 -->
 
