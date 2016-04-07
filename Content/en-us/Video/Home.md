@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Video API
 LinkLabel: Overview
-Url: Video-api/documentation
+Url: Video-api/documentation/Home
 Weight: 100
 -->
 
