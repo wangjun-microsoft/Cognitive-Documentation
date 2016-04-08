@@ -5,10 +5,10 @@ Url: Speech-api/documentation/overview
 Weight: 1000
 -->
 
-#Bing Speech API Overview
+#Bing Speech Recognition API Overview
 
 
-Welcome to Bing Speech API. This API is a cloud-based API that provides advanced algorithms to process spoken language. With this API, developers can add speech driven actions to their applications including real-time interaction with the user.
+Welcome to Bing Speech Recognition API. This API is a cloud-based API that provides advanced algorithms to process spoken language. With this API, developers can add speech driven actions to their applications including real-time interaction with the user.
 
 Microsoft's cross-platform REST API enables speech capabilities on all internet-connected devices. Every major platform including Android, iOS, Windows, and 3rd party IoT devices are supported. Our REST API offers industry-leading speech-to-text, text-to-speech, and language understanding capabilities delivered through the cloud.
 
