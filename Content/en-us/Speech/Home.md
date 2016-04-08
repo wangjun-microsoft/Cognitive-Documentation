@@ -1,18 +1,18 @@
 <!-- 
-NavPath: Speech API
+NavPath: Bing Speech API
 LinkLabel: Overview
 Url: Speech-api/documentation/overview
 Weight: 1000
 -->
 
-#Speech API Overview
+#Bing Speech API Overview
 
 
-Welcome to Speech API. This API is a cloud-based API that provides advanced algorithms to process spoken language. With this API, developers can add speech driven actions to their applications including real-time interaction with the user.
+Welcome to Bing Speech API. This API is a cloud-based API that provides advanced algorithms to process spoken language. With this API, developers can add speech driven actions to their applications including real-time interaction with the user.
 
 Microsoft's cross-platform REST API enables speech capabilities on all internet-connected devices. Every major platform including Android, iOS, Windows, and 3rd party IoT devices are supported. Our REST API offers industry-leading speech-to-text, text-to-speech, and language understanding capabilities delivered through the cloud.
 
-Microsoft has used Speech API for Windows applications like Cortana and Skype Translator as well as Android applications like [Bing Torque](https://play.google.com/store/apps/details?id=com.microsoft.bing.torque) for Android Wear and Android Phone.
+Microsoft has used Bing Speech API for Windows applications like Cortana and Skype Translator as well as Android applications like [Bing Torque](https://play.google.com/store/apps/details?id=com.microsoft.bing.torque) for Android Wear and Android Phone.
 
 ### REST API versus Client Library
 The Speech Recognition API provides the ability to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Developers have a choice of using the REST API or the Client Library. 
