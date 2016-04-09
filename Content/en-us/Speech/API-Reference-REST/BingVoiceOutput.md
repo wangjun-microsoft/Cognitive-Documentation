@@ -134,6 +134,7 @@ The supported locales and related voice fonts are:
 
 Locale | Gender | Service name mapping 
 ---------|--------|------------
+ar-EG*   |  Female   | "Microsoft Server Speech Text to Speech Voice (ar-EG, Hoda, Arabic)"
 de-DE    |   Female  | "Microsoft Server Speech Text to Speech Voice (de-DE, Hedda)" 
 de-DE    |  Male     | "Microsoft Server Speech Text to Speech Voice (de-DE, Stefan, Apollo)" 
 en-AU    |   Female  | "Microsoft Server Speech Text to Speech Voice (en-AU, Catherine)" 
@@ -162,7 +163,7 @@ zh-HK|Female|"Microsoft Server Speech Text to Speech Voice (zh-HK, Tracy, Apollo
 zh-HK|Male|"Microsoft Server Speech Text to Speech Voice (zh-HK, Danny, Apollo)"
 zh-TW|Female|"Microsoft Server Speech Text to Speech Voice (zh-TW, Yating, Apollo)"
 zh-TW|Male|"Microsoft Server Speech Text to Speech Voice (zh-TW, Zhiwei, Apollo)"
-
+ *ar-EG supports Modern Standard Arabic (MSA)
 
 ## <a name="TrouNSupport">5. Troubleshooting and Support</a>
 
