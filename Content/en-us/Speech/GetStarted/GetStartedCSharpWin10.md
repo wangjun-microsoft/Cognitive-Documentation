@@ -17,10 +17,10 @@ Learn to create and develop a simple Windows 10 Universal Application that uses 
 
 If you have a **pre-existing installation of Visual Studio 2015** and are unsure if the “Universal Windows App Development Tools” options were set, do the following.
 
-1. Go to **Control Panel** -> **Programs** -> ”**Programs and Features**” and look for your Microsoft Visual Studio 2015 entry. 
+1. Go to **Control Panel** > **Programs** > ”**Programs and Features**” and look for your Microsoft Visual Studio 2015 entry. 
 2. Right-click on the **Visual Studio 2015** application and choose “**Change**”. 
 3. Wait a bit and, in the upcoming Visual Studio 2015 dialog box, choose “**Modify**”. Look in the upcoming list of options for “**Universal Windows App Development Tools**” and click on that to reveal all the options under “**Universal Windows App Development Tools**” to select all of them. 
-4. Hit **Next** and then “**Update**” to install **Update 2**.
+4. Hit **Next** and then “**Update**” to install "**Update 2**".
 
 ### Step 1: Create an Windows 10 Universal Application project
 
