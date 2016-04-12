@@ -12,15 +12,15 @@ Learn to create and develop a simple Windows 10 Universal Application that uses 
 ### Prerequisites
 
 1.	Install Windows 10 from [here](http://dev.windows.com/en-us/).
-2.	Install Visual Studio 2015 from [here](http://dev.windows.com/en-us/). During the installation of Visual Studio 2015, make sure that you select the "**Custom installation**” option and check all the “**Universal Windows App Development Tools**” options. 
-3.	Upgrade your Visual Studio 2015 to “**Update 2**”.
+2.	Install Visual Studio 2015 from [here](http://dev.windows.com/en-us/). During the installation of Visual Studio 2015, make sure that you select the **Custom installation** option and check all the **Universal Windows App Development Tools** options. 
+3.	Upgrade your Visual Studio 2015 to **Update 2**.
 
-If you have a **pre-existing installation of Visual Studio 2015** and are unsure if the “Universal Windows App Development Tools” options were set, do the following.
+If you have a **pre-existing installation of Visual Studio 2015** and are unsure if the **Universal Windows App Development Tools** options were set, do the following.
 
 1. Go to **Control Panel** > **Programs** > ”**Programs and Features**” and look for your Microsoft Visual Studio 2015 entry. 
-2. Right-click on the **Visual Studio 2015** application and choose “**Change**”. 
-3. Wait a bit and, in the upcoming Visual Studio 2015 dialog box, choose “**Modify**”. Look in the upcoming list of options for “**Universal Windows App Development Tools**” and click on that to reveal all the options under “**Universal Windows App Development Tools**” to select all of them. 
-4. Hit **Next** and then “**Update**” to install "**Update 2**".
+2. Right-click on the **Visual Studio 2015** application and choose **Change**. 
+3. Wait a bit and, in the upcoming Visual Studio 2015 dialog box, choose **Modify**. Look in the upcoming list of options for **Universal Windows App Development Tools** and click on that to reveal all the options under **Universal Windows App Development Tools** to select all of them. 
+4. Hit **Next** and then **Update** to install **Update 2**.
 
 ### Step 1: Create an Windows 10 Universal Application project
 
@@ -43,17 +43,17 @@ Now, you will add use of the Bing Speech Recognition API in your application to 
 
 SpeechRecognizer supports 2 types of recognition sessions:
 
-* Continuous recognition sessions for prolonged audio input from the user. Here, recognition results for phrases spoken during the session are continually produced and returned to the user while the user continues speaking. A continuous session needs to be either explicitly ended or automatically times out after a configurable period of silence (default is 20 seconds).
+* **Continuous recognition sessions** for prolonged audio input from the user. Here, recognition results for phrases spoken during the session are continually produced and returned to the user while the user continues speaking. A continuous session needs to be either explicitly ended or automatically times out after a configurable period of silence (default is 20 seconds).
 
-* Speech recognition session for recognizing a short phrase. The session is terminated and the recognition results returned when a pause is detected by the recognizer.
+* **Speech recognition session for recognizing** a short phrase. The session is terminated and the recognition results returned when a pause is detected by the recognizer.
  
 The objects corresponding to each of these types of sessions have various events for which handlers can be attached to obtain notification of various interesting events during the recognition session.
 
 A continuous recognition session can be started by calling the SpeechRecognizer.ContinuousRecognitionSession.StartAsync method. The SpeechRecognizer.ContinuousRecognitionSession object provides the following events:
 
-* ResultGenerated event: Triggered every time results of a phrase spoken during the session are available. The results are passed as an argument to any handlers attached to the event.
+* **ResultGenerated event:** Triggered every time results of a phrase spoken during the session are available. The results are passed as an argument to any handlers attached to the event.
 
-* Completed event: Triggered at the end of a continuous recognition session.
+* **Completed event:** Triggered at the end of a continuous recognition session.
   
 ![windows-doc002](../Images/windows-doc002.png)
 ![windows-doc003](../Images/windows-doc003.png)
@@ -64,13 +64,13 @@ For the short phrase and continuous recognition scenarios, results are available
 
 Additionally, the SpeechRecognizer object itself includes a HypothesisGenerated event that is triggered every time partial results (or hypothesis) of the recognition is available before the final recognition results are produced. This event applies to both short phrase and continuous speech recognition sessions. Partial recognition results are passed as an argument to any handlers attached to the event.
 
-### Step 3: Deploying and Running your application
+### Step 3: Deploying and running your application
 This part describes some of the necessary steps for successfully running the speech recognition feature in your app.
 
-1. Add the “Microphone” capability in your project’s Package.appxmanifest (see the sample project for reference)
-2. If you run the app on Windows 10 Mobile, enable the speech recognition service on your Windows Phone device or the emulator by going to **Settings** > **Privacy** > **Speech, inking & typing**, and enabling the “**Get to know me**” feature.
+1. Add the **Microphone** capability in your project’s Package.appxmanifest (see the example project for reference)
+2. If you run the app on Windows 10 Mobile, enable the speech recognition service on your Windows Phone device or the emulator by going to **Settings** > **Privacy** > **Speech, inking & typing**, and enabling the **Get to know me** feature.
 
       On desktop and other Windows 10 universal devices, you will receive a prompt on starting the application, asking permission to use the speech recognition service.
 
-In conclusion, we should note that this tutorial and the sample project provided here only illustrates basic functionality of the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx). These APIs offer a much richer set of features that we encourage you to explore through the API documentation on MSDN.
+In conclusion, we should note that this tutorial and the example project provided here only illustrates basic functionality of the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx). These APIs offer a much richer set of features that we encourage you to explore through the API documentation on MSDN.
 
