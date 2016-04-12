@@ -17,7 +17,7 @@ Learn to create and develop a simple Windows 10 Universal Application that uses 
 
 If you have a **pre-existing installation of Visual Studio 2015** and are unsure if the **Universal Windows App Development Tools** options were set, do the following.
 
-1. Go to **Control Panel** > **Programs** > ”**Programs and Features**” and look for your Microsoft Visual Studio 2015 entry. 
+1. Go to **Control Panel** > **Programs** > **Programs and Features** and look for your Microsoft Visual Studio 2015 entry. 
 2. Right-click on the **Visual Studio 2015** application and choose **Change**. 
 3. Wait a bit and, in the upcoming Visual Studio 2015 dialog box, choose **Modify**. Look in the upcoming list of options for **Universal Windows App Development Tools** and click on that to reveal all the options under **Universal Windows App Development Tools** to select all of them. 
 4. Hit **Next** and then **Update** to install **Update 2**.
@@ -74,3 +74,9 @@ This part describes some of the necessary steps for successfully running the spe
 
 In conclusion, we should note that this tutorial and the example project provided here only illustrates basic functionality of the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx). These APIs offer a much richer set of features that we encourage you to explore through the API documentation on MSDN.
 
+### <a name="Related">Related Topics</a>
+* [Get Started with Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md)
+* [Get Started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
+* [Get started with Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
+* [Get started with Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md) 
+* 
