@@ -6,7 +6,7 @@ Weight: 15
 -->
 
 
-# Microsoft Bing Voice Output API
+# Bing Voice Output API
 
 
 ### Non Disclosure Agreement.
