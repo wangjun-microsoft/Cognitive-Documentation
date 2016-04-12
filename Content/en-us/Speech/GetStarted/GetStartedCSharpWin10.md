@@ -79,4 +79,4 @@ In conclusion, we should note that this tutorial and the example project provide
 * [Get Started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
 * [Get started with Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
 * [Get started with Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md) 
-* 
+ 
