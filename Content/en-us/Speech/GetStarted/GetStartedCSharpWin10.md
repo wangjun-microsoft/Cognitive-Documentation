@@ -7,21 +7,28 @@ Weight: 80
 
 # Get started with Bing Speech Recognition in C&#35; for .Net Universal Apps on Windows 10 (including Phone)
 
-<br/>
-In this tutorial, you will learn to create and develop a simple Windows 10 Universal Application that uses the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx) to convert spoken audio input into text by sending audio to Microsoft’s servers in the cloud. Alternatively you have a choice of using a REST API, which requires batching up all of your audio at once into a single buffer, uploading the one full audio buffer, and getting a recognition result text back. Documentation for the REST API can be found [here](../API-Reference-REST/Home.md). Using the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx) allows for real-time streaming, so that as the audio is being spoken and streamed to the server, partial recognition results are returned back to the application. The rest of this tutorial describes the use of the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx). A sample Windows 10 Universal Application project (to be used with VS2015) illustrating basic [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx) usage can be found for your reference. Download [Universal APP SDK](https://oxfordportal.blob.core.windows.net/example-speech/SpeechRecognitionExample.UniversalApp.zip).
+Learn to create and develop a simple Windows 10 Universal Application that uses the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx) to convert spoken audio input into text by sending audio to Microsoft’s servers in the cloud. Alternatively you have a choice of using a REST API, which requires batching up all of your audio into a single buffer, uploading the full audio buffer, and getting a recognition result text back. Documentation for the REST API can be found [here](../API-Reference-REST/Home.md). Using the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx) allows for real-time streaming, so that as the audio is being spoken and streamed to the server, partial recognition results are returned back to the application. The rest of this tutorial describes the use of the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx). A sample Windows 10 Universal Application project (to be used with Visual Studio 2015) illustrating basic [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx) usage can be found for your reference. Download [Universal APP SDK](https://oxfordportal.blob.core.windows.net/example-speech/SpeechRecognitionExample.UniversalApp.zip).
 
-### Preparation
-Use of this tutorial has the following prerequisites:
+### Prerequisites
 
-1. Install Windows 10 from [here](http://dev.windows.com/en-us/).
-2. Install Visual Studio 2015 from [here](http://dev.windows.com/en-us/). During the installation of VS2015, make sure that you select the "Custom installation” option and check the “Windows Universal App Development Tools” option.
+1.	Install Windows 10 from [here](http://dev.windows.com/en-us/).
+2.	Install Visual Studio 2015 from [here](http://dev.windows.com/en-us/). During the installation of Visual Studio 2015, make sure that you select the "**Custom installation**” option and check all the “**Universal Windows App Development Tools**” options. 
+3.	Upgrade your Visual Studio 2015 to “**Update 2**”.
 
-### Step 1: Create an Windows 10 Universal application project
+If you have a **pre-existing installation of Visual Studio 2015** and are unsure if the “Universal Windows App Development Tools” options were set, do the following.
 
-1. In this step you will create a Windows 10 Universal application project where you will use the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx)
-2. Open Visual Studio 2015.
-3. From the File menu, click New and then Project.
-In the New Project dialog box, click Visual C# > Windows > Windows Universal > Blank App (Windows Universal).
+1. Go to **Control Panel** -> **Programs** -> ”**Programs and Features**” and look for your Microsoft Visual Studio 2015 entry. 
+2. Right-click on the **Visual Studio 2015** application and choose “**Change**”. 
+3. Wait a bit and, in the upcoming Visual Studio 2015 dialog box, choose “**Modify**”. Look in the upcoming list of options for “**Universal Windows App Development Tools**” and click on that to reveal all the options under “**Universal Windows App Development Tools**” to select all of them. 
+4. Hit **Next** and then “**Update**” to install **Update 2**.
+
+### Step 1: Create an Windows 10 Universal Application project
+
+In this step you will create a Windows 10 Universal application project where you will use the [Windows.Media.SpeechRecognition API](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx)
+
+1. Open Visual Studio 2015.
+2. From the **File** menu, click **New** and then **Project**.
+In the **New Project** dialog box, click **Visual C#** > **Windows** > **Windows Universal** > **Blank App (Windows Universal)**.
 
 ### Step 2: Add Speech Recognition API use in your application
 Now, you will add use of the Bing Speech Recognition API in your application to convert spoken audio input into text. You can look at the code in MainPage.xaml.cs [Universal APP SDK](https://oxfordportal.blob.core.windows.net/example-speech/SpeechRecognitionExample.UniversalApp.zip) for reference.
@@ -61,7 +68,7 @@ Additionally, the SpeechRecognizer object itself includes a HypothesisGenerated 
 This part describes some of the necessary steps for successfully running the speech recognition feature in your app.
 
 1. Add the “Microphone” capability in your project’s Package.appxmanifest (see the sample project for reference)
-2. If you run the app on Windows Phone 10, enable the speech recognition service on your Windows Phone device or the emulator by going to Settings > System > Speech, and enabling the “Enable Speech Recognition Service” option.
+2. If you run the app on Windows 10 Mobile, enable the speech recognition service on your Windows Phone device or the emulator by going to **Settings** > **Privacy** > **Speech, inking & typing**, and enabling the “**Get to know me**” feature.
 
       On desktop and other Windows 10 universal devices, you will receive a prompt on starting the application, asking permission to use the speech recognition service.
 
