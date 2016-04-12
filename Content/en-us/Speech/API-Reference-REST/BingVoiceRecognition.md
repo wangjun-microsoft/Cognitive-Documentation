@@ -5,7 +5,7 @@ Url: Speech-api/documentation/API-Reference-REST/BingVoiceRecognition
 Weight: 16
 -->
 
-# Microsoft Bing Voice Recognition API
+# Bing Voice Recognition API
 
 
 ### Non Disclosure Agreement. 
