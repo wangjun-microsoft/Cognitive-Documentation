@@ -44,58 +44,16 @@ Before creating the example, you must subscribe to Speech API which is part of M
 ### <a name="Step3">Step 3: Run the example application</a>
 1.	After the build is complete, choose the target browser you would like to use for running your Speech-to-Text web app. 
 2.	Press **F5** or click **Start** on the ribbon menu to run the example.  
-3.	Locate the **Cognitive Services Speech to Text** window with the **text edit box** reading **"Subscription Key"**. Paste your subscription key into the text box as shown in below screenshot. You may choose to persist your subscription key on your PC or laptop by clicking the **Save Key** button. When you want to delete the subscription key from the system, click **Delete Key** to remove it from your PC or laptop.
+3.	Locate the **Cognitive Services Speech to Text** window with the **text edit box** reading **"Oxford Key"**. Paste your subscription key into the text box as shown in below screenshot. 
+4. Check if you would like to use the Microphone as your voice input and what speech mode you would like to use by selecting a setting in the "Mode" drop-down box.
+5. For modes where you would like both Speech Recognition and Intent to work together, you need to first sign up for [Language Understanding Intelligent Service (LUIS)](https:www.luis.ai), then set the key values in the fields "LUIS AppID" and "LUIS SubscriptionId".
 
-
-
-
-
-4.Choose the target browser you would like to use.
-
-
-
-1."Debug" to launch the sample app.
-
-Running the sample
-
-1.In the web application, enter your Microsoft Cognitive Services (formerly Project Oxford) Speech subscription key under "Oxford Key".
-
-
-2.Select whether you would like to use the Microphone and what speech mode you would like to use by select "Use Microphone" and the "Mode" drop down box.
-
-
-3.For modes where you would like both Speech recognition and Intent to work, you need to sign up Language Understanding Intelligent Service (LUIS) and set the key values in the fields "Luis AppID" and "LUIS SubscriptionId".
-
-
-4.To Start recognition, press the Start button.
-
-
-
-
-Contributing
-
-We welcome contributions and are always looking for new SDKs, input, and suggestions. Feel free to file issues on the repo and we'll address them as we can. You can also learn more about how you can help on the Contribution Rules & Guidelines.
 
 For questions, feedback, or suggestions about Microsoft Cognitive Services, feel free to reach out to us directly.
-• Cognitive Services UserVoice Forum
+• Cognitive Services [UserVoice Forum]()
 
-License
+######License
 
 All Microsoft Cognitive Services SDKs and samples are licensed with the MIT License. For more details, see LICENSE.
 
-Sample images are licensed separately, please refer to LICENSE-IMAGE.
-
-
-Status
- API
- Training
- Shop
- Blog
- About
-   © 2016 GitHub, Inc.
- Terms
- Privacy
- Security
- Contact
- Help
  
