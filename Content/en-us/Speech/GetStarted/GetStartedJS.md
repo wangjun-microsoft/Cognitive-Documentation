@@ -42,12 +42,14 @@ Before creating the example, you must subscribe to Speech API which is part of M
 
 ### <a name="Step3">Step 3: Run the example application</a>
 1.	After the build is complete, choose the target browser you would like to use for running your Speech-to-Text web app. 
+2
 ![Speech choose emulator](../Images/SelectEmulator.png)
+
 2.	Press **F5** or click **Start** on the ribbon menu to run the example.  
 3.	Locate the **Cognitive Services Speech to Text** window with the **text edit box** reading **"Oxford Key"**. Paste your subscription key into the text box as shown in below screenshot. 
 ![Speech Recognition paste in subscription key](../Images/JS-Speech UI.PNG)
 4. Check if you would like to use the Microphone as your voice input and what speech mode you would like to use by selecting a setting in the "Mode" drop-down box.
-5. For modes where you would like both Speech Recognition and Intent to work together, you need to first sign up for [Language Understanding Intelligent Service (LUIS)](https:www.luis.ai), then set the key values in the fields "LUIS AppID" and "LUIS SubscriptionId".
+5. For modes where you would like both Speech Recognition and Intent to work together, you need to first sign up for [Language Understanding Intelligent Service (LUIS)](https://www.luis.ai/), then set the key values in the fields "LUIS AppID" and "LUIS SubscriptionId".
 
 ### <a name="Related">Related Topics</a>
 * [Get Started with Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md) 
