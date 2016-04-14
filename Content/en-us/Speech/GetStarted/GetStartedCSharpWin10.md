@@ -1,9 +1,4 @@
-<!-- 
-NavPath: Bing Speech API/Get Started with Speech API
-LinkLabel: Get started with Speech Recognition in C Sharp for .Net Universal Apps on Windows 10 (including Phone)
-Url: Speech-api/documentation/GetStarted/GetStartedCSharpWin10
-Weight: 80
--->
+
 
 # Get started with Bing Speech Recognition in C&#35; for .Net Universal Apps on Windows 10 (including Phone)
 
