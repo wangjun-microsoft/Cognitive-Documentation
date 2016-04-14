@@ -42,7 +42,6 @@ Before creating the example, you must subscribe to Speech API which is part of M
 
 ### <a name="Step3">Step 3: Run the example application</a>
 1.	After the build is complete, choose the target browser you would like to use for running your Speech-to-Text web app. 
-
 ![Speech choose emulator](../Images/SelectEmulator.png)
 2.	Press **F5** or click **Start** on the ribbon menu to run the example.  
 3.	Locate the **Cognitive Services Speech to Text** window with the **text edit box** reading **"Oxford Key"**. Paste your subscription key into the text box as shown in below screenshot. 
