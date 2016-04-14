@@ -60,7 +60,8 @@ Before creating the example, you must subscribe to Speech API which is part of M
 
 
 For questions, feedback, or suggestions about Microsoft Cognitive Services, feel free to reach out to us directly.
-• Cognitive Services [UserVoice Forum](https://cognitive.uservoice.com/)
+
+ * Cognitive Services [UserVoice Forum](https://cognitive.uservoice.com/)
 
 ######License
 
