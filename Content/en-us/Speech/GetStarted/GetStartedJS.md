@@ -63,6 +63,6 @@ For questions, feedback, or suggestions about Microsoft Cognitive Services, feel
 
 ######License
 
-All Microsoft Cognitive Services SDKs and samples are licensed with the MIT License. For more details, see [LICENSE](https://github.com/bhansen3/ProjectOxford-ClientSDK/edit/master/LICENSE.md).
+All Microsoft Cognitive Services SDKs and samples are licensed with the MIT License. For more details, see [LICENSE](https://github.com/bhansen3/ProjectOxford-ClientSDK/blob/master/LICENSE.md).
 
  
