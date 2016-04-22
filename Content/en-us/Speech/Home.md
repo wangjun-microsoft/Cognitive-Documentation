@@ -17,7 +17,7 @@ Microsoft has used Bing Speech API for Windows applications like Cortana and Sky
 ### REST API versus Client Library
 The Speech Recognition API provides the ability to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Developers have a choice of using the REST API or the Client Library. 
 
-* Using the REST API means getting only one reco result back with no partial results. Documentation for the REST API can be found [here](./api-reference-rest/BingVoiceRecognition.md) and code samples [here](https://oxfordportal.blob.core.windows.net/speech/doc/recognition/Program.cs). 
+* Using the REST API means getting only one reco result back with no partial results. Documentation for the REST API can be found [here](api-reference-rest/BingVoiceRecognition.md) and code samples [here](https://oxfordportal.blob.core.windows.net/speech/doc/recognition/Program.cs). 
 *	Using the client library allows for real-time streaming, meaning that as audio is being sent or spoken to the server, partial recognition results are returned at the same time. Real-time streaming is supported on Android, iOS, and Windows.
 
 ### Convert spoken audio to intent
