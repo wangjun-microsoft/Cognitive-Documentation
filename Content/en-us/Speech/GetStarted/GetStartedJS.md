@@ -52,7 +52,6 @@ Before creating the example, you must subscribe to Speech API which is part of M
 ### <a name="Related">Related Topics</a>
 * [Get Started with Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md) 
 * [Get Started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
-* [Get started with Speech Recognition in C Sharp for .Net Universal Apps on Windows 10 (including Phone)](GetStartedCSharpWin10.md) 
 * [Get started with Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
 * [Get started with Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md) 
 
