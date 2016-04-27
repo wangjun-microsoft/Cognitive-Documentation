@@ -157,6 +157,7 @@ For each if the n-best choices, you get a confidence value and few different for
 Run the application with the chosen clients, recognition modes and event handlers.
 
 ### <a name="Related">Related topics</a>
-* [Get started with Speech Recognition in C Sharp for Windows in .NET](GetStartedCSharpDesktop.md)
-* [Get Started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
-* [Get started with Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
+* [Get started with Bing Speech Recognition in C Sharp for Windows in .NET](GetStartedCSharpDesktop.md)
+* [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
+* [Get started with Bing Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
+* [Get started with Bing Speech API in JavaScript](GetStartedJS.md)
