@@ -159,5 +159,4 @@ Run the application with the chosen clients, recognition modes and event handler
 ### <a name="Related">Related topics</a>
 * [Get started with Speech Recognition in C Sharp for Windows in .NET](GetStartedCSharpDesktop.md)
 * [Get Started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
-* [Get started with Speech Recognition in C Sharp for .Net Universal Apps on Windows 10 (including Phone)](GetStartedCSharpWin10.md)
 * [Get started with Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
