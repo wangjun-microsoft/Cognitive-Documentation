@@ -68,8 +68,8 @@ The results are available in a SpeechRecognitionResult object accessible through
 In conclusion, this "Get started" introduction and the provided example application only illustrates basic functionality of the Windows Media Speech Recognition API. The API offers a rich set of features that we encourage you to explore through the API documentation on MSDN and further experimentation.
 
 ###<a name="Related">Related topics</a>
- * [Get Started with Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md) 
- * [Get started with Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md) 
- * [Get started with Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
+ * [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md) 
+ * [Get started with Bing Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md) 
+ * [Get started with Bing Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
  * [Get started with Bing Speech API in JavaScript](GetStartedJS.md)
 
