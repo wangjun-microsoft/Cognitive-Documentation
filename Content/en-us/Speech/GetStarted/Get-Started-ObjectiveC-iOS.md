@@ -173,7 +173,8 @@ Run the application with the chosen clients, recognition modes and event handler
 
 ### <a name="Related">Related topics</a>
 
- * [Get started with Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md) 
- * [Get Started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
- * [Get started with Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
+ * [Get started with Bing Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md) 
+ * [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
+ * [Get started with Bing Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
+ * [Get started with Bing Speech API in JavaScript](GetStartedJS.md)
 
