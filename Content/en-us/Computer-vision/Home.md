@@ -17,7 +17,7 @@ Computer Vision API will also support specialized (or domain-specific) informati
 
 In addition to the new tags, descriptions and models, Computer Vision API continues to return the taxonomy-based categories defined in our previous version. These categories are organized as a taxonomy with parent/child hierarchies. They can be used alone or in combination with our new models. Among the visual categories is the adult/racy feature, which enables detection of adult and racy materials and allows for restriction of display of these types of images. The filter for adult/racy content can be set on a sliding scale to accommodate user preferences.
 
-Computer Vision API’s algorithms extracts colors from an image. The colors are analyzed in three different contexts, foreground, background, and whole, and colors are grouped into 12 dominant accent colors (black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow). Depending on the colors in an image, simple black and white or accent colors may be returned.
+Computer Vision API’s algorithms extracts colors from an image. The colors are analyzed in three different contexts, foreground, background, and whole, and colors are grouped into 12 dominant accent colors (black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow). Depending on the colors in an image, simple black and white or accent colors may be returned. 
 
 ### Generate a thumbnail
 
