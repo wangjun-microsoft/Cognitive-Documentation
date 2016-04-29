@@ -5,4 +5,7 @@
 ## [CalcHistogram Method](./Academic-Knowledge/CalcHistogramMethod.md)
 ## [Query Expression Syntax](./Academic-Knowledge/CalcHistogramMethod.md)
 ## [Entity Attributes](./Academic-knowledge/EntityAttributes.md)
+# [Bing Autosuggest API](./Bing-Autosuggest/overview.md)
+# [Bing Image Search API](./Bing-Image-Search/overview.md)
+# [Bing News Search API](./Bing-News-Search/overview.md)
 # [Get Started](./Emotion/GetStarted.md)
