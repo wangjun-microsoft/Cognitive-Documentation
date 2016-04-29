@@ -2,7 +2,7 @@
 # [Academic Knowledge API] (./Academic-Knowledge/Home.md)
 ## [Interpret Method] (./Academic-Knowledge/InterpretMethod.md)
 ## [Evaluate Method] (./Academic-Knowledge/EvaluateMethod.md)
-## [CalcHistogram Methpd] (./Academic-Knowledge/CalcHistogramMethod.md)
+## [CalcHistogram Method] (./Academic-Knowledge/CalcHistogramMethod.md)
 ## [Query Expression Syntax] (./Academic-Knowledge/CalcHistogramMethod.md)
 ## [Entity Attributes] (./Academic-knowledge/EntityAttributes.md)
 # [Get Started](./Emotion/GetStarted.md)
