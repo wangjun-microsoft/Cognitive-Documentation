@@ -1,6 +1,6 @@
 <!-- 
 NavPath: Face API/Getting Started
-LinkLabel: Get Started With Face API in Java for Android
+LinkLabel: Get Started With Android
 Url: face-api/documentation/get-started-with-face-api/GettingStartedwithFaceAPIinJavaforAndroid
 Weight: 30
 -->
