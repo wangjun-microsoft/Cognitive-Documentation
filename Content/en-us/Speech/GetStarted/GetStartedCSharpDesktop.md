@@ -1,6 +1,6 @@
 <!-- 
 NavPath: Bing Speech API/Get Started with Speech API
-LinkLabel: Get started with Bing Speech API in C#
+LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpDesktop
 Weight: 100
 -->
