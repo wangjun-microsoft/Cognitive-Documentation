@@ -1,5 +1,5 @@
 <!-- NavPath: Bing Speech API/Get Started with Speech API
-LinkLabel: Get started with Bing Speech API for iOS
+LinkLabel: Get started with iOS
 Url: Speech-api/documentation/GetStarted/Get-Started-ObjectiveC-iOS
 Weight: 100 -->
 
