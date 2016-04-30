@@ -1,5 +1,5 @@
 <!-- NavPath: Face API/Getting Started
-LinkLabel: Get Started in Python
+LinkLabel: Get Started with Face API in Python
 Url: face-api/documentation/get-started-with-face-api/GetStartedWithPython
 Weight: 99
 -->
