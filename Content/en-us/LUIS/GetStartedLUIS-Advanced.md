@@ -146,5 +146,5 @@ Here is the JSON repsonse snippet from the following dialog question:
 ```
 ###Summary
 
-You have learnwd to add actions and interactive dialog features to your LUIS application. To publish your application to a bot where the benefits of these advanced features will be showcased, see [Slack / Microsoft Bot Framework Integration](PublishingToBot.md).
+You have learned to add actions and interactive dialog features to your LUIS application. To publish your application to a bot where the benefits of these advanced features will be showcased, see [Slack / Microsoft Bot Framework Integration](PublishingToBot.md).
 
