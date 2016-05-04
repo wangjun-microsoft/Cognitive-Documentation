@@ -8,7 +8,7 @@ Weight: 85 -->
 For unlimited traffic to your HTTP endpoint, you must create a metered key for your account on LUIS. Metered keys provide unlimited traffic to your endpoint following a payment plan. To create your key, follow these steps: 
 
 1. Sign in to the **[Microsoft Azure Portal](https://ms.portal.azure.com/)** 
-2. Click the green **+** sign on the left-hand panel and search for “Cognitive Services” in the marketplace, then click on **Cognitive Services APIs** and follow the **create experience** to create an API account you are interested in. 
+2. Click the green **+** sign in the upper left-hand panel and search for “Cognitive Services” in the marketplace, then click on **Cognitive Services APIs** and follow the **create experience** to create an API account you are interested in. 
 
 ![Ibiza Search](./Images/Ibiza_search.png) 
 
