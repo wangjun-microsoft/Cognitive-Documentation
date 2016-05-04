@@ -9,6 +9,7 @@ There are new options available for publishing LUIS models. These options allow 
 
  * Microsoft Bot Framework
  * Slack
+![Publish to Slack and MBF](./Images/PublishToSlack.PNG)
 
 The Slack integration is a direct integration with a Slack bot while the Microsoft Bot Framework wraps around several other communication channels including Slack. 
 
