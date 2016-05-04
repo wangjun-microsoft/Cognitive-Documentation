@@ -32,7 +32,7 @@ This feature enables you to fulfill the actions that were trigged through a set 
 
 LUIS is providing a first set of channels and actions, expect to see more soon. For a full list of current channels, see [Channels](Channels.md).
 
-![Action Fulfillment](./Images/AddFulfillment.png)
+![Action Fulfillment](./Images/AddFulfillment2.png)
 
 Follow these steps (see above screenshot): 
 
@@ -113,13 +113,13 @@ Phrase lists work with parameters the same way they work with utterances, they a
 
 ###Dialog Execution
 
-Testing the query "BookFlight". Here is the JSON response extract for the dialog response: 
+Testing the query "BookFlight". Here is the JSON response snippet from a dialog response: 
 
 ```
         "dialog": 
   {
     "prompt": "From where?",
-    "parameterName": "FromLocation::FromLocation",
+    "parameterName": "Location::FromLocation",
     "contextId": "09629512-7310-4a9d-9411-57e1d7f8022b",
     "status": "Question"
   }
@@ -129,7 +129,7 @@ A new dialog section appears at the end of the JSON response. Only the top scori
 
 To continue the dialog, append the answer to the question along with the contextID as request parameter. Example: &q=departure date &contextId= a144a208-2f1f-4faf-877b-8898ec523022 
 
-Here is the JSON repsonse for the following Dialog question: 
+Here is the JSON repsonse snippet from the following dialog question: 
 ```
     "dialog":  
  {
