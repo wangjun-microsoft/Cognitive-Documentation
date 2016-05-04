@@ -12,12 +12,12 @@ For unlimited traffic to your HTTP endpoint, you must create a metered key for y
 
 ![Ibiza Search](./Images/Ibiza_search.png) 
 
-  3.Choose the API you are interested in to create a subscription by clicking on the **API Type**. In this case, choose the **Language Understanding Intelligent Service (LUIS)** option. Configure the subscription with settings including account name, pricing tiers, etc. 
+  3.Choose the API you are interested in by clicking on the **API Type** to create a subscription. In this case, choose the **Language Understanding Intelligent Service (LUIS)** option. Configure the subscription with settings including account name, pricing tiers, etc. 
 
 ![Ibiza API Choice](./Images/Ibiza_apiChoice.png) 
 
-  4.Once you have created the API account, you can view the keys generated in the **Settings->Keys** blade. These can be tested in your existing application or by following the LUIS documentation. 
+  4.Once you have created the API account, you can view the keys generated in the **Settings->Keys** blade. These can be tested in your existing application or by following the LUIS documentation to create a new application. 
 
 ![Ibiza Keys](./Images/Ibiza_keys.png)
 
-Once you have created your key, you can add it to your account via the application settings/configuration dialog, found in any application. 
+When you have created your key, you can add it to your account via the application settings/configuration dialog, found in any application. 
