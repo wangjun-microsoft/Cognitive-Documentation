@@ -5,7 +5,7 @@ Weight: 70 -->
 
 #Slack / Microsoft Bot Framework Integration
 
-There are new options available for publishing LUIS models. These options allow the user to access the language model via various communication channels. The user is able to articulate an intent on Slack, via SMS or email and use this connection to trigger a bound action, for example to get temperature or current news. The result of the called action will show up in the communication channel. Currently, LUIS is offering integration with: 
+There are new options available for publishing LUIS models. These options allow the user to access the language model via various communication channels. The user is able to articulate an intent on Slack, via SMS or email and use this connection to trigger a bound action, for example to get temperature or current news. The result of the called action will show up in the communication channel as seen in below screenshot. Currently, LUIS is offering integration with: 
 
  * Microsoft Bot Framework
  * Slack
