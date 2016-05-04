@@ -46,50 +46,55 @@ Follow these steps (see above screenshot):
 7. In the **Action Settings** sub-section, map the action to a parameter from the **Append a Parameter** drop-down list, in this case “location”.
 8. Click **Save** to complete and exit.
 
-###Schematized JSON response
+###JSON response
 
-This is an example extract of the JSON response that is returned when an action is fulfilled: 
+This is an example of the JSON response that is returned when an action is fulfilled. 
 ```
-"actions": [
-        {
-          "triggered": true,
-          "name": "GetWeather",
-          "parameters": [
-            {
-              "name": "location",
-              "required": true,
-              "value": [
-                {
-                  "entity": "location"
-                  "type": "location::tolation",
-                  "score": 0.8636191
-                }
-              ]
-            },
-            {
-              "name": "location",
-              "required": true,
-              "value": [
-                {
-                  "entity": "Get_temperature",
-                  "type": "Temperature",
-                  "score": 0.8523133
-                }
-              ]
-            },
-            {
-              "name": "Get_weather",
-              "required": false,
-              "value": null
-            }
-          ]
-        }
-      ]
-    }
+{
+  "query": "paris",
+  "topScoringIntent": {
+    "intent": "BookFlight",
+    "score": 0.924560249,
+    "actions": [
+      {
+        "triggered": false,
+        "name": "BookFlight",
+        "parameters": [
+          {
+            "name": "Destination",
+            "required": true,
+            "value": [
+              {
+                "entity": "paris",
+                "type": "Location::ToLocation"
+              }
+            ]
+          },
+          {
+            "name": "Source",
+            "required": true,
+            "value": null
+          },
+          {
+            "name": "Travel Date",
+            "required": true,
+            "value": null
+          }
+        ]
+      }
+    ]
+  },
+  "entities": [],
+  "dialog": {
+    "prompt": "From where?",
+    "parameterName": "BookFlight::Source",
+    "contextId": "2dc6f283-b43d-4312-aee4-1d9c2f0f94dc",
+    "status": "Question"
+  }
+}
+
 ```
-
-
-Notice that the "get_temperature" and "location" required parameters are set to TRUE, which means they are filled in. Thus the action will be triggered as all its required parameters are available. Notice also that the action triggering is set to TRUE. Finally, notice that the "Get_weather" parameter is set to FALSE, which means that it is not required for the action to be triggered. 
+Notice that the "Destination" required parameter is set to TRUE, which means they are filled in. Thus the action will be triggered as all its required parameter is available.
 
 ###Dialog Support (Preview)
 
