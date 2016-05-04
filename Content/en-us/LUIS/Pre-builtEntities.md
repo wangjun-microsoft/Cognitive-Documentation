@@ -1,4 +1,4 @@
-<!-- NavPath: Pre-builtEntities
+<!-- NavPath: LUIS API
 LinkLabel: Pre-built Entities 
 Url: LUIS-api/documentation/Pre-builtEntities
 Weight: 90 -->
