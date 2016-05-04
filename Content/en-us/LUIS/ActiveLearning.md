@@ -1,4 +1,4 @@
-<!-- NavPath: ActiveLearning
+<!-- NavPath: LUIS API
 LinkLabel: Active Learning
 Url: LUIS-api/documentation/ActiveLearning
 Weight: 86 -->
