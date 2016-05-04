@@ -32,7 +32,7 @@ This feature enables you to fulfill the actions that were trigged through a set 
 
 LUIS is providing a first set of channels and actions, expect to see more soon. For a full list of current channels, see [Channels](Channels.md).
 
-![Action Fulfillment](./Images/AddFulfillment2.png)
+![Action Fulfillment](./Images/AddFulfillment2.PNG)
 
 Follow these steps (see above screenshot): 
 
