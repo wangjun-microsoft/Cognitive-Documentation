@@ -1,4 +1,4 @@
-<!-- NavPath: PublishingToBot
+<!-- NavPath: LUIS API
 LinkLabel: Publishing to a Bot
 Url: LUIS-api/documentation/PublishingToABot
 Weight: 70 -->
