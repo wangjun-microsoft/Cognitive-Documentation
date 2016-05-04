@@ -1,11 +1,11 @@
-<!-- NavPath: ImprovingPerformance
+<!-- NavPath: LUIS API
 LinkLabel: Improving Performance
 Url: LUIS-api/documentation/ImprovingPerformance
 Weight: 83 -->
 
 #Improving Performance of a LUIS Model
 
-There are several options for improving performance and resolving problems.
+######There are several options for improving performance and resolving problems.
 
 ###Option 1: Adding model features
 
