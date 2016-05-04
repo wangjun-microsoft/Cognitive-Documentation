@@ -36,6 +36,7 @@ Slack is a communication platform for teams and it is getting more and more trac
 ![Slack Framework](./Images/Slack.png)
 
 Setting up a Slack bot in a few steps (see above screenshot): 
+
 1. When you click **Publish** in the upper left-hand corner of the LUIS Application Editor workspace, you will get to a dialog box.
 2. In this dialog you can select “Enabling Action binding using Slack”.
 3. The link in the field brings you to Slack where you can create your Slack app and bot.You can create your app right there.
