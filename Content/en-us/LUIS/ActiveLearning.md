@@ -7,7 +7,7 @@ Weight: 86 -->
 
 The breakthrough feature of LUIS is active learning. After your endpoint has processed a few dozen interactions, you can start benefiting. In the active learning loop, LUIS examines all the utterances that have been sent to it, and calls to your attention the ones that it would like you to label. LUIS is able to critique its own work, and the utterances it points out are the ones that will give your app the biggest boost in performance. 
 
-To use the active learning function, open your application for editing, and click on **Suggest** in the top ribbon. Next, from the drop-down menu, select a specific entity or intent, say "FindNews", and click the **search icon**. You will see currently unlabeled sentences, along with LUIS' interpretation of them. You should process these in order, starting with the first. Here is an example of what your screen will look like, depending on the queries that you have entered into the endpoint. 
+To use the active learning function, open your application for editing, and click on **Suggest** in the top ribbon. Next, from the drop-down menu, select a specific entity or intent, say "BookFlight", and click the **search icon**. You will see currently unlabeled sentences, along with LUIS' interpretation of them. You should process these in order, starting with the first. Here is an example of what your screen will look like, depending on the queries that you have entered into the endpoint. 
 
 ![Active learning](./Images/ActiveLearning3.png)
 
