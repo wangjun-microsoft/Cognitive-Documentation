@@ -10,6 +10,7 @@ Weight: 88 -->
 In addition to allowing you to build your own applications, LUIS also provides selected models from the Microsoft Cortana personal assistant as a pre-built application. To use it, click on the "Cortana pre-built app" at the top of your list of applications. 
 
 For example, the utterance "**set up an appointment at 2:00 pm tomorrow for 90 minutes called discuss budget**" returns:
+```
     {
 	  "q": "set up an appointment at 2:00 pm tomorrow for 90 minutes called discuss budget",
 	  "entities": [
@@ -48,7 +49,7 @@ For example, the utterance "**set up an appointment at 2:00 pm tomorrow for 90 m
 		}
 	  ]
 	}
-    
+  ```  
 
 This is an "as-is" application: the intents and entities in this application cannot be edited or integrated into other LUIS applications. If you’d like your client to have access to both this pre-built LUIS application and your own LUIS application, your client can make 2 separate HTTP calls. 
 
