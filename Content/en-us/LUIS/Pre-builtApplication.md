@@ -7,7 +7,7 @@ Weight: 88 -->
 
 #Pre-built application v2
 
-In addition to allowing you to build your own applications, LUIS also provides selected models from the Microsoft Cortana personal assistant as a pre-built application. To use it, click on the "Cortana pre-built app" at the top of your list of applications. 
+In addition to allowing you to build your own applications, LUIS also provides selected models from the Microsoft Cortana personal assistant as a pre-built application. To use it, click on the "Cortana pre-built app" at the top of your list of LUIS applications. 
 
 For example, the utterance "**set up an appointment at 2:00 pm tomorrow for 90 minutes called discuss budget**" returns:
 ```
