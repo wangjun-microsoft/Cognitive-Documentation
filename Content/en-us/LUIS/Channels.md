@@ -7,7 +7,7 @@ Weight: 80 -->
 
 A channel is a collection of related fulfillments. The following list shows the possible fulfillments available. 
 
-If you want to use the channels, you must first add LUIS Action Binding to your [Slack](https://slack.com/signin?redir=%2Foauth%2Fpick%2F39337220033.d12e11480e) environment. 
+If you want to use the channels, you must first add [LUIS Action Binding](GetStartedLUIS-Advanced.md) to your [Slack](https://slack.com/signin?redir=%2Foauth%2Fpick%2F39337220033.d12e11480e) environment. 
  
 
 ###Definition Channel
