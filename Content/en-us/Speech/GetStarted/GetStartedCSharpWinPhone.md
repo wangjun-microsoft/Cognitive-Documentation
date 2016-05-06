@@ -1,6 +1,6 @@
 <!-- 
 NavPath: Bing Speech API/Get Started with Speech API
-LinkLabel: Get started with Speech Recognition in C Sharp for .Net on Windows Phone 8.1
+LinkLabel: Get started with Windows Phone
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpWinPhone
 Weight: 90
 -->

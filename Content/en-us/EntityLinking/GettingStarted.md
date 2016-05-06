@@ -1,6 +1,6 @@
 <!--
 NavPath: Entity Linking API
-LinkLabel: Get Started with EntityLinking API in C#
+LinkLabel: Get Started in C#
 Url: entitylinking-api/documentation/GettingStarted
 Weight: 1
 -->

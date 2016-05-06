@@ -1,6 +1,6 @@
 <!-- 
 NavPath: Bing Speech API/Get Started with Speech API
-LinkLabel: Get started with Speech Recognition and/or intent in Java on Android
+LinkLabel: Get started with Android
 Url: Speech-api/documentation/GetStarted/GetStartedJavaAndroid
 Weight: 70
 -->
