@@ -56,7 +56,7 @@ https://api.projectoxford.ai/academic/v1.0/interpret?query=papers by jaime teeva
 ```
 https://api.projectoxford.ai/academic/v1.0/calchistogram?expr=And(Composite(AA.AuN=='jaime teevan'),Y>2012)&attributes=Y,F.FN&count=4
 ```
-<br>The response to this request first indicates that there are 23 papers that match the query expression.  For the *Year* attribute, there are 3 distinct values, one for each year after 2012 (i.e. 2013, 2014, and 2015) as specified in the query.  The total paper count over the 3 distinct values is 37.  For each *Year*, the histogram shows the value, total natural log probability, and count of matching entities.     
+<br>The response to this request first indicates that there are 37 papers that match the query expression.  For the *Year* attribute, there are 3 distinct values, one for each year after 2012 (i.e. 2013, 2014, and 2015) as specified in the query.  The total paper count over the 3 distinct values is 37.  For each *Year*, the histogram shows the value, total natural log probability, and count of matching entities.     
 
 The histogram for *Field of Study* shows that there are 34 distinct fields of study. As a paper may be associated with multiple fields of study, the total count (53) can be larger than the number of matching entities.  Although there are 34 distinct values, the response only includes the top 4 because of the *count=4* parameter.
 
