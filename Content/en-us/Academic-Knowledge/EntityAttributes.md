@@ -24,7 +24,7 @@ J.JN	|Journal name				|String		|Equals,<br/>StartsWith
 J.JId	|Journal ID					|Int64		|Equals
 C.CN	|Conference series name		|String		|Equals,<br/>StartsWith
 C.CId	|Conference series ID		|Int64		|Equals
-RId	    |Reference ID				|Int64		|Equals
+RId	    |Reference ID				|Int64[]		|Equals
 W       |Words from paper title/abstract for full text search |String |Equals
 E		|Extended metadata (see table below) |String |Equals  
 		
