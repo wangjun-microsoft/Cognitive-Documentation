@@ -1,5 +1,6 @@
 <!-- 
 NavPath: Computer Vision API
+LinkLabel: Categories
 Url: Computer-Vision-API/documentation/Images/86categories
 Weight: 100
 -->
