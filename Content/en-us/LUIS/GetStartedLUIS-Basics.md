@@ -1,7 +1,9 @@
-<!-- NavPath: LUIS API
+<!-- 
+NavPath: LUIS API
 LinkLabel: Get Started With LUIS-Basics
 Url: LUIS-api/documentation/GetStartedWithLUIS-Basics
-Weight: 100 -->
+Weight: 100 
+-->
 
 #Get Started with LUIS: The Basics
 
