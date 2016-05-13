@@ -1,7 +1,9 @@
-<!-- NavPath: LUIS API
+<!-- 
+NavPath: LUIS API
 LinkLabel: Azure Ibiza Subscription
 Url: LUIS-api/documentation/AzureIbizaSubscription
-Weight: 85 -->
+Weight: 85 
+-->
 
 #Creating Subscription Keys Via Azure Ibiza
 
