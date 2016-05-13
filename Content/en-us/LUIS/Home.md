@@ -1,7 +1,9 @@
-<!-- NavPath: LUIS API
+<!-- 
+NavPath: LUIS API
 LinkLabel: Overview
 Url: LUIS-api/documentation/home
-Weight: 100 -->
+Weight: 100
+-->
 
 #Overview
 
