@@ -1,7 +1,9 @@
-<!-- NavPath: LUIS API
+<!-- 
+NavPath: LUIS API
 LinkLabel: Active Learning
 Url: LUIS-api/documentation/ActiveLearning
-Weight: 86 -->
+Weight: 86 
+-->
 
 #Using Active Learning
 
