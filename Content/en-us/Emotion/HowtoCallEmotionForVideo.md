@@ -138,4 +138,4 @@ var emotionRecognitionTracking = JsonConvert.DeserializeObject<EmotionRecognitio
 ### <a name="Summary">Summary</a>
 In this guide you have learned about the functionalities of the Emotion API for Video: how you can upload a video, check its status, retrieve emotion recognition metadata.
 
-For more information about API details, see the API reference guide “[Emotion API for Video Reference](./APIReference.md)”.
+For more information about API details, see the API reference guide “[Emotion API for Video Reference](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/56f8d40e1984551ec0a0984e)”.
