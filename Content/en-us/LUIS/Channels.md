@@ -1,7 +1,9 @@
-<!-- NavPath: LUIS API
+<!-- 
+NavPath: LUIS API
 LinkLabel: Channels
 Url: LUIS-api/documentation/Channels
-Weight: 80 -->
+Weight: 80 
+-->
 
 #Channels
 
