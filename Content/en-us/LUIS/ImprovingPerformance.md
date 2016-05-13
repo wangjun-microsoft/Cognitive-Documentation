@@ -1,7 +1,9 @@
-<!-- NavPath: LUIS API
+<!-- 
+NavPath: LUIS API
 LinkLabel: Improving Performance
 Url: LUIS-api/documentation/ImprovingPerformance
-Weight: 83 -->
+Weight: 83 
+-->
 
 #Improving Performance of a LUIS Model
 
