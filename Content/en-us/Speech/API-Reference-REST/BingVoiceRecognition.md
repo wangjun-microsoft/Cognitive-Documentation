@@ -47,21 +47,59 @@ This documentation describes the Bing Voice API that exposes an HTTP interface w
 
 
 ### <a name="VoiceRecReq">2. Voice Recognition Request</a>
-###<a name="Authorize">Authenticate the API call</a>
-Every call to the Speech API requires a subscription key. This key needs to be passed either through a query string parameter or specified in the request header. 
+### <a name="Authorize">Authenticate the API call</a>
+Every call to the Speech API requires a JWT access token. This token needs to be passed through as part of the Speech request header. 
+
+Subscription key is first passed to the token service, for example:
+```
+POST https://oxford-speech.cloudapp.net/token/issueToken
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&client_id=<Your subscription key>&client_secret=<Your subscription key>&scope=https%3A%2F%2Fspeech.platform.bing.com
 
 ```
-a)	Subscription key is passed through the query string, for example:
-https://api.projectoxford.ai/speech/detect[?returnSpeechId][&returnSpeechRecognitionResults]&subscription-key=<Your subscription key>
-b)	Subscription key is passed in the HTTP request header, for example: 
-ocp-apim-subscription-key: <Your subscription key>
-c)	  When using a client library, the subscription key is passed in through the constructor of the SpeechRecognitionServiceClient class, for example:
-C#: speechRecognitionServiceClient = new SpeechRecognitionServiceClient("Your subscription key");
+### <a name="TokenReqParam">Required parameters</a>
+
+Name           |Format              |Description, example and use  
+---------------|--------------------|-----------------------------
+grant_type     |  UTF-8             | Must be client_credentials.
+client_id      |  UTF-8             | Your subscription key.
+client_secret  |  UTF-8             | Your subscription key.
+scope          |  UriEncoded-String | Must be `https://speech.platform.bing.com`.
+
 
 ```
+```
+
+
+### <a name="TokenRespParam">Token Response</a>
+
+
+```json
+
+Content-Type: application/json; charset=utf-8
+
+{
+   "access_token":`<Base64-access_token>`,
+   "token_type":"jwt",
+   "expires_in":"600",
+   "scope":"https://speech.platform.bing.com"
+}
+
+```
+
+The `access_token` field is passed to the Speech request as an HTTP request header, for example: 
+
+```
+Authorization: Bearer <Base64-access_token>
+```
+
+
+
+
 Clients must use the following end-point to access the service and build voice enabled applications: [https://speech.platform.bing.com/recognize](https://speech.platform.bing.com/recognize) 
 
-Note! Until you have submitted your subscription key as described above this link will generate a 403 Response Error.
+<B>Note! Until you have acquired an `access token` with your subscription key as described above this link will generate a 403 Response Error.</B>
 
 The API uses HTTP POST to upload audio. The API supports [Chunked Transfer-Encoding](http://tools.ietf.org/html/rfc1945#section-7.2) for efficient audio streaming. For live transcription scenarios, it is recommended you use chunked transfer encoding to stream the audio to the service while the user is speaking. Other implementations result in higher user-perceived latency. 
 
@@ -70,16 +108,20 @@ Your application must endpoint the audio to determine start and end of speech, w
 
 ### <a name="Http">HTTP headers</a>
 
-The value of the Content-type header specifies the audio format being uploaded. The value is a semicolon-separated list of key/value pairs that describe the audio data. For example: 
+The token [Base64 access_token](#TokenRespParam) requested must be passed to the Speech endpoint as an `Authorization` header and prefixed with the string `Bearer`.
 
-audio/wav; codec=”audio/wav”; samplerate=16000; sourcerate=8000; trustsourcerate=false 
+`Authorization: Bearer [Base64 access_token]`
+
+A Content-Type header is **required**. The Content-Type header value specifies the audio format being uploaded. The value is a semicolon-separated list of key/value pairs that describe the audio data. For example: 
+
+`audio/wav; codec=”audio/wav”; samplerate=16000; sourcerate=8000; trustsourcerate=false`
 
 The Voice API supports audio/wav using the following codecs: 
   •  PCM single channel
   •  Siren
   •  SirenSR
 
-The required samplerate is the rate at which the audio data was encoded. Valid values are 8000 and 16000, which should match the value of the samplerate in the RIFF header. 
+The **required** samplerate is the rate at which the audio data was encoded. Valid values are 8000 and 16000, which should match the value of the samplerate in the RIFF header. 
 
 The optional sourcerate is the rate at which the source data was recorded. The sourcerate value, if specified, must be greater than 0. The sourcerate defaults to 8000. 
 
@@ -122,9 +164,10 @@ result.profanitymarkup     |     0/1    |      Scan the result text for words in
 The following is an example of a voice search request where the audio is supplied as part of a recognition request: 
    
 ```
-POST/query? scenarios=catsearch&appid=f84e364c-ec34-4773-a783-73707bd9a585&locale=en-US&device.os=wp7&version=3.0&format=xml&requestid=1d4b6030-9099-11e0-91e4-0800200c9a66&instanceid=1d4b6030-9099-11e0-91e4-0800200c9a66 HTTP/1.1
-Host: speech.platform.bing.com/recognize/query
-Content-Type: audio/wav; samplerate=8000
+POST /recognize?scenarios=catsearch&appid=f84e364c-ec34-4773-a783-73707bd9a585&locale=en-US&device.os=wp7&version=3.0&format=xml&requestid=1d4b6030-9099-11e0-91e4-0800200c9a66&instanceid=1d4b6030-9099-11e0-91e4-0800200c9a66 HTTP/1.1
+Host: speech.platform.bing.com
+Content-Type: audio/wav; samplerate=16000
+Authorization: Bearer [Base64 access_token]
 
 (audio data)
 ```
@@ -138,7 +181,7 @@ The API response is returned in JSON format. The value of the “name” tag has
 
 Schema Legend: 
 
-* < ... >  means optional7
+* < ... >  means optional
 * "[ ]" represents a json array
 * "{ }" represents a json object  
 * "*" indicates that the object can be defined multiple times
