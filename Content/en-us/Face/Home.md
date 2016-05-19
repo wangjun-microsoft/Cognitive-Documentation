@@ -75,6 +75,12 @@ To quickly go through the Face API basic functionalities and subscriptions proce
 - [Getting Started with Face API in CSharp](Get-Started-with-Face-API/GettingStartedwithFaceAPIinCSharp.md)
 - [Getting Started with Face API in Java for Android](Get-Started-with-Face-API/GettingStartedwithFaceAPIinJavaforAndroid.md)
 
+## Sample Apps
+Take a look at these sample applications which make use of Face API.
+
+- [FamilyNotes UWP app](https://github.com/Microsoft/Windows-appsample-familynotes)
+ - Universal Windows Platform (UWP) sample app that shows usage of speech, Cortana, ink, and camera through a family note sharing scenario. 
+
 ## Related Topics
 
 - [How to Detect Faces in Image](Face-API-How-to-Topics/HowtoDetectFacesinImage.md)
