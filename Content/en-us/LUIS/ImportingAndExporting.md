@@ -24,7 +24,7 @@ Note that the "Import" function is for unlabeled data. If you have labeled utter
 ######Exporting an application
 
 LUIS lets you export all of the labels and features you've entered for an application. To do this, click on the "Export App" icon in the list of applications. This is shown in the example below: 
-
+![My Applications page screenshot w. Export App command highlighted](./Images/ExportApp.png)
 
 
 This will download a JSON object that contains all of the information you've entered. Note that it does not contain unlabeled utterances; these can be downloaded by clicking on Edit -> Publish -> Download Logs. 
@@ -36,6 +36,7 @@ This JSON file can now be uploaded to create a new application using New App -> 
 ######Using import to upload labeled utterances
 
 The JSON file can be edited outside of LUIS before being re-imported, for example to add labeled utterances. For entity labels, note that the start and end positions refer to tokens, not characters. Tokenization depends on the culture (locale) of the application -- see the section on Localization for more information. 
+![My Applications page screenshot w. Import Utterances command highlighted](./Images/ImportUtterances.png)
 
 ######Copying/sharing applications
 
