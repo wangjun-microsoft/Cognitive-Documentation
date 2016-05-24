@@ -18,7 +18,7 @@ Weight: 100
 1. In the LUIS Application Editor work space on the left-hand panel, click an existing intent, for example "BookFlight", or create a new one.
 2. In the **Add a new intent** dialog box which opens, click **Add Action**.
 3. Let us assume this action requires three parameters, "FromLocation", "ToLocation", and "Date".
-4. Click **Add Parameter**. Type the name of the parameter, for example "FromLocation", and specify its type from the entities in the **Type** drop-down menu. In this case "Location::FromLocation" is the entity. (For hereditary entities, see [Get started with LUIS: The Basics](GetStartedLUIS-Basics.md).)
+4. Click **Add Parameter**. Type the name of the parameter, for example "FromLocation", and specify its type from the entities in the **Type** drop-down menu. In this case "Location::FromLocation" is the entity. (For hereditary entities, see [Get started with LUIS: The Basics](GetStartedWithLUIS-Basics.md).)
 5. Click **Add Parameter** again to add the next parameter, for example "ToLocation" with "Location::ToLocation" being the entity.
 6. Add a third parameter "Date" with "datetime" being the entity.
 7. Check the **Required** check box next to the name of the parameter that is required for the action to be triggered. (If the action is optional, leave the check box unchecked.)
