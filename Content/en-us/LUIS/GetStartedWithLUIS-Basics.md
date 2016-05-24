@@ -155,5 +155,5 @@ Score |	number	|  Confidence score, between 0 and 1. Only the highest score is l
 
 ###Summary
 
-You have now built a basic LUIS application. This application can be enhanced by adding more [advanced features](GetStartedLUIS-Advanced.md).
+You have now built a basic LUIS application. This application can be enhanced by adding more [advanced features](GetStartedWithLUIS-Advanced.md).
 
