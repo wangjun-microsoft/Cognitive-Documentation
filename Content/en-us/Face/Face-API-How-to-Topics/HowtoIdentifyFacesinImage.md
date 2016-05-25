@@ -23,7 +23,7 @@ This guide will demonstrate how to identify unknown faces using person groups, w
 
 ## <a name="concepts"></a> Concepts
 
-If you are not familiar with the following concepts in this guide, please search for the definitions in our [glossary](Glossary.md) at any time:
+If you are not familiar with the following concepts in this guide, please search for the definitions in our [glossary](../Glossary.md) at any time:
 
 - Face - Detect
 - Face - Identify

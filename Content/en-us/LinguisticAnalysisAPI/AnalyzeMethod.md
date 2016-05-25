@@ -52,7 +52,7 @@ result[x].Tokens | list of token objects | token boundaries identified within th
 result[x].Tokens[y].Offset | int | starting character offset of the token |
 result[x].Tokens[y].Len | int | length in characters of the token |
 result[x].Tokens[y].RawToken | string | the characters inside that token, before normalization |
-result[x].Tokens[y].NormalizedToken | string | a normalized form of the character, safe for use in a [parse tree](Parsing.md); for instance, an open parenthesis character '(' becomes '-LRB-' |
+result[x].Tokens[y].NormalizedToken | string | a normalized form of the character, safe for use in a [parse tree](Constituency-Parsing.md); for instance, an open parenthesis character '(' becomes '-LRB-' |
 
 Example input: `This is a test. Hello.'
 Example JSON response:
