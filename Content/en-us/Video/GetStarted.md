@@ -16,7 +16,6 @@ Explore a basic Windows application that uses Microsoft Cognitive Services (form
 * 	[Step 2: Build the example](#Step2)
 * 	[Step 3: Run the example](#Step3)
 * 	[Review Summary](#Review)   
-* 	[Related Topics](#Related)  
 
 ## <a name="Prerequisites">Prerequisites</a>  
 #### Platform requirements
