@@ -2,7 +2,7 @@
 NavPath: Bing Speech API/Speech Recognition/Client Library
 LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpDesktop
-Weight: 100
+Weight: 600
 -->
 
 # Get started with Bing Speech Recognition and/or intent in C&#35; for .Net Windows
