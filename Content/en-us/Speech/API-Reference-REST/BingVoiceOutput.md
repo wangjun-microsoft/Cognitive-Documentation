@@ -2,7 +2,7 @@
 NavPath: Bing Speech API/Text To Speech
 LinkLabel: API Reference
 Url: Speech-api/documentation/API-Reference-REST/BingVoiceOutput
-Weight: 15
+Weight: 200
 -->
 
 
