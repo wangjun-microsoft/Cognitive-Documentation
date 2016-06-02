@@ -1,5 +1,5 @@
 <!-- 
-NavPath: Bing Speech API/Get Started with Speech API
+NavPath: Bing Speech API/Speech Recognition/Windows API
 LinkLabel: Get started with Windows Phone
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpWinPhone
 Weight: 90
