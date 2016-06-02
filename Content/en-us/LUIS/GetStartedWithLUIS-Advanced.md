@@ -2,7 +2,7 @@
 NavPath: LUIS API
 LinkLabel: Get Started With LUIS-Advanced
 Url: LUIS-api/documentation/GetStartedWithLUIS-Advanced
-Weight: 100 
+Weight: 97 
 -->
 
 #Get Started with LUIS: Advanced Features
