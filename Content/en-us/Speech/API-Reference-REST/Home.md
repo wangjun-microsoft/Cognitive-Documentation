@@ -1,9 +1,4 @@
-<!-- 
-NavPath: Bing Speech API/API Reference - REST
-LinkLabel: Overview
-Url: Speech-api/documentation/API-Reference-REST/Home
-Weight: 17
--->
+
 
 # API Reference - REST
 
