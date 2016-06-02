@@ -11,7 +11,6 @@ Develop a basic JavaScript application that uses Bing Speech Recognition API to 
 
 The Speech Recognition web example demonstrates the following features using a wav file or external microphone input:
  * Short-form recognition
- * Long-form dictation
  * Recognition with intent
 To use Speech.JS, simply host Speech.1.0.0.js on your website. A 'minified' version of Speech.JS is also available Speech.1.0.0.min.js.
 

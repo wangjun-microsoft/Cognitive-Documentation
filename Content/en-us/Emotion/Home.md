@@ -28,7 +28,7 @@ The Emotion API for Video takes a video as an input, and returns the confidence 
 
 Emotion API for Video provides two types of aggregate results for the emotions of faces in a frame. The API first calculates emotion scores for each face in a video, smoothing the results over time for higher accuracy. It returns two types of aggregates: *windowMeanScores* gives a mean score for all of the faces detected in a frame for each emotion. The emotion detected should be interpreted as the emotion with the highest score, as scores are normalized to sum to one. Users may choose to set a higher confidence threshold within their application, depending on their needs. *windowFaceDistribution* gives the distribution of faces with each emotion as the dominant emotion for that face. Dominant emotions for each face have been determined based on the emotion with the highest score for that face. 
 
-Because emotions are smoothed over time, to visualize your results over the original video, subtract 1 second from the provided timestamps. 
+Because emotions are smoothed over time, if you ever build a visualization to overlay your results on top of the original video, subtract 250 milliseconds from the provided timestamps. 
 
 For more detail on how to parse the format of Emotion for Video API results, you may also want to view  <link to Glossary from Video API>
 For more details about emotion detection in video, please refer to the [API Reference](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89).

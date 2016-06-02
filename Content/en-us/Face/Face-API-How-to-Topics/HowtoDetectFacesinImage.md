@@ -156,7 +156,7 @@ These attributes are predicted by using statistical algorithms and may not alway
 
 Below is a simple example of extracting face attributes during face detection:
 ```CSharp
-var requiedFaceAttributes = new FaceAttributeType[] {
+var requiredFaceAttributes = new FaceAttributeType[] {
                 FaceAttributeType.Age,
                 FaceAttributeType.Gender,
                 FaceAttributeType.Smile,
@@ -166,7 +166,7 @@ var requiedFaceAttributes = new FaceAttributeType[] {
             };
 var faces = await faceServiceClient.DetectAsync(imageUrl,
     returnFaceLandmarks: true,
-    returnFaceAttributes: requiedFaceAttributes);
+    returnFaceAttributes: requiredFaceAttributes);
 
 foreach (var face in faces)
 {
