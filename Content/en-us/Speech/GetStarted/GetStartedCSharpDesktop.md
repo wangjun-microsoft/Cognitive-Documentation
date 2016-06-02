@@ -1,5 +1,5 @@
 <!-- 
-NavPath: Bing Speech API/Speech Recognition API/REST API
+NavPath: Bing Speech API/Speech Recognition API/Client Library SDK
 LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpDesktop
 Weight: 100
