@@ -1,4 +1,4 @@
-<!-- NavPath: Bing Speech API/Speech Recognition API/Client Library SDK
+<!-- NavPath: Bing Speech API/Speech Recognition/Client Library
 LinkLabel: Get started with iOS
 Url: Speech-api/documentation/GetStarted/Get-Started-ObjectiveC-iOS
 Weight: 100 -->
