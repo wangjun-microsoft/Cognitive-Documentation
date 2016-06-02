@@ -134,6 +134,7 @@ Below is a simple example of extracting the JSON into a per frame format for fac
 var emotionRecognitionTrackingResultJsonString = operationResult.ProcessingResult;
 var emotionRecognitionTracking = JsonConvert.DeserializeObject<EmotionRecognitionResult>(emotionRecognitionTrackingResultJsonString, settings);
 ```
+Because emotions are smoothed over time, if you ever build a visualization to overlay your results on top the original video, subtract 250 milliseconds from the provided timestamps.
 
 ### <a name="Summary">Summary</a>
 In this guide you have learned about the functionalities of the Emotion API for Video: how you can upload a video, check its status, retrieve emotion recognition metadata.
