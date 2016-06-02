@@ -2,7 +2,7 @@
 NavPath: Bing Speech API/Client Library
 LinkLabel: API Reference
 ExternalLink: https://staging.www.projectoxford.ai/Files/Doc/Speech/Windows/index.html
-Weight: 20
+Weight: 700
 -->
 
 # API Reference - Client Library
