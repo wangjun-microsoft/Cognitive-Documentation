@@ -1,5 +1,5 @@
 <!-- 
-NavPath: Bing Speech API/Speech Recognition API/Client Library SDK
+NavPath: Bing Speech API/Speech Recognition/Client Library
 LinkLabel: Get started with Android
 Url: Speech-api/documentation/GetStarted/GetStartedJavaAndroid
 Weight: 70
