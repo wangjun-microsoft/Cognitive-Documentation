@@ -2,7 +2,7 @@
 NavPath: Bing Speech API/REST API
 LinkLabel: API Reference
 Url: Speech-api/documentation/API-Reference-REST/BingVoiceRecognition
-Weight: 900
+Weight: 7
 -->
 
 # Bing Voice Recognition API
