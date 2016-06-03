@@ -1,5 +1,5 @@
 <!-- 
-NavPath: Bing Speech API/Client Library
+NavPath: Bing Speech API/Speech Recognition/Client Library
 LinkLabel: API Reference
 ExternalLink: https://staging.www.projectoxford.ai/Files/Doc/Speech/Windows/index.html
 Weight: 7
