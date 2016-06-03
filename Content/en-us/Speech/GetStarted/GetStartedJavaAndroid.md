@@ -2,7 +2,7 @@
 NavPath: Bing Speech API/Speech Recognition/Client Library
 LinkLabel: Get started with Android
 Url: Speech-api/documentation/GetStarted/GetStartedJavaAndroid
-Weight: 500
+Weight: 5
 -->
 
 # Get started with Bing Speech Recognition and/or intent in Java on Android
