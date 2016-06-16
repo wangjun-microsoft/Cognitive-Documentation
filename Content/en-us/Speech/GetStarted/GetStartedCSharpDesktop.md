@@ -1,18 +1,13 @@
 <!-- 
-NavPath: Bing Speech API/Get Started with Speech API
+NavPath: Bing Speech API/Speech Recognition/Client Library
 LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpDesktop
-Weight: 100
+Weight: 6
 -->
 
 # Get started with Bing Speech Recognition and/or intent in C&#35; for .Net Windows
 
-Develop a basic Windows application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. You have a choice of using a REST API or a client library. 
-### REST API 
-Using the REST API means getting only one reco result back with no partial results. Documentation for the REST API can be found [here](../API-Reference-REST/Home.md) and code samples [here](https://oxfordportal.blob.core.windows.net/speech/doc/recognition/Program.cs).
-
-### Client Library
-Using the Client Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. This page describes use of the Client Library, which currently supports speech in seven languages, the example below defaults to American English, “en-US”.
+Develop a basic Windows application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the Client Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. This page describes use of the Client Library, which currently supports speech in seven languages, the example below defaults to American English, “en-US”.
 
 ### Table of Contents
 *	[Prerequisites](#Prerequisites)

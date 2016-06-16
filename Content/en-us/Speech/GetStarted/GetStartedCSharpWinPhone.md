@@ -1,13 +1,13 @@
 <!-- 
-NavPath: Bing Speech API/Get Started with Speech API
+NavPath: Bing Speech API/Speech Recognition/Windows API
 LinkLabel: Get started with Windows Phone
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpWinPhone
-Weight: 90
+Weight: 1
 -->
 
 # Get started with Bing Speech Recognition in C&#35; for .Net on Windows Phone 8.1
 
-Develop a basic Windows Phone 8.1 application that uses the [Windows.Media.SpeechRecognition API Client Library](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx) to convert spoken audio input into text by sending audio to Microsoft’s servers in the cloud. Alternatively, you have the choice of using a REST API, which requires batching all of your audio into a single buffer, uploading the entire audio buffer, and getting recognition text results back. Documentation for the REST API can be found [here](../API-Reference-REST/Home.md) and code samples [here](https://oxfordportal.blob.core.windows.net/speech/doc/recognition/Program.cs). 
+Develop a basic Windows Phone 8.1 application that uses the [Windows.Media.SpeechRecognition API Client Library](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx) to convert spoken audio input into text by sending audio to Microsoft’s servers in the cloud. 
 
 Using the Windows.Media.SpeechRecognition API Client Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. This tutorial describes the use of the [Windows.Media.SpeechRecognition API Client Library](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx). 
 

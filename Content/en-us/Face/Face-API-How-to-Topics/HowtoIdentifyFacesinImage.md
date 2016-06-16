@@ -71,7 +71,7 @@ First, you need to create a new person group. This is executed by using the [Per
 
 ```CSharp 
 // Create an empty person group
-string personGroupId = "MyFriends";
+string personGroupId = "myfriends";
 await faceServiceClient.CreatePersonGroupAsync(personGroupId, "My Friends");
  
 // Define Anna

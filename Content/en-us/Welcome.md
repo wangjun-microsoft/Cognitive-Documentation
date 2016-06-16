@@ -19,3 +19,9 @@ Once you are signed in with Microsoft Account you will be able to access [My sub
 
 ## Upgrade to unlock limits
 All the APIs will have a free trial plan.  As paid offerings become available for each API you will be directed to the Azure portal to complete the purchase.  You can find *Buy* links in your Subscriptions page if you are already using them or you can skip trial altogether and purchase with provided links on [Pricing](https://www.microsoft.com/cognitive-services/en-us/pricing "pricing").  You will need to set up a Azure subscriber account with a credit card and a phone number.  For the first time subscriber you get a $200 discount (subject to change without notice).  If you have a special requirement or simply want to talk to sales, please click "Contact us" button at the top the pricing page.
+
+## Support
+We're here for you throughout your development process. Reach out to us at any time using the links below. 
+* For support and technical questions, post on [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-cognitive)
+* For feedback and feature requests, go to [UserVoice](https://cognitive.uservoice.com/)
+* For everything else, click "Contact us" on the bottom of any page

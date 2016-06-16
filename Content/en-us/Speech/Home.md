@@ -26,13 +26,13 @@ The supported locales are:
 
 language-Country |language-Country | language-Country |language-Country 
 ---------|----------|--------|------------------
-de-DE    |   zh-TW  | zh-HK  |    ru-RU 
-es-ES    |   ja-JP  | ar-EG* |    da-DK 
-en-GB    |   en-IN  | fi-FI  |    nl-NL 
-en-US    |   pt-BR  | pt-PT  |    ca-ES
-fr-FR    |   ko-KR  | en-NZ  |    nb-NO
-it-IT    |   fr-CA  | pl-PL  |    es-MX
-zh-CN    |   en-AU  | en-CA  |    sv-SE  
+ar-EG*   |   en-IN  | fr-FR  |    pt-BR
+ca-ES    |   en-NZ  | it-IT  |    pt-PT 
+da-DK    |   en-US  | nb-NO  |    sv-SE 
+de-DE    |   es-ES  | nl-NL  |    ru-RU
+en-AU    |   es-MX  | ja-JP  |    zh-CN
+en-CA    |   fi-FI  | ko-KR  |    zh-HK
+en-GB    |   fr-CA  | pl-PL  |    zh-TW  
 *ar-EG supports Modern Standard Arabic (MSA)
 
 ### Speech Recognition Intent API
@@ -45,15 +45,15 @@ When applications need to “talk” back to their users, this API can be used t
 
 The supported locales are:
 
-language-Country |language-Country | language-Country |language-Country 
----------|----------|--------|------------------
-de-DE    |   zh-TW  | zh-HK  |     
-es-ES    |   ja-JP  | ar-EG* |    
-en-GB    |   en-IN  | es-MX  |    
-en-US    |   ru-RU  | pt-PT  |    
-fr-FR    |   en-CA  |     
-it-IT    |   fr-CA  |   
-zh-CN    |   en-AU  |      
+language-Country |language-Country | language-Country 
+---------|----------|------------
+ar-EG*   |   es-ES  | ru-RU     
+de-DE    |   es-MX  | zh-CN 
+en-AU    |   fr-CA  | zh-HK    
+en-CA    |   fr-FR  | zh-TW    
+en-GB    |   it-IT  |     
+en-IN    |   ja-JP  |   
+en-US    |   pr-BR  |      
 *ar-EG supports Modern Standard Arabic (MSA)
 
 ###Windows 10 Speech API

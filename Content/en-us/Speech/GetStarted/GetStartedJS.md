@@ -1,8 +1,8 @@
 <!-- 
-NavPath: Bing Speech API/Get Started with Speech API
+NavPath: Bing Speech API/Speech Recognition/REST API
 LinkLabel: Get started in JavaScript
 Url: Speech-api/documentation/GetStarted/GetStartedJS
-Weight: 100
+Weight: 80
 -->
 
 #Get Started with Bing Speech API in JavaScript
