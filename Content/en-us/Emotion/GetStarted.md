@@ -26,7 +26,7 @@ Explore a basic Windows application that uses Emotion API to recognize the emoti
   Before creating the example, you must subscribe to Emotion API which is part of the Microsoft Cognitive Services (previously Project Oxford). See [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial. Make sure to follow best practices for keeping your API key secret and secure.  
 #### Get the client library and example  
 
-  You may download the Emotion API client library via [GitHub](https://github.com/Microsoft/ProjectOxford-ClientSDK/tree/master/Emotion/Windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
+  You may download the Emotion API client library via [SDK](../SDK-Sample?api=emotion&platform=windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
 
 ## <a name="Step1">Step 1: Open the example</a>
 1.	Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.
@@ -51,7 +51,7 @@ Explore a basic Windows application that uses Emotion API to recognize the emoti
 ![Emotion Functionality Interface](./Images/EmotionKey.png)
 
 3.	Under "**Select Scenario**" click to use either of the two scenarios, “**Detect emotion using a stream**” or “**Detect emotion using a URL**”, then follow the instructions on the screen. Microsoft receives the images you upload and may use them to improve Emotion API and related services. By submitting an image, you confirm that you have followed our [Developer Code of Conduct](http://research.microsoft.com/en-us/UM/legal/ProjectOxford_CodeOfConduct.htm).
-4.	There are example images to be used with this example application. You can find these images on [Github](https://github.com/Microsoft/ProjectOxford-ClientSDK/tree/master/Face/Windows/Data) under **Face**, **Windows**, then search the **Data** folder. Please note the use of these images is licensed under Fair Use agreement meaning they are OK to use for testing this example, but not for republishing.
+4.	There are example images to be used with this example application. You can find these images on [Github](https://github.com/Microsoft/Cognitive-Face-Windows/tree/master/Data) under **Face**, **Windows**, then search the **Data** folder. Please note the use of these images is licensed under Fair Use agreement meaning they are OK to use for testing this example, but not for republishing.
 ## <a name="Review">Review and Learn</a>
 Now that you have a running application, let us review how this example app integrates with Microsoft Cognitive Services technology. This will make it easier to either continue building onto this app or develop your own app using Microsoft's Emotion API. 
 

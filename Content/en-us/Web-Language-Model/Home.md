@@ -26,6 +26,6 @@ The Web LM REST API supports four lookup operations:
 ## Getting Started
 
 1. Subscribe to the service.
-2. Download the [SDK](https://github.com/Microsoft/ProjectOxford-ClientSDK/tree/master/WebLM).
+2. Download the [SDK](../../Sdk-Sample?api=weblm).
 3. Run the SDK sample code. 
 4. Consult the [API Reference](https://dev.projectoxford.ai/docs/services/55de9ca4e597ed1fd4e2f104) for further details, including code snippets in a variety of languages.
