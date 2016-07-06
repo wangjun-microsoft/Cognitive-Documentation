@@ -21,7 +21,7 @@ Make sure Mac XCode IDE is installed.
 
   * Get the client library and example
 
-You may download the Speech API client library and example for iOS through https [SDK](../../SDK-Sample?api=bing%20speech&platform=ios). The downloaded zip file needs to be extracted to a folder of your choice.
+You may download the Speech API client library and example for iOS through https [SDK](../../../SDK-Sample?api=bing%20speech&platform=ios). The downloaded zip file needs to be extracted to a folder of your choice.
 Install the .pkg file on your Mac. The .pkg file will install onto your Mac hard drive in the root (or personal) Documents directory under **SpeechSDK**. Inside the folder there is both a fully buildable example and an SDK library. The buildable example can be found in the **samples\SpeechRecognitionServerExample** directory and the library can be found at the **SpeechSDK\SpeechSDK.framework**.
 	
   * Subscribe to Speech API and get a free trial subscription key
