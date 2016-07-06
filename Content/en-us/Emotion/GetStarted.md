@@ -26,7 +26,7 @@ Explore a basic Windows application that uses Emotion API to recognize the emoti
   Before creating the example, you must subscribe to Emotion API which is part of the Microsoft Cognitive Services (previously Project Oxford). See [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial. Make sure to follow best practices for keeping your API key secret and secure.  
 #### Get the client library and example  
 
-  You may download the Emotion API client library via [SDK](../SDK-Sample?api=emotion&platform=windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
+  You may download the Emotion API client library via [SDK](../../SDK-Sample?api=emotion&platform=windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
 
 ## <a name="Step1">Step 1: Open the example</a>
 1.	Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.
