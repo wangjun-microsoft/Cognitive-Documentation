@@ -53,7 +53,7 @@ en-AU    |   fr-CA  | zh-HK
 en-CA    |   fr-FR  | zh-TW    
 en-GB    |   it-IT  |     
 en-IN    |   ja-JP  |   
-en-US    |   pr-BR  |      
+en-US    |   pt-BR  |      
 *ar-EG supports Modern Standard Arabic (MSA)
 
 ###Windows 10 Speech API
