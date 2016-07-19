@@ -54,10 +54,12 @@ For more details about person identification, please refer to the API guides lis
 
 ## Changes
 
-This document is targeting **Microsoft Cognitive Services (previously Project Oxford) Face V1.0** service. For user who has experiences on using Face V0, there are some major changes we would like you to know before switching from Face V0 to Face V1.0 service.
+This document is targeting **Microsoft Face API** service version 1.0.
+
+### V1.0 changes from V0
 
 * **API Signature**
-In Face V1.0, Service root endpoint changes from "https://api.projectoxford.ai/face/v0/" to "https://api.projectoxford.ai/face/v1.0/" 
+In Face API V1.0, Service root endpoint changes from `https://api.projectoxford.ai/face/v0/` to `https://api.projectoxford.ai/face/v1.0/` 
 There are several signature changes for API, such as [Face - Detect](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), [Face - Identify](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Find Similar](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237), [Face - Group](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395238).
 
 * **Face sizes**
@@ -66,7 +68,7 @@ The previous version of Face API was not clear about the smallest face sizes the
 * **Persisted data**
 Existing Person Group and Person data which has been setup with Face V0 cannot be accessed with the Face V1.0 service. This incompatible issue will occur for only this one time, following API updates will not affect persisted data any more.
 
-**Note**: The V0 of Face APIs will be retired on **06/30/2016**. We highly suggest you switch to Face V1.0.
+* **Note**: The V0 endpoint of Face API was retired on **06/30/2016**.
 
 ## Getting Started
 
