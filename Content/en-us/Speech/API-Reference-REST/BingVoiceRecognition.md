@@ -20,8 +20,10 @@ This document does not provide you with any legal rights to intellectual propert
 --------------------------------------------------
 ### Contents
 [1. Introduction](#Introduction)  
+
 [2. Voice Recognition Request](#VoiceRecReq)
 * [Authenticate the API call](#Authorize)
+* [Access the Speech Service Endpoint](#SpeechService)
 * [HTTP headers](#Http) 
 * [Input parameters](#InputParam) 
 * [Required parameters](#ReqParam) 
@@ -58,7 +60,7 @@ Content-Type: application/x-www-form-urlencoded
 grant_type=client_credentials&client_id=<Your subscription key>&client_secret=<Your subscription key>&scope=https%3A%2F%2Fspeech.platform.bing.com
 
 ```
-### <a name="TokenReqParam">Required parameters</a>
+The required parameters for token access are :
 
 Name           |Format              |Description, example and use  
 ---------------|--------------------|-----------------------------
@@ -72,7 +74,7 @@ scope          |  UriEncoded-String | Must be `https://speech.platform.bing.com`
 ```
 
 
-### <a name="TokenRespParam">Token Response</a>
+The expected token response is :
 
 
 ```json
@@ -95,9 +97,9 @@ Authorization: Bearer <Base64-access_token>
 ```
 
 
+### <a name="SpeechService">Access the Speech Service Endpoint</a>
 
-
-Clients must use the following end-point to access the service and build voice enabled applications: [https://speech.platform.bing.com/recognize](https://speech.platform.bing.com/recognize) 
+Clients must use the following end-point to access the service and build voice enabled applications:<b> [https://speech.platform.bing.com/recognize](https://speech.platform.bing.com/recognize) </b>
 
 <B>Note! Until you have acquired an `access token` with your subscription key as described above this link will generate a 403 Response Error.</B>
 
