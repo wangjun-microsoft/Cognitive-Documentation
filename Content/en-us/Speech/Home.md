@@ -28,10 +28,10 @@ language-Country |language-Country | language-Country |language-Country
 ---------|----------|--------|------------------
 ar-EG*   |   en-IN  | fr-FR  |    pt-BR
 ca-ES    |   en-NZ  | it-IT  |    pt-PT 
-da-DK    |   en-US  | nb-NO  |    sv-SE 
-de-DE    |   es-ES  | nl-NL  |    ru-RU
-en-AU    |   es-MX  | ja-JP  |    zh-CN
-en-CA    |   fi-FI  | ko-KR  |    zh-HK
+da-DK    |   en-US  | ja-JP  |    ru-RU 
+de-DE    |   es-ES  | ko-KR  |    sv-SE
+en-AU    |   es-MX  | nb-NO  |    zh-CN
+en-CA    |   fi-FI  | nl-NL  |    zh-HK
 en-GB    |   fr-CA  | pl-PL  |    zh-TW  
 *ar-EG supports Modern Standard Arabic (MSA)
 
