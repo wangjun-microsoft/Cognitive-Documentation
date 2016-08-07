@@ -40,6 +40,8 @@ Name | Description
 **error** |	HTTP status codes. This field is present if the request fails.
 **message** | Error message. This field is present if the request fails.
 
+If a query cannot be processed within _800 ms_, a _timeout_ error will be returned. 
+
 <br>
 #### Example:
 
@@ -124,10 +126,10 @@ For the *lambda* search, if we want to get the author IDs of a given paper, we c
 
 ```
 MAG.StartFrom(@"{
-type  : ""Paper"",
-match : {
-           NormalizedTitle : ""trinity: a distributed graph engine on a memory cloud""
-		}
+    type  : ""Paper"",
+    match : {
+        NormalizedTitle : ""trinity: a distributed graph engine on a memory cloud""
+    }
 }").FollowEdge("AuthorIDs").VisitNode(Action.Return)
 ```
 

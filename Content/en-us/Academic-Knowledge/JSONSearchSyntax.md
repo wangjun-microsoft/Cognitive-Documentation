@@ -96,4 +96,42 @@ graph. For the last node of a path, the default action is to stop and return. A 
 }
 ```
 
-The POST body of a *json* search query should contain at least a *path* pattern. Traverse action objects are optional.
+The POST body of a *json* search query should contain at least a *path* pattern. Traverse action objects are optional. Here are two examples.
+
+```JSON
+{
+  "path": "/series/ConferenceInstanceIDs/conference/FieldOfStudyIDs/field",
+  "series": {
+    "type": "ConferenceSeries",
+    "FullName": "graph",
+    "select": [ "FullName", "ShortName" ]
+  },
+  "conference": {
+    "type": "ConferenceInstance",
+    "select": [ "FullName" ]
+  },
+  "field": {
+    "type": "FieldOfStudy",
+    "select": [ "Name" ],
+    "return": { "Name": { "substring" : "World Wide Web" } }
+  }
+}
+```
+
+```JSON
+{
+  "path": "/author/PaperIDs/paper",
+  "author": {
+    "type": "Author",
+    "select": [ "DisplayAuthorName" ],
+    "match": { "Name": "leslie lamport" }
+  },
+  "paper": {
+    "type": "Paper",
+    "select": [ "OriginalTitle", "CitationCount" ],
+    "return": { "CitationCount": { "gt": 100 } }
+  }
+}
+```
+
+

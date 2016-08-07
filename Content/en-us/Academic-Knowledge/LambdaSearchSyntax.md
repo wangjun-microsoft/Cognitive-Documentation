@@ -79,3 +79,29 @@ Returns *Action.Continue* if the condition is *true*. If the condition is *false
 ##### bool dice(double p)
 
 Generates a random number that is greater than or equal to 0.0 and less than 1.0. This function returns *true* only if the number is less than or equal to *p*.
+
+Compared with *json* search, *lambda* search is more expressive: C# lambda expressions can be directly used to specify query patterns. Here are two examples.
+
+```
+MAG.StartFrom(@"{
+    type  : ""ConferenceSeries"",
+    match : {
+        FullName : ""graph""
+    }
+}", new List<string>{ "FullName", "ShortName" })
+.FollowEdge("ConferenceInstanceIDs")
+.VisitNode(v => v.return_if(v.GetField<DateTime>("StartDate").ToString().Contains("2014")),
+        new List<string>{ "FullName", "StartDate" })
+```
+
+```
+MAG.StartFrom(@"{
+    type  : ""Affiliation"",
+    match : {
+        Name : ""microsoft""
+    }
+}").FollowEdge("PaperIDs")
+.VisitNode(v => v.return_if(v.get("NormalizedTitle").Contains("graph") || v.GetField<int>("CitationCount") > 100),
+        new List<string>{ "OriginalTitle", "CitationCount" })
+```
+
