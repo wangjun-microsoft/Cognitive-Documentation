@@ -7,7 +7,7 @@ Weight: 6
 
 # Get started with Bing Speech Recognition and/or intent in C&#35; for .Net Windows
 
-Develop a basic Windows application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the Client Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. This page describes use of the Client Library, which currently supports speech in seven languages, the example below defaults to American English, “en-US”. For client library api reference, see [Client Library Reference](http://htmlpreview.github.io/?https://raw.githubusercontent.com/Microsoft/Cognitive-Speech-STT-Windows/master/docs/SpeechSDK/html/3619e220-aff7-cb66-df2b-487ef35584e1.htm).
+Develop a basic Windows application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the Client Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. This page describes use of the Client Library, which currently supports speech in seven languages, the example below defaults to American English, “en-US”. For client library api reference, see [Client Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-Windows/master/docs/SpeechSDK/index.html).
 
 ### Table of Contents
 *	[Prerequisites](#Prerequisites)
