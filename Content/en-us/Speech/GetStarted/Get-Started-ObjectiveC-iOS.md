@@ -5,7 +5,7 @@ Weight: 4 -->
 
 #Get started with Bing Speech Recognition and/or intent in Objective C on iOS
 
-Develop a basic iOS application that invokes the Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back.
+Develop a basic iOS application that invokes the Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. For client library api reference, see [Client Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-iOS/master/com.Microsoft.SpeechSDK-1_0-for-iOS.docset/Contents/Resources/Documents/index.html).
 
  * [Prerequisites](#Prereqs)
  * [Step 1: Install the example application / create the application framework](#Step1)
