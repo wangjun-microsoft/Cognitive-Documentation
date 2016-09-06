@@ -1,7 +1,7 @@
 <!--
 NavPath: Bing Speech API/Speech Recognition/Windows API
-LinkLabel: Get started with Windows Phone
-Url: Speech-api/documentation/GetStarted/GetStartedCSharpWinPhone
+LinkLabel: Get started with Windows 10 Universal App
+Url: Speech-api/documentation/GetStarted/GetStartedCSharpWin10
 Weight: 2
 -->
 
