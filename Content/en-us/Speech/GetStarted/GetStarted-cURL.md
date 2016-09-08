@@ -1,7 +1,7 @@
 <!--
 NavPath: Bing Speech API/Speech Recognition/REST API
 LinkLabel: Get started in cURL
-Url: Speech-api/documentation/GetStarted/GetStartedcURL
+Url: Speech-api/documentation/GetStarted/GetStarted-cURL
 Weight: 80
 -->
 
