@@ -72,5 +72,5 @@ In conclusion, this "Get started" introduction and the provided example applicat
  * [Get started with Bing Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
  * [Get started with Bing Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
  * [Get started with Bing Speech API in JavaScript](GetStartedJS.md)
-* [Get started with Bing Speech API in cURL](GetStarted-cURL.md)
+ * [Get started with Bing Speech API in cURL](GetStarted-cURL.md)
 
