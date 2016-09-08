@@ -7,7 +7,7 @@ Weight: 5
 
 # Get started with Bing Speech Recognition and/or intent in Java on Android
 
-Develop a basic Android application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. The rest of this page describes use of the client library, which currently supports the 28 languages (see table in Step 2). The example below defaults to American English, “en-US”. For client library api reference, see [Client Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-Android/master/docs/index.html).
+Develop a basic Android application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. The rest of this page describes use of the client library, which currently supports the 28 languages (see table in Step 2). The example below defaults to American English, “en-US”. 
 
 ###Table of Contents
  * [Prerequisites](#Prerequisites)
