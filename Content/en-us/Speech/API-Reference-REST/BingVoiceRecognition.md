@@ -1,4 +1,4 @@
-<!-- 
+﻿<!-- 
 NavPath: Bing Speech API/Speech Recognition/REST API
 LinkLabel: API Reference
 Url: Speech-api/documentation/API-Reference-REST/BingVoiceRecognition
@@ -6,6 +6,18 @@ Weight: 90
 -->
 
 # Bing Voice Recognition API
+
+
+### Non Disclosure Agreement. 
+© 2016 Microsoft. All rights reserved.
+
+This document is provided “as-is”. Information and views expressed in this document, including URLs and other Internet website references, may change without notice. 
+
+Examples are provided for illustration only. 
+
+This document does not provide you with any legal rights to intellectual property in any Microsoft product. You may copy and use this document for your internal reference purposes. This document is confidential and proprietary to Microsoft. It can be used only in agreement with a non-disclosure agreement. 
+
+--------------------------------------------------
 ### Contents
 [1. Introduction](#Introduction)  
 
@@ -42,43 +54,27 @@ Every call to the Speech API requires a JWT access token. This token needs to be
 
 Subscription key is first passed to the token service, for example:
 ```
-POST https://oxford-speech.cloudapp.net/token/issueToken
-Content-Type: application/x-www-form-urlencoded
-
-grant_type=client_credentials&client_id=<Your subscription key>&client_secret=<Your subscription key>&scope=https%3A%2F%2Fspeech.platform.bing.com
+POST https://api.cognitive.microsoft.com/sts/v1.0/issueToken
+Content-Length: 0
 
 ```
-The required parameters for token access are :
+The required header for token access is:
 
-Name           |Format              |Description, example and use  
----------------|--------------------|-----------------------------
-grant_type     |  UTF-8             | Must be client_credentials.
-client_id      |  UTF-8             | Your subscription key.
-client_secret  |  UTF-8             | Your subscription key.
-scope          |  UriEncoded-String | Must be `https://speech.platform.bing.com`.
+Name                     |Format              |Description, example and use  
+-------------------------|--------------------|-----------------------------
+Ocp-Apim-Subscription-Key|  ASCII             | Your subscription key.
 
 
 ```
 ```
 
 
-The expected token response is :
+The expected token response is the JWT access token as text/plain
 
-
-```json
-
-Content-Type: application/json; charset=utf-8
-
-{
-   "access_token":`<Base64-access_token>`,
-   "token_type":"jwt",
-   "expires_in":"600",
-   "scope":"https://speech.platform.bing.com"
-}
 
 ```
 
-The `access_token` field is passed to the Speech request as an HTTP request header, for example: 
+The jwt token is passed to the Speech request as an HTTP request header, for example: 
 
 ```
 Authorization: Bearer <Base64-access_token>
