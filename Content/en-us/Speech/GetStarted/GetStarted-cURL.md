@@ -30,10 +30,10 @@ Before creating the example, you must subscribe to Speech API which is part of M
 ### <a name="Step1">Step 1: Generate an access token</a>
 1.	Replace **your_subscription_key** with your own subscription key and run the command in **bash**.
 
-    `curl -v -X POST "https://oxford-speech.cloudapp.net/token/issueToken" -H "Content-type: application/x-www-form-urlencoded" -d 'grant_type=client_credentials&client_id=your_subscription_key&client_secret=your_subscription_key&scope=https://speech.platform.bing.com'`
+    `curl -v -X POST "https://api.cognitive.microsoft.com/sts/v1.0/issueToken" -H "Content-type: application/x-www-form-urlencoded" -H "Ocp-Apim-Subscription-Key: your_subscription_key"`
 
-2.	Save the the string value of **access_token** in the resonse.
-    `{"access_token":"**save_this_token**","token_type":"jwt","expires_in":"600","scope":"https://speech.platform.bing.com"}`
+2.	The response is a string with the JWT access token.
+    `JWT access token`
 
 
 ### <a name="Step2">Step 2: Upload the audio binary</a>
