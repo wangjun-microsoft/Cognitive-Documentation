@@ -65,11 +65,7 @@ Name                     |Format              |Description, example and use
 Ocp-Apim-Subscription-Key|  ASCII             | Your subscription key.
 
 
-```
-```
-
-
-The expected token response is the JWT access token as text/plain
+The expected token response is the JWT access token as text/plain.
 
 The jwt token is passed to the Speech request as an HTTP request header, for example: 
 
