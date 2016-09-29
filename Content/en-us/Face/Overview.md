@@ -59,6 +59,10 @@ For more details about person identification, please refer to the API guides lis
 
 This document is targeting **Microsoft Face API** service version 1.0.
 
+### Release changes in October 2016
+
+* **Error Message Change** In [Face List - Add a Face to a Face List](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) and [Person - Add a Person Face](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b) APIs, the error message of more than 1 face in the `targetFace` changes from `There are more than 1 face in the image` to `There is more than 1 face in the image`.
+
 ### Release changes in July 2016
 
 * **Face Verification API** Face to Person object authentication is supported – previously Face Verification requests only supported Face to Face authentication. More details can be found: [Face - Verify](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a).
