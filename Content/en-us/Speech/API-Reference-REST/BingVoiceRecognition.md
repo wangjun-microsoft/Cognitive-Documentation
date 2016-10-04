@@ -91,23 +91,10 @@ The token [Base64 access_token](#TokenRespParam) requested must be passed to the
 
 `Authorization: Bearer [Base64 access_token]`
 
-A Content-Type header is **required**. The Content-Type header value specifies the audio format being uploaded. The value is a semicolon-separated list of key/value pairs that describe the audio data. For example: 
-
-`audio/wav; codec=”audio/wav”; samplerate=16000; sourcerate=8000; trustsourcerate=false`
-
 The Voice API supports audio/wav using the following codecs: 
   •  PCM single channel
   •  Siren
   •  SirenSR
-
-The **required** samplerate is the rate at which the audio data was encoded. Valid values are 8000 and 16000, which should match the value of the samplerate in the RIFF header. 
-
-The optional sourcerate is the rate at which the source data was recorded. The sourcerate value, if specified, must be greater than 0. The sourcerate defaults to 8000. 
-
-The optional trustsourcerate is an assertion by the client as to the validity of the sourcerate. If trustsourcerate=true, the audio data has been under the continuous control of the client and the sourcerate is correct. If trustsourcerate=false, the audio data has an unknown history and the sourcerate may or may not be correct. 
-
-The combination of the sourcerate and the samplerate are used to select the appropriate acoustic model. If the trustsourcerate value is specified and set to false, the sourcerate value will not be used in the determination of the appropriate acoustic model. 
-
 
 ### <a name="InputParam">Input parameters</a>
 
@@ -186,7 +173,6 @@ results: [{scenario name lexical confidence pronunciation tokens}*] // n-best li
      scenario: string // the scenario this recognition result came from. 
      name: string // formatted recognition result. Profane terms are surrounded with <profanity> tags. 
      lexical: string // text of what was spoken. Profane terms are surrounded with <profanity> tags. 
-     confidence: float // floating point number indicating the result confidence (from 0.0 to 1.0 with 1.0 being the maximum confidence level. Example: 0.876534) 
      properties: {<HIGHCONF>} 
            HIGHCONF: 1 // set when the header result is determined to be of high-confidence. 
            MIDCONF: 1 // set when the header result is determined to be of medium-confidence. 
@@ -302,7 +288,6 @@ Content-Type: application/json; charset=UTF-8
     "name":"Mc Dermant Autos",
     # The text of what was spoken
     “lexical”:”mac dermant autos”,
-    "confidence":"0.9442599",
     # Words that make up the result; a word can include a space if there
     # isn’t supposed to be a pause between words when speaking them
     "tokens":[{ 
