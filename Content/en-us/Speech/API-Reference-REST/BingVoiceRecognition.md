@@ -34,7 +34,7 @@ Weight: 90
 
 ### <a name="Introduction">1. Introduction</a>
 
-This documentation describes the Bing Voice API that exposes an HTTP interface which enables developers to transcribe and synthesize voice queries. The Bing Voice API may be used in many different contexts that need cloud-based voice recognition and synthesis capabilities. 
+This documentation describes the Bing Voice Recognition REST API that exposes an HTTP interface which enables developers to transcribe voice queries. The Bing Voice Recognition API may be used in many different contexts that need cloud-based voice recognition capabilities. 
 
 
 ### <a name="VoiceRecReq">2. Voice Recognition Request</a>
@@ -337,6 +337,8 @@ Content-Type: application/json; charset=UTF-8
 **Http/401 Unauthorized:** Will be returned if the request is not authorized. 
 
 **Http/502 BadGateway:** Will be returned when the service was unable to perform the recognition. 
+
+**Http/403 Forbidden:** Will be returned when there are issues with your authentication or quota.
 
 Example response for a voice search request submitted with a bad parameter. This is the error response format regardless of what format the user has requested. 
 
