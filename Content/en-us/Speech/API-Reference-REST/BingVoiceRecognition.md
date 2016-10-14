@@ -114,6 +114,7 @@ Name  |Format  |Description and example
 maxnbest     |     Integer    |       Maximum number of results the voice application API should return. The default is 1. The maximum is 5. **Example:** maxnbest=3   
 result.profanitymarkup     |     0/1    |      Scan the result text for words included in an offensive word list. If found, the word will be delimited by bad word tag. **Example:** result.profanity=1 (0 means off, 1 means on, default is 1.)
 
+A working code sample of REST API implementation can be found [here](https://oxfordportal.blob.core.windows.net/speech/doc/recognition/Program.cs). 
 ###  <a name="SampleVoiceRR">Example voice recognition request</a>
 
 The following is an example of a voice search request where the audio is supplied as part of a recognition request: 
