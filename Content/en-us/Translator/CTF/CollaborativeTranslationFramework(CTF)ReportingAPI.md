@@ -330,8 +330,8 @@ class SOAPMicrosoftTranslator {
         }
     }
 }
-``
-``
+
+
 try {
     //Soap WSDL Url.
     $wsdlUrl       = "http://api.microsofttranslator.com/v2/beta/ctfreporting.svc";
@@ -576,11 +576,11 @@ namespace CtfReporting
         }
     }
 }
-``                                            
+                                           
 **PHP**
 
 <?php
-``
+
 class AccessTokenAuthentication {
     /*
      * Get the access token.
