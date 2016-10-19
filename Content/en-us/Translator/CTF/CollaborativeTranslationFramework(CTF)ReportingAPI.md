@@ -109,7 +109,7 @@ The result set contains array of the **UserTranslation**. Each UserTranslation h
 **PHP**
 
 **C#**
-``
+```
 using System;
 using System.IO;
 using System.Net;
@@ -223,7 +223,8 @@ namespace CtfReporting
 **PHP**
 
 <?php
-``
+```
+```
 class AccessTokenAuthentication {
     /*
      * Get the access token.
@@ -397,7 +398,7 @@ try {
 } catch (Exception $e) {
     echo "Exception: " . $e->getMessage() . PHP_EOL;
 }
-``                                            
+```                                       
 
 
 ##GetUserTranslationCounts Method##
@@ -468,7 +469,7 @@ The result set contains array of the **UserTranslationCount**. Each UserTranslat
 PHP**
 
 **C#**
-``
+```
 using System;
 using System.IO;
 using System.Net;
@@ -752,7 +753,7 @@ try {
 } catch (Exception $e) {
     echo "Exception: " . $e->getMessage() . PHP_EOL;
 }
-``                                            
+```                                        
                                           
 
 
