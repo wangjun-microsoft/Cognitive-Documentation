@@ -142,7 +142,7 @@ it-IT|Male|"Microsoft Server Speech Text to Speech Voice (it-IT, Cosimo, Apollo)
 ja-JP|Female|"Microsoft Server Speech Text to Speech Voice (ja-JP, Ayumi, Apollo)"
 ja-JP|Male|"Microsoft Server Speech Text to Speech Voice (ja-JP, Ichiro, Apollo)"
 pt-BR|Male|"Microsoft Server Speech Text to Speech Voice (pt-BR, Daniel, Apollo)"
-ru-RU|Female|"Microsoft Server Speech Text to Speech Voice (pt-BR, Daniel, Apollo)"
+ru-RU|Female|"Microsoft Server Speech Text to Speech Voice (ru-RU, Irina, Apollo)"
 ru-RU|Male|"Microsoft Server Speech Text to Speech Voice (ru-RU, Pavel, Apollo)"
 zh-CN|Female|"Microsoft Server Speech Text to Speech Voice (zh-CN, HuihuiRUS)"
 zh-CN|Female|"Microsoft Server Speech Text to Speech Voice (zh-CN, Yaoyao, Apollo)"
