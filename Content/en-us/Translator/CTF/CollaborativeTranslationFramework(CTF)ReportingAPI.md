@@ -578,7 +578,7 @@ namespace CtfReporting
 }
 ``                                            
 **PHP**
-``
+
 <?php
 ``
 class AccessTokenAuthentication {
