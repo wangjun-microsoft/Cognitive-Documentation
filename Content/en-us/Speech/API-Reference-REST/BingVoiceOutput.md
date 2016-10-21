@@ -16,8 +16,8 @@ Weight: 180
 * [Example voice output request](#SampleVoiceOR) 
 
 [3. Voice Output Responses](#VoiceOutResponse) 
-  * [Successful recognition Response](#SuccessfulRecResponse) 
-  * [Recognition failure](#RecFailure)
+  * [Successful synthesis Response](#SuccessfulRecResponse) 
+  * [Synthesis failure](#RecFailure)
   * [Error responses](#ErrorResponse) 
 
 [4. Supported Locales and Voice Fonts](#SupLocales)  
@@ -47,7 +47,6 @@ X-Microsoft-OutputFormat     |    **1)** raw-8khz-8bit-mono-mulaw, **2)** raw-16
 X-Search-AppId     |    A GUID (hex only, no dashes)     |     An ID that uniquely identifies the client application. This can be Store ID for Apps. If one is not available, the ID may be user generated per-application.     
 X-Search-ClientID     |     A GUID (hex only, no dashes)    |    An ID that uniquely identifies application instance per-installation.     
 User-Agent     |     Application name    |     Application name is required and must be less than 255 characters.    
-X-Search-PartnerEventID     |    A GUID (hex only, no dashes)     |     Azure Offer ID is a required parameter.    
 
 
 ### <a name="InputParam">Input parameters</a>
@@ -76,7 +75,7 @@ Content-Length: 197
 
 The API response contains the audio stream and the codec and will match the requested output format.
  
-#### <a name="SuccessfulRecResponse">Succcessful recognition response</a>
+#### <a name="SuccessfulRecResponse">Succcessful synthesis response</a>
 
 Example JSON response for a successful voice search. The comments and formatting of the JSON below is for example reasons only. The real result will omit indentation spaces, smart quotes, comments, etc. 
 ```
@@ -87,9 +86,9 @@ Content-Type: audio/x-wav
 Response audio payload       
 ```
  
-#### <a name="RecFailure">Recognition failure</a>
+#### <a name="RecFailure">Synthesis failure</a>
 
-Example JSON response for a voice search query where the user’s speech could not be recognized.
+Example JSON response for a voice synthesis query failure.
 
 ```
 HTTP/1.1 400 XML parser error
