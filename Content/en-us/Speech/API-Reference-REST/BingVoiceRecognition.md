@@ -5,21 +5,21 @@ Url: Speech-api/documentation/API-Reference-REST/BingVoiceRecognition
 Weight: 90
 -->
 
-# Bing Voice Recognition API
+# Bing Speech Recognition API
 
 ### Contents
 [1. Introduction](#Introduction)  
 
-[2. Voice Recognition Request](#VoiceRecReq)
+[2. Speech Recognition Request](#VoiceRecReq)
 * [Authenticate the API call](#Authorize)
 * [Access the Speech Service Endpoint](#SpeechService)
 * [HTTP headers](#Http) 
 * [Input parameters](#InputParam) 
 * [Required parameters](#ReqParam) 
 * [Optional parameters](#OptParam) 
-* [Sample voice recognition request](#SampleVoiceRR)  
+* [Sample speech recognition request](#SampleVoiceRR)  
 
-[3. Voice Recognition Responses](#VoiceRecResponse)
+[3. Speech Recognition Responses](#VoiceRecResponse)
 * [Normal response](#NormalResponse)  
   * [Schema 1](#Schema1) 
   * [Schema 2](#Schema2) 
@@ -34,10 +34,10 @@ Weight: 90
 
 ### <a name="Introduction">1. Introduction</a>
 
-This documentation describes the Bing Voice Recognition REST API that exposes an HTTP interface which enables developers to transcribe voice queries. The Bing Voice Recognition API may be used in many different contexts that need cloud-based voice recognition capabilities. 
+This documentation describes the Bing Speech Recognition REST API that exposes an HTTP interface which enables developers to transcribe voice queries. The Bing Speech Recognition API may be used in many different contexts that need cloud-based speech recognition capabilities. 
 
 
-### <a name="VoiceRecReq">2. Voice Recognition Request</a>
+### <a name="VoiceRecReq">2. Speech Recognition Request</a>
 ### <a name="Authorize">Authenticate the API call</a>
 Every call to the Speech API requires a JWT access token. This token needs to be passed through as part of the Speech request header. The token has a expiry time of 10 minutes. 
 
@@ -80,14 +80,14 @@ The token [Base64 access_token](#TokenRespParam) requested must be passed to the
 
 `Authorization: Bearer [Base64 access_token]`
 
-The Voice API supports audio/wav using the following codecs: 
+The Speech Recognition API supports audio/wav using the following codecs: 
   •  PCM single channel
   •  Siren
   •  SirenSR
 
 ### <a name="InputParam">Input parameters</a>
 
-Inputs to the Bing Voice API are expressed as HTTP query parameters. Parameters in the POST body are treated as audio content. The following is a complete list of recognized input parameters. Unsafe characters should be escaped following the W3C URL spec ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). 
+Inputs to the Bing Speech Recognition API are expressed as HTTP query parameters. Parameters in the POST body are treated as audio content. The following is a complete list of recognized input parameters. Unsafe characters should be escaped following the W3C URL spec ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). 
 
 ### <a name="ReqParam">Required parameters</a>
 
@@ -115,9 +115,9 @@ maxnbest     |     Integer    |       Maximum number of results the voice applic
 result.profanitymarkup     |     0/1    |      Scan the result text for words included in an offensive word list. If found, the word will be delimited by bad word tag. **Example:** result.profanity=1 (0 means off, 1 means on, default is 1.)
 
 A working code sample of REST API implementation can be found [here](https://oxfordportal.blob.core.windows.net/speech/doc/recognition/Program.cs). 
-###  <a name="SampleVoiceRR">Example voice recognition request</a>
+###  <a name="SampleVoiceRR">Example speech recognition request</a>
 
-The following is an example of a voice search request where the audio is supplied as part of a recognition request: 
+The following is an example of a request where the audio is supplied as part of a recognition request: 
    
 ```
 POST /recognize?scenarios=catsearch&appid=f84e364c-ec34-4773-a783-73707bd9a585&locale=en-US&device.os=wp7&version=3.0&format=xml&requestid=1d4b6030-9099-11e0-91e4-0800200c9a66&instanceid=1d4b6030-9099-11e0-91e4-0800200c9a66 HTTP/1.1
@@ -127,7 +127,7 @@ Authorization: Bearer [Base64 access_token]
 
 (audio data)
 ```
-## <a name="VoiceRecResponse">3. Voice Recognition Responses</a>
+## <a name="VoiceRecResponse">3. Speech Recognition Responses</a>
 
 The API response is returned in JSON format. The value of the “name” tag has the post-inverse text normalization result. The value of the “lexical” tag has the pre-inverse text normalization result. 
 
