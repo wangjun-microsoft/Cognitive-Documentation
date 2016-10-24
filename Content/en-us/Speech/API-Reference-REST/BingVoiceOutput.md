@@ -25,13 +25,13 @@ Weight: 180
  
 ## <a name="Introduction">1. Introduction</a>
 
-This documentation describes the Bing Voice Output API which exposes an HTTP interface that enables developers to synthesize voice queries. The Bing Voice Output API may be used in many different contexts that need cloud-based voice recognition and synthesis capabilities.  
+This documentation describes the Bing Text to Speech API which exposes an HTTP interface that enables developers to synthesize voice queries. The Bing Text To Speech API may be used in many different contexts that need cloud-based voice recognition and synthesis capabilities.  
 
 ## <a name="VoiceSynReq">2. Voice Synthesis Request</a>
 
 Clients must use the following end-point to access the service and build voice enabled applications: [https://speech.platform.bing.com/synthesize](https://speech.platform.bing.com/synthesize) 
 
-Note! Until you have submitted your subscription key as described in [Bing Voice Recognition](./BingVoiceRecognition.md), this link will generate a 403 Response Error.
+Note! Until you have submitted your subscription key as described in [Bing Speech Recognition](./BingVoiceRecognition.md), this link will generate a 403 Response Error.
 
 The API uses HTTP POST to send audio back to the client. The maximum amount of audio returned for a given request must not exceed 15 seconds. 
  
@@ -51,7 +51,7 @@ User-Agent     |     Application name    |     Application name is required and 
 
 ### <a name="InputParam">Input parameters</a>
 
-Inputs to the Bing Voice API are expressed as HTTP query parameters. Parameters in the POST body are treated as SSML content. Refer to the W3C specifications ([http://www.w3.org/TR/speech-synthesis/](http://www.w3.org/TR/speech-synthesis/)). The following is a complete list of recognized input parameters. Unsafe characters should be escaped following the W3C URL specifications ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). 
+Inputs to the Bing Text to Speech API are expressed as HTTP query parameters. Parameters in the POST body are treated as SSML content. Refer to the W3C specifications ([http://www.w3.org/TR/speech-synthesis/](http://www.w3.org/TR/speech-synthesis/)). The following is a complete list of recognized input parameters. Unsafe characters should be escaped following the W3C URL specifications ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). 
 
 ###  <a name="SampleVoiceOR">Example voice output request</a>
 
