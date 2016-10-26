@@ -1,8 +1,8 @@
 <!-- 
-NavPath: Microsoft Translator API/Speech Translation API
+NavPath: Translator API/Speech Translation API
 LinkLabel: API Reference
 Weight: 170
-ExternalLink: https://translatorapidocs-int.azurewebsites.net/speech-translate.html
+ExternalLink: http://docs.microsofttranslator.com/speech-translate.html
 -->
 
 # API Reference
