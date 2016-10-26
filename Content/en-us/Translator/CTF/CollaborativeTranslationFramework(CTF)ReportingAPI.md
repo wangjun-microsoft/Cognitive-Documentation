@@ -1,5 +1,5 @@
 <!-- 
-NavPath: Microsoft Translator API
+NavPath: Translator API
 LinkLabel: CTF
 Weight: 100
 url:translator/documentation
