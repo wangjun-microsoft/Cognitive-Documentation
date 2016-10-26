@@ -1,8 +1,8 @@
 <!-- 
-NavPath: Microsoft Translator API/Text Translation API
+NavPath: Translator API/Text Translation API
 LinkLabel: Overview
 Weight: 160
-url:translator/documentation
+url:translator-api/documentation
 -->
 
 #Microsoft Translator Text Translation
