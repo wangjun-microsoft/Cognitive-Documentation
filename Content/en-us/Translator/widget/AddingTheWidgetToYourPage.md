@@ -1,8 +1,8 @@
 <!--
-NavPath: Microsoft Translator API/Web Widget
+NavPath: Translator API/Web Widget
 LinkLabel: Add Web Widget To Your Page
 Weight: 115
-url:translator/documentation
+url:translator-api/documentation
 -->
 
 ##Adding the Widget to your Page##
