@@ -2,7 +2,7 @@
 NavPath: Translator API/Text Translation API
 LinkLabel: Overview
 Weight: 160
-url:translator-api/documentation
+url:translator-api/documentation/Text/overview
 -->
 
 #Microsoft Translator Text Translation
