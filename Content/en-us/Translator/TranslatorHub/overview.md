@@ -1,8 +1,8 @@
 <!-- 
-NavPath: Microsoft Translator API
+NavPath: Translator API
 LinkLabel: Hub
 Weight: 130
-url:translator/documentation
+url:translator-api/documentation
 -->
 #Your world in your words
 
