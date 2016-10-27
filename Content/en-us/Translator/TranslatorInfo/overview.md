@@ -1,6 +1,6 @@
 <!--
 NavPath: Translator API
-LinkLable: Overview
+LinkLabel: Overview
 Weight: 200
 url:translator-api/documentation/TranslatorInfo/overview
 -->
