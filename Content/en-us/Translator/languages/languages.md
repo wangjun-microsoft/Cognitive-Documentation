@@ -1,8 +1,8 @@
 <!-- 
-NavPath: Microsoft Translator API
+NavPath: Translator API
 LinkLabel: Languages
 Weight: 140
-url:translator/documentation
+url:translator-api/documentation
 -->
 
 #Supported Languages
