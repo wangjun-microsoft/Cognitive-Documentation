@@ -1,8 +1,8 @@
 <!--
-NavPath: Microsoft Translator API/Web Widget
+NavPath: Translator API/Web Widget
 LinkLabel: Overview
 Weight: 120
-url:translator/documentation
+url:translator-api/documentation
 -->
 
 ##Getting Started with the Translator Web Widget##
