@@ -2,7 +2,7 @@
 NavPath: Translator API/Web Widget
 LinkLabel: Overview
 Weight: 120
-url:translator-api/documentation
+url:translator-api/documentation/widget/GettingStartedWithTheTranslatorWebWidget
 -->
 
 ##Getting Started with the Translator Web Widget##
