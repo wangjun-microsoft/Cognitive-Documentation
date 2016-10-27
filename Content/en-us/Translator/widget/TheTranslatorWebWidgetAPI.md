@@ -2,7 +2,7 @@
 NavPath: Translator API/Web Widget
 LinkLabel: Web Widget API
 Weight: 105
-url:translator-api/documentation
+url:translator-api/documentation/widget/TheTranslatorWebWidgetAPI
 -->
 
 ##Web Widget Customization API##
