@@ -2,7 +2,7 @@
 NavPath: Translator API
 LinkLabel: CTF
 Weight: 100
-url:translator-api/documentation
+url:translator-api/documentation/CTF/ReportingAPI
 -->
 
 
