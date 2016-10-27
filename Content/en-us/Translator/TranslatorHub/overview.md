@@ -2,7 +2,7 @@
 NavPath: Translator API
 LinkLabel: Hub
 Weight: 130
-url:translator-api/documentation
+url:translator-api/documentation/TranslatorHub/overview
 -->
 #Your world in your words
 
