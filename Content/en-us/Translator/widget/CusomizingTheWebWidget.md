@@ -1,8 +1,8 @@
 <!--
-NavPath: Microsoft Translator API/Web Widget
+NavPath: Translator API/Web Widget
 LinkLabel: Customizing the Web Widget
 Weight: 110
-url:translator/documentation
+url:translator-api/documentation
 -->
 
 ##Customizing the Web Widget##
