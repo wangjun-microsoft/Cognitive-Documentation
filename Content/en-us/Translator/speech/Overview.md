@@ -2,7 +2,7 @@
 NavPath: Translator API/Speech Translation API
 LinkLabel: Overview
 Weight: 180
-url:translator-api/documentation
+url:translator-api/documentation/speech/overview
 -->
 
 #Speech Translation API
