@@ -2,7 +2,7 @@
 NavPath: Translator API
 LinkLabel: Languages
 Weight: 140
-url:translator-api/documentation
+url:translator-api/documentation/languages/languages
 -->
 
 #Supported Languages
