@@ -2,7 +2,7 @@
 NavPath: Translator API/Web Widget
 LinkLabel: Add Web Widget To Your Page
 Weight: 115
-url:translator-api/documentation
+url:translator-api/documentation/widget/AddingTheWidgetToYourPage
 -->
 
 ##Adding the Widget to your Page##
