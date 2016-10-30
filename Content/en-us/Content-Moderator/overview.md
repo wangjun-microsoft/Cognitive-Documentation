@@ -5,26 +5,28 @@ Url: Content-Moderator/documentation
 Weight: 150
 -->
 
-# Content Moderator
+# Overview
+Content moderation is the process of monitoring User Generated Content (UGC) on online and social media web sites, chat and messaging platforms, and peer communication platforms to track, flag, assess and filter out offensive and unwanted content that creates risks for businesses. The content can include text, images, and videos.
 
-Welcome to Microsoft Content Moderator. This cloud-based API provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Microsoft Computer Vision algorithms can analyze visual content in different ways based on inputs and user choices.
+## Where would you use it
+Content moderation for all three types of content has several benefits.They are
 
-### Analyze an image
+- Image moderation works great for profile pictures, social media, business documents, and image sharing sites.
+- Text moderation benefits communities, family-based web sites, in-game communities, chat and messaging platforms, and user-generated content marketing.
+- Video moderation is used for video publishing sites, news sites, and video content sites, to take a few examples.
 
-As something new with the release of version 1.0, Computer Vision API offers image “tagging” based on more than 2000 recognizable objects, living beings and actions. In cases where tags may be ambiguous or not common knowledge, the API response provides “hints” to clarify the meaning of the tag in context of a known setting. Tags are not organized as a taxonomy and no inheritance hierarchies exist. A collection of content tags forms the foundation for an image “description” displayed as human readable language formatted in complete sentences. Note, that at this point English is the only supported language for image description.
+## Three ways to moderate content
+- Automated moderation applies machine learning and AI to cost-effectively moderate at scale
+- Human moderation uses teams and the community to moderate all content.
+- Hybrid moderation combines automated moderation augmented by the human-in-the-loop (human oversight).
 
-Computer Vision API will also support specialized (or domain-specific) information. Specialized information can be implemented as a stand-alone method or in combination with the "analyze" method. Specialized information is a way to break down the 86-category taxonomy into domain-specific models. Right now, we only support celebrity-recognition as a domain-specific model, but more will be added soon!  
+Microsoft Content Moderator enables all three scenarios.
 
-In addition to the new tags, descriptions and models, Computer Vision API continues to return the [taxonomy-based](./Images/86categories.md) categories defined in our previous version. These categories are organized as a [taxonomy](./Images/86categories.md) with parent/child hierarchies. They can be used alone or in combination with our new models. Among the visual categories is the adult/racy feature, which enables detection of adult and racy materials and allows for restriction of display of these types of images. The filter for adult/racy content can be set on a sliding scale to accommodate user preferences.
+## Automated moderation APIs ##
+You can subscribe to the Moderator APIs for text, images and videos to automatically moderate large amount of content cost-effectively, at scale with only a few lines of code.
 
-Computer Vision API’s algorithms extracts colors from an image. The colors are analyzed in three different contexts, foreground, background, and whole, and colors are grouped into 12 dominant accent colors (black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow). Depending on the colors in an image, simple black and white or accent colors may be returned. 
+## The human review tool ##
+The review tool enables the human-in-the-loop capability with it’s support for human review teams. You can invite other users, track pending invites, and assign permissions to your team members. It will internally call the automated moderation APIs and make the reviews available right within your web browser. The review tool currently supports image reviews, but text and videos are on the roadmap.
 
-### Generate a thumbnail
-
-A thumbnail is a small representation of a full-size image. Varied devices such as phones, tablets, and PCs create a need for different user experience (UX) layouts and thumbnail sizes. Using smart cropping, this Computer Vision API feature helps solve the problem. The algorithm analyzes the objects within the image, then crops it to fit “the region of interest” (ROI). The generated thumbnail can be presented in a different aspect ratio than that of the original image to accommodate a user’s needs. 
-
-### OCR
-
-Optical Character Recognition (OCR) is a technology that detects text content in an image and subsequently extracts the identified text into a machine-readable character stream used for search and numerous other purposes ranging from medical records to security and banking. It automatically detects the language. OCR saves time and provides convenience for users by allowing them to simply take photos of text instead of transcribing text.
-
-
+## Combining the APIs with the review tool ##
+Combine the image moderation APIs with the human review tool to quickly implement an end-to-end hybrid moderation solution for images. Use the review tool’s API to auto-moderate images in bulk and review the tagged images within the review tool. Provide your API callback point so that you get notified when the reviewers submit their decisions. This allows you to automate the post-review workflow by integrating with your own systems.
