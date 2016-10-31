@@ -1,3 +1,10 @@
+<!-- 
+NavPath: Content Moderator
+LinkLabel: Quick Start
+Url: Content-Moderator/documentation
+Weight: 151
+-->
+
 # Quick Start #
 The fastest way to explore the Content Moderator is to sign up for the review tool beta and upload either the built-in sample images or your own images. Then, start the automated moderation and review the moderation results right within your web browser. You can take actions such as changing the highlighted tags and submitting your decisions to the default workflow.
 
