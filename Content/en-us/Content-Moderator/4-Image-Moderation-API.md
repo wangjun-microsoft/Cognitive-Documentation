@@ -1,3 +1,10 @@
+<!-- 
+NavPath: Content Moderator
+LinkLabel: Image Moderation API
+Url: Content-Moderator/documentation
+Weight: 152
+-->
+
 # Image Moderation API #
 
 Using Content Moderator’s image moderation API, you can moderate images for adult and racy content, and match against custom and shared lists even when file types are changed or images are otherwise altered. You can also implement optical character recognition (OCR) and face detection.
