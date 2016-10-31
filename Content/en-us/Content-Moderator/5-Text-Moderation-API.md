@@ -34,8 +34,11 @@ Let’s look at these in greater detail.
 
 Let’s assume that the input text is: (the ‘lzay’ is intentional.)
 
-"The <a href="www.bunnies.com">qu!ck</a> brown  <a href="b.suspiciousdomain.com">f0x</a> jumps over the lzay dog www.benign.net."
-If you ask for auto-correction, the response will contain the corrected version of the text as in “The quick brown fox jumps over the lazy dog."
+	The <a href="www.bunnies.com">qu!ck</a> brown  <a href="b.suspiciousdomain.com">f0x</a> jumps over the lzay dog www.benign.net.
+
+If you ask for auto-correction, the response will contain the corrected version of the text as in:
+
+	“The quick brown fox jumps over the lazy dog."
 
 ## Profanity terms ##
 
