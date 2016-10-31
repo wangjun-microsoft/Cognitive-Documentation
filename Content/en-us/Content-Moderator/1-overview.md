@@ -5,17 +5,17 @@ Url: Content-Moderator/documentation
 Weight: 150
 -->
 
-# Overview
+# Overview #
 Content moderation is the process of monitoring User Generated Content (UGC) on online and social media web sites, chat and messaging platforms, and peer communication platforms to track, flag, assess and filter out offensive and unwanted content that creates risks for businesses. The content can include text, images, and videos.
 
-## Where would you use it
+## Where would you use it ##
 Content moderation for all three types of content has several benefits.They are
 
 - Image moderation works great for profile pictures, social media, business documents, and image sharing sites.
 - Text moderation benefits communities, family-based web sites, in-game communities, chat and messaging platforms, and user-generated content marketing.
 - Video moderation is used for video publishing sites, news sites, and video content sites, to take a few examples.
 
-## Three ways to moderate content
+## Three ways to moderate content ##
 - Automated moderation applies machine learning and AI to cost-effectively moderate at scale
 - Human moderation uses teams and the community to moderate all content.
 - Hybrid moderation combines automated moderation augmented by the human-in-the-loop (human oversight).
