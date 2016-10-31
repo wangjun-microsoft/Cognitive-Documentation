@@ -1,11 +1,11 @@
 <!-- 
 NavPath: Content Moderator
-LinkLabel: Quick Start
+LinkLabel: Review API
 Url: Content-Moderator/documentation
 Weight: 151
 -->
 
-# The Review API #
+# Review API #
 
 Once you have explored the review tool with ad-hoc file uploads, the fastest way to implement an end-to-end image moderation solution is to use the review API to integrate your content with the review tool that in turn handles both automated moderation and human reviews.
 
