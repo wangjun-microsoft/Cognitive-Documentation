@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Content Moderator
 LinkLabel: Video Moderation API
-Url: Content-Moderator/documentation
+Url: content-moderator/documentation/video-moderation-api
 Weight: 155
 -->
 
