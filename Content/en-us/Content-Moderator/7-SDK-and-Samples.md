@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Content Moderator
 LinkLabel: SDKs and Samples
-Url: Content-Moderator/documentation
+Url: content-moderator/documentation/sdk-samples
 Weight: 152
 -->
 
