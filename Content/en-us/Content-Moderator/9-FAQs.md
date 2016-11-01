@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Content Moderator
 LinkLabel: API Reference
-Url: Content-Moderator/documentation
+Url: content-moderator/documentation/faq
 Weight: 152
 -->
 
@@ -27,7 +27,7 @@ The text API will return an error code that informs that the text is longer than
 Data privacy is our top priority. Your content is your own and may not be retained by Microsoft without your consent. Microsoft uses industry-leading security measures to help protect your content.
 
 #### Can I use Content Moderator to screen for illegal child exploitation images? ####
-No. However, qualified organizations can use the PhotoDNA Cloud Service to screen for this type of content.
+No. However, qualified organizations can use the [PhotoDNA Cloud Service](https://www.microsoft.com/photodna "Microsoft PhotoDNA Cloud Service") to screen for this type of content.
 
 #### What type of content (text, images, videos) can be reviewed within the review tool? ####
 As of now, images from automated image moderation results can be reviewed and collaborated upon within the review tool.

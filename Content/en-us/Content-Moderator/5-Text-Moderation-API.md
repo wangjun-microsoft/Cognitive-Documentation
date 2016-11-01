@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Content Moderator
 LinkLabel: Text Moderation API
-Url: Content-Moderator/documentation
+Url: content-moderator/documentation/text-moderation-api
 Weight: 152
 -->
 
@@ -11,14 +11,14 @@ Using Content Moderator’s text moderation API, you can moderate text for profa
 
 ## Language detection ##
 
-The first step to using the text moderation API is to have the algorithm detect the language of the content to be moderated. The API supports more than 100 languages. The language detection operation will return language codes for the predominant language comprising the submitted text in the following format:
+The first step to using the text moderation API is to have the algorithm detect the language of the content to be moderated. The API supports more than 100 languages. The **Detect Language** operation will return language codes for the predominant language comprising the submitted text in the following format:
 {"DetectedLanguage": "eng"}
 
 ## Screening for profanity ##
 
-The text moderation API’s Screen operation does it all – screen the incoming text (maximum 1024 characters) for profanity, detect the presence of malware and phishing URLs, and PII, while matching against custom lists of terms if needed.
+The text moderation API’s **Screen** operation does it all – screen the incoming text (maximum 1024 characters) for profanity, detect the presence of malware and phishing URLs, and PII, while matching against custom lists of terms if needed.
 
-The operations response will contain one or more of these, depending on what you ask it to do:
+The response will contain one or more of these, depending on what you ask it to do:
 
 - Auto-corrected text
 - Original text
