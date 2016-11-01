@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Content Moderator
 LinkLabel: Image Moderation API
-Url: Content-Moderator/documentation
+Url: content-moderator/documentation/image-moderation-api
 Weight: 152
 -->
 
