@@ -1,15 +1,15 @@
 <!-- 
 NavPath: Content Moderator
 LinkLabel: Review API
-Url: Content-Moderator/documentation
+Url: content-moderator/documentation/review-api
 Weight: 151
 -->
 
-# Review API #
+# The Review API #
 
-Once you have explored the review tool with ad-hoc file uploads, the fastest way to implement an end-to-end image moderation solution is to use the review API to integrate your content with the review tool that in turn handles both automated moderation and human reviews.
+Once you have explored the review tool with ad-hoc file uploads, the fastest way to implement an end-to-end image moderation solution is to use the Review API to integrate your content with the review tool that in turn handles both automated moderation and human reviews.
 
-The review API has a small set of operations that use the underlying moderation APIs to moderate your content and make the tagged images available within the review tool for human review.
+The Review API has a small set of operations that use the underlying moderation APIs to moderate your content and make the tagged images available within the review tool for human review.
 
 Here is a sample sequence of steps you might follow:
 
