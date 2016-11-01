@@ -7,4 +7,4 @@ Weight: 152
 
 # API Reference #
 
-The complete API reference for the text and image moderation APIs, list management APIs, and the review API can be found in the API Reference.
+Please refer to the Content Moderator **API Reference** for text and image moderation APIs, list management APIs, and the review API.
