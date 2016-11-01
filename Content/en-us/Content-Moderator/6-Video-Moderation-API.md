@@ -15,7 +15,7 @@ The Content Moderator video moderation capability is powered by the adult conten
 
 You will need to subscribe to the Azure Media Services though, and the free tier can help you to evaluate the video moderation with your content. Depending on your volumes and purchase options, your expenses will include storage and compute costs.
 
-[Contact us](https://www.microsoft.com/en-us/Moderator/contact-us "Contact Us") if you would like to try the video moderation capability.
+[Contact us](https://cognitive.uservoice.com/ "Contact Us") if you would like to try the video moderation capability.
 
 ## Code Sample ##
 
