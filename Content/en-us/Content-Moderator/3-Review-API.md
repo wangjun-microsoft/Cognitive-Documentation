@@ -2,7 +2,7 @@
 NavPath: Content Moderator
 LinkLabel: Review API
 Url: content-moderator/documentation/review-api
-Weight: 151
+Weight: 180
 -->
 
 # The Review API #
