@@ -2,7 +2,7 @@
 NavPath: Content Moderator
 LinkLabel: Video Moderation API
 Url: content-moderator/documentation/video-moderation-api
-Weight: 155
+Weight: 150
 -->
 
 # Video Moderation API #
