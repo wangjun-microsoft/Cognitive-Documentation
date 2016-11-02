@@ -2,12 +2,12 @@
 NavPath: Content Moderator
 LinkLabel: Text Moderation API
 Url: content-moderator/documentation/text-moderation-api
-Weight: 152
+Weight: 160
 -->
 
 # Text Moderation API #
 
-Using Content Moderator’s text moderation API, you can moderate text for profanity in more than 100 languages, report on malware and phishing URLs, and match against custom and shared lists that are specific to your business and users.
+Use the Content Moderator’s [**text moderation API**](https://westus.dev.cognitive.microsoft.com/docs/services/57cf753a3f9b070c105bd2c1/operations/57cf753a3f9b070868a1f66e "Content Moderator Text Moderation API") to moderate text for profanity in more than 100 languages, report on malware and phishing URLs, and match against custom and shared lists that are specific to your business and users.
 
 ## Language detection ##
 
