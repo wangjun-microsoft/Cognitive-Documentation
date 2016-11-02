@@ -1,6 +1,6 @@
 <!-- 
 NavPath: Content Moderator
-LinkLabel: API Reference
+LinkLabel: FAQ
 Url: content-moderator/documentation/faq
 Weight: 152
 -->
