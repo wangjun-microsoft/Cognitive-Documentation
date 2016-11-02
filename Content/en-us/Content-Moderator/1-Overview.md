@@ -2,7 +2,7 @@
 NavPath: Content Moderator
 LinkLabel: Overview
 Url: Content-Moderator/documentation
-Weight: 150
+Weight: 200
 -->
 
 # Overview #
