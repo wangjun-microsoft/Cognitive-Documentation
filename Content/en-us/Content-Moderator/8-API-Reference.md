@@ -1,7 +1,9 @@
+
 <!-- 
 NavPath: Content Moderator
 LinkLabel: API Reference
 Url: content-moderator/documentation/api-reference
+ExternalLink: https://developer.microsoftmoderator.com/ 
 Weight: 152
 -->
 
