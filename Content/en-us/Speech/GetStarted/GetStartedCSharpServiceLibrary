@@ -1,6 +1,6 @@
 <!--NavPath: Bing Speech API/Speech Recognition/Service LibraryLinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpServiceLibrary
-Weight: 6-->
+Weight: 3-->
 
 # Get started with Bing Speech Recognition for services in C&#35; for .Net Windows
 Microsoft Speech Recognition Service Library can be used to do speech transcription for service clients. If you run a service which needs 
