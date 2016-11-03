@@ -1,8 +1,8 @@
 <!-- 
 NavPath: Content Moderator
-LinkLabel: API Reference
+LinkLabel: FAQ
 Url: content-moderator/documentation/faq
-Weight: 152
+Weight: 120
 -->
 
 # Frequently Asked Questions (FAQs) #
@@ -32,8 +32,8 @@ No. However, qualified organizations can use the [PhotoDNA Cloud Service](https:
 #### What type of content (text, images, videos) can be reviewed within the review tool? ####
 As of now, images from automated image moderation results can be reviewed and collaborated upon within the review tool.
 
-#### Up to how many reviews teams can a user join? Can the user switch between teams? ####
-There is no limit to the number of teams a user can join. The user can switch between teams.
+#### Up to how many review teams can a user join? Can the user switch between teams? ####
+A user can join one team at a time.
 
 #### What kind of team member roles are supported by the review tool? How are they different? ####
 The Studio currently allows assigning Administrator and Reviewer roles. The Administrators can invite other users and have access to the configuration settings while reviewers can only review moderation results and tag or untag content.
