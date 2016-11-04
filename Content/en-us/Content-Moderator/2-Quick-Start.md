@@ -13,6 +13,7 @@ Sign up to try the [**review tool**](http://contentmoderator.cognitive.microsoft
 
 ## 2. Invite team members ##
 On the opening screen after signup, name your team, and optionally, invite your colleagues by entering their email addresses. You can see the status of existing invites, cancel pending invites, and after confirmation by the invited users, you can assign them the role of an administrator (like yourself) or of a reviewer.
+![Invite team member](images/QuickStart-2.png)
 
 ## 3. Upload images ##
 Use the File Upload feature to upload a set of sample images for moderation. These can be your images, subject to size and count restrictions. You will find a link to download the sample images on the File Upload screen.
