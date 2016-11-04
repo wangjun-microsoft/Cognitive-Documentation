@@ -19,7 +19,7 @@ On the opening screen after signup, name your team, and optionally, invite your 
 ## 3. Upload images ##
 Use the File Upload feature to upload a set of sample images for moderation. These can be your images, subject to size and count restrictions. You will find a link to download the sample images on the File Upload screen.
 
-![Upload files](images/QuickStart-3.png)
+![Upload files](images/QuickStart-3.PNG)
 
 ## 4. Start automated moderation ##
 Submit your uploaded content to start the auto-moderation step. Internally, the review tool will call the moderation APIs to scan your content for built-in tags. Once the scanning is complete, you will see a message informing you about the results waiting for your review.
