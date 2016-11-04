@@ -35,7 +35,7 @@ The following samples requests show how you will use you the Client Id and Clien
 ## Request Samples ##
 
 #### CURL ####
-	curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d 'resource=http://wb-review-svc&client_id=<Your Client Id>&client_secret=<Your Client Key/Secret>&grant_type=client_credentials' "https://login.microsoftonline.com/contentmoderator.onmicrosoft.com/oauth2/token"
+	curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d 'resource=https://api.contentmoderator.cognitive.microsoft.com/review&client_id=<Your Client Id>&client_secret=<Your Client Key/Secret>&grant_type=client_credentials' "https://login.microsoftonline.com/contentmoderator.onmicrosoft.com/oauth2/token"
  
 	NodeJS Unirest
 	var unirest = require("unirest");
@@ -46,7 +46,7 @@ The following samples requests show how you will use you the Client Id and Clien
 	});
  
 	req.form({
-	  	"resource": "http://wb-review-svc",
+	  	"resource": "https://api.contentmoderator.cognitive.microsoft.com/review",
 		"client_id": "< Your Client Id >",
 		"client_secret": "< Your Client Key/Secret >",
 	  	"grant_type": "client_credentials"
@@ -60,7 +60,7 @@ The following samples requests show how you will use you the Client Id and Clien
 #### Python ####
 	import http.client
 	conn = http.client.HTTPSConnection("login.microsoftonline.com")
-	payload = "resource=http%3A%2F%2Fwb-review-svc&client_id=< Your Client Id >&client_secret=< Your Client Key/Secret >&grant_type=client_credentials"
+	payload = "resource=https%3A%2F%2Fapi.contentmoderator.cognitive.microsoft.com%2Freview&client_id=< Your Client Id >&client_secret=< Your Client Key/Secret >&grant_type=client_credentials"
 	headers = {
     	'content-type': "application/x-www-form-urlencoded"
     }
@@ -73,7 +73,7 @@ The following samples requests show how you will use you the Client Id and Clien
 	var client = new RestClient("https://login.microsoftonline.com/contentmoderator.onmicrosoft.com/oauth2/token");
 	var request = new RestRequest(Method.POST);
 	request.AddHeader("content-type", "application/x-www-form-urlencoded");
-	request.AddParameter("application/x-www-form-urlencoded", "resource=http%3A%2F%2Fwb-review-svc&client_id=< Your Client Id >&client_secret=< Your Client Key/Secret >&grant_type=client_credentials", ParameterType.RequestBody);
+	request.AddParameter("application/x-www-form-urlencoded", "resource=https%3A%2F%2Fapi.contentmoderator.cognitive.microsoft.com%2Freview&client_id=< Your Client Id >&client_secret=< Your Client Key/Secret >&grant_type=client_credentials", ParameterType.RequestBody);
 	IRestResponse response = client.Execute(request);
 
 ## Response Sample ##
@@ -83,7 +83,7 @@ The following samples requests show how you will use you the Client Id and Clien
 		"ext_expires_in": "0",
 		"expires_on": "1476491009",
 		"not_before": "1476487109",
-		"resource": "http://wb-review-svc",
+		"resource": "https://api.contentmoderator.cognitive.microsoft.com/review",
 		"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ikk2b0J3NFZ6QkhPcWxlR3JWMkFKZEE1RW1YYyIsImtpZCI6Ikk2b0J3NFZ6QkhPcWxlR3JWMkFKZEE1RW1YYyJ9.eyJhdWQiOiJodHRwOi8vd2ItcmV2aWV3LXN2YyIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0LzdjNDZiZTcwLTkyZmItNDkzMS1hNzE5LWY0MWU4NmEwMGNlOS8iLCJpYXQiOjE0NzY0ODcxMDksIm5iZiI6MTQ3NjQ4NzEwOSwiZXhwIjoxNDc2NDkxMDA5LCJhcHBpZCI6IjIxMmQyODczLTFlZDEtNDRiNi1hNGFlLTQ1MWI4MjdmODZjZCIsImFwcGlkYWNyIjoiMSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0LzdjNDZiZTcwLTkyZmItNDkzMS1hNzE5LWY0MWU4NmEwMGNlOS8iLCJ0aWQiOiI3YzQ2YmU3MC05MmZiLTQ5MzEtYTcxOS1mNDFlODZhMDBjZTkiLCJ2ZXIiOiIxLjAifQ.jiCrnPMWDT0Zq9NPNjlU02-NeTNrOv13ujPODXvJ8Bvu5tRWKj4sjdHP-ml9L1KXgMUZZ_JZ9N7_7vFuard6hGg1XRE-ZeIuCToihy3M10kwaTEnNDQI4SRmuYWZZfhbEQ8FnSB5EICZnDKS5gFswkDVaQAjPSNKgV12fjIocqTxPvUpbDLYr8SPWcYuUitj803CPIpK9necLH7Fuh1Un2N_KJ9lPxvG5pbQRdUY4BIuKhuPOyFWx0_aAOSUZQx7xGOsL9VXKWg74elYOxcXL2gbqIEy1CA_tRyKhB_pJhB_4UcWpAEeP-v8ODpXiIqHWBuOImCarquGxY6STIaV1g"
 	}
 
@@ -98,7 +98,6 @@ You can now use the token while making the review API calls by sending the acces
 ## Helpful Links ##
 [How to get an Azure AD security token](https://msdn.microsoft.com/en-us/library/partnercenter/dn974935.aspx "How to get an Azure AD token")
  
-
 
 
 
