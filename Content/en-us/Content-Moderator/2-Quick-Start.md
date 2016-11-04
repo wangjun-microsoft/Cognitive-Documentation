@@ -24,7 +24,7 @@ Use the File Upload feature to upload a set of sample images for moderation. The
 ## 4. Start automated moderation ##
 Submit your uploaded content to start the auto-moderation step. Internally, the review tool will call the moderation APIs to scan your content for built-in tags. Once the scanning is complete, you will see a message informing you about the results waiting for your review.
 
-![Moderate files](images/QuickStart-4.PNG )
+![Moderate files](images/QuickStart-4.PNG)
 
 ## 5. Review moderation results ##
 As your business application calls the Moderator API, the tagged content will start queuing up, ready to be reviewed by the human review teams. You can quickly review large volumes of content using this approach. You will be doing a few different things as part of your moderation workflow such as:
@@ -33,6 +33,8 @@ As your business application calls the Moderator API, the tagged content will st
 - Browsing the reviews on-screen
 - Reviewing moderation scores and results
 - Confirming or modifying the tags returned by the API
+
+![Review results](images/QuickStart-5.PNG)
 
 ## 6. Integrate with the review tool by using the review API ##
 Once you have explored the review tool, use the [**review API**](https://westus.dev.cognitive.microsoft.com/docs/services/580519463f9b070e5c591178/operations/580519483f9b0709fc47f9c5 "Content Moderator Review API") to integrate large number of images with the review tool in an automated way. The review API will scan your images and generate reviews in the review tool where you can resume the human review steps.
