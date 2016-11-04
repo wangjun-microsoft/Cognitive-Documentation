@@ -24,6 +24,8 @@ Use the File Upload feature to upload a set of sample images for moderation. The
 ## 4. Start automated moderation ##
 Submit your uploaded content to start the auto-moderation step. Internally, the review tool will call the moderation APIs to scan your content for built-in tags. Once the scanning is complete, you will see a message informing you about the results waiting for your review.
 
+![Moderate files](images/QuickStart-4.PNG )
+
 ## 5. Review moderation results ##
 As your business application calls the Moderator API, the tagged content will start queuing up, ready to be reviewed by the human review teams. You can quickly review large volumes of content using this approach. You will be doing a few different things as part of your moderation workflow such as:
 
