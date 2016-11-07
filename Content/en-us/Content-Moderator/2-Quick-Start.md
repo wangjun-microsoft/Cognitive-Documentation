@@ -1,11 +1,11 @@
 <!-- 
 NavPath: Content Moderator
-LinkLabel: Quick Start
+LinkLabel: Get Started
 Url: content-moderator/documentation/quickstart
 Weight: 190
 -->
 
-# Quick Start #
+# Get Started #
 Start by signing up for the [**review tool**](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool") and uploading images to explore the automated moderation and review the  results right within your web browser. You can take actions such as changing the highlighted tags and submitting your decisions to the default workflow. You can then move on to using the review API to integrate your content (images) with the tool, and finally, use the underlying moderation APIs directly for automated moderation and custom list management.
 
 ## 1. Sign up for the review tool ##
@@ -14,11 +14,17 @@ Sign up to try the [**review tool**](http://contentmoderator.cognitive.microsoft
 ## 2. Invite team members ##
 On the opening screen after signup, name your team, and optionally, invite your colleagues by entering their email addresses. You can see the status of existing invites, cancel pending invites, and after confirmation by the invited users, you can assign them the role of an administrator (like yourself) or of a reviewer.
 
+![Invite team member](images/QuickStart-2-small.png)
+
 ## 3. Upload images ##
 Use the File Upload feature to upload a set of sample images for moderation. These can be your images, subject to size and count restrictions. You will find a link to download the sample images on the File Upload screen.
 
+![Upload files](images/QuickStart-3.PNG)
+
 ## 4. Start automated moderation ##
 Submit your uploaded content to start the auto-moderation step. Internally, the review tool will call the moderation APIs to scan your content for built-in tags. Once the scanning is complete, you will see a message informing you about the results waiting for your review.
+
+![Moderate files](images/QuickStart-4.PNG)
 
 ## 5. Review moderation results ##
 As your business application calls the Moderator API, the tagged content will start queuing up, ready to be reviewed by the human review teams. You can quickly review large volumes of content using this approach. You will be doing a few different things as part of your moderation workflow such as:
@@ -27,6 +33,8 @@ As your business application calls the Moderator API, the tagged content will st
 - Browsing the reviews on-screen
 - Reviewing moderation scores and results
 - Confirming or modifying the tags returned by the API
+
+![Review results](images/QuickStart-5.PNG)
 
 ## 6. Integrate with the review tool by using the review API ##
 Once you have explored the review tool, use the [**review API**](https://westus.dev.cognitive.microsoft.com/docs/services/580519463f9b070e5c591178/operations/580519483f9b0709fc47f9c5 "Content Moderator Review API") to integrate large number of images with the review tool in an automated way. The review API will scan your images and generate reviews in the review tool where you can resume the human review steps.
