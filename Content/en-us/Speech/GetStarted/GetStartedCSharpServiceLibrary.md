@@ -8,7 +8,7 @@ Weight: 3 -->
 Microsoft Speech Recognition Service Library can be used to do speech transcription for service clients. If you run a service which needs 
 to utilize the power of Microsoft Speech transcription cloud, this library can be used to convert spoken language to text. 
 Develop a basic Windows application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to 
-Microsoft’s servers in the cloud. Using this Service-To-Service Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. For library api reference, see [Service Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary/docs/index.html)
+Microsoft’s servers in the cloud. Using this Service-To-Service Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. For library api reference, see [Service Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary/docs/index.html).
 
 ### Table of Contents
 * [Prerequisites](#Prerequisites)  
@@ -56,31 +56,28 @@ results and one final multiple N-best choice result.
 ### <a name="Preferences">Preferences</a>
 To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
 that configures the behavior of the speech service. It consists of the following fields:  
-SpeechLanguage: The locale of the audio being sent to the speech service.  
-ServiceUri: The endpoint use to call the speech service.  
-AuthorizationProvider: An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the
-sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle 
+**SpeechLanguage:** The locale of the audio being sent to the speech service.  
+**ServiceUri:** The endpoint use to call the speech service.  
+**AuthorizationProvider:** An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle 
 token caching.  
-EnableAudioBuffering: An advanced option, please see [Connection Management](#connection-management)
+**EnableAudioBuffering:** An advanced option, please see [Connection Management](#connection-management)
 
 ### SpeechInput
 The SpeechInput object consists of 2 fields:-     
-Audio: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any [Stream](https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) that supports reading. **Note**: the SDK detects the end of of the stream when it the stream returns **0** when attempting to read from it.  
-RequestMetadata: Metadata about the speech request. For more details refer to the documentation.
+**Audio:** A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any [Stream](https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) that supports reading. **Note**: the SDK detects the end of of the stream when it the stream returns **0** when attempting to read from it.  
+**RequestMetadata:** Metadata about the speech request. For more details refer to the documentation.
 
 ### Using SpeechClient to make a request
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.   
 ```csharp var task = speechClient.RecognizeAsync(speechInput);  
-```The task returned by RecognizeAsync completes once the request completes. 
-last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails 
-unexpectedly.
+```The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails unexpectedly.
 
 ### Events
 #### Partial Results Event:
 This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finish transferring data (if you are using the Data Client). You can subscribe to the event using 
-```csharp SpeechClient.SubscribeToPartialResult();
-```Or use the generic events subscription method
-```csharp SpeechClient.SubscribeTo<RecognitionPartialResult>();
+```csharp SpeechClient.SubscribeToPartialResult();  
+```Or use the generic events subscription method  
+```csharp SpeechClient.SubscribeTo<RecognitionPartialResult>();  
 ``` **Return format** |  Description | ------|------ **LexicalForm** |  This form is optimal for use by applications that need raw,
 unprocessed speech recognition results. **DisplayText**  |  The recognized phrase with inverse text normalization, capitalization, 
 punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is 
