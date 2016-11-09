@@ -13,9 +13,9 @@ Microsoft’s servers in the cloud. Using this Service-To-Service Library allows
 ### Table of Contents
 * [Prerequisites](#Prerequisites)  
 * [Step 1: Install the example application](#Step-1)  
-* [Step 2: Build the example application](#Step-2)
-* [Step 3: Run the example application](#Step-3)
-* [Supported Audio formats](#Supported-Audio-formats)
+* [Step 2: Build the example application](#Step-2)  
+* [Step 3: Run the example application](#Step-3)  
+* [Supported Audio formats](#Supported-Audio-formats)  
 * [Advanced](#Advanced)
 
 ### <a name="Prerequisites">Prerequisites</a>
@@ -32,17 +32,17 @@ Before creating the example, you must subscribe to Speech API which is part of M
 Both the primary and secondary key can be used in this tutorial.
 
 ### <a name="Step1">Step 1: Install the example application.
-1. Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.
+1. Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.  
 2. Double-click to open the Visual Studio 2015 Solution (.sln) file named **SpeechClient.sln**. This will open the solution in Visual Studio.
-### <a name="Step2"> Step 2: Build the example application. 
+### <a name="Step2"> Step 2: Build the example application.   
 Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build Solution**.
-### <a name="Step3">Step 3: Run the example application.
-1. After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.
-2. Open the output directory for the sample (**SpeechClientSample\bin\Debug**),press **Shift+Right Click**, press **Open command window here**.
-3. Run **SpeechClientSample.exe** with the following arguments: 
-Arg[0]: Specify an input audio wav file.  
-Arg[1]: Specify the audio locale.  
-Arg[2]: Specify the subscription key to access the Speech Recognition Service.
+### <a name="Step3">Step 3: Run the example application.  
+1. After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.  
+2. Open the output directory for the sample (**SpeechClientSample\bin\Debug**),press **Shift+Right Click**, press **Open command window here**.  
+3. Run **SpeechClientSample.exe** with the following arguments:   
+Arg[0]: Specify an input audio wav file.    
+Arg[1]: Specify the audio locale.    
+Arg[2]: Specify the subscription key to access the Speech Recognition Service.  
 
 ### Supported Audio formats
 The Voice API supports audio/wav using the following codecs: 
