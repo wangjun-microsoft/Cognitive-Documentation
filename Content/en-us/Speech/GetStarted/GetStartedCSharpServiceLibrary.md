@@ -73,10 +73,10 @@ unexpectedly.
 ### Events* 
 #### Partial Results Event:This event gets called every time the Speech Recognition Server has an idea of what the
 speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finish
-transferring data (if you are using the Data Client).You can subscribe to the event using 
-```csharpSpeechClient.SubscribeToPartialResult()
+transferring data (if you are using the Data Client). You can subscribe to the event using 
+```csharpSpeechClient.SubscribeToPartialResult();
 ```Or use the generic events subscription method
-```csharpSpeechClient.SubscribeTo<RecognitionPartialResult>()
+```csharpSpeechClient.SubscribeTo<RecognitionPartialResult>();
 ``` **Return format** |  Description | ------|------ **LexicalForm** |  This form is optimal for use by applications that need raw,
 unprocessed speech recognition results. **DisplayText**  |  The recognized phrase with inverse text normalization, capitalization, 
 punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is 
@@ -88,10 +88,10 @@ Recognition Server.**MediaTime** | The current time relative to the start of the
 #### Result Event:When you have finished speaking (in ShortPhrase mode), this event is called. You will be provided with n-best 
 choices for the result. In LongDictation mode, t
 he event can be called multiple times, based on where the server thinks sentence 
-pauses are.You can subscribe to the event using
-```csharpSpeechClient.SubscribeToRecognitionResult()
+pauses are. You can subscribe to the event using
+```csharpSpeechClient.SubscribeToRecognitionResult();
 ```OrUse the generic events subscription method
-```csharpSpeechClient.SubscribeTo<RecognitionResult>()
+```csharpSpeechClient.SubscribeTo<RecognitionResult>();
 ```**Return format** | Description |------|------**RecognitionStatus**|
 The status on how the recognition was produced.  For example, was it produced as a result of successful recognition, or as a result of 
 canceling the connection, etc..**Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the 
@@ -105,12 +105,3 @@ buffer that it uses to buffer the audio and clears the buffer as it received Rec
 ### Buffering BehaviorBy default, the SDK buffers audio so it can recover when a network interrupt occurs. In some scenario where it i
 preferable to discard the audio lost during the network disconnect and restart the connection where the stream at due to performance 
 considerations, it is best to disable audio buffering by setting **EnableAudioBuffering** in the Preferences object to **false**.
-
-
-
-
-
-
-
-
-
