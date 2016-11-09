@@ -1,4 +1,4 @@
-
+y
 .<!-- NavPath: Bing Speech API/Speech Recognition/Service Library
 LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpServiceLibrary
@@ -27,7 +27,7 @@ The below example has been developed for the .NET 4.5+ Framework using [Visual S
 The library is available through a [Nuget Package].(https://www.nuget.org/packages/Microsoft.Bing.Speech/2.0.1)
 You may clone the sample through [Github](https://github.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary). 
 
-* #### Subscribe to Speech API and get a free trial subscription ke
+* #### Subscribe to Speech API and get a free trial subscription key
 Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). 
 Both the primary and secondary key can be used in this tutorial.
 
@@ -48,15 +48,15 @@ Arg[2]: Specify the subscription key to access the Speech Recognition Service.
 The Voice API supports audio/wav using the following codecs: 
 * PCM single channel * Siren * SirenSR
 
-### Recognition Modes*
+### Recognition Modes
 **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial 
 results and one final multiple N-best choice result.
 **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
 ### <a name="Preferences">Preferences</a>
 To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
-that configures the behavior of the speech service. It consists of the following fields:- SpeechLanguage: The locale of the audio being
-sent to the speech service.
+that configures the behavior of the speech service. It consists of the following fields:
+SpeechLanguage: The locale of the audio being sent to the speech service.
 ServiceUri: The endpoint use to call the speech service.
 AuthorizationProvider: An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the
 sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle 
