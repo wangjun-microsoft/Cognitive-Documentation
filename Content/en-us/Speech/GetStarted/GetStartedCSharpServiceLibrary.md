@@ -11,8 +11,8 @@ Develop a basic Windows application that uses Bing Speech Recognition API to con
 Microsoft’s servers in the cloud. Using this Service-To-Service Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. For library api reference, see [Service Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary/docs/index.html)
 
 ### Table of Contents
-* [Prerequisites](#Prerequisites)_
-* [Step 1: Install the example application](#Step-1)_
+* [Prerequisites](#Prerequisites)  
+* [Step 1: Install the example application](#Step-1)  
 * [Step 2: Build the example application](#Step-2)
 * [Step 3: Run the example application](#Step-3)
 * [Supported Audio formats](#Supported-Audio-formats)
