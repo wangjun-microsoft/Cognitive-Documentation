@@ -1,4 +1,4 @@
-<!-- NavPath: Bing Speech API/Speech Recognition/Service Library
+.<!-- NavPath: Bing Speech API/Speech Recognition/Service Library
 LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpServiceLibrary
 Weight: 3 -->
@@ -23,16 +23,16 @@ The below example has been developed for the .NET 4.5+ Framework using [Visual S
 (https://www.visualstudio.com/products/visual-studio-community-vs).
 
 * #### Get the service library and example
-The library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/2.0.1)
+The library is available through a [Nuget Package].(https://www.nuget.org/packages/Microsoft.Bing.Speech/2.0.1)
 You may clone the sample through [Github](https://github.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary). 
 
 * #### Subscribe to Speech API and get a free trial subscription ke
 Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). 
 Both the primary and secondary key can be used in this tutorial.
+
 ### <a name="Step1">Step 1: Install the example application
 1. Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.
-2. Double-click to open the Visual Studio 2015 Solution (.sln) file named **SpeechClient.sln**. This will open the solution in 
-Visual Studio.
+2. Double-click to open the Visual Studio 2015 Solution (.sln) file named **SpeechClient.sln**. This will open the solution in Visual Studio.
 ### <a name="Step2"> Step 2: Build the example application1. Press Ctrl+Shift+B, or click **Build** on the ribbon menu, 
 then select **Build Solution**.
 ### <a name="Step3">Step 3: Run the example application
