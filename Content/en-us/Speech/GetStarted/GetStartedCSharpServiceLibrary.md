@@ -52,7 +52,8 @@ The Voice API supports audio/wav using the following codecs:
 results and one final multiple N-best choice result.  
 **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
-### <a name="Preferences">Preferences</a>To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
+### <a name="Preferences">Preferences</a>  
+To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
 that configures the behavior of the speech service. It consists of the following fields:  
 **SpeechLanguage:** The locale of the audio being sent to the speech service.  
 **ServiceUri:** The endpoint use to call the speech service.  
@@ -80,12 +81,11 @@ This event gets called every time the Speech Recognition Server has an idea of w
 ``` **Return format** |  Description |  
 ------|------  
 **LexicalForm** | This form is optimal for use by applications that need raw,unprocessed speech recognition results.  
-**DisplayText** |  The recognized phrase with inverse text normalization, capitalization, 
-punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is 
-optimal for use by applications that display the speech recognition results to a user.  
+**DisplayText** |  The recognized phrase with inverse text normalization, capitalization, punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user.  
 **Confidence** | Indicates the level of confidence the recognized phrase represents the audio associated as defined by the Speech 
-Recognition Server.**MediaTime** | The current time relative to the start of the audio stream (In 100-nanosecond units of time).
-**MediaDuration** | The current phrase duration/length relative to the audio segment (In 100-nanosecond units of time).* 
+Recognition Server.  
+**MediaTime** | The current time relative to the start of the audio stream (In 100-nanosecond units of time).  
+**MediaDuration** | The current phrase duration/length relative to the audio segment (In 100-nanosecond units of time).
 
 #### Result Event:
 When you have finished speaking (in ShortPhrase mode), this event is called. You will be provided with n-best choices for the result. In LongDictation mode, the event can be called multiple times, based on where the server thinks sentence pauses are. You can subscribe to the event using
