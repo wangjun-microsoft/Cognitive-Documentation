@@ -1,12 +1,10 @@
-y
-.<!-- NavPath: Bing Speech API/Speech Recognition/Service Library
+<!-- NavPath: Bing Speech API/Speech Recognition/Service Library
 LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpServiceLibrary
 Weight: 3 -->
 
 # Get started with Bing Speech Recognition for services in C&#35; for .Net Windows
-Microsoft Speech Recognition Service Library can be used to do speech transcription for service clients. If you run a service which needs 
-to utilize the power of Microsoft Speech transcription cloud, this library can be used to convert spoken language to text. 
+Microsoft Speech Recognition Service Library can be used to do speech transcription for service clients. If you run a service which needs to utilize the power of Microsoft Speech transcription cloud, this library can be used to convert spoken language to text. 
 Develop a basic Windows application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to 
 Microsoft’s servers in the cloud. Using this Service-To-Service Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. For library api reference, see [Service Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary/docs/index.html).
 
