@@ -18,7 +18,7 @@ Microsoft’s servers in the cloud. Using this Service-To-Service Library allows
 * [Advanced](#Advanced)
 
 ### <a name="Prerequisites">Prerequisites</a>
-*#### Platform requirements
+* #### Platform requirements
 The below example has been developed for the .NET 4.5+ Framework using [Visual Studio 2015, Community Edition]
 (https://www.visualstudio.com/products/visual-studio-community-vs).
 
