@@ -1,3 +1,4 @@
+
 .<!-- NavPath: Bing Speech API/Speech Recognition/Service Library
 LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpServiceLibrary
@@ -30,12 +31,12 @@ You may clone the sample through [Github](https://github.com/Microsoft/Cognitive
 Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). 
 Both the primary and secondary key can be used in this tutorial.
 
-### <a name="Step1">Step 1: Install the example application
+### <a name="Step1">Step 1: Install the example application.
 1. Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.
 2. Double-click to open the Visual Studio 2015 Solution (.sln) file named **SpeechClient.sln**. This will open the solution in Visual Studio.
-### <a name="Step2"> Step 2: Build the example application1. Press Ctrl+Shift+B, or click **Build** on the ribbon menu, 
-then select **Build Solution**.
-### <a name="Step3">Step 3: Run the example application
+### <a name="Step2"> Step 2: Build the example application. 
+Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build Solution**.
+### <a name="Step3">Step 3: Run the example application.
 1. After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.
 2. Open the output directory for the sample (**SpeechClientSample\bin\Debug**),press **Shift+Right Click**, press **Open command window here**.
 3. Run **SpeechClientSample.exe** with the following arguments: 
@@ -47,7 +48,7 @@ Arg[2]: Specify the subscription key to access the Speech Recognition Service.
 The Voice API supports audio/wav using the following codecs: 
 * PCM single channel * Siren * SirenSR
 
-### Recognition Modes* 
+### Recognition Modes*
 **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial 
 results and one final multiple N-best choice result.
 **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
