@@ -50,27 +50,27 @@ The Voice API supports audio/wav using the following codecs:
 
 ### Recognition Modes
 **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial 
-results and one final multiple N-best choice result.
+results and one final multiple N-best choice result.  
 **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
 ### <a name="Preferences">Preferences</a>
 To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
-that configures the behavior of the speech service. It consists of the following fields:
-SpeechLanguage: The locale of the audio being sent to the speech service.
-ServiceUri: The endpoint use to call the speech service.
+that configures the behavior of the speech service. It consists of the following fields:  
+SpeechLanguage: The locale of the audio being sent to the speech service.  
+ServiceUri: The endpoint use to call the speech service.  
 AuthorizationProvider: An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the
 sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle 
-token caching.  
+token caching.  
 EnableAudioBuffering: An advanced option, please see [Connection Management](#connection-management)
 
 ### SpeechInput
-The SpeechInput object consists of 2 fields:- 
-Audio: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any [Stream](https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) that supports reading. **Note**: the SDK detects the end of of the stream when it the stream returns **0** when attempting to read from it.
+The SpeechInput object consists of 2 fields:-     
+Audio: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any [Stream](https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) that supports reading. **Note**: the SDK detects the end of of the stream when it the stream returns **0** when attempting to read from it.  
 RequestMetadata: Metadata about the speech request. For more details refer to the documentation.
 
 ### Using SpeechClient to make a request
-Once you have instantiated a SpeechClient ans SpeechInput objects, use RecognizeAsync to make a request to the speech service. 
-```charp var task = speechClient.RecognizeAsync(speechInput);
+Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.   
+```csharp var task = speechClient.RecognizeAsync(speechInput);  
 ```The task returned by RecognizeAsync completes once the request completes. 
 last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails 
 unexpectedly.
