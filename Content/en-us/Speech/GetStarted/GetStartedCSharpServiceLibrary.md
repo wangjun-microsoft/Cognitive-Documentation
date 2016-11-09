@@ -13,7 +13,7 @@ Microsoft’s servers in the cloud. Using this Service-To-Service Library allows
 * [Prerequisites](#Prerequisites)
 * [Step 1: Install the example application](#Step-1)
 * [Step 2: Build the example application](#Step-2)
-* [Step 3: Run the example application](#Step-3:-Run-the-example-application)
+* [Step 3: Run the example application](#Step-3)
 * [Supported Audio formats](#Supported-Audio-formats)
 * [Advanced](#Advanced)
 
