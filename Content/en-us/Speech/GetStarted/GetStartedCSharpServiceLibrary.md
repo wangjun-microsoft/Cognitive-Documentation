@@ -24,7 +24,7 @@ The below example has been developed for the .NET 4.5+ Framework using [Visual S
 (https://www.visualstudio.com/products/visual-studio-community-vs).
 
 * #### Get the service library and example
-The library is available through a [Nuget Package].(https://www.nuget.org/packages/Microsoft.Bing.Speech/2.0.1)
+The library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/2.0.1).
 You may clone the sample through [Github](https://github.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary). 
 
 * #### Subscribe to Speech API and get a free trial subscription key
@@ -75,10 +75,9 @@ Once you have instantiated a SpeechClient ans SpeechInput objects, use Recognize
 last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails 
 unexpectedly.
 
-### Events* 
-#### Partial Results Event:This event gets called every time the Speech Recognition Server has an idea of what the
-speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finish
-transferring data (if you are using the Data Client). You can subscribe to the event using 
+### Events
+#### Partial Results Event:
+This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finish transferring data (if you are using the Data Client). You can subscribe to the event using 
 ```csharp SpeechClient.SubscribeToPartialResult();
 ```Or use the generic events subscription method
 ```csharp SpeechClient.SubscribeTo<RecognitionPartialResult>();
@@ -90,24 +89,22 @@ optimal for use by applications that display the speech recognition results to a
 Recognition Server.**MediaTime** | The current time relative to the start of the audio stream (In 100-nanosecond units of time).
 **MediaDuration** | The current phrase duration/length relative to the audio segment (In 100-nanosecond units of time).* 
 
-#### Result Event:When you have finished speaking (in ShortPhrase mode), this event is called. You will be provided with n-best 
-choices for the result. In LongDictation mode, t
-he event can be called multiple times, based on where the server thinks sentence 
-pauses are. You can subscribe to the event using
-```csharpSpeechClient.SubscribeToRecognitionResult();
-```OrUse the generic events subscription method
-```csharpSpeechClient.SubscribeTo<RecognitionResult>();
+#### Result Event:
+When you have finished speaking (in ShortPhrase mode), this event is called. You will be provided with n-best choices for the result. In LongDictation mode, the event can be called multiple times, based on where the server thinks sentence pauses are. You can subscribe to the event using
+```csharp SpeechClient.SubscribeToRecognitionResult();
+```Or Use the generic events subscription method
+```csharp SpeechClient.SubscribeTo<RecognitionResult>();
 ```**Return format** | Description |------|------**RecognitionStatus**|
 The status on how the recognition was produced.  For example, was it produced as a result of successful recognition, or as a result of 
 canceling the connection, etc..**Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the 
-above table for phrase format.## Advanced### Connection ManagementThe APIs utilizes a single web-socket connection per request. 
-For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last
-RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 
-1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. 
+above table for phrase format.
+
+### <a name="Advanced">Advanced</a>
+### Connection Management
+The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. 
 **Note** that the SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal 
 buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
 
-### Buffering 
-BehaviorBy default, the SDK buffers audio so it can recover when a network interrupt occurs. In some scenario where it i
-preferable to discard the audio lost during the network disconnect and restart the connection where the stream at due to performance 
+### Buffering Behavior
+By default, the SDK buffers audio so it can recover when a network interrupt occurs. In some scenario where it is preferable to discard the audio lost during the network disconnect and restart the connection where the stream at due to performance 
 considerations, it is best to disable audio buffering by setting **EnableAudioBuffering** in the Preferences object to **false**.
