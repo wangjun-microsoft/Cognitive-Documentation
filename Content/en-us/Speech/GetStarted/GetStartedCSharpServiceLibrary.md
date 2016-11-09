@@ -75,7 +75,7 @@ unexpectedly.
 speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finish
 transferring data (if you are using the Data Client).You can subscribe to the event using 
 ```csharpSpeechClient.SubscribeToPartialResult()
-Or use the generic events subscription method
+```Or use the generic events subscription method
 ```csharpSpeechClient.SubscribeTo<RecognitionPartialResult>()
 ``` **Return format** |  Description | ------|------ **LexicalForm** |  This form is optimal for use by applications that need raw,
 unprocessed speech recognition results. **DisplayText**  |  The recognized phrase with inverse text normalization, capitalization, 
@@ -91,7 +91,8 @@ he event can be called multiple times, based on where the server thinks sentence
 pauses are.You can subscribe to the event using
 ```csharpSpeechClient.SubscribeToRecognitionResult()
 ```OrUse the generic events subscription method
-```csharpSpeechClient.SubscribeTo<RecognitionResult>()```**Return format** | Description |------|------**RecognitionStatus**|
+```csharpSpeechClient.SubscribeTo<RecognitionResult>()
+```**Return format** | Description |------|------**RecognitionStatus**|
 The status on how the recognition was produced.  For example, was it produced as a result of successful recognition, or as a result of 
 canceling the connection, etc..**Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the 
 above table for phrase format.## Advanced### Connection ManagementThe APIs utilizes a single web-socket connection per request. 
