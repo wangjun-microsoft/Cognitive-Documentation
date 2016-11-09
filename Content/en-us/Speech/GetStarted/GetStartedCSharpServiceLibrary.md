@@ -68,15 +68,15 @@ The SpeechInput object consists of 2 fields:-
 
 ### Using SpeechClient to make a request
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.  
-**var task = speechClient.RecognizeAsync(speechInput);**
+**var task = speechClient.RecognizeAsync(speechInput);**  
 The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails unexpectedly.
 
 ### Events
 #### Partial Results Event:
 This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finish transferring data (if you are using the Data Client). You can subscribe to the event using  
-**SpeechClient.SubscribeToPartialResult();  **
-Or use the generic events subscription method  
-**SpeechClient.SubscribeTo<RecognitionPartialResult>(); ** 
+**SpeechClient.SubscribeToPartialResult();**  
+Or use the generic events subscription method    
+**SpeechClient.SubscribeTo<RecognitionPartialResult>();**  
 
 **Return format** |  Description |  
 ------|------  
@@ -87,10 +87,10 @@ Or use the generic events subscription method
 **MediaDuration** | The current phrase duration/length relative to the audio segment (In 100-nanosecond units of time).
 
 #### Result Event:
-When you have finished speaking (in ShortPhrase mode), this event is called. You will be provided with n-best choices for the result. In LongDictation mode, the event can be called multiple times, based on where the server thinks sentence pauses are. You can subscribe to the event using
-**SpeechClient.SubscribeToRecognitionResult();  **
-Or Use the generic events subscription method  
-**SpeechClient.SubscribeTo<RecognitionResult>();**  
+When you have finished speaking (in ShortPhrase mode), this event is called. You will be provided with n-best choices for the result. In LongDictation mode, the event can be called multiple times, based on where the server thinks sentence pauses are. You can subscribe to the event using  
+**SpeechClient.SubscribeToRecognitionResult();**  
+Or Use the generic events subscription method    
+**SpeechClient.SubscribeTo<RecognitionResult>();**   
 
 **Return format** | Description |  
 ------|------  
