@@ -22,7 +22,8 @@ Microsoft’s servers in the cloud. Using this Service-To-Service Library allows
 The below example has been developed for the .NET 4.5+ Framework using [Visual Studio 2015, Community Edition]
 (https://www.visualstudio.com/products/visual-studio-community-vs).
 
-* #### Get the service library and exampleThe library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/2.0.1)
+* #### Get the service library and example
+The library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/2.0.1)
 You may clone the sample through [Github](https://github.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary). 
 
 * #### Subscribe to Speech API and get a free trial subscription ke
