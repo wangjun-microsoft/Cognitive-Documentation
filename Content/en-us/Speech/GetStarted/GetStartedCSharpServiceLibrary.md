@@ -7,48 +7,52 @@ Weight: 3 -->
 Microsoft Speech Recognition Service Library can be used to do speech transcription for service clients. If you run a service which needs 
 to utilize the power of Microsoft Speech transcription cloud, this library can be used to convert spoken language to text. 
 Develop a basic Windows application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to 
-Microsoft’s servers in the cloud. Using the Service-To-Service Library allows for real-time streaming, which means that at the same time 
-your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. 
-For library api reference, see [Service Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary/docs/index.html)
+Microsoft’s servers in the cloud. Using this Service-To-Service Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. For library api reference, see [Service Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary/docs/index.html)
 
-.## Table of Contents* 
-[Prerequisites](#Prerequisites)* 
-[Step 1: Install the example application](#Step-1:-Install-the-example-application)* 
-[Step 2: Build the example application](#Step-2:-Build-the-example-application)* 
-[Step 3: Run the example application](#Step-3:-Run-the-example-application)*  
-[Supported Audio formats](#Supported-Audio-formats)* 
-[Advanced](#Advanced)### Prerequisites* 
+### Table of Contents
+* [Prerequisites](#Prerequisites)
+* [Step 1: Install the example application](#Step-1:-Install-the-example-application)
+* [Step 2: Build the example application](#Step-2:-Build-the-example-application)
+* [Step 3: Run the example application](#Step-3:-Run-the-example-application)
+* [Supported Audio formats](#Supported-Audio-formats)
+* [Advanced](#Advanced)
 
-### Platform requirements
+### <a name="Prerequisites">Prerequisites</a>
+* #### Platform requirements
 The below example has been developed for the .NET 4.5+ Framework using [Visual Studio 2015, Community Edition]
-(https://www.visualstudio.com/products/visual-studio-community-vs).* 
-#### Get the service library and exampleThe library is available through a 
-[Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/2.0.1)
+(https://www.visualstudio.com/products/visual-studio-community-vs).
+
+* #### Get the service library and exampleThe library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/2.0.1)
 You may clone the sample through [Github](https://github.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary). 
-* #### Subscribe to Speech API and get a free trial subscription keyBefore creating the example, you must subscribe to Speech API 
-which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, 
-see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). 
-Both the primary and secondary key can be used in this tutorial.### Step 1: Install the example application1. 
-Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.
-3. Double-click to open the Visual Studio 2015 Solution (.sln) file named **SpeechClient.sln**. This will open the solution in 
-Visual Studio.### Step 2: Build the example application1. Press Ctrl+Shift+B, or click **Build** on the ribbon menu, 
-then select **Build Solution**.### Step 3: Run the example application1. After the build is complete, press **F5** 
-or click **Start** on the ribbon menu to run the example.2.  Open the output directory for the sample 
-(**SpeechClientSample\bin\Debug**),press **Shift+Right Click**, press **Open command window here**.
+
+* #### Subscribe to Speech API and get a free trial subscription ke
+Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). 
+Both the primary and secondary key can be used in this tutorial.
+### <a name="Step1">Step 1: Install the example application
+1. Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.
+2. Double-click to open the Visual Studio 2015 Solution (.sln) file named **SpeechClient.sln**. This will open the solution in 
+Visual Studio.
+### <a name="Step2"> Step 2: Build the example application1. Press Ctrl+Shift+B, or click **Build** on the ribbon menu, 
+then select **Build Solution**.
+### <a name="Step3">Step 3: Run the example application
+1. After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.
+2. Open the output directory for the sample (**SpeechClientSample\bin\Debug**),press **Shift+Right Click**, press **Open command window here**.
 3. Run **SpeechClientSample.exe** with the following arguments: 
-Arg[0]: Specify an input audio wav file.  Arg[1]: Specify the audio locale.  
+Arg[0]: Specify an input audio wav file.  
+Arg[1]: Specify the audio locale.  
 Arg[2]: Specify the subscription key to access the Speech Recognition Service.
 
-### Supported Audio formatsThe Voice API supports audio/wav using the following codecs: 
+### Supported Audio formats
+The Voice API supports audio/wav using the following codecs: 
 * PCM single channel * Siren * SirenSR
 
 ### Recognition Modes* 
 **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial 
-results and one final multiple N-best choice result.*  **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the 
-server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence
-pauses.
+results and one final multiple N-best choice result.
+**LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
-### PreferencesTo create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
+### <a name="Preferences">Preferences</a>
+To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
 that configures the behavior of the speech service. It consists of the following fields:- SpeechLanguage: The locale of the audio being
 sent to the speech service.
 ServiceUri: The endpoint use to call the speech service.
@@ -57,15 +61,14 @@ sample provides a Cognitive Services authorization provider, it is highly recomm
 token caching.  
 EnableAudioBuffering: An advanced option, please see [Connection Management](#connection-management)
 
-### SpeechInputThe SpeechInput object consists of 2 fields:- Audio: A stream implementation of your choice that the SDK will pull 
-audio from. Please note that this could be any [Stream](https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) 
-that supports reading. **Note**: the SDK detects the end of of the stream when it the stream returns **0** when attempting to read 
-from it.
+### SpeechInput
+The SpeechInput object consists of 2 fields:- 
+Audio: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any [Stream](https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) that supports reading. **Note**: the SDK detects the end of of the stream when it the stream returns **0** when attempting to read from it.
 RequestMetadata: Metadata about the speech request. For more details refer to the documentation.
 
-### Using SpeechClient to make a requestOnce you have instantiated a SpeechClient ans SpeechInput objects, use RecognizeAsync to 
-make a request to the speech service. 
-```charpvar task = speechClient.RecognizeAsync(speechInput);
+### Using SpeechClient to make a request
+Once you have instantiated a SpeechClient ans SpeechInput objects, use RecognizeAsync to make a request to the speech service. 
+```charp var task = speechClient.RecognizeAsync(speechInput);
 ```The task returned by RecognizeAsync completes once the request completes. 
 last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails 
 unexpectedly.
@@ -74,9 +77,9 @@ unexpectedly.
 #### Partial Results Event:This event gets called every time the Speech Recognition Server has an idea of what the
 speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finish
 transferring data (if you are using the Data Client). You can subscribe to the event using 
-```csharpSpeechClient.SubscribeToPartialResult();
+```csharp SpeechClient.SubscribeToPartialResult();
 ```Or use the generic events subscription method
-```csharpSpeechClient.SubscribeTo<RecognitionPartialResult>();
+```csharp SpeechClient.SubscribeTo<RecognitionPartialResult>();
 ``` **Return format** |  Description | ------|------ **LexicalForm** |  This form is optimal for use by applications that need raw,
 unprocessed speech recognition results. **DisplayText**  |  The recognized phrase with inverse text normalization, capitalization, 
 punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is 
@@ -102,6 +105,7 @@ RecognitionResult that it received. For example, if the audio request is 2 minut
 **Note** that the SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal 
 buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
 
-### Buffering BehaviorBy default, the SDK buffers audio so it can recover when a network interrupt occurs. In some scenario where it i
+### Buffering 
+BehaviorBy default, the SDK buffers audio so it can recover when a network interrupt occurs. In some scenario where it i
 preferable to discard the audio lost during the network disconnect and restart the connection where the stream at due to performance 
 considerations, it is best to disable audio buffering by setting **EnableAudioBuffering** in the Preferences object to **false**.
