@@ -58,7 +58,7 @@ that configures the behavior of the speech service. It consists of the following
 **SpeechLanguage:** The locale of the audio being sent to the speech service.  
 **ServiceUri:** The endpoint use to call the speech service.  
 **AuthorizationProvider:** An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle 
-token caching. 
+token caching.  
 **EnableAudioBuffering:** An advanced option, please see [Connection Management](#connection-management)
 
 ### SpeechInput
@@ -68,31 +68,31 @@ The SpeechInput object consists of 2 fields:-
 
 ### Using SpeechClient to make a request
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.  
-```csharp var task = speechClient.RecognizeAsync(speechInput);  
+var task = speechClient.RecognizeAsync(speechInput);  
 The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails unexpectedly.
 
 ### Events
 #### Partial Results Event:
 This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finish transferring data (if you are using the Data Client). You can subscribe to the event using  
-```csharp SpeechClient.SubscribeToPartialResult();  
-```Or use the generic events subscription method  
-```csharp SpeechClient.SubscribeTo<RecognitionPartialResult>();  
+SpeechClient.SubscribeToPartialResult();  
+Or use the generic events subscription method  
+SpeechClient.SubscribeTo<RecognitionPartialResult>();  
 
-``` **Return format** |  Description |  
+**Return format** |  Description |  
 ------|------  
 **LexicalForm** | This form is optimal for use by applications that need raw,unprocessed speech recognition results.  
 **DisplayText** |  The recognized phrase with inverse text normalization, capitalization, punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user.  
-**Confidence** | Indicates the level of confidence the recognized phrase represents the audio associated as defined by the Speech 
-Recognition Server.  
+**Confidence** | Indicates the level of confidence the recognized phrase represents the audio associated as defined by the Speech Recognition Server.  
 **MediaTime** | The current time relative to the start of the audio stream (In 100-nanosecond units of time).  
 **MediaDuration** | The current phrase duration/length relative to the audio segment (In 100-nanosecond units of time).
 
 #### Result Event:
 When you have finished speaking (in ShortPhrase mode), this event is called. You will be provided with n-best choices for the result. In LongDictation mode, the event can be called multiple times, based on where the server thinks sentence pauses are. You can subscribe to the event using
-```csharp SpeechClient.SubscribeToRecognitionResult();
-```Or Use the generic events subscription method
-```csharp SpeechClient.SubscribeTo<RecognitionResult>();
-```**Return format** | Description |  
+csharp SpeechClient.SubscribeToRecognitionResult();  
+Or Use the generic events subscription method  
+csharp SpeechClient.SubscribeTo<RecognitionResult>();  
+
+**Return format** | Description |  
 ------|------  
 **RecognitionStatus**|The status on how the recognition was produced.  For example, was it produced as a result of successful recognition, or as a result of canceling the connection, etc..  
 **Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the above table for phrase format.
