@@ -73,7 +73,7 @@ The task returned by RecognizeAsync completes once the request completes. The la
 
 ### Events
 #### Partial Results Event:
-This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finish transferring data (if you are using the Data Client). You can subscribe to the event using  
+This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before the user has finished speaking (if you are using the Microphone Client) or have finish transferring data (if you are using the Data Client). You can subscribe to the event using  
 **SpeechClient.SubscribeToPartialResult();**  
 Or use the generic events subscription method    
 **SpeechClient.SubscribeTo<RecognitionPartialResult>();**  
