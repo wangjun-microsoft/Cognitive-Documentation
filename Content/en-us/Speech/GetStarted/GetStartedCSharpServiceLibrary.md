@@ -68,7 +68,7 @@ The SpeechInput object consists of 2 fields:-
 
 ### Using SpeechClient to make a request
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.  
-**var task = speechClient.RecognizeAsync(speechInput);  **
+**var task = speechClient.RecognizeAsync(speechInput);**
 The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails unexpectedly.
 
 ### Events
