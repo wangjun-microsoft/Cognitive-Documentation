@@ -42,6 +42,7 @@ Arg[0]: Specify an input audio wav file.  
 Arg[1]: Specify the audio locale.    
 Arg[2]: Specify the subscription key to access the Speech Recognition Service.  
 
+
 ### Supported Audio formats
 The Voice API supports audio/wav using the following codecs: 
 * PCM single channel * Siren * SirenSR
@@ -51,13 +52,12 @@ The Voice API supports audio/wav using the following codecs:
 results and one final multiple N-best choice result.  
 **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
-### <a name="Preferences">Preferences</a>
-To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
+### <a name="Preferences">Preferences</a>To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
 that configures the behavior of the speech service. It consists of the following fields:  
 **SpeechLanguage:** The locale of the audio being sent to the speech service.  
 **ServiceUri:** The endpoint use to call the speech service.  
 **AuthorizationProvider:** An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle 
-token caching.  
+token caching. 
 **EnableAudioBuffering:** An advanced option, please see [Connection Management](#connection-management)
 
 ### SpeechInput
@@ -77,10 +77,12 @@ This event gets called every time the Speech Recognition Server has an idea of w
 ```Or use the generic events subscription method  
 ```csharp SpeechClient.SubscribeTo<RecognitionPartialResult>();  
 
-``` **Return format** |  Description | ------|------ **LexicalForm** |
-This form is optimal for use by applications that need raw,unprocessed speech recognition results. **DisplayText**  |  The recognized phrase with inverse text normalization, capitalization, 
+``` **Return format** |  Description |  
+------|------  
+**LexicalForm** | This form is optimal for use by applications that need raw,unprocessed speech recognition results.  
+**DisplayText** |  The recognized phrase with inverse text normalization, capitalization, 
 punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is 
-optimal for use by applications that display the speech recognition results to a user.
+optimal for use by applications that display the speech recognition results to a user.  
 **Confidence** | Indicates the level of confidence the recognized phrase represents the audio associated as defined by the Speech 
 Recognition Server.**MediaTime** | The current time relative to the start of the audio stream (In 100-nanosecond units of time).
 **MediaDuration** | The current phrase duration/length relative to the audio segment (In 100-nanosecond units of time).* 
@@ -90,11 +92,10 @@ When you have finished speaking (in ShortPhrase mode), this event is called. You
 ```csharp SpeechClient.SubscribeToRecognitionResult();
 ```Or Use the generic events subscription method
 ```csharp SpeechClient.SubscribeTo<RecognitionResult>();
-```**Return format** | Description |------|------**RecognitionStatus**|
-The status on how the recognition was produced.  For example, was it produced as a result of successful recognition, or as a result of 
-canceling the connection, etc..
-**Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the 
-above table for phrase format.
+```**Return format** | Description |  
+------|------  
+**RecognitionStatus**|The status on how the recognition was produced.  For example, was it produced as a result of successful recognition, or as a result of canceling the connection, etc..  
+**Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the above table for phrase format.
 
 ### <a name="Advanced">Advanced</a>
 ### Connection Management
