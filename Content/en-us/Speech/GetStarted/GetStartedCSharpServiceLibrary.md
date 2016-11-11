@@ -8,15 +8,23 @@ Microsoft Speech Recognition Service Library can be used to do speech transcript
 Develop a basic Windows application that uses Bing Speech Recognition Service Library to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using this Service-To-Service Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. For library API reference, see [Service Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary/master/docs/index.html).
 
 ### Table of Contents
-* Sample Application
+* Sample Application  
  * [Prerequisites](#Prerequisites)  
- * [Step 1: Install the example application](#Step-1)  
+ * [Step 1: Install the example application](#Step-1)    
  * [Step 2: Build the example application](#Step-2)  
  * [Step 3: Run the example application](#Step-3)  
-* Additional Usage Information
- * [Service Uri](#ServiceUri)
- * [Supported Audio formats](#Supported-Audio-formats)  
-* [Advanced](#Advanced)
+ 
+* Service Library Usage Topics  
+ * [Service Uri](#ServiceUri)  
+ * [Supported Audio formats](#Formats)  
+ * [Recognition Modes](#Modes)  
+ * [Preferences](#Preferences)
+ * [Speech Input](#Input)
+ * [Speech Request](#Request)
+ * [Speech Events](#Events)
+ * [Speech Response](#Response)
+ * [COnnection Management](#Connection)
+ * [Buffering](#Buffering)
 
 ### <a name="Prerequisites">Prerequisites</a>
 * #### Platform requirements
@@ -56,7 +64,7 @@ Long-Form  | wss://speech.platform.bing.com/api/service/recognition/continuous
 The Voice API supports audio/wav using the following codecs: 
 * PCM single channel * Siren * SirenSR
 
-### <a name="modes">Recognition Modes</a>
+### <a name="Modes">Recognition Modes</a>
 **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial 
 results and one final best result.  
 **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
@@ -70,17 +78,17 @@ that configures the behavior of the speech service. It consists of the following
 token caching.  
 **EnableAudioBuffering:** An advanced option, please see [Connection Management](#connection-management)
 
-### <a name="input">SpeechInput</a>
+### <a name="Input">Speech Input</a>
 The SpeechInput object consists of 2 fields:-     
 **Audio:** A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any [Stream](https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) that supports reading. **Note**: the SDK detects the end of of the stream when it the stream returns **0** when attempting to read from it.  
 **RequestMetadata:** Metadata about the speech request. For more details refer to the documentation.
 
-###  <a name="Request">Using SpeechClient to make a request</a>
+###  <a name="Request">Speech Request</a>
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.  
 **var task = speechClient.RecognizeAsync(speechInput);**  
 The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails unexpectedly.
 
-### <a name="Events">Events</a>
+### <a name="Events">Speech Events</a>
 #### Partial Results Event:
 This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before the user has finished speaking (if you are using the Microphone Client) or have finish transferring data (if you are using the Data Client). You can subscribe to the event using  
 **SpeechClient.SubscribeToPartialResult();**  
@@ -107,16 +115,17 @@ Or Use the generic events subscription method
 **Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the above table for phrase format.
 
 ### <a name="Response">Speech Response</a>
-...
---- Partial result received by OnPartialResult ---what--- Partial result received by OnPartialResult ---what's--- Partial result received by OnPartialResult ---whats the web--- Partial result received by OnPartialResult ---what's the weather like--- Phrase result received by OnRecognitionResult ---***** Phrase Recognition Status = [Success] ***What's the weather like? (Confidence:High)What's the weather like? (Confidence:High)
+...  
+
+--- Partial result received by OnPartialResult ---what--- Partial result received by OnPartialResult ---what's--- Partial result received by OnPartialResult ---whats the web--- Partial result received by OnPartialResult ---what's the weather like--- Phrase result received by OnRecognitionResult ---***** Phrase Recognition Status = [Success] ***What's the weather like? (Confidence:High)What's the weather like? (Confidence:High)  
+
 ...
 
-### <a name="Advanced">Advanced Topics</a>
-### Connection Management
+### <a name="Connection">Connection Management</a>
 The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. 
 **Note** that the SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal 
 buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
 
-### Buffering Behavior
+### <a name="Buffering">Buffering Behavior</a>
 By default, the SDK buffers audio so it can recover when a network interrupt occurs. In some scenario where it is preferable to discard the audio lost during the network disconnect and restart the connection where the stream at due to performance 
 considerations, it is best to disable audio buffering by setting **EnableAudioBuffering** in the Preferences object to **false**.
