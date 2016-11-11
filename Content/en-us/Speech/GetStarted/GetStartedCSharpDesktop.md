@@ -43,7 +43,7 @@ Before creating the example, you must subscribe to Speech API which is part of M
 1.	Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build Solution**.
 
 ### Step 3: Run the Example Application
-1.	After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.
+.	After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.
 2.	Locate the **Project Oxford Speech to Text** window with the **text edit box** reading **"Paste your subscription key here to start"**. Paste your subscription key into the text box as shown in below screenshot. You may choose to persist your subscription key on your PC or laptop by clicking the **Save Key** button. When you want to delete the subscription key from the system, click **Delete Key** to remove it from your PC or laptop.
 
 ![Speech Recognition paste in key](../Images/SpeechRecog_paste_key.PNG)
@@ -66,9 +66,15 @@ Long-Form	| wss://speech.platform.bing.com/api/service/recognition/continuous
 ### Supported Audio formats
 The Voice API supports audio/wav using the following codecs: 
 * PCM single channel 
-
 * Siren 
 * SirenSR
+
+<a name="RecognitionModes"></a>
+## Recognition Modes
+Each category has three recognition modes.
+*  **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final multiple N-best choice result.
+*  **LongDictation mode:** an utterance up to 2 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
+*  **Intent detection:** The server returns additional structured information about the speech input. To use Intent you will need to first train a model. See details [here](https://www.luis.ai/).
 
 <a name="Preferences"></a>
 ## Preferences 
@@ -77,13 +83,6 @@ To create a SpeechClient, you need to first create a Preferences object. The Pre
 * ServiceUri: The endpoint use to call the speech service.
 * AuthorizationProvider: An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle token caching.
 * EnableAudioBuffering: An advanced option, please see Connection Management
-
-<a name="RecognitionModes"></a>
-## Recognition Modes
-Each category has three recognition modes.
-*  **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final multiple N-best choice result.
-*  **LongDictation mode:** an utterance up to 2 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
-*  **Intent detection:** The server returns additional structured information about the speech input. To use Intent you will need to first train a model. See details [here](https://www.luis.ai/).
 
 <a name="Input"></a>
 ## Speech Input
@@ -98,7 +97,7 @@ var task = speechClient.RecognizeAsync(speechInput);
 The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition. The task can Fault if the server or the SDK fails unexpectedly.
 
 <a name="Events"></a>
-## Events
+## Speech Events
 #### Partial Results Event:
 This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finished transferring data (if you are using the Data Client).
 #### Intent Event:
