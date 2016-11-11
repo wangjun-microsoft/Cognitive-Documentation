@@ -79,27 +79,30 @@ Each category has three recognition modes.
 <a name="Preferences"></a>
 ## Preferences 
 To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters that configures the behavior of the speech service. It consists of the following fields:
-* SpeechLanguage: The locale of the audio being sent to the speech service.
-* ServiceUri: The endpoint use to call the speech service.
-* AuthorizationProvider: An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle token caching.
-* EnableAudioBuffering: An advanced option, please see Connection Management
+* **SpeechLanguage**: The locale of the audio being sent to the speech service.
+* **ServiceUri**: The endpoint use to call the speech service.
+* **AuthorizationProvider**: An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle token caching.
+* **EnableAudioBuffering**: An advanced option, please see Connection Management
 
 <a name="Input"></a>
 ## Speech Input
 The SpeechInput object consists of 2 fields:
-* Audio: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any Stream that supports reading. Note: the SDK detects the end of the stream when it the stream returns 0 when attempting to read from it.
-* RequestMetadata: Metadata about the speech request. For more details refer to the documentation.
+* **Audio**: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any Stream that supports reading. 
+  **Note**: the SDK detects the end of the stream when it the stream returns 0 when attempting to read from it.
+* **RequestMetadata**: Metadata about the speech request. For more details refer to the documentation.
 
 <a name="Request"></a>
 ## Speech Request
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.
-var task = speechClient.RecognizeAsync(speechInput);
+
+**var task = speechClient.RecognizeAsync(speechInput);**
+
 The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition. The task can Fault if the server or the SDK fails unexpectedly.
 
 <a name="Events"></a>
 ## Speech Events
 #### Partial Results Event:
-This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finished transferring data (if you are using the Data Client).
+#This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finished transferring data (if you are using the Data Client).
 #### Intent Event:
 Called on WithIntent clients (only in ShortPhrase mode) after the final reco result has been parsed into structured JSON intent.
 #### Result Event:
@@ -151,7 +154,7 @@ The APIs utilizes a single web-socket connection per request. For optimal user e
 By default, the SDK buffers audio so it can recover when a network interrupt occurs. In some scenario where it is preferable to discard the audio lost during the network disconnect and restart the connection where the stream at due to performance considerations, it is best to disable audio buffering by setting EnableAudioBuffering in the Preferences object to false.
 
 <a name="RelatedTopics"></a>
-Related Topics
+##Related Topics
 * [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
 * [Get started with Bing Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
 * [Get started with Bing Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
