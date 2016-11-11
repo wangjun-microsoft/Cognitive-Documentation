@@ -58,8 +58,7 @@ There are example audio files to be used with this example application. You find
 ## Concepts
 
 <a name="Preferences"></a>
-###Preferences 
-To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters that configures the behavior of the speech service. It consists of the following fields:
+###Preferences To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters that configures the behavior of the speech service. It consists of the following fields:
 * SpeechLanguage: The locale of the audio being sent to the speech service.
 * ServiceUri: The endpoint use to call the speech service.
 * AuthorizationProvider: An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle token caching.
@@ -83,15 +82,15 @@ The Voice API supports audio/wav using the following codecs:
 
 <a name="SpeechInput"></a>
 ###SpeechInput
-The SpeechInput object consists of 2 fields:-
-* Audio: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any Stream that supports reading. Note: the SDK detects the end of of the stream when it the stream returns 0 when attempting to read from it.
+The SpeechInput object consists of 2 fields:
+* Audio: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any Stream that supports reading. Note: the SDK detects the end of the stream when it the stream returns 0 when attempting to read from it.
 * RequestMetadata: Metadata about the speech request. For more details refer to the documentation.
 
 <a name="SpeechClient"></a>
-###Using SpeechClient to make a request
+###Using SpeechClient to Make a Request
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.
 var task = speechClient.RecognizeAsync(speechInput);
-The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails unexpectedly.
+The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition. The task can Fault if the server or the SDK fails unexpectedly.
 
 <a name="Events"></a>
 ### Events
