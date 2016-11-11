@@ -6,7 +6,7 @@ Weight: 3 -->
 # Get started with Bing Speech Recognition for services in C&#35; for .Net Windows
 Microsoft Speech Recognition Service Library can be used to do speech transcription for service clients. If you run a service which needs to utilize the power of Microsoft Speech transcription cloud, this library can be used to convert spoken language to text. 
 Develop a basic Windows application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to 
-Microsoft’s servers in the cloud. Using this Service-To-Service Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. For library api reference, see [Service Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary/master/docs/index.html).
+Microsoft’s servers in the cloud. Using this Service-To-Service Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. For library API reference, see [Service Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary/master/docs/index.html).
 
 ### Table of Contents
 * [Prerequisites](#Prerequisites)  
@@ -22,7 +22,7 @@ The below example has been developed for the .NET 4.5+ Framework using [Visual S
 (https://www.visualstudio.com/products/visual-studio-community-vs).
 
 * #### Get the service library and example
-The library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/2.0.1).
+The library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/).
 You may clone the sample through [Github](https://github.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary). 
 
 * #### Subscribe to Speech API and get a free trial subscription key
@@ -39,9 +39,16 @@ Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build S
 2. Open the output directory for the sample (**SpeechClientSample\bin\Debug**),press **Shift+Right Click**, press **Open command window here**.  
 3. Run **SpeechClientSample.exe** with the following arguments:   
 Arg[0]: Specify an input audio wav file.    
-Arg[1]: Specify the audio locale.    
-Arg[2]: Specify the subscription key to access the Speech Recognition Service.  
+Arg[1]: Specify the audio locale.  
+Arg[2]: Specify the service uri
+Arg[3]: Specify the subscription key to access the Speech Recognition Service.  
 
+### Service Uri
+**Recognition Mode** |  Service Uri |  
+------|------  
+Short-Form | wss://speech.platform.bing.com/api/service/recognition  
+Long-Form  | wss://speech.platform.bing.com/api/service/recognition/continuous
+ 
 
 ### Supported Audio formats
 The Voice API supports audio/wav using the following codecs: 
@@ -49,7 +56,7 @@ The Voice API supports audio/wav using the following codecs:
 
 ### Recognition Modes
 **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial 
-results and one final multiple N-best choice result.  
+results and one final best result.  
 **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
 ### <a name="Preferences">Preferences</a>  
