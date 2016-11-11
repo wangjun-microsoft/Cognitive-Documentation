@@ -13,6 +13,7 @@ This article describes how to install, build, and run a C# example app. It also 
 ### Table of Contents
 *	[Install, Build, and Run the Example App](#Example)
 *	[Speech Recognition Service Concepts](#Concepts)
+ * [Preferences](#Preferences)
  * [Recognition Modes](#RecognitionModes)
  *	[Supported Audio Formats](#RecognitionModes)
  *	[Events](#Events)
@@ -51,6 +52,15 @@ There are example audio files to be used with this example application. You find
 
 <a name="Concepts"></a>
 ## Concepts
+
+<a name="Preferences"></a>
+###Preferences 
+To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters that configures the behavior of the speech service. It consists of the following fields:
+* SpeechLanguage: The locale of the audio being sent to the speech service.
+* ServiceUri: The endpoint use to call the speech service.
+* AuthorizationProvider: An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle token caching.
+* EnableAudioBuffering: An advanced option, please see Connection Management
+
 <a name="RecognitionModes"></a>
 ### Recognition Modes
 Each category has three recognition modes.
@@ -62,20 +72,17 @@ Each category has three recognition modes.
 ### Supported Audio Formats
 Supported Audio formats
 The Voice API supports audio/wav using the following codecs: 
-•	PCM single channel
-•	Siren 
-•	SirenSR
+* PCM single channel
+* Siren 
+* SirenSR
 
 <a name="Events"></a>
 ### Events
-
-* ####Partial Results Event:
+* #### Partial Results Event:
 This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finished transferring data (if you are using the Data Client).
-
-* ####Intent Event:
+* #### Intent Event:
 Called on WithIntent clients (only in ShortPhrase mode) after the final reco result has been parsed into structured JSON intent.
-
-* ####Result Event:
+* #### Result Event:
 When you have finished speaking (in ShortPhrase mode), this event is called. You will be provided with n-best choices for the result. In LongDictation mode, the handler associated with this event will be called multiple times, based on where the server thinks sentence pauses are.
 
 Eventhandlers are already pointed out in the code in form of code comments.
