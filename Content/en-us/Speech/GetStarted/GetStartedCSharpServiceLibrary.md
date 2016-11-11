@@ -82,7 +82,7 @@ token caching.
 The SpeechInput object consists of 2 fields:-     
 **Audio:** A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any [Stream](https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) that supports reading. **Note**: the SDK detects the end of of the stream when it the stream returns **0** when attempting to read from it.  
 **RequestMetadata:** Metadata about the speech request. For more details refer to the documentation.
-
+ 
 ###  <a name="Request">Speech Request</a>
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.  
 **var task = speechClient.RecognizeAsync(speechInput);**  
@@ -116,16 +116,16 @@ Or Use the generic events subscription method
 
 ### <a name="Response">Speech Response</a>
 
---- Partial result received by OnPartialResult 
----what
---- Partial result received by OnPartialResult
---what's
---- Partial result received by OnPartialResult 
----whats the web
---- Partial result received by OnPartialResult 
----what's the weather like
----***** Phrase Recognition Status = [Success] 
-***What's the weather like? (Confidence:High)
+--- Partial result received by OnPartialResult  
+---what  
+--- Partial result received by OnPartialResult  
+--what's  
+--- Partial result received by OnPartialResult  
+---whats the web  
+--- Partial result received by OnPartialResult   
+---what's the weather like  
+---***** Phrase Recognition Status = [Success]   
+***What's the weather like? (Confidence:High)  
 What's the weather like? (Confidence:High)  
 
 ### <a name="Connection">Connection Management</a>
