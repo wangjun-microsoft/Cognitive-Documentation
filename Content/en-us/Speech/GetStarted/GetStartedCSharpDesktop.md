@@ -61,7 +61,6 @@ Recognition Mode	 | Service Uri |
  ------|------
 Short-Form	| wss://speech.platform.bing.com/api/service/recognition
 Long-Form	| wss://speech.platform.bing.com/api/service/recognition/continuous
-
 <a name="SupportedFormats"></a>
 ### Supported Audio formats
 The Voice API supports audio/wav using the following codecs: 
@@ -102,7 +101,7 @@ The task returned by RecognizeAsync completes once the request completes. The la
 <a name="Events"></a>
 ## Speech Events
 #### Partial Results Event:
-#This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finished transferring data (if you are using the Data Client).
+This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finished transferring data (if you are using the Data Client).
 #### Intent Event:
 Called on WithIntent clients (only in ShortPhrase mode) after the final reco result has been parsed into structured JSON intent.
 #### Result Event:
