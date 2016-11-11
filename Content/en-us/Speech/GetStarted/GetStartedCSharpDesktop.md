@@ -66,6 +66,7 @@ Long-Form	| wss://speech.platform.bing.com/api/service/recognition/continuous
 ### Supported Audio formats
 The Voice API supports audio/wav using the following codecs: 
 * PCM single channel 
+
 * Siren 
 * SirenSR
 
@@ -117,23 +118,34 @@ Eventhandlers are already pointed out in the code in form of code comments.
 
 <a name="Response"></a>
 ## Speech Response
+
 --- Partial result received by OnPartialResult
+
 ---what
+
 --- Partial result received by OnPartialResult
+
 --what's
+
 --- Partial result received by OnPartialResult
+
 ---whats the web
+
 --- Partial result received by OnPartialResult
+
 ---what's the weather like
+
 ---***** Phrase Recognition Status = [Success]
+
 ***What's the weather like? (Confidence:High)
+
 What's the weather like? (Confidence:High) 
 
 <a name="ConnectionManagement"></a>
 ###Connection Management
 The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. 
 
-Note that the SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
+*Note*: The SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
 
 <a name="Buffering"></a>
 ##Buffering
