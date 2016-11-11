@@ -1,4 +1,4 @@
-<--
+<!--
 NavPath: Bing Speech API/Speech Recognition/Client Library
 LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpDesktop
@@ -70,7 +70,7 @@ The Voice API supports audio/wav using the following codecs:
 * SirenSR
 
 <a name="Preferences"></a>
-### Preferences 
+## Preferences 
 To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters that configures the behavior of the speech service. It consists of the following fields:
 * SpeechLanguage: The locale of the audio being sent to the speech service.
 * ServiceUri: The endpoint use to call the speech service.
@@ -78,25 +78,26 @@ To create a SpeechClient, you need to first create a Preferences object. The Pre
 * EnableAudioBuffering: An advanced option, please see Connection Management
 
 <a name="RecognitionModes"></a>
-### Recognition Modes
+## Recognition Modes
 Each category has three recognition modes.
 *  **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final multiple N-best choice result.
 *  **LongDictation mode:** an utterance up to 2 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 *  **Intent detection:** The server returns additional structured information about the speech input. To use Intent you will need to first train a model. See details [here](https://www.luis.ai/).
+
 <a name="Input"></a>
-### Speech Input
+## Speech Input
 The SpeechInput object consists of 2 fields:
 * Audio: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any Stream that supports reading. Note: the SDK detects the end of the stream when it the stream returns 0 when attempting to read from it.
 * RequestMetadata: Metadata about the speech request. For more details refer to the documentation.
 
 <a name="Request"></a>
-### Speech Request
+## Speech Request
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.
 var task = speechClient.RecognizeAsync(speechInput);
 The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition. The task can Fault if the server or the SDK fails unexpectedly.
 
 <a name="Events"></a>
-### Events
+## Events
 #### Partial Results Event:
 This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finished transferring data (if you are using the Data Client).
 #### Intent Event:
@@ -127,7 +128,6 @@ Eventhandlers are already pointed out in the code in form of code comments.
 ---***** Phrase Recognition Status = [Success]
 ***What's the weather like? (Confidence:High)
 What's the weather like? (Confidence:High) 
-
 
 <a name="ConnectionManagement"></a>
 ###Connection Management
