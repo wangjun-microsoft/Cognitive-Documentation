@@ -19,16 +19,18 @@ This article describes how to install, build, and run a C# example app. It also 
  *	[SpeechInput](#SpeechInput)
  *	[SpeechClient](#SpeechClient)
  *	[Events](#Events)
- *	[Related Topics](#RelatedTopics)
+ *	[Connection Management](#ConnectionManagement)
+ *	[Buffering Behavior](#BufferingBehavior)
+*	[Related Topics](#RelatedTopics)
 
 <a name="Example">
 ## Install, Build, and Run the Example App
 ### Prerequisites
-* #### Platform requirements
+#### Platform requirements
 The below example has been developed for the .NET Framework using [Visual Studio 2015, Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs).
-* #### Get the client library and example
+#### Get the client library and example
 You may download the Speech API client library and example through  [SDK](https://github.com/microsoft/cognitive-speech-stt-windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
-* #### Subscribe to Speech API and get a free trial subscription key
+#### Subscribe to Speech API and get a free trial subscription key
 Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial.
 
 ### Step 1: Install the example application
@@ -74,6 +76,7 @@ Each category has three recognition modes.
 ### Supported Audio Formats
 Supported Audio formats
 The Voice API supports audio/wav using the following codecs: 
+
 * PCM single channel
 * Siren 
 * SirenSR
@@ -108,6 +111,14 @@ Eventhandlers are already pointed out in the code in form of code comments.
 **Inverse Text Normalization (ITN) has been applied**  |  An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that display the speech recognition results to a user.
 **InverseTextNormalizationResult**  | Inverse text normalization (ITN) converts phrases like "one two three four" to a normalized form such as "1234". Another example is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that interpret the speech recognition results as commands or perform queries based on the recognized text.
 **MaskedInverseTextNormalizationResult**  |  The recognized phrase with inverse text normalization and profanity masking applied, but no capitalization or punctuation. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user. Inverse Text Normalization (ITN) has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that use the unmasked ITN results but also need to display the command or query to the user.
+
+<a name="ConnectionManagement"></a>
+###Connection Management
+The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. Note that the SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
+
+<a name="BufferingBehavior"></a>
+###Buffering Behavior
+By default, the SDK buffers audio so it can recover when a network interrupt occurs. In some scenario where it is preferable to discard the audio lost during the network disconnect and restart the connection where the stream at due to performance considerations, it is best to disable audio buffering by setting EnableAudioBuffering in the Preferences object to false.
 
 <a name="RelatedTopics"></a>
 Related Topics
