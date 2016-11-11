@@ -14,16 +14,16 @@ Develop a basic Windows application that uses Bing Speech Recognition Service Li
  * [Step 2: Build the example application](#Step-2)  
  * [Step 3: Run the example application](#Step-3)  
  
-* Service Library Usage Topics  
+* Service Library Usage Topics
  * [Service Uri](#ServiceUri)  
  * [Supported Audio formats](#Formats)  
  * [Recognition Modes](#Modes)  
- * [Preferences](#Preferences)
- * [Speech Input](#Input)
- * [Speech Request](#Request)
- * [Speech Events](#Events)
- * [Speech Response](#Response)
- * [COnnection Management](#Connection)
+ * [Preferences](#Preferences)  
+ * [Speech Input](#Input)  
+ * [Speech Request](#Request)  
+ * [Speech Events](#Events)  
+ * [Speech Response](#Response)  
+ * [Connection Management](#Connection)  
  * [Buffering](#Buffering)
 
 ### <a name="Prerequisites">Prerequisites</a>
@@ -115,11 +115,18 @@ Or Use the generic events subscription method
 **Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the above table for phrase format.
 
 ### <a name="Response">Speech Response</a>
-...  
 
---- Partial result received by OnPartialResult ---what--- Partial result received by OnPartialResult ---what's--- Partial result received by OnPartialResult ---whats the web--- Partial result received by OnPartialResult ---what's the weather like--- Phrase result received by OnRecognitionResult ---***** Phrase Recognition Status = [Success] ***What's the weather like? (Confidence:High)What's the weather like? (Confidence:High)  
-
-...
+--- Partial result received by OnPartialResult 
+---what
+--- Partial result received by OnPartialResult
+--what's
+--- Partial result received by OnPartialResult 
+---whats the web
+--- Partial result received by OnPartialResult 
+---what's the weather like
+---***** Phrase Recognition Status = [Success] 
+***What's the weather like? (Confidence:High)
+What's the weather like? (Confidence:High)  
 
 ### <a name="Connection">Connection Management</a>
 The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. 
