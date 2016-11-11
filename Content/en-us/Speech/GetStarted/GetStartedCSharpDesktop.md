@@ -15,6 +15,8 @@ This article describes how to install, build, and run a C# example app. It also 
 *	[Speech Recognition Service Concepts](#Concepts)
  * [Recognition Modes](#RecognitionModes)
  *	[Supported Audio Formats](#RecognitionModes)
+ *	[Events](#Events)
+ *	[Related Topics](#RelatedTopics)
 
 <a name="Example">
 ## Install, Build, and Run the Example App
@@ -55,8 +57,7 @@ Each category has three recognition modes.
 *  **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final multiple N-best choice result.
 *  **LongDictation mode:** an utterance up to 2 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 *  **Intent detection:** The server returns additional structured information about the speech input. To use Intent you will need to first train a model. See details [here](https://www.luis.ai/).
-​
-52
+
 <a name="SupportedFormats"></a>
 ### Supported Audio Formats
 Supported Audio formats
@@ -65,6 +66,7 @@ The Voice API supports audio/wav using the following codecs:
 •	Siren 
 •	SirenSR
 
+<a name="Events"></a>
 ### Events
 
 * ####Partial Results Event:
@@ -86,7 +88,8 @@ Eventhandlers are already pointed out in the code in form of code comments.
 **InverseTextNormalizationResult**  | Inverse text normalization (ITN) converts phrases like "one two three four" to a normalized form such as "1234". Another example is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that interpret the speech recognition results as commands or perform queries based on the recognized text.
 **MaskedInverseTextNormalizationResult**  |  The recognized phrase with inverse text normalization and profanity masking applied, but no capitalization or punctuation. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user. Inverse Text Normalization (ITN) has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that use the unmasked ITN results but also need to display the command or query to the user.
 
-### <a name="Related">Related Topics</a>
+<a name="RelatedTopics"></a>
+Related Topics
 * [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
 * [Get started with Bing Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
 * [Get started with Bing Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
