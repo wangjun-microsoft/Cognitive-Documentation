@@ -13,8 +13,8 @@ This article describes how to install, build, and run a C# example app. It also 
 ### Table of Contents
 *	[Install, Build, and Run the Example App](#Example)
 *	[Speech Recognition Service Concepts](#Concepts)
-**	[Recognition Modes](#RecognitionModes)
-**	[Supported Audio Formats](#RecognitionModes)
+ * [Recognition Modes](#RecognitionModes)
+ *	[Supported Audio Formats](#RecognitionModes)
 
 <a name="Example">
 ## Install, Build, and Run the Example App
