@@ -1,4 +1,4 @@
---
+<--
 NavPath: Bing Speech API/Speech Recognition/Client Library
 LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpDesktop
@@ -83,7 +83,6 @@ Each category has three recognition modes.
 *  **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final multiple N-best choice result.
 *  **LongDictation mode:** an utterance up to 2 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 *  **Intent detection:** The server returns additional structured information about the speech input. To use Intent you will need to first train a model. See details [here](https://www.luis.ai/).
-
 <a name="Input"></a>
 ### Speech Input
 The SpeechInput object consists of 2 fields:
@@ -132,10 +131,12 @@ What's the weather like? (Confidence:High)
 
 <a name="ConnectionManagement"></a>
 ###Connection Management
-The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. Note that the SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
+The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. 
 
-<a name="BufferingBehavior"></a>
-###Buffering Behavior
+Note that the SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
+
+<a name="Buffering"></a>
+##Buffering
 By default, the SDK buffers audio so it can recover when a network interrupt occurs. In some scenario where it is preferable to discard the audio lost during the network disconnect and restart the connection where the stream at due to performance considerations, it is best to disable audio buffering by setting EnableAudioBuffering in the Preferences object to false.
 
 <a name="RelatedTopics"></a>
