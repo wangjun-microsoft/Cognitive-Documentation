@@ -15,7 +15,9 @@ This article describes how to install, build, and run a C# example app. It also 
 *	[Speech Recognition Service Concepts](#Concepts)
  * [Preferences](#Preferences)
  * [Recognition Modes](#RecognitionModes)
- *	[Supported Audio Formats](#RecognitionModes)
+ *	[Supported Audio Formats](#SupportedFormats)
+ *	[SpeechInput](#SpeechInput)
+ *	[SpeechClient](#SpeechClient)
  *	[Events](#Events)
  *	[Related Topics](#RelatedTopics)
 
@@ -76,13 +78,25 @@ The Voice API supports audio/wav using the following codecs:
 * Siren 
 * SirenSR
 
+<a name="SpeechInput"></a>
+###SpeechInput
+The SpeechInput object consists of 2 fields:-
+* Audio: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any Stream that supports reading. Note: the SDK detects the end of of the stream when it the stream returns 0 when attempting to read from it.
+* RequestMetadata: Metadata about the speech request. For more details refer to the documentation.
+
+<a name="SpeechClient"></a>
+###Using SpeechClient to make a request
+Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.
+var task = speechClient.RecognizeAsync(speechInput);
+The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails unexpectedly.
+
 <a name="Events"></a>
 ### Events
-* #### Partial Results Event:
+#### Partial Results Event:
 This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finished transferring data (if you are using the Data Client).
-* #### Intent Event:
+#### Intent Event:
 Called on WithIntent clients (only in ShortPhrase mode) after the final reco result has been parsed into structured JSON intent.
-* #### Result Event:
+#### Result Event:
 When you have finished speaking (in ShortPhrase mode), this event is called. You will be provided with n-best choices for the result. In LongDictation mode, the handler associated with this event will be called multiple times, based on where the server thinks sentence pauses are.
 
 Eventhandlers are already pointed out in the code in form of code comments.
