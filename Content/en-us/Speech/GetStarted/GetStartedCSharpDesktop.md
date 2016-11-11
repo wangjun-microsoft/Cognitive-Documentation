@@ -8,7 +8,7 @@ Weight: 6
 # Getting Started with Bing Speech Recognition Service Library in C&#35; for .Net Windows
 With Microsoft Speech Recognition Service Library, your service can utilize the power of Microsoft Speech transcription cloud to convert spoken language to text. This service-to-service library works in real-time so your client app can send audio to servers in the cloud and start receiving partial recognition results back simultaneously and asynchronously. For client library API reference, see the [Microsoft Bing Speech SDK](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-Windows/master/docs/SpeechSDK/index.html).
 
-This article describes how to install, build, and run a C# example app, as well as the basic concepts for using the Bing Recognition Service Library.  
+This article describes how to install, build, and run a C# example app, as well as basic concepts for using the Bing Recognition Service Library.  
 
 ### Table of Contents
 *	[Install, Build, and Run the Example App](#Example)
@@ -27,12 +27,12 @@ This article describes how to install, build, and run a C# example app, as well 
 <a name="Example">
 ## Install, Build, and Run the Example App
 ### Prerequisites
-
 #### Platform Requirements
 The below example has been developed for the .NET Framework using [Visual Studio 2015, Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs).
-#### Get the client library and example
+#### Get the Client Library and Example
 You may download the Speech API client library and example through  [SDK](https://github.com/microsoft/cognitive-speech-stt-windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
-#### Subscribe to Speech API and get a free trial subscription keyBefore creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial.
+#### Subscribe to Speech API and Get a Free Trial Subscription Key
+Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial.
 
 ### Step 1: Install the Example Application
 1.	Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.
