@@ -30,7 +30,6 @@ The below example has been developed for the .NET 4.5+ Framework using [Visual S
 #### Get the Service Library and Sample Application
 The library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/).
 You may clone the sample through [Github](https://github.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary). 
-
 #### Subscribe to Speech API and Get a Free Trial Subscription Key
 Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). 
 Both the primary and secondary key can be used in this tutorial.
@@ -78,9 +77,11 @@ token caching.
 **EnableAudioBuffering:** An advanced option, please see [Connection Management](#connection-management)
 
 ## <a name="Input">Speech Input</a>
-The SpeechInput object consists of 2 fields:-     
-**Audio:** A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any [Stream](https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) that supports reading. **Note**: the SDK detects the end of of the stream when it the stream returns **0** when attempting to read from it.  
-**RequestMetadata:** Metadata about the speech request. For more details refer to the documentation.
+The SpeechInput object consists of 2 fields:    
+#### Audio: 
+A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any [Stream](https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) that supports reading. **Note**: the SDK detects the end of of the stream when it the stream returns **0** when attempting to read from it. 
+#### RequestMetadata:
+Metadata about the speech request. For more details refer to the documentation.
  
 ##  <a name="Request">Speech Request</a>
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.  
@@ -94,7 +95,7 @@ This event gets called every time the Speech Recognition Server has an idea of w
 Or use the generic events subscription method    
 **SpeechClient.SubscribeTo<RecognitionPartialResult>();**  
 
-**Return format** |  Description |  
+**Return Format** |  Description |  
 ------|------  
 **LexicalForm** | This form is optimal for use by applications that need raw, unprocessed speech recognition results.  
 **DisplayText** |  The recognized phrase with inverse text normalization, capitalization, punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user.  
@@ -108,9 +109,9 @@ When you have finished speaking (in ShortPhrase mode), this event is called. You
 Or Use the generic events subscription method    
 **SpeechClient.SubscribeTo<RecognitionResult>();**   
 
-**Return format** | Description |  
+**Return Format** | Description |  
 ------|------  
-**RecognitionStatus**|The status on how the recognition was produced.  For example, was it produced as a result of successful recognition, or as a result of canceling the connection, etc..  
+**RecognitionStatus**|The status on how the recognition was produced.  For example, was it produced as a result of successful recognition, or as a result of canceling the connection, etc.  
 **Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the above table for phrase format.
 
 ## <a name="Response">Speech Response</a>
