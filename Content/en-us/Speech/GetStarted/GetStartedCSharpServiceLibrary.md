@@ -56,7 +56,6 @@ The Voice API supports audio/wav using the following codecs:
 * PCM single channel
 * Siren 
 * SirenSR
-
 ## <a name="Modes">Recognition Modes</a>
 **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial 
 results and one final best result.  
@@ -91,7 +90,7 @@ Or use the generic events subscription method
 **Return Format** |  Description |  
 ------|------  
 **LexicalForm** | This form is optimal for use by applications that need raw, unprocessed speech recognition results.  
-**DisplayText** |  The recognized phrase with inverse text normalization, capitalization, punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user.  
+**DisplayText** | The recognized phrase with inverse text normalization, capitalization, punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user.  
 **Confidence** | Indicates the level of confidence the recognized phrase represents the audio associated as defined by the Speech Recognition Server.  
 **MediaTime** | The current time relative to the start of the audio stream (In 100-nanosecond units of time).  
 **MediaDuration** | The current phrase duration/length relative to the audio segment (In 100-nanosecond units of time).
