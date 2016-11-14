@@ -20,8 +20,8 @@ With Microsoft Speech Recognition Service Library, your service can utilize the 
 * [Buffering](#Buffering)
 
 <a name="Sample"></a>
-## Speech Recognition Sample
-This section describes how to install, build, and run a C# example app
+## Speech Recognition Service C# Sample
+This section describes how to install, build, and run the C# sample application.
 ### Prerequisites
 #### Platform Requirements
 The below example has been developed for the .NET 4.5+ Framework using [Visual Studio 2015, Community Edition]
