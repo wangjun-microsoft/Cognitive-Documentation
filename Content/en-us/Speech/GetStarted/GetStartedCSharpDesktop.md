@@ -5,43 +5,39 @@ Url: Speech-api/documentation/GetStarted/GetStartedCSharpDesktop
 Weight: 6
 -->
 
-# Getting Started with Bing Speech Recognition Service Library in C&#35; for .Net Windows
-With Microsoft Speech Recognition Service Library, your service can utilize the power of Microsoft Speech transcription cloud to convert spoken language to text. This service-to-service library works in real-time so your client app can send audio to servers in the cloud and start receiving partial recognition results back simultaneously and asynchronously. For client library API reference, see the [Microsoft Bing Speech SDK](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-Windows/master/docs/SpeechSDK/index.html).
+# Getting Started with Bing Speech Recognition and/or Intent in C&#35; for .Net Windows
 
-This article describes how to install, build, and run a C# example app, as well as basic concepts for using the Bing Recognition Service Library.  
+Develop a basic Windows application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the Client Library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. This page describes use of the Client Library, which currently supports speech in seven languages, the example below defaults to American English, “en-US”. For client library API reference, see [Microsoft Bing Speech SDK](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-Windows/master/docs/SpeechSDK/index.html).
 
 ### Table of Contents
-*	[Install, Build, and Run the Example App](#Example)
-* [Service URI](#ServiceUri) 
- * [Supported Audio Formats](#SupportedFormats) 
-* [Recognition Modes](#RecognitionModes)
-* [Preferences](#Preferences)
-*	[Speech Input](#Input)
-*	[Speech Request](#Request)
-*	[Speech Events](#Events)
-* [Speech Response](#Response)
- *	[Connection Management](#ConnectionManagement)
-*	[Buffering](#Buffering)
+
+* [Prerequisites](#Prerequisites) 
+* [Step 1: Install the Example Application](#Step1) 
+* [Step 2: Build the Example Application](#Step2) 
+* [Step 3: Run the Example Application](#Step3) 
+* [Review and Learn](#Review) 
 *	[Related Topics](#RelatedTopics)
 
-<a name="Example">
-## Install, Build, and Run the Example App
-### Prerequisites
+<a name="Prerequisites">
+## Prerequisites
 #### Platform Requirements
 The below example has been developed for the .NET Framework using [Visual Studio 2015, Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs).
 #### Get the Client Library and Example
-You may download the Speech API client library and example through  [SDK](https://github.com/microsoft/cognitive-speech-stt-windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
+You may download the Speech API client library and example through [SDK](https://github.com/microsoft/cognitive-speech-stt-windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
 #### Subscribe to Speech API and Get a Free Trial Subscription Key
 Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial.
 
+<a name="Step1">
 ### Step 1: Install the Example Application
 1.	Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.
 2.	Browse to the folder where you saved the downloaded Speech API files. Click on **Speech**, then **Windows**, and then the **Sample-WPF** folder.
 3.	Double-click to open the Visual Studio 2015 Solution (.sln) file named **SpeechToText-WPF-Samples.sln**. This will open the solution in Visual Studio.
 
+<a name="Step2">
 ### Step 2: Build the Example Application
 1.	Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build Solution**.
 
+<a name="Step3">
 ### Step 3: Run the Example Application
 .	After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.
 2.	Locate the **Project Oxford Speech to Text** window with the **text edit box** reading **"Paste your subscription key here to start"**. Paste your subscription key into the text box as shown in below screenshot. You may choose to persist your subscription key on your PC or laptop by clicking the **Save Key** button. When you want to delete the subscription key from the system, click **Delete Key** to remove it from your PC or laptop.
@@ -51,55 +47,19 @@ Before creating the example, you must subscribe to Speech API which is part of M
 *  Using your computer’s microphone, or an attached microphone, to capture speech.
 *  Playing an audio file.
 
+Each category has three recognition modes.
+* *ShortPhrase Mode*: An utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final multiple N-best choice result.
+* *LongDictation Mode*: An utterance up to 2 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
+* *Intent Detection*: The server returns additional structured information about the speech input. To use Intent you will need to first train a model. See details [here](https://www.luis.ai/).
+
 There are example audio files to be used with this example application. You find the files in the repository you downloaded with this example under **SpeechToText**, in the **Windows** folder, under **samples**, in the **SpeechRecognitionServiceExample** folder. These example audio files will run automatically if no other files are chosen when selecting the **Use wav file for Shortphrase mode** or **Use wav file for Longdictation mode** as your speech input. Currently only wav and MP4 audio formats are supported.
 
 ![Speech to Text Interface](../Images/HelloJones.PNG)
 
-<a name="ServiceUri"></a>
-## Service Uri
-Recognition Mode	 | Service Uri |
- ------|------
-Short-Form	| wss://speech.platform.bing.com/api/service/recognition
-Long-Form	| wss://speech.platform.bing.com/api/service/recognition/continuous
-<a name="SupportedFormats"></a>
-### Supported Audio formats
-The Voice API supports audio/wav using the following codecs: 
-* PCM single channel 
-* Siren 
-* SirenSR
+<a name="Review"></a>
+## Review and Learn
 
-<a name="RecognitionModes"></a>
-## Recognition Modes
-Each category has three recognition modes.
-*  **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final multiple N-best choice result.
-*  **LongDictation mode:** an utterance up to 2 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
-*  **Intent detection:** The server returns additional structured information about the speech input. To use Intent you will need to first train a model. See details [here](https://www.luis.ai/).
-
-<a name="Preferences"></a>
-## Preferences 
-To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters that configures the behavior of the speech service. It consists of the following fields:
-* **SpeechLanguage**: The locale of the audio being sent to the speech service.
-* **ServiceUri**: The endpoint use to call the speech service.
-* **AuthorizationProvider**: An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle token caching.
-* **EnableAudioBuffering**: An advanced option, please see Connection Management
-
-<a name="Input"></a>
-## Speech Input
-The SpeechInput object consists of 2 fields:
-* **Audio**: A stream implementation of your choice that the SDK will pull audio from. Please note that this could be any Stream that supports reading. 
-  **Note**: the SDK detects the end of the stream when it the stream returns 0 when attempting to read from it.
-* **RequestMetadata**: Metadata about the speech request. For more details refer to the documentation.
-
-<a name="Request"></a>
-## Speech Request
-Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.
-
-**var task = speechClient.RecognizeAsync(speechInput);**
-
-The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition. The task can Fault if the server or the SDK fails unexpectedly.
-
-<a name="Events"></a>
-## Speech Events
+### Events
 #### Partial Results Event:
 This event gets called every time the Speech Recognition Server has an idea of what the speaker might be saying – even before he or she has finished speaking (if you are using the Microphone Client) or have finished transferring data (if you are using the Data Client).
 #### Intent Event:
@@ -116,41 +76,6 @@ Eventhandlers are already pointed out in the code in form of code comments.
 **Inverse Text Normalization (ITN) has been applied**  |  An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that display the speech recognition results to a user.
 **InverseTextNormalizationResult**  | Inverse text normalization (ITN) converts phrases like "one two three four" to a normalized form such as "1234". Another example is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that interpret the speech recognition results as commands or perform queries based on the recognized text.
 **MaskedInverseTextNormalizationResult**  |  The recognized phrase with inverse text normalization and profanity masking applied, but no capitalization or punctuation. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user. Inverse Text Normalization (ITN) has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that use the unmasked ITN results but also need to display the command or query to the user.
-
-<a name="Response"></a>
-## Speech Response
-
---- Partial result received by OnPartialResult
-
----what
-
---- Partial result received by OnPartialResult
-
---what's
-
---- Partial result received by OnPartialResult
-
----whats the web
-
---- Partial result received by OnPartialResult
-
----what's the weather like
-
----***** Phrase Recognition Status = [Success]
-
-***What's the weather like? (Confidence:High)
-
-What's the weather like? (Confidence:High) 
-
-<a name="ConnectionManagement"></a>
-###Connection Management
-The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. 
-
-*Note*: The SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
-
-<a name="Buffering"></a>
-##Buffering
-By default, the SDK buffers audio so it can recover when a network interrupt occurs. In some scenario where it is preferable to discard the audio lost during the network disconnect and restart the connection where the stream at due to performance considerations, it is best to disable audio buffering by setting EnableAudioBuffering in the Preferences object to false.
 
 <a name="RelatedTopics"></a>
 ##Related Topics
