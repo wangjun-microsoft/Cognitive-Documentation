@@ -7,7 +7,7 @@ Weight: 3 -->
 With Microsoft Speech Recognition Service Library, your service can utilize the power of Microsoft Speech transcription cloud to convert spoken language to text. This service-to-service library works in real-time so your client app can send audio to servers in the cloud and start receiving partial recognition results back simultaneously and asynchronously. For library API reference, see the [Microsoft Bing Speech SDK](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary/master/docs/index.html). 
 
 ### Table of Contents
-* [Sample Application](Sample)  
+* [Sample Application](#Sample)  
 * [Service Uri](#ServiceUri)  
  * [Supported Audio Formats](#Formats)  
 * [Recognition Modes](#Modes)  
