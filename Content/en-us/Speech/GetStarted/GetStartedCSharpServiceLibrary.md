@@ -38,7 +38,7 @@ Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build S
 
 ### <a name="Step3">Step 3: Run the Sample Application.  
 1. After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.  
-2. Open the output directory for the sample (**SpeechClientSample\bin\Debug**),press **Shift+Right Click**, press **Open command window here**.  
+2. Open the output directory for the sample (**SpeechClientSample\bin\Debug**), press **Shift+Right Click**, press **Open command window here**.  
 3. Run **SpeechClientSample.exe** with the following arguments:   
  * Arg[0]: Specify an input audio wav file.    
  * Arg[1]: Specify the audio locale.
