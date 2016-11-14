@@ -31,7 +31,7 @@ The below example has been developed for the .NET 4.5+ Framework using [Visual S
 The library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/).
 You may clone the sample through [Github](https://github.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary). 
 
-#### Subscribe to Speech API and get a free trial subscription key
+### Subscribe to Speech API and get a free trial subscription key
 Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). 
 Both the primary and secondary key can be used in this tutorial.
 
@@ -56,11 +56,12 @@ Arg[3]: Specify the subscription key to access the Speech Recognition Service.
 ------|------  
 Short-Form | wss://speech.platform.bing.com/api/service/recognition  
 Long-Form  | wss://speech.platform.bing.com/api/service/recognition/continuous
- 
 
-##  <a name="Formats">Supported Audio formats</a>
+###  <a name="Formats">Supported Audio formats</a>
 The Voice API supports audio/wav using the following codecs: 
-* PCM single channel * Siren * SirenSR
+* PCM single channel
+* Siren 
+* SirenSR
 
 ## <a name="Modes">Recognition Modes</a>
 **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial 
@@ -84,7 +85,7 @@ The SpeechInput object consists of 2 fields:-
 ##  <a name="Request">Speech Request</a>
 Once you have instantiated a SpeechClient and SpeechInput objects, use RecognizeAsync to make a request to the speech service.  
 **var task = speechClient.RecognizeAsync(speechInput);**  
-The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition.The task can Fault if the server or the SDK fails unexpectedly.
+The task returned by RecognizeAsync completes once the request completes. The last RecognitionResult that the server thinks is the end of the recognition. The task can Fault if the server or the SDK fails unexpectedly.
 
 ## <a name="Events">Speech Events</a>
 #### Partial Results Event:
@@ -95,7 +96,7 @@ Or use the generic events subscription method
 
 **Return format** |  Description |  
 ------|------  
-**LexicalForm** | This form is optimal for use by applications that need raw,unprocessed speech recognition results.  
+**LexicalForm** | This form is optimal for use by applications that need raw, unprocessed speech recognition results.  
 **DisplayText** |  The recognized phrase with inverse text normalization, capitalization, punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user.  
 **Confidence** | Indicates the level of confidence the recognized phrase represents the audio associated as defined by the Speech Recognition Server.  
 **MediaTime** | The current time relative to the start of the audio stream (In 100-nanosecond units of time).  
