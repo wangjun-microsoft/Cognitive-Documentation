@@ -1,4 +1,4 @@
-<!-- NavPath: Bing Speech API/Speech Recognition/Service Library
+!-- NavPath: Bing Speech API/Speech Recognition/Service Library
 LinkLabel: Get started in C#
 Url: Speech-api/documentation/GetStarted/GetStartedCSharpServiceLibrary
 Weight: 3 -->
@@ -40,10 +40,10 @@ Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build S
 1. After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.  
 2. Open the output directory for the sample (**SpeechClientSample\bin\Debug**),press **Shift+Right Click**, press **Open command window here**.  
 3. Run **SpeechClientSample.exe** with the following arguments:   
-Arg[0]: Specify an input audio wav file.    
-Arg[1]: Specify the audio locale.  
-Arg[2]: Specify the service uri
-Arg[3]: Specify the subscription key to access the Speech Recognition Service.  
+ Arg[0]: Specify an input audio wav file.    
+ Arg[1]: Specify the audio locale.  
+ Arg[2]: Specify the service uri.
+ Arg[3]: Specify the subscription key to access the Speech Recognition Service.  
 
 ## <a name="ServiceUri"> Service Uri</a>
 **Recognition Mode** |  Service Uri |  
