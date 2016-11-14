@@ -23,16 +23,11 @@ With Microsoft Speech Recognition Service Library, your service can utilize the 
 ## Speech Recognition Service C# Sample
 This section describes how to install, build, and run the C# sample application.
 ### Prerequisites
-#### Platform Requirements
-The below example has been developed for the .NET 4.5+ Framework using [Visual Studio 2015, Community Edition]
-(https://www.visualstudio.com/products/visual-studio-community-vs).
-
-#### Get the Service Library and Sample Application
-The library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/).
-You may clone the sample through [Github](https://github.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary). 
-#### Subscribe to Speech API and Get a Free Trial Subscription Key
-Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). 
-Both the primary and secondary key can be used in this tutorial.
+* **Platform Requirements**: The below example has been developed for the .NET 4.5+ Framework using [Visual Studio 2015, Community Edition] (https://www.visualstudio.com/products/visual-studio-community-vs).
+* **Get the Service Library and Sample Application**: The library is available through a [Nuget Package](https://www.nuget.org/packages/Microsoft.Bing.Speech/). 
+ You may clone the sample through [Github](https://github.com/Microsoft/Cognitive-Speech-STT-ServiceLibrary). 
+* **Subscribe to Speech API and Get a Free Trial Subscription Key**: Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). 
+ Both the primary and secondary key can be used in this tutorial.
 
 ### <a name="Step1">Step 1: Install the Sample Application.
 1. Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.  
