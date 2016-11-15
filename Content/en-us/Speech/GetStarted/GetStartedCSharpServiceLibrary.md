@@ -45,7 +45,9 @@ Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build S
  * Arg[2]: Specify the service uri.
  * Arg[3]: Specify the subscription key to access the Speech Recognition Service.  
  
- ### <a name="Modes">Recognition Modes</a>**ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final best result.  **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
+ ### <a name="Modes">Recognition Modes</a>  
+ **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final best result.  
+ **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
 ## <a name="ServiceUri"> Service Uri</a>
 **Recognition Mode** |  Service Uri |  
