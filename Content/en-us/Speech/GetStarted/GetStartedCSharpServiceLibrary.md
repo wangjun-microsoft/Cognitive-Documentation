@@ -8,9 +8,9 @@ With Microsoft Speech Recognition Service Library, your service can utilize the 
 
 ### Table of Contents
 * [Sample Application](#Sample)  
+* [Recognition Modes](#Modes)
 * [Service Uri](#ServiceUri)  
 * [Supported Audio Formats](#Formats)  
-* [Recognition Modes](#Modes)  
 * [Preferences](#Preferences)  
 * [Speech Input](#Input)  
 * [Speech Request](#Request)  
@@ -44,6 +44,8 @@ Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build S
  * Arg[1]: Specify the audio locale.
  * Arg[2]: Specify the service uri.
  * Arg[3]: Specify the subscription key to access the Speech Recognition Service.  
+ 
+ ### <a name="Modes">Recognition Modes</a>**ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final best result.  **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
 ## <a name="ServiceUri"> Service Uri</a>
 **Recognition Mode** |  Service Uri |  
@@ -56,10 +58,6 @@ The Voice API supports audio/wav using the following codecs:
 * PCM single channel
 * Siren 
 * SirenSR
-## <a name="Modes">Recognition Modes</a>
-**ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial 
-results and one final best result.  
-**LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
 ## <a name="Preferences">Preferences</a>  
 To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
