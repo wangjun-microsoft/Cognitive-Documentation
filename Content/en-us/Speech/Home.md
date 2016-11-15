@@ -25,7 +25,7 @@ Bing Speech Recognition API provides the ability to convert spoken audio to text
 * Using the REST API means getting only one reco result back with no partial results. Documentation for the REST API can be found [here](API-Reference-REST/BingVoiceRecognition.md) and code samples [here](https://oxfordportal.blob.core.windows.net/speech/doc/recognition/Program.cs). 
 *	Using the client library allows for real-time streaming, meaning that as audio is being sent or spoken to the server, partial recognition results are returned at the same time. Real-time streaming is supported on Android, iOS, and Windows. The client library also supports speech intent recognition in addition to returning recognized text from audio inputs.Structured information about the speech to apps that parse the intent of the speaker can also be retrieved to drive further actions. Models trained by [Project LUIS](https://www.luis.ai/) service are used to generate the intent. To use intent, you will need to train a model after getting an AppID and a Secret. Once you have a trained model, you can use the Speech Recognition API for intent parsing on reco results via the “WithIntent” clients.
 * Using the service library allows for real-time streaming audio from a service to the server allowing for partial results. Service Library is supported for Windows.  
-#### Supported languages
+####Supported languages
 Locales supported by the Speech Recognition API include:
 
 language-Country |language-Country | language-Country |language-Country 
