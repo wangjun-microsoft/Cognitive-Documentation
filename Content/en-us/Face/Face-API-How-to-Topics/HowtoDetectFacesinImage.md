@@ -146,10 +146,10 @@ By knowing the direction that the face is in, you can then rotate the rectangula
 
 Besides face landmarks, Face – Detect API can also analyze several other attributes on a face. These attributes include:
 
-- Age of the face
-- Gender of the face
-- Smile intensity of the face
-- Facila hair of the face
+- Age
+- Gender
+- Smile intensity
+- Facial hair
 - A 3D head pose
 
 These attributes are predicted by using statistical algorithms and may not always be 100% precise. However, they are still helpful when you want to classify faces by these attributes. For more information about each of the attributes, please refer to the [Glossary](../Glossary.md).
