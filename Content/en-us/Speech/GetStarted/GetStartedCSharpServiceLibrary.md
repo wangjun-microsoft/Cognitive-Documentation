@@ -9,14 +9,14 @@ With Microsoft Speech Recognition Service Library, your service can utilize the 
 ### Table of Contents
 * [Sample Application](#Sample)  
 * [Service Uri](#ServiceUri)  
- * [Supported Audio Formats](#Formats)  
+* [Supported Audio Formats](#Formats)  
 * [Recognition Modes](#Modes)  
 * [Preferences](#Preferences)  
 * [Speech Input](#Input)  
 * [Speech Request](#Request)  
 * [Speech Events](#Events)  
 * [Speech Response](#Response)  
- * [Connection Management](#Connection)  
+* [Connection Management](#Connection)  
 * [Buffering](#Buffering)
 
 <a name="Sample"></a>
@@ -51,7 +51,7 @@ Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build S
 Short-Form | wss://speech.platform.bing.com/api/service/recognition  
 Long-Form  | wss://speech.platform.bing.com/api/service/recognition/continuous
 
-###  <a name="Formats">Supported Audio formats</a>
+##  <a name="Formats">Supported Audio formats</a>
 The Voice API supports audio/wav using the following codecs: 
 * PCM single channel
 * Siren 
@@ -120,7 +120,7 @@ Or Use the generic events subscription method
 ***What's the weather like? (Confidence:High)  
 What's the weather like? (Confidence:High)  
 
-### <a name="Connection">Connection Management</a>
+## <a name="Connection">Connection Management</a>
 The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. 
 **Note** that the SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal 
 buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
