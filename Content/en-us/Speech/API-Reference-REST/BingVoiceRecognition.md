@@ -62,6 +62,7 @@ Authorization: Bearer <Base64-access_token>
 ```
 
 
+
 ### <a name="SpeechService">Access the Speech Service Endpoint</a>
 
 Clients must use the following endpoint to access the service and build voice enabled applications:<b> [https://speech.platform.bing.com/recognize](https://speech.platform.bing.com/recognize) </b>
@@ -80,9 +81,9 @@ The token [Base64 access_token](#TokenRespParam) requested must be passed to the
 `Authorization: Bearer [Base64 access_token]`
 
 The Speech Recognition API supports audio/wav using the following codecs: 
-  •  PCM single channel
-  •  Siren
-  •  SirenSR
+* PCM single channel
+* Siren
+* SirenSR
 
 ### <a name="InputParam">Input Parameters</a>
 
