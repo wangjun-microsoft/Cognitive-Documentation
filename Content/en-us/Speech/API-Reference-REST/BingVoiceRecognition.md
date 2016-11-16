@@ -17,7 +17,7 @@ Weight: 90
 * [Input Parameters](#InputParam) 
 * [Required Parameters](#ReqParam) 
 * [Optional Parameters](#OptParam) 
-* [Sample Speech Recognition Request](#SampleVoiceRR)  
+* [Example Speech Recognition Request](#SampleVoiceRR)  
 
 [Speech Recognition Responses](#VoiceRecResponse)
 * [Normal Response](#NormalResponse)  
@@ -26,13 +26,12 @@ Weight: 90
   * [Successful Recognition Response](#SuccessfulRecResponse) 
   * [Recognition Failure](#RecFailure)
 * [Error Responses](#ErrorResponse)  
+
 [Supported Locales](#SupLocales)  
 
 [Troubleshooting and Support](#TrouNSupport)
 
-
 ## <a name="Introduction">Introduction</a>
-
 This documentation describes the Bing Speech Recognition REST API that exposes an HTTP interface which enables developers to transcribe voice queries. The Bing Speech Recognition API may be used in many different contexts that need cloud-based speech recognition capabilities. 
 
 
@@ -61,8 +60,6 @@ The jwt token is passed to the Speech request as an HTTP request header, for exa
 Authorization: Bearer <Base64-access_token>
 ```
 
-
-
 ### <a name="SpeechService">Access the Speech Service Endpoint</a>
 
 Clients must use the following endpoint to access the service and build voice enabled applications:<b> [https://speech.platform.bing.com/recognize](https://speech.platform.bing.com/recognize) </b>
@@ -87,10 +84,9 @@ The Speech Recognition API supports audio/wav using the following codecs:
 
 ### <a name="InputParam">Input Parameters</a>
 
-Inputs to the Bing Speech Recognition API are expressed as HTTP query parameters. Parameters in the POST body are treated as audio content. The following is a complete list of recognized input parameters. Unsafe characters should be escaped following the W3C URL spec ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). 
+Inputs to the Bing Speech Recognition API are expressed as HTTP query parameters. Parameters in the POST body are treated as audio content. Unsafe characters should be escaped following the W3C URL spec ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). Following is a complete list of recognized input parameters.
 
 ### <a name="ReqParam">Required Parameters</a>
-
 
 Name  |Format  |Description, example and use  
 ---------|---------|---------
@@ -115,7 +111,7 @@ maxnbest     |     Integer    |       Maximum number of results the voice applic
 result.profanitymarkup     |     0/1    |      Scan the result text for words included in an offensive word list. If found, the word will be delimited by bad word tag. **Example:** result.profanity=1 (0 means off, 1 means on, default is 1.)
 
 A working code sample of REST API implementation can be found [here](https://oxfordportal.blob.core.windows.net/speech/doc/recognition/Program.cs). 
-###  <a name="SampleVoiceRR">Example speech recognition request</a>
+###  <a name="SampleVoiceRR">Example Speech Recognition Request</a>
 
 The following is an example of a request where the audio is supplied as part of a recognition request: 
    
