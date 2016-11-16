@@ -12,8 +12,8 @@ Weight: 90
 
 [Speech Recognition Request](#VoiceRecReq)
 * [Authenticate the API Call](#Authorize)
-* [Access the Speech Service Endpoint](#SpeechService)
 * [HTTP Headers](#Http) 
+* [Access the Speech Service Endpoint](#SpeechService)
 * [Input Parameters](#InputParam) 
 * [Required Parameters](#ReqParam) 
 * [Optional Parameters](#OptParam) 
@@ -37,9 +37,9 @@ This documentation describes the Bing Speech Recognition REST API that exposes a
 
 ## <a name="VoiceRecReq">Speech Recognition Request</a>
 ### <a name="Authorize">Authenticate the API call</a>
-Every call to the Speech API requires a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) (JWT) access token. The JWT needs to be passed through as part of the Speech request header. The token has a expiry time of 10 minutes. 
+Every call to the Speech API requires a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) (JWT) access token. The JWT  access token needs to be passed through as part of the Speech request header. The token has a expiry time of 10 minutes. 
 
-Subscription key is first passed to the token service, for example:
+First, the Subscription key is passed to the token service, for example:
 ```
 POST https://api.cognitive.microsoft.com/sts/v1.0/issueToken
 Content-Length: 0
@@ -51,29 +51,13 @@ Name                     |Format              |Description, example and use
 -------------------------|--------------------|-----------------------------
 Ocp-Apim-Subscription-Key|  ASCII             | Your subscription key.
 
+The expected response from the call to the token service is the JWT access token as text/plain.
 
-The expected token response is the JWT access token as text/plain.
-
-The jwt token is passed to the Speech request as an HTTP request header, for example: 
-
-```
-Authorization: Bearer <Base64-access_token>
-```
-
-### <a name="SpeechService">Access the Speech Service Endpoint</a>
-
-Clients must use the following endpoint to access the service and build voice enabled applications:<b> [https://speech.platform.bing.com/recognize](https://speech.platform.bing.com/recognize) </b>
-
-<B>Note! Until you have acquired an `access token` with your subscription key as described above this link will generate a 403 Response Error.</B>
-
-The API uses HTTP POST to upload audio. The API supports [Chunked Transfer-Encoding](http://tools.ietf.org/html/rfc1945#section-7.2) for efficient audio streaming. For live transcription scenarios, it is recommended you use chunked transfer encoding to stream the audio to the service while the user is speaking. Other implementations result in higher user-perceived latency. 
-
-Your application must endpoint the audio to determine start and end of speech, which in turn is used by the service to determine the start and end of the request. You may not upload more than 10 seconds of audio in any one request and the total request duration cannot exceed 14 seconds. 
-
+Then the JWT access token is passed to the Speech request as an HTTP request header. 
 
 ### <a name="Http">HTTP Headers</a>
 
-The token [Base64 access_token](#TokenRespParam) requested must be passed to the Speech endpoint as an `Authorization` header and prefixed with the string `Bearer`.
+The token Base64 access_token requested must be passed to the Speech endpoint as an `Authorization` header and prefixed with the string `Bearer`, for example:
 
 `Authorization: Bearer [Base64 access_token]`
 
@@ -81,6 +65,18 @@ The Speech Recognition API supports audio/wav using the following codecs:
 * PCM single channel
 * Siren
 * SirenSR
+
+### <a name="SpeechService">Access the Speech Service Endpoint</a>
+
+Clients must use the following endpoint to access the service and build voice enabled applications: 
+
+ `https://speech.platform.bing.com/recognize`
+
+**Note!:** Until you have acquired an `access token` with your subscription key as described above this link will generate a 403 Response Error.
+
+The API uses HTTP POST to upload audio. The API supports [Chunked Transfer Encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding) for efficient audio streaming. For live transcription scenarios, it is recommended you use chunked transfer encoding to stream the audio to the service while the user is speaking. Other implementations result in higher user-perceived latency. 
+
+Your application must endpoint the audio to determine start and end of speech, which in turn is used by the service to determine the start and end of the request. You may not upload more than 10 seconds of audio in any one request and the total request duration cannot exceed 14 seconds. 
 
 ### <a name="InputParam">Input Parameters</a>
 
