@@ -11,7 +11,7 @@ Use the Content Moderator’s [**text moderation API**](https://westus.dev.cogni
 
 ## Language detection ##
 
-The first step to using the text moderation API is to have the algorithm detect the language of the content to be moderated. The API supports more than 100 languages. The **Detect Language** operation will return language codes for the predominant language comprising the submitted text in the following format:
+The first step to using the text moderation API is to have the algorithm detect the language of the content to be moderated. The API supports more than [100 languages](Text-Moderation-API-Languages.md). The **Detect Language** operation will return language codes for the predominant language comprising the submitted text in the following format:
 {"DetectedLanguage": "eng"}
 
 ## Screening for profanity ##
