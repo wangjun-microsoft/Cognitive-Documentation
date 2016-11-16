@@ -107,7 +107,8 @@ Or Use the generic events subscription method
 **Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the above table for phrase format.
 
 ## <a name="Response">Speech Response</a>
-
+Speech Rsponse example:
+```
 --- Partial result received by OnPartialResult  
 ---what  
 --- Partial result received by OnPartialResult  
@@ -118,7 +119,8 @@ Or Use the generic events subscription method
 ---what's the weather like  
 ---***** Phrase Recognition Status = [Success]   
 ***What's the weather like? (Confidence:High)  
-What's the weather like? (Confidence:High)  
+What's the weather like? (Confidence:High) 
+```
 
 ## <a name="Connection">Connection Management</a>
 The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. 
