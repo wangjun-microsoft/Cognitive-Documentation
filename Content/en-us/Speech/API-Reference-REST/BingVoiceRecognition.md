@@ -1,4 +1,4 @@
-﻿<!-- 
+<!-- 
 NavPath: Bing Speech API/Speech Recognition/REST API
 LinkLabel: API Reference
 Url: Speech-api/documentation/API-Reference-REST/BingVoiceRecognition
@@ -8,7 +8,7 @@ Weight: 90
 # Bing Speech Recognition API
 
 ### Contents
-[Introduction](#Introduction)  
+[Introduction](#Introduction) 
 
 [Speech Recognition Request](#VoiceRecReq)
 * [Authenticate the API Call](#Authorize)
@@ -28,6 +28,7 @@ Weight: 90
 * [Error Responses](#ErrorResponse)  
 
 [Supported Locales](#SupLocales)  
+
 [Troubleshooting and Support](#TrouNSupport)
 
 
@@ -332,13 +333,13 @@ Content-Type: application/json; charset=UTF-8
 
 ### <a name="ErrorResponse">Error Responses</a>
 
-**Http/400 BadRequest:** Will be returned if a required parameter is missing, empty or null, or if the value passed to either a required or optional parameter is invalid. The “Invalid” response includes passing a string value that is longer than the allowed length. A brief description of the problematic parameter will be included. 
+* **Http/400 BadRequest:** Will be returned if a required parameter is missing, empty or null, or if the value passed to either a required or optional parameter is invalid. The “Invalid” response includes passing a string value that is longer than the allowed length. A brief description of the problematic parameter will be included. 
 
-**Http/401 Unauthorized:** Will be returned if the request is not authorized. 
+* **Http/401 Unauthorized:** Will be returned if the request is not authorized. 
 
-**Http/502 BadGateway:** Will be returned when the service was unable to perform the recognition. 
+* **Http/502 BadGateway:** Will be returned when the service was unable to perform the recognition. 
 
-**Http/403 Forbidden:** Will be returned when there are issues with your authentication or quota.
+* **Http/403 Forbidden:** Will be returned when there are issues with your authentication or quota.
 
 Example response for a voice search request submitted with a bad parameter. This is the error response format regardless of what format the user has requested. 
 
