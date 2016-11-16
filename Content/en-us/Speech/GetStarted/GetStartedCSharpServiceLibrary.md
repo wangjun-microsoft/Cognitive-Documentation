@@ -46,8 +46,8 @@ Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build S
  * Arg[3]: Specify the subscription key to access the Speech Recognition Service.  
  
 ## <a name="Modes">Recognition Modes</a>  
-**ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final best result.  
-**LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
+* **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final best result.  
+* **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
 ## <a name="ServiceUri"> Service Uri</a>
 **Recognition Mode** |  Service Uri |  
@@ -64,11 +64,11 @@ The Voice API supports audio/wav using the following codecs:
 ## <a name="Preferences">Preferences</a>  
 To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
 that configures the behavior of the speech service. It consists of the following fields:  
-**SpeechLanguage:** The locale of the audio being sent to the speech service.  
-**ServiceUri:** The endpoint use to call the speech service.  
-**AuthorizationProvider:** An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle 
+* **SpeechLanguage:** The locale of the audio being sent to the speech service.  
+* **ServiceUri:** The endpoint use to call the speech service.  
+* **AuthorizationProvider:** An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle 
 token caching.  
-**EnableAudioBuffering:** An advanced option, please see [Connection Management](#connection-management)
+* **EnableAudioBuffering:** An advanced option, please see [Connection Management](#connection-management)
 
 ## <a name="Input">Speech Input</a>
 The SpeechInput object consists of 2 fields:    
