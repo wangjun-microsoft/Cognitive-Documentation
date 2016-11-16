@@ -26,7 +26,6 @@ Weight: 90
   * [Successful Recognition Response](#SuccessfulRecResponse) 
   * [Recognition Failure](#RecFailure)
 * [Error Responses](#ErrorResponse)  
-
 [Supported Locales](#SupLocales)  
 
 [Troubleshooting and Support](#TrouNSupport)
@@ -65,7 +64,7 @@ Authorization: Bearer <Base64-access_token>
 
 ### <a name="SpeechService">Access the Speech Service Endpoint</a>
 
-Clients must use the following end-point to access the service and build voice enabled applications:<b> [https://speech.platform.bing.com/recognize](https://speech.platform.bing.com/recognize) </b>
+Clients must use the following endpoint to access the service and build voice enabled applications:<b> [https://speech.platform.bing.com/recognize](https://speech.platform.bing.com/recognize) </b>
 
 <B>Note! Until you have acquired an `access token` with your subscription key as described above this link will generate a 403 Response Error.</B>
 
