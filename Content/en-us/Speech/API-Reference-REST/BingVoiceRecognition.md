@@ -8,38 +8,37 @@ Weight: 90
 # Bing Speech Recognition API
 
 ### Contents
-[1. Introduction](#Introduction)  
+[Introduction](#Introduction)  
 
-[2. Speech Recognition Request](#VoiceRecReq)
-* [Authenticate the API call](#Authorize)
+[Speech Recognition Request](#VoiceRecReq)
+* [Authenticate the API Call](#Authorize)
 * [Access the Speech Service Endpoint](#SpeechService)
-* [HTTP headers](#Http) 
-* [Input parameters](#InputParam) 
-* [Required parameters](#ReqParam) 
-* [Optional parameters](#OptParam) 
-* [Sample speech recognition request](#SampleVoiceRR)  
+* [HTTP Headers](#Http) 
+* [Input Parameters](#InputParam) 
+* [Required Parameters](#ReqParam) 
+* [Optional Parameters](#OptParam) 
+* [Sample Speech Recognition Request](#SampleVoiceRR)  
 
-[3. Speech Recognition Responses](#VoiceRecResponse)
-* [Normal response](#NormalResponse)  
+[Speech Recognition Responses](#VoiceRecResponse)
+* [Normal Response](#NormalResponse)  
   * [Schema 1](#Schema1) 
   * [Schema 2](#Schema2) 
-  * [Successful recognition response](#SuccessfulRecResponse) 
-  * [Recognition failure](#RecFailure)
-* [Error responses](#ErrorResponse)  
+  * [Successful Recognition Response](#SuccessfulRecResponse) 
+  * [Recognition Failure](#RecFailure)
+* [Error Responses](#ErrorResponse)  
 
-[4. Supported Locales](#SupLocales)  
-[5. Troubleshooting and Support](#TrouNSupport)
- 
+[Supported Locales](#SupLocales)  
+[Troubleshooting and Support](#TrouNSupport)
 
 
-### <a name="Introduction">1. Introduction</a>
+## <a name="Introduction">Introduction</a>
 
 This documentation describes the Bing Speech Recognition REST API that exposes an HTTP interface which enables developers to transcribe voice queries. The Bing Speech Recognition API may be used in many different contexts that need cloud-based speech recognition capabilities. 
 
 
-### <a name="VoiceRecReq">2. Speech Recognition Request</a>
+## <a name="VoiceRecReq">Speech Recognition Request</a>
 ### <a name="Authorize">Authenticate the API call</a>
-Every call to the Speech API requires a JWT access token. This token needs to be passed through as part of the Speech request header. The token has a expiry time of 10 minutes. 
+Every call to the Speech API requires a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) (JWT) access token. The JWT needs to be passed through as part of the Speech request header. The token has a expiry time of 10 minutes. 
 
 Subscription key is first passed to the token service, for example:
 ```
@@ -74,7 +73,7 @@ The API uses HTTP POST to upload audio. The API supports [Chunked Transfer-Encod
 Your application must endpoint the audio to determine start and end of speech, which in turn is used by the service to determine the start and end of the request. You may not upload more than 10 seconds of audio in any one request and the total request duration cannot exceed 14 seconds. 
 
 
-### <a name="Http">HTTP headers</a>
+### <a name="Http">HTTP Headers</a>
 
 The token [Base64 access_token](#TokenRespParam) requested must be passed to the Speech endpoint as an `Authorization` header and prefixed with the string `Bearer`.
 
@@ -85,11 +84,11 @@ The Speech Recognition API supports audio/wav using the following codecs:
   •  Siren
   •  SirenSR
 
-### <a name="InputParam">Input parameters</a>
+### <a name="InputParam">Input Parameters</a>
 
 Inputs to the Bing Speech Recognition API are expressed as HTTP query parameters. Parameters in the POST body are treated as audio content. The following is a complete list of recognized input parameters. Unsafe characters should be escaped following the W3C URL spec ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). 
 
-### <a name="ReqParam">Required parameters</a>
+### <a name="ReqParam">Required Parameters</a>
 
 
 Name  |Format  |Description, example and use  
@@ -103,7 +102,7 @@ device.os    |     UTF-8    |     Operating system the client is running on. Thi
 scenarios     |    UTF-8     |    The context for performing a recognition. The supported values are: ulm, websearch. **Example:** scenarios=ulm.     
 instanceid      |    GUID     |      A globally unique device identifier of the device making the request. **Example:** instanceid=b2c95ede-97eb-4c88-81e4-80f32d6aee5
   
-### <a name="OptParam">Optional parameters</a>
+### <a name="OptParam">Optional Parameters</a>
 
 Note that the values below are used either for performing the request or to manage the service operationally. 
 
@@ -127,7 +126,7 @@ Authorization: Bearer [Base64 access_token]
 
 (audio data)
 ```
-## <a name="VoiceRecResponse">3. Speech Recognition Responses</a>
+## <a name="VoiceRecResponse">Speech Recognition Responses</a>
 
 The API response is returned in JSON format. The value of the “name” tag has the post-inverse text normalization result. The value of the “lexical” tag has the pre-inverse text normalization result. 
 
@@ -254,7 +253,7 @@ LOWCONF: “1” to indicate low-confidence
   * **value:** string, the IPA pronunciation of this token 
   * **attributes:** none 
 
-#### <a name="SuccessfulRecResponse">Succcessful recognition response</a>
+#### <a name="SuccessfulRecResponse">Successful Recognition Response</a>
 
 Example JSON response for a successful voice search. The comments and formatting of the JSON below is for example reasons only. The real result will omit indentations, spaces, smart quotes, comments, etc. 
 
@@ -306,7 +305,7 @@ Content-Type: application/json; charset=UTF-8
 ```
 </speechbox-root>
 ```
-#### <a name="RecFailure">Recognition failure</a>
+#### <a name="RecFailure">Recognition Failure</a>
 
 Example JSON response for a voice search query where the user’s speech could not be recognized. 
 
@@ -331,7 +330,7 @@ Content-Type: application/json; charset=UTF-8
 
 ```
 
-### <a name="ErrorResponse">Error responses</a>
+### <a name="ErrorResponse">Error Responses</a>
 
 **Http/400 BadRequest:** Will be returned if a required parameter is missing, empty or null, or if the value passed to either a required or optional parameter is invalid. The “Invalid” response includes passing a string value that is longer than the allowed length. A brief description of the problematic parameter will be included. 
 
@@ -352,7 +351,7 @@ Content-Type: text/plain; charset=UTF-8
 
 Invalid lat parameter specified       
 ```
-### <a name="SupLocales">4. Supported Locales</a>
+## <a name="SupLocales">Supported Locales</a>
 
 The supported locales are:
 
@@ -367,7 +366,7 @@ it-IT    |   fr-CA  | pl-PL  |    es-MX
 zh-CN    |   en-AU  | en-CA  |    sv-SE  
 *ar-EG supports Modern Standard Arabic (MSA)
 
-### <a name="TrouNSupport">5. Troubleshooting and Support</a>
+## <a name="TrouNSupport">Troubleshooting and Support</a>
 
 Post all questions and issues to the [Bing Speech Service](https://social.msdn.microsoft.com/Forums/en-US/home?forum=SpeechService) MSDN Forum, with complete detail, such as: 
 * An example of the full request string (minus the raw audio data).
