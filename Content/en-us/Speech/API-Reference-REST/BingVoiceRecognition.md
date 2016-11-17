@@ -12,8 +12,8 @@ Weight: 90
 
 [Speech Recognition Request](#VoiceRecReq)
 * [Authenticate the API Call](#Authorize)
-* [HTTP Headers](#Http) 
 * [Access the Speech Service Endpoint](#SpeechService)
+* [HTTP Headers](#Http) 
 * [Input Parameters](#InputParam) 
  * [Required Parameters](#ReqParam) 
  * [Optional Parameters](#OptParam) 
@@ -53,18 +53,8 @@ Ocp-Apim-Subscription-Key|  ASCII             | Your subscription key.
 
 The expected response from the call to the token service is the JWT access token as text/plain.
 
-Then the JWT access token is passed to the Speech request as an HTTP request header. 
-
-### <a name="Http">HTTP Headers</a>
-
-The token Base64 access_token requested must be passed to the Speech endpoint as an `Authorization` header and prefixed with the string `Bearer`, for example:
-
+Then the JWT access token is passed to the Speech request as an HTTP request header, for example:
 `Authorization: Bearer [Base64 access_token]`
-
-The Speech Recognition API supports audio/wav using the following codecs: 
-* PCM single channel
-* Siren
-* SirenSR
 
 ### <a name="SpeechService">Access the Speech Service Endpoint</a>
 
@@ -77,6 +67,16 @@ Clients must use the following endpoint to access the service and build voice en
 The API uses HTTP POST to upload audio. The API supports [Chunked Transfer Encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding) for efficient audio streaming. For live transcription scenarios, it is recommended you use chunked transfer encoding to stream the audio to the service while the user is speaking. Other implementations result in higher user-perceived latency. 
 
 Your application must endpoint the audio to determine start and end of speech, which in turn is used by the service to determine the start and end of the request. You may not upload more than 10 seconds of audio in any one request and the total request duration cannot exceed 14 seconds. 
+
+### <a name="Http">HTTP Headers</a>
+The token Base64 access_token requested must be passed to the Speech endpoint as an `Authorization` header and prefixed with the string `Bearer`, for example:
+
+`Authorization: Bearer [Base64 access_token]`
+
+The Speech Recognition API supports audio/wav using the following codecs: 
+* PCM single channel
+* Siren
+* SirenSR
 
 ### <a name="InputParam">Input Parameters</a>
 
