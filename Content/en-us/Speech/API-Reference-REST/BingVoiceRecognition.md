@@ -15,8 +15,8 @@ Weight: 90
 * [HTTP Headers](#Http) 
 * [Access the Speech Service Endpoint](#SpeechService)
 * [Input Parameters](#InputParam) 
-* [Required Parameters](#ReqParam) 
-* [Optional Parameters](#OptParam) 
+ * [Required Parameters](#ReqParam) 
+ * [Optional Parameters](#OptParam) 
 * [Example Speech Recognition Request](#SampleVoiceRR)  
 
 [Speech Recognition Responses](#VoiceRecResponse)
@@ -80,7 +80,9 @@ Your application must endpoint the audio to determine start and end of speech, w
 
 ### <a name="InputParam">Input Parameters</a>
 
-Inputs to the Bing Speech Recognition API are expressed as HTTP query parameters. Parameters in the POST body are treated as audio content. Unsafe characters should be escaped following the W3C URL spec ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). Following is a complete list of recognized input parameters.
+Inputs to the Bing Speech Recognition API are expressed as HTTP query parameters. Parameters in the POST body are treated as audio content. Unsafe characters should be escaped following the W3C URL spec ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). 
+
+Following is a complete list of required and optional input parameters.
 
 ### <a name="ReqParam">Required Parameters</a>
 
