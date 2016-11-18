@@ -70,7 +70,7 @@ Clients must use the following endpoint to access the service and build voice en
 
 The API uses HTTP POST to upload audio. The API supports [chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding) for efficient audio streaming. For live transcription scenarios, it is recommended you use chunked transfer encoding to stream the audio to the service while the user is speaking. Other implementations result in higher user-perceived latency. 
 
-Your application must endpoint the audio to determine start and end of speech, which in turn is used by the service to determine the start and end of the request. You may not upload more than 10 seconds of audio in any one request and the total request duration cannot exceed 14 seconds. 
+Your application must indicate the end of the audio to determine start and end of speech, which in turn is used by the service to determine the start and end of the request. You may not upload more than 10 seconds of audio in any one request and the total request duration cannot exceed 14 seconds. 
 
 ### <a name="InputParam">Input Parameters</a>
 
