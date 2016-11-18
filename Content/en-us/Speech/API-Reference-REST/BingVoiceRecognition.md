@@ -16,6 +16,7 @@ Weight: 90
 * [Input Parameters](#InputParam) 
  * [Required Parameters](#ReqParam) 
  * [Optional Parameters](#OptParam) 
+* [REST API Implmentation Sample](#SampleImplementation)  
 * [Example Speech Recognition Request](#SampleVoiceRR)  
 
 [Speech Recognition Responses](#VoiceRecResponse)
@@ -77,7 +78,7 @@ Inputs to the Bing Speech Recognition API are expressed as HTTP query parameters
 
 Following is a complete list of required and optional input parameters.
 
-### <a name="ReqParam">Required Parameters</a>
+#### <a name="ReqParam">Required Parameters</a>
 
 Name  |Format  |Description, example and use  
 ---------|---------|---------
@@ -90,7 +91,7 @@ device.os    |     UTF-8    |     Operating system the client is running on. Thi
 scenarios     |    UTF-8     |    The context for performing a recognition. The supported values are: ulm, websearch. **Example:** scenarios=ulm.     
 instanceid      |    GUID     |      A globally unique device identifier of the device making the request. **Example:** instanceid=b2c95ede-97eb-4c88-81e4-80f32d6aee5
   
-### <a name="OptParam">Optional Parameters</a>
+#### <a name="OptParam">Optional Parameters</a>
 
 **Note**: the values below are used either for performing the request or to manage the service operationally. 
 
@@ -99,8 +100,10 @@ Name  |Format  |Description and example
 maxnbest     |     Integer    |       Maximum number of results the voice application API should return. The default is 1. The maximum is 5. **Example:** maxnbest=3   
 result.profanitymarkup     |     0/1    |      Scan the result text for words included in an offensive word list. If found, the word will be delimited by bad word tag. **Example:** result.profanity=1 (0 means off, 1 means on, default is 1.)
 
+### <a name="SampleImplementation">REST API Implementation Sample
 
 A working code sample of REST API implementation can be found [here](https://oxfordportal.blob.core.windows.net/speech/doc/recognition/Program.cs). 
+
 ###  <a name="SampleVoiceRR">Example Speech Recognition Request</a>
 
 The following is an example of a request where the audio is supplied as part of a recognition request: 
