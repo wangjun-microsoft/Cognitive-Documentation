@@ -13,7 +13,6 @@ Weight: 90
 [Speech Recognition Request](#VoiceRecReq)
 * [Authenticate the API Call](#Authorize)
 * [Access the Speech Service Endpoint](#SpeechService)
-* [HTTP Headers](#Http) 
 * [Input Parameters](#InputParam) 
  * [Required Parameters](#ReqParam) 
  * [Optional Parameters](#OptParam) 
@@ -26,6 +25,8 @@ Weight: 90
   * [Successful Recognition Response](#SuccessfulRecResponse) 
   * [Recognition Failure](#RecFailure)
 * [Error Responses](#ErrorResponse)  
+
+[Supported Codecs](#Codecs) 
 
 [Supported Locales](#SupLocales)  
 
@@ -53,8 +54,10 @@ Ocp-Apim-Subscription-Key|  ASCII             | Your subscription key.
 
 The expected response from the call to the token service is the JWT access token as text/plain.
 
-Then the JWT access token is passed to the Speech request as an HTTP request header, for example:
-`Authorization: Bearer [Base64 access_token]`
+
+Then the token Base64 access_token requested is passed to the Speech endpoint as an `Authorization` header and prefixed with the string `Bearer`, for example:
+
+ `Authorization: Bearer [Base64 access_token]`
 
 ### <a name="SpeechService">Access the Speech Service Endpoint</a>
 
@@ -64,19 +67,9 @@ Clients must use the following endpoint to access the service and build voice en
 
 **Note!:** Until you have acquired an `access token` with your subscription key as described above this link will generate a 403 Response Error.
 
-The API uses HTTP POST to upload audio. The API supports [Chunked Transfer Encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding) for efficient audio streaming. For live transcription scenarios, it is recommended you use chunked transfer encoding to stream the audio to the service while the user is speaking. Other implementations result in higher user-perceived latency. 
+The API uses HTTP POST to upload audio. The API supports [chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding) for efficient audio streaming. For live transcription scenarios, it is recommended you use chunked transfer encoding to stream the audio to the service while the user is speaking. Other implementations result in higher user-perceived latency. 
 
 Your application must endpoint the audio to determine start and end of speech, which in turn is used by the service to determine the start and end of the request. You may not upload more than 10 seconds of audio in any one request and the total request duration cannot exceed 14 seconds. 
-
-### <a name="Http">HTTP Headers</a>
-The token Base64 access_token requested must be passed to the Speech endpoint as an `Authorization` header and prefixed with the string `Bearer`, for example:
-
-`Authorization: Bearer [Base64 access_token]`
-
-The Speech Recognition API supports audio/wav using the following codecs: 
-* PCM single channel
-* Siren
-* SirenSR
 
 ### <a name="InputParam">Input Parameters</a>
 
@@ -99,14 +92,13 @@ instanceid      |    GUID     |      A globally unique device identifier of the 
   
 ### <a name="OptParam">Optional Parameters</a>
 
-Note that the values below are used either for performing the request or to manage the service operationally. 
-
- 
+**Note**: the values below are used either for performing the request or to manage the service operationally. 
 
 Name  |Format  |Description and example  
 ---------|---------|---------
 maxnbest     |     Integer    |       Maximum number of results the voice application API should return. The default is 1. The maximum is 5. **Example:** maxnbest=3   
 result.profanitymarkup     |     0/1    |      Scan the result text for words included in an offensive word list. If found, the word will be delimited by bad word tag. **Example:** result.profanity=1 (0 means off, 1 means on, default is 1.)
+
 
 A working code sample of REST API implementation can be found [here](https://oxfordportal.blob.core.windows.net/speech/doc/recognition/Program.cs). 
 ###  <a name="SampleVoiceRR">Example Speech Recognition Request</a>
@@ -337,8 +329,6 @@ Content-Type: application/json; charset=UTF-8
 
 Example response for a voice search request submitted with a bad parameter. This is the error response format regardless of what format the user has requested. 
 
-
-
 ```
 HTTP/1.0 400 Bad Request
 Content-Length: XXX
@@ -346,9 +336,15 @@ Content-Type: text/plain; charset=UTF-8
 
 Invalid lat parameter specified       
 ```
-## <a name="SupLocales">Supported Locales</a>
 
-The supported locales are:
+### <a name="Codecs">Supported Codecs</a>
+The Speech Recognition API supports audio/wav using the following codecs: 
+* PCM single channel
+* Siren
+* SirenSR
+
+## <a name="SupLocales">Supported Locales</a>
+Supported locales include:
 
 language-Country |language-Country | language-Country |language-Country 
 ---------|----------|--------|------------------
