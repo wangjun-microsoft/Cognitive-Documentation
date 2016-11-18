@@ -18,6 +18,8 @@ Weight: 90
  * [Optional Parameters](#OptParam) 
 * [REST API Implmentation Sample](#SampleImplementation)  
 * [Example Speech Recognition Request](#SampleVoiceRR)  
+* [Supported Codecs](#Codecs) 
+* [Supported Locales](#SupLocales)
 
 [Speech Recognition Responses](#VoiceRecResponse)
 * [Normal Response](#NormalResponse)  
@@ -26,10 +28,6 @@ Weight: 90
   * [Successful Recognition Response](#SuccessfulRecResponse) 
   * [Recognition Failure](#RecFailure)
 * [Error Responses](#ErrorResponse)  
-
-[Supported Codecs](#Codecs) 
-
-[Supported Locales](#SupLocales)  
 
 [Troubleshooting and Support](#TrouNSupport)
 
@@ -116,14 +114,32 @@ Authorization: Bearer [Base64 access_token]
 
 (audio data)
 ```
-## <a name="VoiceRecResponse">Speech Recognition Responses</a>
+### <a name="Codecs">Supported Codecs</a>
+The Speech Recognition API supports audio/wav using the following codecs: 
+* PCM single channel
+* Siren
+* SirenSR
 
+### <a name="SupLocales">Supported Locales</a>
+Supported locales include:
+
+language-Country |language-Country | language-Country |language-Country 
+---------|----------|--------|------------------
+de-DE    |   zh-TW  | zh-HK  |    ru-RU 
+es-ES    |   ja-JP  | ar-EG* |    da-DK 
+en-GB    |   en-IN  | fi-FI  |    nl-NL 
+en-US    |   pt-BR  | pt-PT  |    ca-ES
+fr-FR    |   ko-KR  | en-NZ  |    nb-NO
+it-IT    |   fr-CA  | pl-PL  |    es-MX
+zh-CN    |   en-AU  | en-CA  |    sv-SE  
+*ar-EG supports Modern Standard Arabic (MSA)
+
+## <a name="VoiceRecResponse">Speech Recognition Responses</a>
 The API response is returned in JSON format. The value of the “name” tag has the post-inverse text normalization result. The value of the “lexical” tag has the pre-inverse text normalization result. 
 
 ### <a name="NormalResponse">Normal response</a>
 
 #### <a name="Schema1">Schema 1</a>
-
 Schema Legend: 
 
 * < ... >  means optional
@@ -340,28 +356,7 @@ Content-Type: text/plain; charset=UTF-8
 Invalid lat parameter specified       
 ```
 
-### <a name="Codecs">Supported Codecs</a>
-The Speech Recognition API supports audio/wav using the following codecs: 
-* PCM single channel
-* Siren
-* SirenSR
-
-## <a name="SupLocales">Supported Locales</a>
-Supported locales include:
-
-language-Country |language-Country | language-Country |language-Country 
----------|----------|--------|------------------
-de-DE    |   zh-TW  | zh-HK  |    ru-RU 
-es-ES    |   ja-JP  | ar-EG* |    da-DK 
-en-GB    |   en-IN  | fi-FI  |    nl-NL 
-en-US    |   pt-BR  | pt-PT  |    ca-ES
-fr-FR    |   ko-KR  | en-NZ  |    nb-NO
-it-IT    |   fr-CA  | pl-PL  |    es-MX
-zh-CN    |   en-AU  | en-CA  |    sv-SE  
-*ar-EG supports Modern Standard Arabic (MSA)
-
 ## <a name="TrouNSupport">Troubleshooting and Support</a>
-
 Post all questions and issues to the [Bing Speech Service](https://social.msdn.microsoft.com/Forums/en-US/home?forum=SpeechService) MSDN Forum, with complete detail, such as: 
 * An example of the full request string (minus the raw audio data).
 * If applicable, the full output of a failed request, which includes log IDs.
