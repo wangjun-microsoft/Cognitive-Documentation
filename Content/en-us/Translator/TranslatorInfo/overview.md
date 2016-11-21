@@ -22,7 +22,7 @@ The only noticeable differences will be:
 
 ##High-level product architecture
 
-[How DNN works] (http://translator.microsoft.com/compare)
+[How DNN works] (http://translator.microsoft.com)
 
 DNN will provide better translations not only from a raw translation quality scoring standpoint but also because they will sound more fluid, more human, than SMT ones. 
 The key reason for this fluidity is that DNN translation uses the full context of a sentence to translate words contrary to SMT that only takes the context of a few words before and after each word.
