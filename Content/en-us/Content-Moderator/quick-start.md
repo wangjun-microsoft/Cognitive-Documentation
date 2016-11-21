@@ -27,7 +27,7 @@ Submit your uploaded content to start the auto-moderation step. Internally, the 
 ![Moderate files](images/QuickStart-4.PNG)
 
 ## 5. Review moderation results ##
-As your business application calls the Moderator API, the tagged content will start queuing up, ready to be reviewed by the human review teams. You can quickly review large volumes of content using this approach. You will be doing a few different things as part of your moderation workflow such as:
+As your business application calls the Moderator [image API](image-moderation-api.md "Image Moderation API"), the tagged content will start queuing up, ready to be reviewed by the human review teams. You can quickly review large volumes of content using this approach. You will be doing a few different things as part of your moderation workflow such as:
 
 - Adjusting the zoom level
 - Browsing the reviews on-screen
