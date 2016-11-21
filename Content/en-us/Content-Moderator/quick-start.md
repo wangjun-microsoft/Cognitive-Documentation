@@ -6,10 +6,10 @@ Weight: 190
 -->
 
 # Get Started #
-Start by signing up for the [**review tool**](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool") and uploading images to explore the automated moderation and review the  results right within your web browser. You can take actions such as changing the highlighted tags and submitting your decisions to the default workflow. You can then move on to using the review API to integrate your content (images) with the tool, and finally, use the underlying moderation APIs directly for automated moderation and custom list management.
+Start by signing up for the [review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool") and uploading images to explore the automated moderation and review the  results right within your web browser. You can take actions such as changing the highlighted tags and submitting your decisions to the default workflow. You can then move on to using the review API to integrate your content (images) with the tool, and finally, use the underlying moderation APIs directly for automated moderation and custom list management.
 
 ## 1. Sign up for the review tool ##
-Sign up to try the [**review tool**](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool") by either using your existing Microsoft account or create a new account within the review tool.
+Sign up to try the [review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool") by either using your existing Microsoft account or create a new account within the review tool.
 
 ## 2. Invite team members ##
 On the opening screen after signup, name your team, and optionally, invite your colleagues by entering their email addresses. You can see the status of existing invites, cancel pending invites, and after confirmation by the invited users, you can assign them the role of an administrator (like yourself) or of a reviewer.
@@ -37,10 +37,10 @@ As your business application calls the Moderator API, the tagged content will st
 ![Review results](images/QuickStart-5.PNG)
 
 ## 6. Integrate with the review tool by using the review API ##
-Once you have explored the review tool, use the [**review API**](review-api.md "Content Moderator Review API") to integrate large number of images with the review tool in an automated way. The review API will scan your images and generate reviews in the review tool where you can resume the human review steps.
+Once you have explored the review tool, use the [review API](review-api.md "Content Moderator Review API") to integrate large number of images with the review tool in an automated way. The review API will scan your images and generate reviews in the review tool where you can resume the human review steps.
 
 ## 7. Directly use the Moderate APIs for image and text moderation ##
-Use the [**image**](image-moderation-api.md "Image Moderation API") and [**text**](text-moderation-api.md "Text Moderation API") moderation APIs to directly scan your content and get back the detailed results. You can use the information to either implement your post-moderation workflow by either using your  systems and/or create reviews within the built-in review tool for your human moderation teams. You will find your Moderate API credentials listed within the "API" section under Settings in the review tool.
+Use the [image](image-moderation-api.md "Image Moderation API") and [text](text-moderation-api.md "Text Moderation API") moderation APIs to directly scan your content and get back the detailed results. You can use the information to either implement your post-moderation workflow by either using your  systems and/or create reviews within the built-in review tool for your human moderation teams. You will find your Moderate API credentials listed within the "API" section under Settings in the review tool.
 
 ## 8. Create and manage custom lists of content ##
-Enhance your moderation effectiveness by using the list management capabilities introduced in the [**image**](image-moderation-api.md "Image Moderation API") and [**text**](text-moderation-api.md "Text Moderation API") moderation APIs to create and manage custom lists of known (approved and blocked) text and images to the incoming content before moderating. The lists that you create can be used in the Moderate operations. You can use your Moderate API credentials for the list management API as well.
+Enhance your moderation effectiveness by using the list management capabilities introduced in the [image](image-moderation-api.md "Image Moderation API") and [text](text-moderation-api.md "Text Moderation API") moderation APIs to create and manage custom lists of known (approved and blocked) text and images to the incoming content before moderating. The lists that you create can be used in the Moderate operations. You can use your Moderate API credentials for the list management API as well.
