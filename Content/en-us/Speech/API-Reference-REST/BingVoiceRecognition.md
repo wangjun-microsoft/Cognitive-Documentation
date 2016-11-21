@@ -53,8 +53,7 @@ Ocp-Apim-Subscription-Key|  ASCII             | Your subscription key.
 
 The expected response from the call to the token service is the JWT access token as text/plain.
 
-
-Then the token Base64 access_token requested is passed to the Speech endpoint as an `Authorization` header and prefixed with the string `Bearer`, for example:
+Then the JWT is passed as a Base64 access_token to the Speech endpoint as an `Authorization` header prefixed with the string `Bearer`, for example:
 
  `Authorization: Bearer [Base64 access_token]`
 
