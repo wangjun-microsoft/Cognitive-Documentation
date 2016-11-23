@@ -4,30 +4,30 @@ LinkLabel: API Reference
 Url: Speech-api/documentation/API-Reference-REST/BingVoiceOutput
 Weight: 180
 -->
-
-
 # Bing Text To Speech API
 
 ## Contents
-[1. Introduction](#Introduction)  
-[2. Voice Synthesis Request](#VoiceSynReq)
-* [HTTP headers](#Http) 
-* [Input parameters](#InputParam) 
-* [Example voice output request](#SampleVoiceOR) 
+[Introduction](#Introduction) 
 
-[3. Voice Output Responses](#VoiceOutResponse) 
-  * [Successful synthesis Response](#SuccessfulRecResponse) 
-  * [Synthesis failure](#RecFailure)
-  * [Error responses](#ErrorResponse) 
+[Voice Synthesis Request](#VoiceSynReq)
+* [HTTP Headers](#Http) 
+* [Input Parameters](#InputParam) 
+* [Example Voice Output Request](#SampleVoiceOR) 
 
-[4. Supported Locales and Voice Fonts](#SupLocales)  
-[5. Troubleshooting and Support](#TrouNSupport)
+[Voice Output Responses](#VoiceOutResponse) 
+  * [Successful Synthesis Response](#SuccessfulRecResponse) 
+  * [Synthesis Failure](#RecFailure)
+  * [Error Responses](#ErrorResponse) 
+
+[Supported Locales and Voice Fonts](#SupLocales)  
+
+[Troubleshooting and Support](#TrouNSupport)
  
-## <a name="Introduction">1. Introduction</a>
+## <a name="Introduction"> Introduction</a>
 
 This documentation describes the Bing Text to Speech API which exposes an HTTP interface that enables developers to synthesize voice queries. The Bing Text To Speech API may be used in many different contexts that need cloud-based voice recognition and synthesis capabilities.  
 
-## <a name="VoiceSynReq">2. Voice Synthesis Request</a>
+## <a name="VoiceSynReq"> Voice Synthesis Request</a>
 
 Clients must use the following end-point to access the service and build voice enabled applications: [https://speech.platform.bing.com/synthesize](https://speech.platform.bing.com/synthesize) 
 
@@ -35,10 +35,9 @@ Note! Until you have submitted your subscription key as described in [Bing Speec
 
 The API uses HTTP POST to send audio back to the client. The maximum amount of audio returned for a given request must not exceed 15 seconds. 
  
-### <a name="Http">HTTP headers</a>
+### <a name="Http">HTTP Headers</a>
 
-Here are the HTTP headers for the request:
-
+HTTP headers for the request include:
 
 Header   |Value  |Comments 
 ---------|---------|---------
@@ -49,11 +48,11 @@ X-Search-ClientID     |     A GUID (hex only, no dashes)    |    An ID that uniq
 User-Agent     |     Application name    |     Application name is required and must be less than 255 characters.    
 
 
-### <a name="InputParam">Input parameters</a>
+### <a name="InputParam">Input Parameters</a>
 
 Inputs to the Bing Text to Speech API are expressed as HTTP query parameters. Parameters in the POST body are treated as SSML content. Refer to the W3C specifications ([http://www.w3.org/TR/speech-synthesis/](http://www.w3.org/TR/speech-synthesis/)). The following is a complete list of recognized input parameters. Unsafe characters should be escaped following the W3C URL specifications ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). 
 
-###  <a name="SampleVoiceOR">Example voice output request</a>
+###  <a name="SampleVoiceOR">Example Voice Output Request</a>
 
 The following is an example of a voice output request:  
  
@@ -71,11 +70,11 @@ Content-Length: 197
 <speak version='1.0' xml:lang='en-US'><voice xml:lang='en-US' xml:gender='Female' name='Microsoft Server Speech Text to Speech Voice (en-US, ZiraRUS)'>Microsoft Bing Voice Output API</voice></speak>
 ```
  
-## <a name="VoiceOutResponse">3. Voice Output Responses</a>
+## <a name="VoiceOutResponse"> Voice Output Responses</a>
 
 The API response contains the audio stream and the codec and will match the requested output format.
  
-#### <a name="SuccessfulRecResponse">Succcessful synthesis response</a>
+#### <a name="SuccessfulRecResponse"> Succcessful Synthesis Response</a>
 
 Example JSON response for a successful voice search. The comments and formatting of the JSON below is for example reasons only. The real result will omit indentation spaces, smart quotes, comments, etc. 
 ```
@@ -86,7 +85,7 @@ Content-Type: audio/x-wav
 Response audio payload       
 ```
  
-#### <a name="RecFailure">Synthesis failure</a>
+#### <a name="RecFailure"> Synthesis Failure</a>
 
 Example JSON response for a voice synthesis query failure.
 
@@ -96,17 +95,16 @@ Content-Type: text/xml
 Content-Length: 0
 ```
  
-### <a name="ErrorResponse">Error responses</a>
+### <a name="ErrorResponse"> Error Responses</a>
 
-**Http/400 Bad Request:** Will be returned if a required parameter is missing, empty or null, or if the value passed to either a required or optional parameter is invalid. The “Invalid” response includes passing a string value that is longer than the allowed length. A brief description of the problematic parameter will be included.  
+Error   | Description 
+---------|---------
+**Http/400 Bad Request** | Will be returned if a required parameter is missing, empty or null, or if the value passed to either a required or optional parameter is invalid. The “Invalid” response includes passing a string value that is longer than the allowed length. A brief description of the problematic parameter will be included.  
+**Http/401 Unauthorized** | Will be returned if the request is not authorized. 
+**HTTP/413 RequestEntityTooLarge**  | Will be returned if the SSML input is larger than what is supported. 
+**Http/502 BadGateway** | Network related problem or a server side issue. 
 
-**Http/401 Unauthorized:** Will be returned if the request is not authorized. 
-
-**HTTP/413 RequestEntityTooLarge:**  Will be returned if the SSML input is larger than what is supported. 
-
-**Http/502 BadGateway:** Network related problem or a server side issue. 
-
-Example of Error response.
+#### Example Error Response.
 ```
 HTTP/1.0 400 Bad Request
 Content-Length: XXX
@@ -115,9 +113,9 @@ Content-Type: text/plain; charset=UTF-8
 Voice name not supported
 ```
 
-## <a name="SupLocales">4. Supported Locales and Voice Fonts</a>
+## <a name="SupLocales">Supported Locales and Voice Fonts</a>
 
-The supported locales and related voice fonts are:
+Supported locales and related voice fonts include:
 
 Locale | Gender | Service name mapping 
 ---------|--------|------------
@@ -152,7 +150,7 @@ zh-TW|Female|"Microsoft Server Speech Text to Speech Voice (zh-TW, Yating, Apoll
 zh-TW|Male|"Microsoft Server Speech Text to Speech Voice (zh-TW, Zhiwei, Apollo)"
  *ar-EG supports Modern Standard Arabic (MSA)
 
-## <a name="TrouNSupport">5. Troubleshooting and Support</a>
+## <a name="TrouNSupport"> Troubleshooting and Support</a>
 
 Post all questions and issues to the [Bing Speech Service](https://social.msdn.microsoft.com/Forums/en-US/home?forum=SpeechService) MSDN Forum, with complete detail, such as: 
 * An example of the full request string (minus the raw audio data).
