@@ -25,7 +25,7 @@ Weight: 180
  
 ## <a name="Introduction"> Introduction</a>
 
-This documentation describes the Bing Text to Speech API which exposes an HTTP interface that enables developers to synthesize voice queries. The Bing Text To Speech API may be used in many different contexts that need cloud-based voice recognition and synthesis capabilities.  
+With the Bing Text to Speech API your application can send HTTP requests to a cloud server, where text is instantly synthesized into human sounding speech, and returned as an audio file.  The API can be used in many different contexts to provide real-time text to speech conversion in a variety of different voices and languages.  
 
 ## <a name="VoiceSynReq"> Voice Synthesis Request</a>
 
@@ -47,10 +47,13 @@ X-Search-AppId     |    A GUID (hex only, no dashes)     |     An ID that unique
 X-Search-ClientID     |     A GUID (hex only, no dashes)    |    An ID that uniquely identifies application instance per-installation.     
 User-Agent     |     Application name    |     Application name is required and must be less than 255 characters.    
 
-
 ### <a name="InputParam">Input Parameters</a>
+Inputs to the Bing Text to Speech API are expressed as HTTP query parameters. Parameters in the POST body are treated as Speech Synthesis Markup Language (SSML) content. Refer to the [SSML W3C Specification](http://www.w3.org/TR/speech-synthesis/) for a description of the markup used to control aspects of speech such as pronunciation, volume, pitch, rate, etc. 
+The following is a complete list of recognized input parameters:  
 
-Inputs to the Bing Text to Speech API are expressed as HTTP query parameters. Parameters in the POST body are treated as SSML content. Refer to the W3C specifications ([http://www.w3.org/TR/speech-synthesis/](http://www.w3.org/TR/speech-synthesis/)). The following is a complete list of recognized input parameters. Unsafe characters should be escaped following the W3C URL specifications ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). A request with more than one instance of any parameter will result in an error response (HTTP 400). 
+**Note**: Unsafe characters should be escaped following the W3C URL specifications ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). 
+
+**Note**: Requests with more than one instance of any parameter will result in an HTTP 400 error response.
 
 ###  <a name="SampleVoiceOR">Example Voice Output Request</a>
 
