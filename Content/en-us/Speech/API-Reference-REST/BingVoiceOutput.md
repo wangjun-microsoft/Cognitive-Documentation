@@ -76,7 +76,7 @@ The API response contains the audio stream and the codec and will match the requ
  
 #### <a name="SuccessfulRecResponse"> Succcessful Synthesis Response</a>
 
-Example JSON response for a successful voice search. The comments and formatting of the JSON below is for example reasons only. The real result will omit indentation spaces, smart quotes, comments, etc. 
+Example JSON response for a successful voice search. The comments and formatting of the JSON below is for example reasons only. Indentation spaces, smart quotes, comments, etc. are omitted from the actual response. 
 ```
 HTTP/1.1 200 OK
 Content-Length: XXX
