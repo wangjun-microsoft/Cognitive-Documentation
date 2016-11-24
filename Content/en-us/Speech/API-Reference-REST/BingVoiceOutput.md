@@ -77,7 +77,7 @@ Content-Length: 197
 
 The API response contains the audio stream and the codec and will match the requested output format.
  
-#### <a name="SuccessfulRecResponse"> Succcessful Synthesis Response</a>
+#### <a name="SuccessfulRecResponse"> Successful Synthesis Response</a>
 
 Example JSON response for a successful voice search. The comments and formatting of the JSON below is for example reasons only. Indentation spaces, smart quotes, comments, etc. are omitted from the actual response. 
 ```
@@ -102,10 +102,10 @@ Content-Length: 0
 
 Error   | Description 
 ---------|---------
-**Http/400 Bad Request** | Will be returned if a required parameter is missing, empty or null, or if the value passed to either a required or optional parameter is invalid. The “Invalid” response includes passing a string value that is longer than the allowed length. A brief description of the problematic parameter will be included.  
-**Http/401 Unauthorized** | Will be returned if the request is not authorized. 
+**HTTP/400 Bad Request** | Will be returned if a required parameter is missing, empty or null, or if the value passed to either a required or optional parameter is invalid. The “Invalid” response includes passing a string value that is longer than the allowed length. A brief description of the problematic parameter will be included.  
+**HTTP/401 Unauthorized** | Will be returned if the request is not authorized. 
 **HTTP/413 RequestEntityTooLarge**  | Will be returned if the SSML input is larger than what is supported. 
-**Http/502 BadGateway** | Network related problem or a server side issue. 
+**HTTP/502 BadGateway** | Network related problem or a server side issue. 
 
 #### Example Error Response.
 ```
