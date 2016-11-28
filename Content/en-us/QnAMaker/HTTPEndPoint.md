@@ -1,6 +1,6 @@
 <!-- 
 NavPath: QnA Maker
-LinkLabel: HTTP endpoint
+LinkLabel: API Reference
 Url: QnAMaker/documentation/httpendpoint
 Weight: 86 
 -->
@@ -16,9 +16,9 @@ You need the following two GUIDs to access your knowledge base via the HTTP endp
 
 ### HTTP ###
 ```Markdown
-POST /knowledgebases/*<Your KB ID>*/generateAnswer HTTP/1.1
+POST /knowledgebases/<Your KB ID>/generateAnswer HTTP/1.1
 Host: qnaservice-ppe.cloudapp.net
-Ocp-Apim-Subscription-Key: *<Your Subscription key>*
+Ocp-Apim-Subscription-Key: <Your Subscription key>
 Content-Type: application/json
 Cache-Control: no-cache
 {"question": "Question goes here"}
@@ -29,19 +29,19 @@ Cache-Control: no-cache
 string responseString = string.Empty;
 
 //Build the URI
-Uri qnamakerUriBase = new Uri("http://qnaservice-ppe.cloudapp.net/");
-var builder = new UriBuilder($"*{qnamakerUriBase }*/knowledgebases/*{knowledgebaseId}*/generateAnswer");
+Uri qnamakerUriBase = new Uri("https://westus.api.cognitive.microsoft.com/qnamaker/v1.0");
+var builder = new UriBuilder($"{qnamakerUriBase}/knowledgebases/{knowledgebaseId}/generateAnswer");
 
 //Add the subscription key header
-builder.Query = $" Ocp-Apim-Subscription-Key =*{qnamakerSubscriptionKey}*";
+builder.Query = $" Ocp-Apim-Subscription-Key ={qnamakerSubscriptionKey}";
 //Add the question as part of the body
-var postBody = $"{{\"question\": \"*{Query}*\"}}";
+var postBody = $"{{\"question\": \"{Query}\"}}";
 
 //Send the POST request
 using (WebClient client = new WebClient())
 {
-client.Headers.Add("Content-Type", "application/json");
-responseString = client.UploadString(builder.Uri, postBody);
+	client.Headers.Add("Content-Type", "application/json");
+	responseString = client.UploadString(builder.Uri, postBody);
 }
 ```
 

@@ -1,6 +1,6 @@
 <!-- 
 NavPath: QnA Maker
-LinkLabel: FAQs
+LinkLabel: FAQ
 Url: QnAMaker/documentation/faqs
 Weight: 86 
 -->

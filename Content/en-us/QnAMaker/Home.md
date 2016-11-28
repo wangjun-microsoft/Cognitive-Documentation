@@ -1,6 +1,6 @@
 <!-- 
 NavPath: QnA Maker
-LinkLabel: Overview
+LinkLabel: API Overview
 Url: QnAMaker/documentation/home
 Weight: 86 
 -->
@@ -13,6 +13,3 @@ Microsoft QnA Maker is a free, easy-to-use, REST API- and web-based service that
 With optimized machine learning logic and the ability to integrate industry-leading language processing with ease, QnA Maker distills masses of information into distinct, helpful answers.
 
 ![alt text](./Images/botFrameworkArch.png)
-
-# Quick start video #
-This 5 minute video gives you a quick overview of all the features of the QnA Maker tool, and walks you through your first knowledge base creation.

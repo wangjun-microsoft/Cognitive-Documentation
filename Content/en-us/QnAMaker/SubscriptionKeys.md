@@ -1,6 +1,6 @@
 <!-- 
 NavPath: QnA Maker
-LinkLabel: Subscription keys
+LinkLabel: Authentication
 Url: QnAMaker/documentation/subkeys
 Weight: 86 
 -->
