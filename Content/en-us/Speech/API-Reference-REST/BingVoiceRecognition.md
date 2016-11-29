@@ -37,7 +37,7 @@ This documentation describes the Bing Speech Recognition REST API that exposes a
 
 ## <a name="VoiceRecReq">Speech Recognition Request</a>
 ### <a name="Authorize">Authenticate the API call</a>
-Every call to the Speech API requires a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) (JWT) access token. The JWT  access token needs to be passed through as part of the Speech request header. The token has a expiry time of 10 minutes. 
+Every call to the Speech API requires a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) (JWT) access token. The JWT  access token needs to be passed through as part of the Speech request header. The token has an expiry time of 10 minutes. 
 
 First, the Subscription key is passed to the token service, for example:
 ```

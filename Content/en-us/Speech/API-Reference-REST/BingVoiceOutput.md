@@ -19,6 +19,8 @@ Weight: 180
   * [Synthesis Failure](#RecFailure)
   * [Error Responses](#ErrorResponse) 
 
+[Sample Application](#SampleApp)  
+
 [Supported Locales and Voice Fonts](#SupLocales)  
 
 [Troubleshooting and Support](#TrouNSupport)
@@ -51,9 +53,20 @@ User-Agent     |     Application name    |     Application name is required and 
 Inputs to the Bing Text to Speech API are expressed as HTTP query parameters. Parameters in the POST body are treated as Speech Synthesis Markup Language (SSML) content. Refer to the [SSML W3C Specification](http://www.w3.org/TR/speech-synthesis/) for a description of the markup used to control aspects of speech such as pronunciation, volume, pitch, rate, etc. 
 The following is a complete list of recognized input parameters:  
 
-**Note**: Unsafe characters should be escaped following the W3C URL specifications ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). 
+Parameter   |Description | Values 
+---------|---------|----------
+VoiceType | Indicates the preferred gender of the voice to speak the synthesized text. | Female, Male 
+VoiceName | Indicates the processor-specific voice name used to speak the synthesized text. | See [Supported Locales and Voice Fonts](#SupLocales)
+Locale | Indicates the language used to speak the synthesized text. | See [Supported Locales and Voice Fonts](#SupLocales)  
+OutputFormat | Indicates the audio format the text will be synthesized into | Raw8Khz8BitMonoMULaw, Raw16Khz16BitMonoPcm, Riff8Khz8BitMonoMULaw, Riff16Khz16BitMonoPcm
+RequestUri | Indicates the URI of the Internet resource associated with the request | 
+AuthorizationToken | Token used to validate the transaction | 
+Text | The text to be synthesized. | 
 
 **Note**: Requests with more than one instance of any parameter will result in an HTTP 400 error response.
+
+**Note**: Unsafe characters should be escaped following the W3C URL specifications ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). 
+
 
 ###  <a name="SampleVoiceOR">Example Voice Output Request</a>
 
@@ -115,6 +128,9 @@ Content-Type: text/plain; charset=UTF-8
 
 Voice name not supported
 ```
+
+## <a name="SampleApp">Sample Application</a>
+See the [Visual C#.NET Text to Speech sample application](https://github.com/Microsoft/Cognitive-Speech-TTS/blob/master/Samples-Http/CSharp/TTSProgram.cs) for implementation details.  
 
 ## <a name="SupLocales">Supported Locales and Voice Fonts</a>
 
