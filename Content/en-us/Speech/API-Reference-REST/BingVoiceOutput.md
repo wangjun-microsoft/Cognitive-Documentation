@@ -1,4 +1,3 @@
-
 <!-- 
 NavPath: Bing Speech API/Text To Speech
 LinkLabel: API Reference
@@ -28,7 +27,6 @@ Weight: 180
 [Troubleshooting and Support](#TrouNSupport)
  
 ## <a name="Introduction"> Introduction</a>
-
 With the Bing Text to Speech API your application can send HTTP requests to a cloud server, where text is instantly synthesized into human sounding speech, and returned as an audio file.  The API can be used in many different contexts to provide real-time text to speech conversion in a variety of different voices and languages.  
 
 ## <a name="VoiceSynReq"> Voice Synthesis Request</a>
@@ -54,12 +52,12 @@ The token service returns the JWT access token as text/plain. Then the JWT is pa
 `Authorization: Bearer [Base64 access_token]`
 
 Clients must use the following endpoint to access the text to speech service: 
-[https://speech.platform.bing.com/synthesize](https://speech.platform.bing.com/synthesize) 
+
+`https://speech.platform.bing.com/synthesize` 
 
 **Note!**: Until you have acquired an access token with your subscription key as described above this link will generate a 403 Response Error.
 
 ### <a name="Http">HTTP Headers</a>
-
 HTTP headers for the request include:
 
 Header   |Value  |Comments 
@@ -71,7 +69,7 @@ X-Search-ClientID     |     A GUID (hex only, no dashes)    |    An ID that uniq
 User-Agent     |     Application name    |     Application name is required and must be less than 255 characters.    
 
 ### <a name="InputParam">Input Parameters</a>
-Inputs to the Bing Text to Speech API are expressed as HTTP query parameters. Parameters in the POST body are treated as Speech Synthesis Markup Language (SSML) content. Refer to the [SSML W3C Specification](http://www.w3.org/TR/speech-synthesis/) for a description of the markup used to control aspects of speech such as pronunciation, volume, pitch, rate, etc. 
+Inputs to the Bing Text to Speech API are expressed as HTTP query parameters. Parameters in the POST body are treated as Speech Synthesis Markup Language (SSML) content. Refer to the [SSML W3C Specification](http://www.w3.org/TR/speech-synthesis/) for a description of the markup used to control aspects of speech such as the language and gender of the speaker.
 The following is a complete list of recognized input parameters:  
 
 Parameter   |Description | Values 
