@@ -33,7 +33,7 @@ With the Bing Text to Speech API your application can send HTTP requests to a cl
 ## <a name="VoiceSynReq"> Voice Synthesis Request</a>
 
 ### <a name="Subscription">Authorization Tokens</a>
-Every request requires a JSON Web Token (JWT) access token. The JWT access token is passed through in the Speech request header. The token has an expiry time of 10 minutes. See [Get Started for Free](https://www.microsoft.com/cognitive-services/en-US/sign-up?ReturnUrl=/cognitive-services/en-us/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) for information about subscribing and obtaining API keys.
+Every request requires a JSON Web Token (JWT) access token. The JWT access token is passed through in the Speech request header. The token has an expiry time of 10 minutes. See [Get Started for Free](https://www.microsoft.com/cognitive-services/en-US/sign-up?ReturnUrl=/cognitive-services/en-us/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) for information about subscribing and obtaining API keys used to retrieve valid JWT access tokens.
 
 The API key is passed to the token service, for example:
 
