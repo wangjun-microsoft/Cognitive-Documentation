@@ -18,7 +18,7 @@ You will find your Client Id listed on this page:
 ![API Settings](images/Review-API-Authentication-1A.png)
 
 ## Client Secret ##
-The Keys portion of the Settings.API tab allows you to generate the client secrets(keys) that you would need to use to authenticate while using the Review API.
+dThe Keys portion of the Settings.API tab allows you to generate the client secrets(keys) that you would need to use to authenticate while using the Review API.
 
 The secrets are time bound and can have lifetime of either 1 or 2 years. You can generate multiple secrets(keys) to cycle through them in your production environment.
 
@@ -28,18 +28,18 @@ You can manage your existing secrets or create new ones from this page.
 ![API Settings](images/Review-API-Authentication-2A.png)
 
 ## Using the Client Id and Client Secret to Authenticate ##
-Use the credentials generated on the Settings.API page to authenticate the Review API.
+oUse the credentials generated on the Settings.API page to authenticate the Review API.
 
 The following samples requests show how you will use you the Client Id and Client Secret(key) to generate time bound tokens.
 
 ## Request Samples ##
 
 #### CURL ####
-	curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d 'resource=https://api.contentmoderator.cognitive.microsoft.com/review&client_id=<Your Client Id>&client_secret=<Your Client Key/Secret>&grant_type=client_credentials' "https://login.microsoftonline.com/contentmoderator.onmicrosoft.com/oauth2/token"
+	curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d 'resource=https://api.contentmoderator.cognitive.microsoft.com/review&client_id=<Your Client Id>&client_secret=<Your Client Key/Secret>&grant_type=client_credentials' "https://login.microsoftonline.com/contentmoderatorprod.onmicrosoft.com/oauth2/token"
  
 	NodeJS Unirest
 	var unirest = require("unirest");
-	var req = unirest("POST", "https://login.microsoftonline.com/contentmoderator.onmicrosoft.com/oauth2/token");
+	var req = unirest("POST", "https://login.microsoftonline.com/contentmoderatorprod.onmicrosoft.com/oauth2/token");
  
 	req.headers({
     	"content-type": "application/x-www-form-urlencoded"
@@ -64,13 +64,13 @@ The following samples requests show how you will use you the Client Id and Clien
 	headers = {
     	'content-type': "application/x-www-form-urlencoded"
     }
-	conn.request("POST", "/contentmoderator.onmicrosoft.com/oauth2/token", payload, headers)
+	conn.request("POST", "/contentmoderatorprod.onmicrosoft.com/oauth2/token", payload, headers)
 	res = conn.getresponse()
 	data = res.read()
 	print(data.decode("utf-8"))
 
 #### C# ####
-	var client = new RestClient("https://login.microsoftonline.com/contentmoderator.onmicrosoft.com/oauth2/token");
+	var client = new RestClient("https://login.microsoftonline.com/contentmoderatorprod.onmicrosoft.com/oauth2/token");
 	var request = new RestRequest(Method.POST);
 	request.AddHeader("content-type", "application/x-www-form-urlencoded");
 	request.AddParameter("application/x-www-form-urlencoded", "resource=https%3A%2F%2Fapi.contentmoderator.cognitive.microsoft.com%2Freview&client_id=< Your Client Id >&client_secret=< Your Client Key/Secret >&grant_type=client_credentials", ParameterType.RequestBody);

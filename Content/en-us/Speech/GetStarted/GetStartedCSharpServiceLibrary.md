@@ -8,15 +8,15 @@ With Microsoft Speech Recognition Service Library, your service can utilize the 
 
 ### Table of Contents
 * [Sample Application](#Sample)  
+* [Recognition Modes](#Modes)
 * [Service Uri](#ServiceUri)  
- * [Supported Audio Formats](#Formats)  
-* [Recognition Modes](#Modes)  
+* [Supported Audio Formats](#Formats)  
 * [Preferences](#Preferences)  
 * [Speech Input](#Input)  
 * [Speech Request](#Request)  
 * [Speech Events](#Events)  
 * [Speech Response](#Response)  
- * [Connection Management](#Connection)  
+* [Connection Management](#Connection)  
 * [Buffering](#Buffering)
 
 <a name="Sample"></a>
@@ -44,6 +44,10 @@ Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build S
  * Arg[1]: Specify the audio locale.
  * Arg[2]: Specify the service uri.
  * Arg[3]: Specify the subscription key to access the Speech Recognition Service.  
+ 
+## <a name="Modes">Recognition Modes</a>  
+* **ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial results and one final best result.  
+* **LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
 ## <a name="ServiceUri"> Service Uri</a>
 **Recognition Mode** |  Service Uri |  
@@ -51,24 +55,20 @@ Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build S
 Short-Form | wss://speech.platform.bing.com/api/service/recognition  
 Long-Form  | wss://speech.platform.bing.com/api/service/recognition/continuous
 
-###  <a name="Formats">Supported Audio formats</a>
+##  <a name="Formats">Supported Audio formats</a>
 The Voice API supports audio/wav using the following codecs: 
 * PCM single channel
 * Siren 
 * SirenSR
-## <a name="Modes">Recognition Modes</a>
-**ShortPhrase mode:** an utterance up to 15 seconds long. As data is sent to the server, the client will receive multiple partial 
-results and one final best result.  
-**LongDictation mode:** an utterance up to 10 minutes long. As data is sent to the server, the client will receive multiple partial results and multiple final results, based on where the server indicates sentence pauses.
 
 ## <a name="Preferences">Preferences</a>  
 To create a SpeechClient, you need to first create a Preferences object. The Preferences object is a set of parameters
 that configures the behavior of the speech service. It consists of the following fields:  
-**SpeechLanguage:** The locale of the audio being sent to the speech service.  
-**ServiceUri:** The endpoint use to call the speech service.  
-**AuthorizationProvider:** An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle 
+* **SpeechLanguage:** The locale of the audio being sent to the speech service.  
+* **ServiceUri:** The endpoint use to call the speech service.  
+* **AuthorizationProvider:** An IAuthorizationProvider implemetation used to fetch tokens in order to access the speech service. Although the sample provides a Cognitive Services authorization provider, it is highly recommended to create your own implementation to handle 
 token caching.  
-**EnableAudioBuffering:** An advanced option, please see [Connection Management](#connection-management)
+* **EnableAudioBuffering:** An advanced option, please see [Connection Management](#connection-management)
 
 ## <a name="Input">Speech Input</a>
 The SpeechInput object consists of 2 fields:    
@@ -107,7 +107,8 @@ Or Use the generic events subscription method
 **Phrases** | The set of n-best recognized phrases with the recognition confidence. Refer to the above table for phrase format.
 
 ## <a name="Response">Speech Response</a>
-
+Speech Rsponse example:
+```
 --- Partial result received by OnPartialResult  
 ---what  
 --- Partial result received by OnPartialResult  
@@ -118,9 +119,10 @@ Or Use the generic events subscription method
 ---what's the weather like  
 ---***** Phrase Recognition Status = [Success]   
 ***What's the weather like? (Confidence:High)  
-What's the weather like? (Confidence:High)  
+What's the weather like? (Confidence:High) 
+```
 
-### <a name="Connection">Connection Management</a>
+## <a name="Connection">Connection Management</a>
 The APIs utilizes a single web-socket connection per request. For optimal user experience, the SDK will attempt to reconnect to the speech service and start the recognition from the last RecognitionResult that it received. For example, if the audio request is 2 minutes long and the SDK received a RecognitionEvent at the 1 minute mark, then a network failure occurred after 5 seconds, the SDK will start a new connection starting from the 1 minute mark. 
 **Note** that the SDK does not seek back to the 1 minute mark, as the Stream may not support seeking. Instead the SDK keep internal 
 buffer that it uses to buffer the audio and clears the buffer as it received RecognitionResult events.
