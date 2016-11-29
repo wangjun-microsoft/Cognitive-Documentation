@@ -1,3 +1,4 @@
+
 <!-- 
 NavPath: Bing Speech API/Text To Speech
 LinkLabel: API Reference
@@ -37,8 +38,10 @@ Every request requires a JSON Web Token (JWT) access token. The JWT access token
 
 The API key is passed to the token service, for example:
 
-`POST https://api.cognitive.microsoft.com/sts/v1.0/issueToken
-Content-Length: 0`
+```
+POST https://api.cognitive.microsoft.com/sts/v1.0/issueToken
+Content-Length: 0
+```
 
 The required header for token access is:
 
