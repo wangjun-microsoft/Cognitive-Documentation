@@ -34,28 +34,27 @@ Weight: 90
 ## <a name="Introduction">Introduction</a>
 This documentation describes the Bing Speech Recognition REST API that exposes an HTTP interface which enables developers to transcribe voice queries. The Bing Speech Recognition API may be used in many different contexts that need cloud-based speech recognition capabilities. 
 
-
 ## <a name="VoiceRecReq">Speech Recognition Request</a>
 ### <a name="Authorize">Authenticate the API call</a>
-Every call to the Speech API requires a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) (JWT) access token. The JWT  access token needs to be passed through as part of the Speech request header. The token has an expiry time of 10 minutes. 
 
-First, the Subscription key is passed to the token service, for example:
+Every request requires a JSON Web Token (JWT) access token. The JWT access token is passed through in the Speech request header. The token has an expiry time of 10 minutes. See [Get Started for Free](https://www.microsoft.com/cognitive-services/en-US/sign-up?ReturnUrl=/cognitive-services/en-us/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) for information about subscribing and obtaining API keys used to retrieve valid JWT access tokens.
+
+The API key is passed to the token service, for example:
+
 ```
 POST https://api.cognitive.microsoft.com/sts/v1.0/issueToken
 Content-Length: 0
-
 ```
+
 The required header for token access is:
 
-Name                     |Format              |Description, example and use  
--------------------------|--------------------|-----------------------------
-Ocp-Apim-Subscription-Key|  ASCII             | Your subscription key.
+Name	| Format	| Description, Example and Use
+---------|---------|--------
+Ocp-Apim-Subscription-Key |	ASCII	| Your subscription key.
 
-The expected response from the call to the token service is the JWT access token as text/plain.
+The token service returns the JWT access token as text/plain. Then the JWT is passed as a Base64 access_token to the Speech endpoint as an Authorization header prefixed with the string Bearer, for example:
 
-Then the JWT is passed as a Base64 access_token to the Speech endpoint as an `Authorization` header prefixed with the string `Bearer`, for example:
-
- `Authorization: Bearer [Base64 access_token]`
+`Authorization: Bearer [Base64 access_token]`
 
 ### <a name="SpeechService">Access the Speech Service Endpoint</a>
 
