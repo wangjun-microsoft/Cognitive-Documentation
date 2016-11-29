@@ -32,14 +32,14 @@ string responseString = string.Empty;
 Uri qnamakerUriBase = new Uri("https://westus.api.cognitive.microsoft.com/qnamaker/v1.0");
 var builder = new UriBuilder($"{qnamakerUriBase}/knowledgebases/{knowledgebaseId}/generateAnswer");
 
+//Add the subscription key header
+builder.Query = $" Ocp-Apim-Subscription-Key ={qnamakerSubscriptionKey}";
 //Add the question as part of the body
 var postBody = $"{{\"question\": \"{Query}\"}}";
 
 //Send the POST request
 using (WebClient client = new WebClient())
 {
-	//Add the subscription key header
-	client.Headers.Add("Ocp-Apim-Subscription-Key", qnamakerSubscriptionKey);
 	client.Headers.Add("Content-Type", "application/json");
 	responseString = client.UploadString(builder.Uri, postBody);
 }
