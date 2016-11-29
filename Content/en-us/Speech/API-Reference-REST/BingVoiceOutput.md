@@ -31,7 +31,6 @@ Weight: 180
 With the Bing Text to Speech API your application can send HTTP requests to a cloud server, where text is instantly synthesized into human sounding speech, and returned as an audio file.  The API can be used in many different contexts to provide real-time text to speech conversion in a variety of different voices and languages.  
 
 ## <a name="VoiceSynReq"> Voice Synthesis Request</a>
-The API uses HTTP POST to send audio back to the client.  The maximum amount of audio returned for a given request must not exceed 15 seconds. 
 
 ### <a name="Subscription">Authorization Tokens</a>
 Every request requires a JSON Web Token (JWT) access token. The JWT access token is passed through in the Speech request header. The token has an expiry time of 10 minutes. See [Get Started for Free](https://www.microsoft.com/cognitive-services/en-US/sign-up?ReturnUrl=/cognitive-services/en-us/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) for information about subscribing and obtaining API keys.
@@ -85,7 +84,6 @@ Text | The text to be synthesized. | **Note**: Unsafe characters should be escap
 **Note**: Requests with more than one instance of any parameter will result in an HTTP 400 error response.
 
 ###  <a name="SampleVoiceOR">Example Voice Output Request</a>
-
 The following is an example of a voice output request:  
  
 ```
@@ -103,11 +101,9 @@ Content-Length: 197
 ```
  
 ## <a name="VoiceOutResponse"> Voice Output Responses</a>
-
-The API response contains the audio stream and the codec and will match the requested output format.
+The Bing Text to Speech API uses HTTP POST to send audio back to the client. The API response contains the audio stream and the codec and will match the requested output format. The maximum amount of audio returned for a given request must not exceed 15 seconds. 
  
 #### <a name="SuccessfulRecResponse"> Successful Synthesis Response</a>
-
 Example JSON response for a successful voice search. The comments and formatting of the JSON below is for example reasons only. Indentation spaces, smart quotes, comments, etc. are omitted from the actual response. 
 ```
 HTTP/1.1 200 OK
