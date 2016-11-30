@@ -9,7 +9,7 @@ Weight: 5
 
 Develop a basic Android application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. The rest of this page describes use of the client library, which currently supports the 28 languages (see table in Step 2). The example below defaults to American English, “en-US”. 
 
-###Table of Contents
+### Table of Contents
  * [Prerequisites](#Prerequisites)
  * [Step 1: Install the example application and create the application framework](#Step1)
  * [Step 2: Build the example application](#Step2)
@@ -18,7 +18,7 @@ Develop a basic Android application that uses Bing Speech Recognition API to con
  * [Interpreting the returned results](#Results)
  * [Related Topics](#Related)
 
-### <a name="Prerequisites">Prerequisites</a>
+## <a name="Prerequisites">Prerequisites</a>
 
  * #### Platform requirements
 The below example has been developed for [Android Studio](http://developer.android.com/sdk/index.html) for Windows in Java.
@@ -29,20 +29,21 @@ Download Speech Recognition API Client Library for Android from [this link](http
  * #### Subscribe to Speech API and get a free trial subscription key 
 Before creating the example, you must subscribe to Speech API which is part of Cognitive Services. Click the yellow **"Try for free"** button on one of the offered services, in this case Speech API, and follow the directions. For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial. 
 
-### <a name="Step1">Step 1: Install the example application and create the application framework</a>
+## <a name="Step1">Step 1: Install the example application and create the application framework</a>
 
 Create an Android application project to implement use of the Speech Recognition API
 
 1.	Open Android Studio.
-2.	You will need to paste your subscription key into the **strings.xml** file, which can be found under **samples**, **SpeechRecoExample**, then **res** in the **values** folder. (You don’t have to worry about the LUIS values if you don’t want to use Intent at this point.)
+2.	Paste your subscription key into the **primaryKey** string in the in the  ..\samples\SpeechRecoExample\res\values folder. 
+    **Note:** You don’t have to worry about the LUIS values if you don’t want to use Intent at this point.)
 
-You can now run the example application or continue with these instructions if you want to build your own application.
+    *You can now run the example application or continue with these instructions if you want to build your own application.*
 
 3.	Create a new application project.
 4.	Using files downloaded from the **speech_SpeechToText-SDK-Android** zip package, do the following: 
-    a)	Copy the **speechsdk.jar** file, found in the **SpeechSDK** folder inside the **Bin** folder, to the “**your-application\app\libs**” folder.
-    b)	Right click "**app**" in the project tree, select "**Open module settings**", select the "**Dependencies**" tab, and click "**+**" to add a "**File dependency**". Select the **libs\speechsdk.jar** in the "**Select Path**" dialog box.
-    c)	Copy the **libandroid_platform.so** file to the “**your-application\app\src\main\jniLibs\armeabi**” folder.
+    1. Copy the **speechsdk.jar** file, found in the **SpeechSDK** folder inside the **Bin** folder, to the “**your-application\app\libs**” folder.
+    2. Right click "**app**" in the project tree, select "**Open module settings**", select the "**Dependencies**" tab, and click "**+**" to add a "**File dependency**". Select the **libs\speechsdk.jar** in the "**Select Path**" dialog box.
+    3. Copy the **libandroid_platform.so** file to the “**your-application\app\src\main\jniLibs\armeabi**” folder.
 
 ### <a name="Step2">Step 2: Build the example application</a>
 Open [MainActivity.java](https://oxfordportal.blob.core.windows.net/example-speech/MainActivity.java) or locate the **MainActivity.java** file within the **samples**, **SpeechRecoExample**, **src**, **com**, **microsoft**, **AzureIntelligentServicesExample** folder from the downloaded **speech_SpeechToText-SDK-Android** zip package. You will need the subscription key you generated above. Once you have added your subscription key to the application, notice that you use the **SpeechRecognitionServiceFactory** to create a client of your liking. 
