@@ -10,6 +10,7 @@ Weight: 180
 [Introduction](#Introduction) 
 
 [Voice Synthesis Request](#VoiceSynReq)
+* [Authorization Tokens](#Subscription) 
 * [HTTP Headers](#Http) 
 * [Input Parameters](#InputParam) 
 * [Example Voice Output Request](#SampleVoiceOR) 
@@ -19,26 +20,44 @@ Weight: 180
   * [Synthesis Failure](#RecFailure)
   * [Error Responses](#ErrorResponse) 
 
-[Sample Application](#SampleApp)  
+[Sample Text to Speech Application](#SampleApp)  
 
 [Supported Locales and Voice Fonts](#SupLocales)  
 
 [Troubleshooting and Support](#TrouNSupport)
  
 ## <a name="Introduction"> Introduction</a>
-
 With the Bing Text to Speech API your application can send HTTP requests to a cloud server, where text is instantly synthesized into human sounding speech, and returned as an audio file.  The API can be used in many different contexts to provide real-time text to speech conversion in a variety of different voices and languages.  
 
 ## <a name="VoiceSynReq"> Voice Synthesis Request</a>
 
-Clients must use the following end-point to access the service and build voice enabled applications: [https://speech.platform.bing.com/synthesize](https://speech.platform.bing.com/synthesize) 
+### <a name="Subscription">Authorization Tokens</a>
+Every request requires a JSON Web Token (JWT) access token. The JWT access token is passed through in the Speech request header. The token has an expiry time of 10 minutes. See [Get Started for Free](https://www.microsoft.com/cognitive-services/en-US/sign-up?ReturnUrl=/cognitive-services/en-us/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) for information about subscribing and obtaining API keys used to retrieve valid JWT access tokens.
 
-Note! Until you have submitted your subscription key as described in [Bing Speech Recognition](./BingVoiceRecognition.md), this link will generate a 403 Response Error.
+The API key is passed to the token service, for example:
 
-The API uses HTTP POST to send audio back to the client. The maximum amount of audio returned for a given request must not exceed 15 seconds. 
- 
+```
+POST https://api.cognitive.microsoft.com/sts/v1.0/issueToken
+Content-Length: 0
+```
+
+The required header for token access is:
+
+Name	| Format	| Description, Example and Use
+---------|---------|--------
+Ocp-Apim-Subscription-Key |	ASCII	| Your subscription key.
+
+The token service returns the JWT access token as text/plain. Then the JWT is passed as a Base64 access_token to the Speech endpoint as an Authorization header prefixed with the string Bearer, for example:
+
+`Authorization: Bearer [Base64 access_token]`
+
+Clients must use the following endpoint to access the text to speech service: 
+
+`https://speech.platform.bing.com/synthesize` 
+
+**Note!**: Until you have acquired an access token with your subscription key as described above this link will generate a 403 Response Error.
+
 ### <a name="Http">HTTP Headers</a>
-
 HTTP headers for the request include:
 
 Header   |Value  |Comments 
@@ -50,7 +69,7 @@ X-Search-ClientID     |     A GUID (hex only, no dashes)    |    An ID that uniq
 User-Agent     |     Application name    |     Application name is required and must be less than 255 characters.    
 
 ### <a name="InputParam">Input Parameters</a>
-Inputs to the Bing Text to Speech API are expressed as HTTP query parameters. Parameters in the POST body are treated as Speech Synthesis Markup Language (SSML) content. Refer to the [SSML W3C Specification](http://www.w3.org/TR/speech-synthesis/) for a description of the markup used to control aspects of speech such as pronunciation, volume, pitch, rate, etc. 
+Inputs to the Bing Text to Speech API are expressed as HTTP query parameters. Parameters in the POST body are treated as Speech Synthesis Markup Language (SSML) content. Refer to the [SSML W3C Specification](http://www.w3.org/TR/speech-synthesis/) for a description of the markup used to control aspects of speech such as the language and gender of the speaker.
 The following is a complete list of recognized input parameters:  
 
 Parameter   |Description | Values 
@@ -61,15 +80,11 @@ Locale | Indicates the language used to speak the synthesized text. | See [Suppo
 OutputFormat | Indicates the audio format the text will be synthesized into | Raw8Khz8BitMonoMULaw, Raw16Khz16BitMonoPcm, Riff8Khz8BitMonoMULaw, Riff16Khz16BitMonoPcm
 RequestUri | Indicates the URI of the Internet resource associated with the request | 
 AuthorizationToken | Token used to validate the transaction | 
-Text | The text to be synthesized. | 
+Text | The text to be synthesized. | **Note**: Unsafe characters should be escaped following the W3C URL specifications ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)).
 
 **Note**: Requests with more than one instance of any parameter will result in an HTTP 400 error response.
 
-**Note**: Unsafe characters should be escaped following the W3C URL specifications ([http://www.w3.org/Addressing/URL/url-spec.txt](http://www.w3.org/Addressing/URL/url-spec.txt)). 
-
-
 ###  <a name="SampleVoiceOR">Example Voice Output Request</a>
-
 The following is an example of a voice output request:  
  
 ```
@@ -87,11 +102,9 @@ Content-Length: 197
 ```
  
 ## <a name="VoiceOutResponse"> Voice Output Responses</a>
-
-The API response contains the audio stream and the codec and will match the requested output format.
+The Bing Text to Speech API uses HTTP POST to send audio back to the client. The API response contains the audio stream and the codec and will match the requested output format. The maximum amount of audio returned for a given request must not exceed 15 seconds. 
  
 #### <a name="SuccessfulRecResponse"> Successful Synthesis Response</a>
-
 Example JSON response for a successful voice search. The comments and formatting of the JSON below is for example reasons only. Indentation spaces, smart quotes, comments, etc. are omitted from the actual response. 
 ```
 HTTP/1.1 200 OK
@@ -172,7 +185,7 @@ zh-TW|Male|"Microsoft Server Speech Text to Speech Voice (zh-TW, Zhiwei, Apollo)
 ## <a name="TrouNSupport"> Troubleshooting and Support</a>
 
 Post all questions and issues to the [Bing Speech Service](https://social.msdn.microsoft.com/Forums/en-US/home?forum=SpeechService) MSDN Forum, with complete detail, such as: 
-* An example of the full request string (minus the raw audio data).
+* An example of the full request string.
 * If applicable, the full output of a failed request, which includes log IDs.
 * The percentage of requests that are failing.
 
