@@ -6,21 +6,20 @@ Weight: 86
 -->
 
 # Create your knowledge base #
-Creating your knowledge base is as simple as pointing the tool to the existing content.
+Creating your knowledge base is as simple as pointing the tool to the existing content, and ingesting the QnA content.
 
-First, login to the QnA Maker portal using your MSA
+Currently the tool is able to auto-extract question and answer pairs from most FAQ URLs and documents. If we are not able auto-extract, there is an option to editorially add QnA pairs later.
 
-![alt text](../Images/qnaMakerSignIn.png)
-
-Click on Create new service
+Follow the below steps to create a new KB.
+## Step 1 - Click on Create new service
 
 ![alt text](../Images/myKbService.png)
 
-Give your knowledge base a name, add FAQ URLs or files containing QnA.
+## Step 2 - Add sources for your KB
 
 ![alt text](../Images/createKbService.png)
 
-Click on Create
+## Step 3 - Click on Create
 
 ![alt text](../Images/createKbService2.png)
 

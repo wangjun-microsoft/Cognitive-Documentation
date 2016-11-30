@@ -5,9 +5,13 @@ Url: QnAMaker/documentation/subkeys
 Weight: 86 
 -->
 
-# Subscription keys #
-Each MSA login to the tool is assigned a subscription key. This subscription key is used to track your usage of the service and need to be part of every request, as mentioned in the API section.
-To view your subscription keys, go to Subscription keys.
+# Authentication & Subscription keys #
+You will need a Microsoft Account if you don't already have one, to sign in to the portal.
+
+You will receive a unique pair of keys. The second one is just a spare. Please do not share the secret keys with anyone
+
+These subscription keys are used to track your usage of the service and need to be part of every request, as mentioned in the API section.
+To view your subscription keys, go to Settings.
 
 ![alt text](./Images/kbSubscription.png)
 
