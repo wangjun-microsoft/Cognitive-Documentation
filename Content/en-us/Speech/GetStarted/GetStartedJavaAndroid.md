@@ -9,7 +9,7 @@ Weight: 5
 
 Develop a basic Android application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. 
 
-The article uses a sample application to demonstrate how to use the Bing Speech Recognition API Client Library for Android to develop speech to text applications in Java for Android devices.  
+This article uses a sample application to demonstrate how to use the Bing Speech Recognition API Client Library for Android to develop speech to text applications in Java for Android devices.  
 
 ### Table of Contents
 * [Prerequisites](#Prerequisites)
@@ -20,7 +20,7 @@ The article uses a sample application to demonstrate how to use the Bing Speech 
 * [Interpreting the Returned Results](#Results)
 * [Related Topics](#Related)
 
-## <a name="Prerequisites">Prerequisites</a>
+## <a name="Prerequisites"> Prerequisites</a>
 
 #### Platform Requirements
 The below example has been developed for [Android Studio](http://developer.android.com/sdk/index.html) for Windows in Java.
@@ -36,7 +36,7 @@ Before creating the example, you must subscribe to Speech API which is part of C
 Create an Android application project to implement use of the Speech Recognition API
 
 1.	Open Android Studio.
-2.	Paste your subscription key into the **primaryKey** string in the in the  ..\samples\SpeechRecoExample\res\values folder. 
+2.	Paste your subscription key into the **primaryKey** string in the **..\samples\SpeechRecoExample\res\values** folder. 
     **Note:** You don’t have to worry about the LUIS values if you don’t want to use Intent at this point.)
 
     *You can now run the example application or continue with these instructions if you want to build your own application.*
