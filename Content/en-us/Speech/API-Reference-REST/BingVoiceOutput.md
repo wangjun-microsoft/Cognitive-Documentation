@@ -63,7 +63,7 @@ HTTP headers for the request include:
 Header   |Value  |Comments 
 ---------|---------|---------
 Content-Type     |    application/ssml+xml     |      The input content type   
-X-Microsoft-OutputFormat     |    **1)** raw-8khz-8bit-mono-mulaw, **2)** raw-16khz-16bit-mono-pcm, **3)** riff-8khz-8bit-mono-mulaw, **4)** riff-16khz-16bit-mono-pcm |       The output audio format  
+X-Microsoft-OutputFormat     |    **1)** ssml-16khz-16bit-mono-tts, **2)** raw-16khz-16bit-mono-pcm, **3)** audio-16khz-16kbps-mono-siren, **4)** riff-16khz-16kbps-mono-siren **5)** riff-16khz-16bit-mono-pcm **6)** audio-16khz-128kbitrate-mono-mp3, **7)** audio-16khz-64kbitrate-mono-mp3, **8)** audio-16khz-32kbitrate-mono-mp3, |       The output audio format  
 X-Search-AppId     |    A GUID (hex only, no dashes)     |     An ID that uniquely identifies the client application. This can be Store ID for Apps. If one is not available, the ID may be user generated per-application.     
 X-Search-ClientID     |     A GUID (hex only, no dashes)    |    An ID that uniquely identifies application instance per-installation.     
 User-Agent     |     Application name    |     Application name is required and must be less than 255 characters.    
