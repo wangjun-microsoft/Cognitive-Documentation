@@ -28,7 +28,7 @@ You can manage your existing secrets or create new ones from this page.
 ![API Settings](images/Review-API-Authentication-2A.png)
 
 ## Using the Client Id and Client Secret to Authenticate ##
-oUse the credentials generated on the Settings.API page to authenticate the Review API.
+Use the credentials generated on the Settings.API page to authenticate the Review API.
 
 The following samples requests show how you will use you the Client Id and Client Secret(key) to generate time bound tokens.
 
