@@ -5,31 +5,33 @@ Url: Speech-api/documentation/GetStarted/GetStartedJavaAndroid
 Weight: 5
 -->
 
-# Get started with Bing Speech Recognition and/or intent in Java on Android
+# Get Started with Bing Speech Recognition in Java on Android
 
-Develop a basic Android application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. The rest of this page describes use of the client library, which currently supports the 28 languages (see table in Step 2). The example below defaults to American English, “en-US”. 
+Develop a basic Android application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. 
+
+The article uses a sample application to demonstrate how to use the Bing Speech Recognition API Client Library for Android to develop speech to text applications in Java for Android devices.  
 
 ### Table of Contents
  * [Prerequisites](#Prerequisites)
- * [Step 1: Install the example application and create the application framework](#Step1)
- * [Step 2: Build the example application](#Step2)
- * [Step 3: Run the example application](#Step3)
+ * [Step 1: Install the Example Application and Create the Application Framework](#Step1)
+ * [Step 2: Build the Example Application](#Step2)
+ * [Step 3: Run the Example Application](#Step3)
  * [Review and Learn](#Review)   
- * [Interpreting the returned results](#Results)
+ * [Interpreting the Returned Results](#Results)
  * [Related Topics](#Related)
 
 ## <a name="Prerequisites">Prerequisites</a>
 
- * #### Platform requirements
+ * #### Platform Requirements
 The below example has been developed for [Android Studio](http://developer.android.com/sdk/index.html) for Windows in Java.
 
- * #### Get the client library and example
+ * #### Get the Client Library and Example Application
 Download Speech Recognition API Client Library for Android from [this link](https://github.com/microsoft/cognitive-speech-stt-android). The downloaded files need to be saved to a folder of your choice. Inside there is both a fully buildable example and the SDK library. The buildable example can be found under **samples** in the **SpeechRecoExample** directory. The two libraries you need to use in your own apps can be found in the **SpeechSDK** folder under **libs** in the **armeabi** and the **x86** folder. The size of **libandroid_platform.so** file is 22 MB but gets reduced to 4MB at deploy time. 
 
- * #### Subscribe to Speech API and get a free trial subscription key 
+ * #### Subscribe to Speech API and Get a Free Trial Subscription Key 
 Before creating the example, you must subscribe to Speech API which is part of Cognitive Services. Click the yellow **"Try for free"** button on one of the offered services, in this case Speech API, and follow the directions. For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial. 
 
-## <a name="Step1">Step 1: Install the example application and create the application framework</a>
+## <a name="Step1"> Step 1: Install the Example Application and Create the Application Framework</a>
 
 Create an Android application project to implement use of the Speech Recognition API
 
@@ -45,7 +47,7 @@ Create an Android application project to implement use of the Speech Recognition
     2. Right click "**app**" in the project tree, select "**Open module settings**", select the "**Dependencies**" tab, and click "**+**" to add a "**File dependency**". Select the **libs\speechsdk.jar** in the "**Select Path**" dialog box.
     3. Copy the **libandroid_platform.so** file to the “**your-application\app\src\main\jniLibs\armeabi**” folder.
 
-### <a name="Step2">Step 2: Build the example application</a>
+### <a name="Step2">Step 2: Build the Example Application</a>
 Open [MainActivity.java](https://oxfordportal.blob.core.windows.net/example-speech/MainActivity.java) or locate the **MainActivity.java** file within the **samples**, **SpeechRecoExample**, **src**, **com**, **microsoft**, **AzureIntelligentServicesExample** folder from the downloaded **speech_SpeechToText-SDK-Android** zip package. You will need the subscription key you generated above. Once you have added your subscription key to the application, notice that you use the **SpeechRecognitionServiceFactory** to create a client of your liking. 
 
 ```
@@ -147,11 +149,11 @@ For each if the n-best choices, you get a confidence value and few different for
   * **InverseTextNormalizationResult:** Inverse text normalization (ITN) converts phrases like "one two three four" to a normalized form such as "1234". Another example is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that interpret the speech recognition results as commands or which perform queries based on the recognized text.
   * **MaskedInverseTextNormalizationResult:** The recognized phrase with inverse text normalization and profanity masking applied, but not capitalization or punctuation. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user. Inverse Text Normalization (ITN) has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that use the unmasked ITN results but also need to display the command or query to the user.
 
-### <a name="Step3">Step 3: Run the example application</a>
+### <a name="Step3"> Step 3: Run the Example Application</a>
 
 Run the application with the chosen clients, recognition modes and event handlers.
 
-### <a name="Related">Related topics</a>
+### <a name="Related"> Related Topics</a>
 * [Get started with Bing Speech Recognition in C Sharp for Windows in .NET](GetStartedCSharpDesktop.md)
 * [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
 * [Get started with Bing Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
