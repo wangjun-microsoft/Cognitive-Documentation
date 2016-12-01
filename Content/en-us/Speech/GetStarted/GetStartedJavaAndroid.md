@@ -16,8 +16,6 @@ This article uses a sample application to demonstrate how to use the Bing Speech
 * [Step 1: Install the Example Application and Create the Application Framework](#Step1)
 * [Step 2: Build the Example Application](#Step2)
 * [Step 3: Run the Example Application](#Step3)
-* [Review and Learn](#Review)   
-* [Interpreting the Returned Results](#Results)
 * [Related Topics](#Related)
 
 ## <a name="Prerequisites"> Prerequisites</a>
