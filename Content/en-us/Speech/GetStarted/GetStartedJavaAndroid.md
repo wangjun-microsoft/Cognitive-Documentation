@@ -47,7 +47,7 @@ Create an Android application project to implement use of the Speech Recognition
     2. Right click "**app**" in the project tree, select "**Open module settings**", select the "**Dependencies**" tab, and click "**+**" to add a "**File dependency**". Select the **libs\speechsdk.jar** in the "**Select Path**" dialog box.
     3. Copy the **libandroid_platform.so** file to the “**your-application\app\src\main\jniLibs\armeabi**” folder.
 
-### <a name="Step2">Step 2: Build the Example Application</a>
+##<a name="Step2"> Step 2: Build the Example Application</a>
 Open [MainActivity.java](https://oxfordportal.blob.core.windows.net/example-speech/MainActivity.java) or locate the **MainActivity.java** file within the **samples**, **SpeechRecoExample**, **src**, **com**, **microsoft**, **AzureIntelligentServicesExample** folder from the downloaded **speech_SpeechToText-SDK-Android** zip package. You will need the subscription key you generated above. Once you have added your subscription key to the application, notice that you use the **SpeechRecognitionServiceFactory** to create a client of your liking. 
 
 ```
@@ -101,20 +101,22 @@ void initializeRecoClient()
     }
 
 ```
-#### You can create one of the following clients:
+#### Create a Client:
+Create one of the following clients
 
- **1. DataRecognitionClient:** Speech recognition with PCM data, for example from a file or audio source. 
-The data is broken up into buffers and each buffer is sent to the Speech Recognition Service. No modification is done to the buffers, so the user can apply their own Silence Detection if desired. If the data is provided from wave files, you can send data from the file directly to the server. If you have raw data, for example audio coming over Bluetooth, then you first send a format header to the server followed by the data.
+* **DataRecognitionClient:** Speech recognition with PCM data, for example from a file or audio source. 
+    The data is broken up into buffers and each buffer is sent to the Speech Recognition Service. No modification is done to the buffers, so the user can apply their own Silence Detection if desired. If the data is provided from wave files, you can send data from the file directly to the server. If you have raw data, for example audio coming over Bluetooth, then you first send a format header to the server followed by the data.
 
- **2. MicrophoneRecognitionClient:** Speech recognition with audio coming from the microphone. 
-Make sure the microphone is turned on and data from the microphone is sent to the Speech Recognition Service. A built-in Silence Detector is applied to the microphone data before it is sent to the recognition service.
+* **MicrophoneRecognitionClient:** Speech recognition with audio coming from the microphone. 
+    Make sure the microphone is turned on and data from the microphone is sent to the Speech Recognition Service. A built-in Silence Detector is applied to the microphone data before it is sent to the recognition service.
 
- **3. “WithIntent” clients:**
-Use “WithIntent” if you want the server to return additional structured information about the speech to be used by apps to parse the intent of the speaker and drive further actions by the app. To use Intent, you will need to train a model and get an AppID and a Secret. See project [LUIS](https://www.luis.ai/) for details.
+* **“WithIntent” clients:**
+    Use “WithIntent” if you want the server to return additional structured information about the speech to be used by apps to parse the intent of the speaker and drive further actions by the app. To use Intent, you will need to train a model and get an AppID and a Secret. See project [LUIS](https://www.luis.ai/) for details.
 
+#### Select a Locale
 When you use the SpeechRecognitionServiceFactory to create the Client, you must select a language.
 
- The supported locales are:
+Supported locales include:
 
 language-Country |language-Country | language-Country |language-Country 
 ---------|----------|--------|------------------
@@ -127,13 +129,15 @@ it-IT    |   fr-CA  | pl-PL  |    es-MX
 zh-CN    |   en-AU  | en-CA  |    sv-SE  
 *ar-EG supports Modern Standard Arabic (MSA)
 
+#### Select a Recognition Mode
 You also need to provide the recognition mode. 
 
- * **ShortPhrase mode:** An utterance up to 15 seconds long. 
+* **ShortPhrase mode:** An utterance up to 15 seconds long. 
 As data is sent to the service, the client will receive multiple partial results and one final multiple n-best choice result.
- * **LongDictation mode:** An utterance up to 2 minutes long. 
+* **LongDictation mode:** An utterance up to 2 minutes long. 
 As data is sent to the service, the client will receive multiple partial results and multiple final results, based on where the server identifies sentence pauses.
 
+#### Attach an Event Handler
 From the created client, you can attach various event handlers.
 
 * **Partial Results Events:** This event gets called every time the Speech Recognition Server has an idea of what you might be saying – even before you finish speaking (if you are using the Microphone Client) or have finished sending up data (if you are using the Data Client).
@@ -141,19 +145,21 @@ From the created client, you can attach various event handlers.
 * **Intent Events:** Called on WithIntent clients (only in ShortPhrase mode) after the final reco result has been parsed into a structured JSON intent.
 * **Result Events:** When you have finished speaking (in ShortPhrase mode), this event is called. You will be provided with n-best choices for the result. In LongDictation mode, he handler's associated with this event will be called multiple times, based on where the server thinks sentence pauses are.
 
+#### Select Confidence Value and Text Form
 For each if the n-best choices, you get a confidence value and few different forms of the recognized text:
 
-  * **LexicalForm:** This form is optimal for use by applications that need the raw, unprocessed speech recognition result.
-  * **DisplayText:** The recognized phrase with inverse text normalization, capitalization, punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user.
-  * **Inverse Text Normalization (ITN):** has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that display the speech recognition results to a user.
-  * **InverseTextNormalizationResult:** Inverse text normalization (ITN) converts phrases like "one two three four" to a normalized form such as "1234". Another example is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that interpret the speech recognition results as commands or which perform queries based on the recognized text.
-  * **MaskedInverseTextNormalizationResult:** The recognized phrase with inverse text normalization and profanity masking applied, but not capitalization or punctuation. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user. Inverse Text Normalization (ITN) has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that use the unmasked ITN results but also need to display the command or query to the user.
+* **LexicalForm:** This form is optimal for use by applications that need the raw, unprocessed speech recognition result.
+* **DisplayText:** The recognized phrase with inverse text normalization, capitalization, punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user.
+* **Inverse Text Normalization (ITN):** has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that display the speech recognition results to a user.
+* **InverseTextNormalizationResult:** Inverse text normalization (ITN) converts phrases like "one two three four" to a normalized form such as "1234". Another example is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that interpret the speech recognition results as commands or which perform queries based on the recognized text.
+* **MaskedInverseTextNormalizationResult:** The recognized phrase with inverse text normalization and profanity masking applied, but not capitalization or punctuation. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to a user. Inverse Text Normalization (ITN) has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that use the unmasked ITN results but also need to display the command or query to the user.
 
-### <a name="Step3"> Step 3: Run the Example Application</a>
-
+<a name="Step3"> </a>
+## Step 3: Run the Example Application
 Run the application with the chosen clients, recognition modes and event handlers.
 
-### <a name="Related"> Related Topics</a>
+<a name="Related"> </a>
+## Related Topics
 * [Get started with Bing Speech Recognition in C Sharp for Windows in .NET](GetStartedCSharpDesktop.md)
 * [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
 * [Get started with Bing Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
