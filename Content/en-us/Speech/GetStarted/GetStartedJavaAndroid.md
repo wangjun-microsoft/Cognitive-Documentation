@@ -35,15 +35,17 @@ Create an Android application project to implement use of the Speech Recognition
 
 1.	Open Android Studio.
 2.	Paste your subscription key into the **primaryKey** string in the **..\samples\SpeechRecoExample\res\values** folder. 
+    
     **Note:** You don’t have to worry about the LUIS values if you don’t want to use Intent at this point.)
-
-    *You can now run the example application or continue with these instructions if you want to build your own application.*
 
 3.	Create a new application project.
 4.	Using files downloaded from the **speech_SpeechToText-SDK-Android** zip package, do the following: 
     1. Copy the **speechsdk.jar** file, found in the **SpeechSDK** folder inside the **Bin** folder, to the “**your-application\app\libs**” folder.
     2. Right click "**app**" in the project tree, select "**Open module settings**", select the "**Dependencies**" tab, and click "**+**" to add a "**File dependency**". Select the **libs\speechsdk.jar** in the "**Select Path**" dialog box.
     3. Copy the **libandroid_platform.so** file to the “**your-application\app\src\main\jniLibs\armeabi**” folder.
+
+
+**You can now run the example application or continue with these instructions if you want to build your own application.**
 
 ##<a name="Step2"> Step 2: Build the Example Application</a>
 Open [MainActivity.java](https://oxfordportal.blob.core.windows.net/example-speech/MainActivity.java) or locate the **MainActivity.java** file within the **samples**, **SpeechRecoExample**, **src**, **com**, **microsoft**, **AzureIntelligentServicesExample** folder from the downloaded **speech_SpeechToText-SDK-Android** zip package. You will need the subscription key you generated above. Once you have added your subscription key to the application, notice that you use the **SpeechRecognitionServiceFactory** to create a client of your liking. 
