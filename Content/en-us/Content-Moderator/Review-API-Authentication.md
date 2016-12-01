@@ -18,7 +18,7 @@ You will find your Client Id listed on this page:
 ![API Settings](images/Review-API-Authentication-1A.png)
 
 ## Client Secret ##
-dThe Keys portion of the Settings.API tab allows you to generate the client secrets(keys) that you would need to use to authenticate while using the Review API.
+The Keys portion of the Settings.API tab allows you to generate the client secrets(keys) that you would need to use to authenticate while using the Review API.
 
 The secrets are time bound and can have lifetime of either 1 or 2 years. You can generate multiple secrets(keys) to cycle through them in your production environment.
 
