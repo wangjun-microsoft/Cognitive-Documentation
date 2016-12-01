@@ -12,23 +12,23 @@ Develop a basic Android application that uses Bing Speech Recognition API to con
 The article uses a sample application to demonstrate how to use the Bing Speech Recognition API Client Library for Android to develop speech to text applications in Java for Android devices.  
 
 ### Table of Contents
- * [Prerequisites](#Prerequisites)
- * [Step 1: Install the Example Application and Create the Application Framework](#Step1)
- * [Step 2: Build the Example Application](#Step2)
- * [Step 3: Run the Example Application](#Step3)
- * [Review and Learn](#Review)   
- * [Interpreting the Returned Results](#Results)
- * [Related Topics](#Related)
+* [Prerequisites](#Prerequisites)
+* [Step 1: Install the Example Application and Create the Application Framework](#Step1)
+* [Step 2: Build the Example Application](#Step2)
+* [Step 3: Run the Example Application](#Step3)
+* [Review and Learn](#Review)   
+* [Interpreting the Returned Results](#Results)
+* [Related Topics](#Related)
 
 ## <a name="Prerequisites">Prerequisites</a>
 
- * #### Platform Requirements
+#### Platform Requirements
 The below example has been developed for [Android Studio](http://developer.android.com/sdk/index.html) for Windows in Java.
 
- * #### Get the Client Library and Example Application
+#### Get the Client Library and Example Application
 Download Speech Recognition API Client Library for Android from [this link](https://github.com/microsoft/cognitive-speech-stt-android). The downloaded files need to be saved to a folder of your choice. Inside there is both a fully buildable example and the SDK library. The buildable example can be found under **samples** in the **SpeechRecoExample** directory. The two libraries you need to use in your own apps can be found in the **SpeechSDK** folder under **libs** in the **armeabi** and the **x86** folder. The size of **libandroid_platform.so** file is 22 MB but gets reduced to 4MB at deploy time. 
 
- * #### Subscribe to Speech API and Get a Free Trial Subscription Key 
+#### Subscribe to Speech API and Get a Free Trial Subscription Key 
 Before creating the example, you must subscribe to Speech API which is part of Cognitive Services. Click the yellow **"Try for free"** button on one of the offered services, in this case Speech API, and follow the directions. For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial. 
 
 ## <a name="Step1"> Step 1: Install the Example Application and Create the Application Framework</a>
