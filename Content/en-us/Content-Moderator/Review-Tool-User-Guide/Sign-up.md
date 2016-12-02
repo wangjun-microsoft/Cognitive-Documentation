@@ -1,4 +1,4 @@
-
+<!--
 NavPath: Content Moderator
 LinkLabel: Review Tool User Guide/Sign up
 Url: content-moderator/documentation/review-tool-user-guide/sign-up
