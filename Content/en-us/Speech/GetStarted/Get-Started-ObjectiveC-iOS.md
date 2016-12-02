@@ -3,32 +3,37 @@ LinkLabel: Get started with iOS
 Url: Speech-api/documentation/GetStarted/Get-Started-ObjectiveC-iOS
 Weight: 4 -->
 
-#Get started with Bing Speech Recognition and/or intent in Objective C on iOS
+#Get Started with Bing Speech Recognition in Objective C on iOS
 
-Develop a basic iOS application that invokes the Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. For client library api reference, see [Client Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-iOS/master/com.Microsoft.SpeechSDK-1_0-for-iOS.docset/Contents/Resources/Documents/index.html).
+Develop a basic iOS application that invokes the Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. 
 
+For client library api reference, see [Client Library Reference](https://cdn.rawgit.com/Microsoft/Cognitive-Speech-STT-iOS/master/com.Microsoft.SpeechSDK-1_0-for-iOS.docset/Contents/Resources/Documents/index.html).
+
+###Table of Contents
  * [Prerequisites](#Prereqs)
- * [Step 1: Install the example application / create the application framework](#Step1)
- * [Step 2: Build the example application / example code](#Step2)
- * [Step 3: Run the example application](#Step3)
+ * [Step 1: Install the Example Application and Create the Application Framework](#Step1)
+ * [Step 2: Build the Example Application / Example Code](#Step2)
+ * [Step 3: Run the Example Application](#Step3)
  * [Related Topics](#Related)
 
-### <a name="Prereqs">Prerequisites</a>
+<a name="Prereqs"> </a>
+## Prerequisites
 
- * Platform requirements
+#### Platform requirements
 
 Make sure Mac XCode IDE is installed.
 
-  * Get the client library and example
+#### Get the client library and example
 
 You may download the Speech API client library and example for iOS through https [SDK](https://github.com/microsoft/cognitive-speech-stt-ios). The downloaded zip file needs to be extracted to a folder of your choice.
 Install the .pkg file on your Mac. The .pkg file will install onto your Mac hard drive in the root (or personal) Documents directory under **SpeechSDK**. Inside the folder there is both a fully buildable example and an SDK library. The buildable example can be found in the **samples\SpeechRecognitionServerExample** directory and the library can be found at the **SpeechSDK\SpeechSDK.framework**.
 
-  * Subscribe to Speech API and get a free trial subscription key
+#### Subscribe to Speech API and get a free trial subscription key
 
 Before creating the example, you must subscribe to Speech API which is part of Cognitive Services. For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial.
 
-### <a name="Step1">Step 1: Install the example application / create the application framework</a>
+<a name="Step1"> </a>
+## Step 1: Install the Example Application and Create the Application Framework
 
 Open Xcode IDE. You have two options, building the example application or building your own application.
 
@@ -54,7 +59,8 @@ If you want to **build your own application**, continue on with these instructio
 
  **g)**	Note that inside the directory to which you unpacked the SDK in directory **SpeechSDK\Samples\SpeechRecognitionServerExample** there is a XCode buildable example so you can see these settings in action.
 
-### <a name="Step2">Step 2: Build the application / example code</a>
+<a name="Step2"> </a>
+## Step 2: Build the Application / Example Code
 
 3.-Open [ViewController.mm](https://oxfordportal.blob.core.windows.net/example-speech/ViewController.mm) in a new window or find **ViewController.mm** in the downloaded file under **samples\SpeechRecognitionServiceExample**. You will need the **Speech API primary subscription key**. The below code snippet shows where to use the key. (You may ignore the LUIS values if you don’t want to use “Intent” right now.)
 
@@ -165,11 +171,13 @@ You can attach various event handlers to the client you created.
 
       e)	**MaskedInverseTextNormalizationResult:** The recognized phrase with inverse text normalization and profanity masking applied, but no capitalization or punctuation. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to users. Inverse Text Normalization (ITN) has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that use the unmasked ITN results, but also need to display the command or query to users.
 
-### <a name="Step3">Step 3: Run the example application</a>
+<a name="Step3"> </a>
+## Step 3: Run the Example Application
 
 Run the application with the chosen clients, recognition modes and event handlers.
 
-### <a name="Related">Related topics</a>
+<a name="Related"> </a>
+## Related Topics
 
  * [Get started with Bing Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md)
  * [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
