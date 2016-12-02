@@ -34,3 +34,4 @@ This is where you can define your custom tags by entering the short code, name, 
 
 ![Tags Settings](images/2-Settings-3-Tags.PNG)
 
+You will see your new tag on the screen. Click the **Save** button to save your new tag and make it available during reviews.
