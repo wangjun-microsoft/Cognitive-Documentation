@@ -1,4 +1,3 @@
-
 <!-- 
 NavPath: Content Moderator
 LinkLabel: Review Tool User Guide/Sign up
@@ -21,11 +20,17 @@ After you have sent out invites, you can monitor them, change permissions for te
 
 **Review API**
 
-In this section, you can access your Review API credentials (Client Id and Client secret) that you will use to integrate your content with the review tool.
+In this section, you can access your Review API credentials (Client Id and Client Secret) that you will use to integrate your content with the review tool.
 
 **Moderator API**
 
 Under "Connectors", you can access your credentials for the Content Moderator API that are automatically created for you. If you already have a subscription to the Content Moderator API, you can enter the information by clicking the "Edit" button.
 
 ![API Settings](images/2-Settings-2-API.PNG)
+
+## Tags ##
+
+This is where you can define your custom tags by entering the short code, name, and description for your tags and using the **Add** button.
+
+![Tags Settings](images/2-Settings-3-Tags.PNG)
 
