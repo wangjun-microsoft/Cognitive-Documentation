@@ -112,7 +112,7 @@ If you want to **build your own application**, continue on with these instructio
 }
 
 ```
-
+ 
 #### Create a Client
 Once your **primaryKey** has been pasted into the example, you can use the **SpeechRecognitionServiceFactory** to create a client of your liking. For example, you can create a client consisting of:
 
@@ -144,34 +144,35 @@ zh-CN    |   en-AU  | en-CA  |    sv-SE
 #### Select a Recognition Mode
 You also need to provide the recognition mode.
 
- * **ShortPhrase mode:** An utterance up to 15 seconds long.
+* **ShortPhrase mode:** An utterance up to 15 seconds long.
 As data is sent to the service, the client will receive multiple partial results and one final multiple n-best choice result.
- * **LongDictation mode:** An utterance up to 2 minutes long.
+
+* **LongDictation mode:** An utterance up to 2 minutes long.
 As data is sent to the service, the client will receive multiple partial results and multiple final results, based on where the server identifies sentence pauses.
 
 #### Attach Event Handlers
 You can attach various event handlers to the client you created.
 
-**1.	Partial Results Events:** This event gets called every time the Speech Recognition Service predicts what you might be saying – even before you finish speaking (if you are using the Microphone Client) or have finished sending data (if you are using the Data Client).
+* **Partial Results Events:** This event gets called every time the Speech Recognition Service predicts what you might be saying – even before you finish speaking (if you are using the Microphone Client) or have finished sending data (if you are using the Data Client).
 
-**2.	Error Events:** Called when the service detects an Error.
+* **Error Events:** Called when the service detects an Error.
 
-**3.	Intent Events:** Called on “WithIntent” clients (only in ShortPhrase mode) after the final reco result has been parsed into a structured JSON intent.
+* **Intent Events:** Called on “WithIntent” clients (only in ShortPhrase mode) after the final reco result has been parsed into a structured JSON intent.
 
-**4.	Result Events:**
+* **Result Events:**
   * **In ShortPhrase mode**, this event is called and returns n-best results after you finish speaking.
   * **In LongDictation mode**, the event handler is called multiple times, based on where the service identifies sentence pauses.
   * **For each of the n-best choices**, a confidence value and a few different forms of the recognized text are returned:
 
-      a)	**LexicalForm:** This form is optimal for use by applications that need the raw, unprocessed speech recognition result.
+      *	**LexicalForm:** This form is optimal for use by applications that need the raw, unprocessed speech recognition result.
 
-      b)	**DisplayText:** The recognized phrase with inverse text normalization, capitalization, punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, for example "d***". This form is optimal for use by applications that display the speech recognition results to users.
+      *	**DisplayText:** The recognized phrase with inverse text normalization, capitalization, punctuation and profanity masking applied. Profanity is masked with asterisks after the initial character, for example "d***". This form is optimal for use by applications that display the speech recognition results to users.
 
-      c)	**Inverse Text Normalization (ITN):** An example of ITN is converting result text from "go to fourth street" to "go to 4th St". This form is optimal for use by applications that display the speech recognition results to users.
+      *	**Inverse Text Normalization (ITN):** An example of ITN is converting result text from "go to fourth street" to "go to 4th St". This form is optimal for use by applications that display the speech recognition results to users.
 
-      d)	**InverseTextNormalizationResult:** Inverse text normalization (ITN) converts phrases like "one two three four" to a normalized form such as "1234". Another example is converting result text from "go to fourth street" to "go to 4th St". This form is optimal for use by applications that interpret the speech recognition results as commands or perform queries based on the recognized text.
+      *	**InverseTextNormalizationResult:** Inverse text normalization (ITN) converts phrases like "one two three four" to a normalized form such as "1234". Another example is converting result text from "go to fourth street" to "go to 4th St". This form is optimal for use by applications that interpret the speech recognition results as commands or perform queries based on the recognized text.
 
-      e)	**MaskedInverseTextNormalizationResult:** The recognized phrase with inverse text normalization and profanity masking applied, but no capitalization or punctuation. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to users. Inverse Text Normalization (ITN) has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that use the unmasked ITN results, but also need to display the command or query to users.
+      *	**MaskedInverseTextNormalizationResult:** The recognized phrase with inverse text normalization and profanity masking applied, but no capitalization or punctuation. Profanity is masked with asterisks after the initial character, e.g. "d***". This form is optimal for use by applications that display the speech recognition results to users. Inverse Text Normalization (ITN) has also been applied. An example of ITN is converting result text from "go to fourth street" to "go to 4th st". This form is optimal for use by applications that use the unmasked ITN results, but also need to display the command or query to users.
 
 <a name="Step3"> </a>
 ## Step 3: Run the Example Application
