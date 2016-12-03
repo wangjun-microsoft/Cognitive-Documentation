@@ -113,22 +113,22 @@ If you want to **build your own application**, continue on with these instructio
 
 ```
 
+#### Create a Client
 Once your **primaryKey** has been pasted into the example, you can use the **SpeechRecognitionServiceFactory** to create a client of your liking. For example, you can create a client consisting of:
 
-**1.	DataRecognitionClient:** Speech recognition with PCM data (for example from a file or audio source).
-The data is broken up into buffers and each buffer is sent to the Speech Recognition Service. No modification is done to the buffers, so the user can apply their own Silence Detection if desired. If the data is provided from wave files, you can send data from the file right to the server. If you have raw data, for example audio coming over Bluetooth, then you first send a format header to the server followed by the data.
+* **DataRecognitionClient: ** 
+ Speech recognition with PCM data (for example from a file or audio source). The data is broken up into buffers and each buffer is sent to the Speech Recognition Service. No modification is done to the buffers, so the user can apply their own Silence Detection if desired. If the data is provided from wave files, you can send data from the file right to the server. If you have raw data, for example audio coming over Bluetooth, then you first send a format header to the server followed by the data.
 
-**2.	MicrophoneRecognitionClient:** Speech recognition with audio coming from the microphone.
+* **MicrophoneRecognitionClient: ** 
+ Speech recognition with audio coming from the microphone. Make sure the microphone is turned on and data from the microphone is sent to the Speech Recognition Service. A built-in “Silence Detector” is applied to the microphone data before it is sent to the recognition service.
 
-Make sure the microphone is turned on and data from the microphone is sent to the Speech Recognition Service. A built-in “Silence Detector” is applied to the microphone data before it is sent to the recognition service.
+* **“WithIntent” Clients": **
+ Use “WithIntent” if you want the server to return additional structured information about the speech to be used by apps to parse the intent of the speaker and drive further actions by the app. To use Intent, you will need to train a model and get an AppID and a Secret. See project [LUIS](https://www.luis.ai) for details.
 
-**3.	“WithIntent” clients:**
-
-Use “WithIntent” if you want the server to return additional structured information about the speech to be used by apps to parse the intent of the speaker and drive further actions by the app. To use Intent, you will need to train a model and get an AppID and a Secret. See project [LUIS](https://www.luis.ai) for details.
-
+#### Select a Language
 When you use the SpeechRecognitionServiceFactory to create the Client, you must select a language.
 
-The supported locales are:
+Supported locales include:
 
 language-Country |language-Country | language-Country |language-Country
 ---------|----------|--------|------------------
@@ -141,6 +141,7 @@ it-IT    |   fr-CA  | pl-PL  |    es-MX
 zh-CN    |   en-AU  | en-CA  |    sv-SE
 *ar-EG supports Modern Standard Arabic (MSA)
 
+#### Select a Recognition Mode
 You also need to provide the recognition mode.
 
  * **ShortPhrase mode:** An utterance up to 15 seconds long.
@@ -148,6 +149,7 @@ As data is sent to the service, the client will receive multiple partial results
  * **LongDictation mode:** An utterance up to 2 minutes long.
 As data is sent to the service, the client will receive multiple partial results and multiple final results, based on where the server identifies sentence pauses.
 
+#### Attach Event Handlers
 You can attach various event handlers to the client you created.
 
 **1.	Partial Results Events:** This event gets called every time the Speech Recognition Service predicts what you might be saying – even before you finish speaking (if you are using the Microphone Client) or have finished sending data (if you are using the Data Client).
