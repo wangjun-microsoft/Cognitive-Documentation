@@ -116,13 +116,13 @@ If you want to **build your own application**, continue on with these instructio
 #### Create a Client
 Once your **primaryKey** has been pasted into the example, you can use the **SpeechRecognitionServiceFactory** to create a client of your liking. For example, you can create a client consisting of:
 
-* **DataRecognitionClient: ** 
+* **DataRecognitionClient:** 
  Speech recognition with PCM data (for example from a file or audio source). The data is broken up into buffers and each buffer is sent to the Speech Recognition Service. No modification is done to the buffers, so the user can apply their own Silence Detection if desired. If the data is provided from wave files, you can send data from the file right to the server. If you have raw data, for example audio coming over Bluetooth, then you first send a format header to the server followed by the data.
 
-* **MicrophoneRecognitionClient: ** 
+* **MicrophoneRecognitionClient:** 
  Speech recognition with audio coming from the microphone. Make sure the microphone is turned on and data from the microphone is sent to the Speech Recognition Service. A built-in “Silence Detector” is applied to the microphone data before it is sent to the recognition service.
 
-* **“WithIntent” Clients": **
+* **“WithIntent” Clients:**
  Use “WithIntent” if you want the server to return additional structured information about the speech to be used by apps to parse the intent of the speaker and drive further actions by the app. To use Intent, you will need to train a model and get an AppID and a Secret. See project [LUIS](https://www.luis.ai) for details.
 
 #### Select a Language
