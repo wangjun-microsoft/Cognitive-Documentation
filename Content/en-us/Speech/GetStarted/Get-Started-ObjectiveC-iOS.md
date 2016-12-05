@@ -3,7 +3,7 @@ LinkLabel: Get started with iOS
 Url: Speech-api/documentation/GetStarted/Get-Started-ObjectiveC-iOS
 Weight: 4 -->
 
-#Get Started with Bing Speech Recognition in Objective C on iOS
+#Get Started with Bing Speech Recognition API in Objective C on iOS
 
 Develop a basic iOS application that invokes the Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. 
 
