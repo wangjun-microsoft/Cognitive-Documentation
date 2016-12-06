@@ -45,7 +45,8 @@ Before creating the example, you must subscribe to Speech API which is part of M
 
 4.	Tap the app to open it.  A simple user interface opens. Tap the “Listen” button and speak a sentence or two. (Make sure the microphone is on.)  The spoken audio should be returned as text and appear in the square window immediately after your speech. A confidence level accompanies the returned text.
 
-###<a name="Review">Review and Learn</a>
+<a name="Review"> </a>
+### Review and Learn
 One SpeechRecognizer object can be used for multiple recognition sessions.
 (BH comment: Suggest adding the preceding line of code which contains the async modifier:
  )
@@ -59,10 +60,13 @@ A speech recognition session can be started by calling the SpeechRecognizer.Reco
 
 The results are available in a SpeechRecognitionResult object accessible through the arguments of the Completed event handler. This object provides n-best alternatives in decreasing order of quality (results with highest recognition confidence level is first followed by results with decreasing recognition confidence levels).
 
-###<a name="Summary">Summary remarks</a>
+<a name="Summary"> </a>
+### Summary Remarks 
 In conclusion, this "Get Started" introduction and the provided example application only illustrates basic functionality of the Windows Media Speech Recognition API. The API offers a rich set of features that we encourage you to explore through the API documentation on MSDN and further experimentation.
 
-###<a name="Related">Related topics</a>
+
+<a name="Related"> </a>
+### Related Topics 
  * [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md)
  * [Get Started with Bing Speech Recognition in Java on Android](GetStartedJavaAndroid.md)
  * [Get Started with Bing Speech Recognition in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
