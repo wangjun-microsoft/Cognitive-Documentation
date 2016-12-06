@@ -25,7 +25,7 @@ This example assumes that **cURL** is available in your bash environment.
 The below example has been developed in **bash**. (Also works in git bash/zsh/etc)
 
 * #### Subscribe to Speech API and get a free trial subscription key
-Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services (previously Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial.
+Before creating the example, you must subscribe to Speech API which is part of Microsoft Cognitive Services. For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial.
 
 ### <a name="Step1">Step 1: Generate an Access Token</a>
 1.	Replace **your_subscription_key** with your own subscription key and run the command in **bash**.
