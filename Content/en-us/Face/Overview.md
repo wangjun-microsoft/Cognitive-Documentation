@@ -20,6 +20,7 @@ Face rectangle (left, top, width and height) indicating the face location in the
 
 Face recognition is widely used in many scenarios including security, natural user interface, image content analysis and management, mobile apps, and robotics. Four face recognition functions are provided: face verification, finding similar faces, face grouping, and person identification.
 
+
 ### Face Verification
 
 Face API verification performs an authentication against two detected faces or authentication from one detected face to one person object. Refer to [Face - Verify](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a) for more details.
@@ -55,9 +56,24 @@ For more details about person identification, please refer to the API guides lis
 [Person - Create a Person](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c)  
 [Person Group - Train Person Group](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) 
 
+### Face Storage 
+Face Storage allows a Standard subscription to store additional persisted faces when using Person objects ([Person - Add A Person Face](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b)) or Face Lists ([Face List - Add a Face to a Face List](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250)) for identification or similarity matching with the Face API. The stored images are charged at $0.5 per 1000 faces and this rate is prorated on a daily basis. Free tier subscriptions are free, but limited to 1,000 total persons. 
+
+Pricing for Face Storage is prorated daily. For example, if your account used 10,000 persisted faces each day for the first half of the month and none the second half, you would be billed only for the 10,000 faces for the days stored. Alternatively, if each day during the month you persist 1,000 faces for a few hours and then delete them each night, you would still be billed for 1,000 persisted faces each day.
+
+
+
 ## Changes
 
 This document is targeting **Microsoft Face API** service version 1.0.
+
+### Release changes in November 2016
+
+* **Face Storage expansion** Face Storage allows a Standard subscription to store additional persisted faces when using Person objects ([Person - Add A Person Face](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b)) or Face Lists ([Face List - Add a Face to a Face List](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250)) for identification or similarity matching with the Face API. The stored images are charged at $0.5 per 1000 faces and this rate is prorated on a daily basis. Free tier subscriptions continue to be limited to 1,000 total persons. 
+
+### Release changes in October 2016
+
+* **Error Message Change** In [Face List - Add a Face to a Face List](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) and [Person - Add a Person Face](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b) APIs, the error message of more than 1 face in the `targetFace` changes from `There are more than 1 face in the image` to `There is more than 1 face in the image`.
 
 ### Release changes in July 2016
 
@@ -91,12 +107,15 @@ To quickly go through the Face API basic functionalities and subscriptions proce
 
 - [Getting Started with Face API in CSharp](Get-Started-with-Face-API/GettingStartedwithFaceAPIinCSharp.md)
 - [Getting Started with Face API in Java for Android](Get-Started-with-Face-API/GettingStartedwithFaceAPIinJavaforAndroid.md)
+- [Getting Started with Face API in Python](Get-Started-with-Face-API/GettingStartedwithFaceAPIinPython.md)
 
 ## Sample Apps
 Take a look at these sample applications which make use of Face API.
 
 - [FamilyNotes UWP app](https://github.com/Microsoft/Windows-appsample-familynotes)
  - Universal Windows Platform (UWP) sample app that shows usage of speech, Cortana, ink, and camera through a family note sharing scenario. 
+- [Video Frame Analysis Sample](https://github.com/microsoft/cognitive-samples-videoframeanalysis)
+ - Universal Windows Platform (UWP) sample app that shows analyzing live video streams in near real-time using the Face, Computer Vision, and Emotion APIs.
 
 ## Related Topics
 

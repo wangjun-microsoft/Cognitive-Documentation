@@ -25,12 +25,12 @@ The below example has been developed for the .NET Framework using [Visual Studio
 Before creating the example, you must subscribe to Computer Vision API which is part of the Microsoft Cognitive Services (formerly Project Oxford). For subscription and key management details, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial. 
 
   * ####Get the client library and example
-You may download the Computer Vision API client library and example application via [SDK](https://www.github.com/microsoft/cognitive-vision-windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
+You may clone the Computer Vision API client library and example application to your computer via [SDK](https://www.github.com/microsoft/cognitive-vision-windows). 
 
 ###<a name="Step1">Step 1: Install the example</a>
 
-1.	Browse to the folder where you saved the downloaded Computer Vision API files. Click on Vision, then Windows, and then the Sample-Console folder.
-2.	Double-click to open the Visual Studio 2015 Solution (.sln) file named VisionAPI-Console-Sample.sln. This will open the application's user interface window.
+1.	If you are using GitHub Desktop, open Sample-WPF\VisionAPI-WPF-Samples.sln, or
+2.	Browse to the folder where you saved the downloaded Computer Vision API files. Click on Cognitive-Vision-Windows and then the Sample-WPF folder. Double-click to open the Visual Studio 2015 Solution (.sln) file named VisionAPI-WPF-Samples.sln. This will open the application's user interface window.
 
 ###<a name="Step2">Step 2: Build the example</a>
 
