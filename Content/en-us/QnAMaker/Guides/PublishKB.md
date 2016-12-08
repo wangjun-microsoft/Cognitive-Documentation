@@ -2,7 +2,7 @@
 NavPath: QnA Maker/Guides
 LinkLabel: Publish your knowledge base
 Url: QnAMaker/documentation/guides/publishkb
-Weight: 86 
+Weight: 76
 -->
 
 # Publish your knowledge base #

@@ -2,7 +2,7 @@
 NavPath: QnA Maker
 LinkLabel: API Reference
 Url: QnAMaker/documentation/httpendpoint
-Weight: 86 
+Weight: 70
 -->
 
 # API Reference #

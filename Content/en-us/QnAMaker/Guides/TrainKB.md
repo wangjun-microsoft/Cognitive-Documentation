@@ -2,7 +2,7 @@
 NavPath: QnA Maker/Guides
 LinkLabel: Train your knowledge base
 Url: QnAMaker/documentation/guides/trainkb
-Weight: 86 
+Weight: 77
 -->
 
 # Test and train #

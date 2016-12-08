@@ -2,7 +2,7 @@
 NavPath: QnA Maker/Guides
 LinkLabel: Create a knowledge base
 Url: QnAMaker/documentation/guides/createkb
-Weight: 86 
+Weight: 79
 -->
 
 # Create your knowledge base #
