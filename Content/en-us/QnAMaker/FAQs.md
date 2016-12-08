@@ -33,8 +33,8 @@ Every edit operation, whether in Table update, Test or Settings needs to be save
 ### What is the roadmap of the QnA Maker?
 Currently the QnA Maker tool handles semi-structured FAQ content. Eventually the vision is to be able to answer questions from un-structured content as well.
 
-### Do I need to use BotFramework to use the QnA Maker tool?
-Not necessarily, however the QnAMaker is integrated seamlessly into Botframework as a QnA Bot Template. This makes is almost no effort to create an FAQ bot with Botframework.
+### Do I need to use Bot Framework in order to use QnA Maker?
+No, you don’t. However, QnA Maker is offered as one of several templates in [Azure Bot Service](https://azure.microsoft.com/services/bot-service/) which enables rapid intelligent bot development powered by Microsoft Bot Framework, and run in a serverless environment. Bots scale based on demand; pay only for the resources you consume.
 
 ### Why can’t I replace my Knowledge Base with the upload feature?
 The format in which upload expects the file is, tab separated columns of Question, Answer and Source.
@@ -44,3 +44,7 @@ You should refresh your subscription keys I you suspect that they have been comp
 
 ### How safe is my knowledge base data?
 Every knowledge base content is stored in Azure storage by the QnAMaker tool. You need a combination of knowledge base id and subscription key to access the knowledge base. The knowledge base contents are not used by the tool for any other purpose.
+
+### Does the KB support rich data?
+The knowledge base supports Markdown. However, the auto-extraction from URLs has limited HTML to Markdown conversion capability. If you want to use full fledged Markdown, you can modify your content directly in the Table, or upload a KB with the rich content. 
+
