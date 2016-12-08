@@ -50,5 +50,5 @@ In this example, we generate the similarity score between two partial abstracts 
 ```
 0.520
 ```
-The score is deteremined by assessing the academic concepts through word embedding and vectors. In this example, 0.52 represents that the two partial abstracts are somewhat relevant. 
+The score is determined by assessing the academic concepts through word embeddings. In this example, 0.52 represents that the two partial abstracts are somewhat relevant. 
 <br>
