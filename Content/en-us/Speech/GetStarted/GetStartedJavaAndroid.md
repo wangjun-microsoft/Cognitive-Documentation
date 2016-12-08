@@ -6,8 +6,7 @@ Weight: 5
 -->
 
 # Get Started with Bing Speech Recognition in Java on Android
-
-Develop a basic Android application that uses Bing Speech Recognition API to convert spoken audio to text by sending audio to Microsoft’s servers in the cloud. Using the client library allows for real-time streaming, which means that at the same time your client application sends audio to the service, it simultaneously and asynchronously receives partial recognition results back. 
+With Bing Speech Recognition API you can develop Android applications that leverage Microsoft cloud servers to convert spoken audio to text. The API supports real-time streaming, so your application can simultaneously and asynchronously receive partial recognition results at the same time it is sending audio to the service
 
 This article uses a sample application to demonstrate how to use the Bing Speech Recognition API Client Library for Android to develop speech to text applications in Java for Android devices.  
 
@@ -41,11 +40,11 @@ Create an Android application project to implement use of the Speech Recognition
 3.	Create a new application project.
 4.	Using files downloaded from the **speech_SpeechToText-SDK-Android** zip package, do the following: 
     1. Copy the **speechsdk.jar** file, found in the **SpeechSDK** folder inside the **Bin** folder, to the “**your-application\app\libs**” folder.
-    2. Right click "**app**" in the project tree, select "**Open module settings**", select the "**Dependencies**" tab, and click "**+**" to add a "**File dependency**". Select the **libs\speechsdk.jar** in the "**Select Path**" dialog box.
-    3. Copy the **libandroid_platform.so** file to the “**your-application\app\src\main\jniLibs\armeabi**” folder.
+    2. Right click "**app**" in the project tree, select "**Open module settings**", select the "**Dependencies**" tab, and click "**+**" to add a "**File dependency**". 
+    3. Select the **libs\speechsdk.jar** in the "**Select Path**" dialog box.
+    4. Copy the **libandroid_platform.so** file to the “**your-application\app\src\main\jniLibs\armeabi**” folder.
 
-
-**You can now run the example application or continue with these instructions if you want to build your own application.**
+**You can now run the example application or continue with thes following instructions to build your own application.**
 
 ##<a name="Step2"> Step 2: Build the Example Application</a>
 Open [MainActivity.java](https://oxfordportal.blob.core.windows.net/example-speech/MainActivity.java) or locate the **MainActivity.java** file within the **samples**, **SpeechRecoExample**, **src**, **com**, **microsoft**, **AzureIntelligentServicesExample** folder from the downloaded **speech_SpeechToText-SDK-Android** zip package. You will need the subscription key you generated above. Once you have added your subscription key to the application, notice that you use the **SpeechRecognitionServiceFactory** to create a client of your liking. 
@@ -160,7 +159,7 @@ Run the application with the chosen clients, recognition modes and event handler
 
 <a name="Related"> </a>
 ## Related Topics
-* [Get started with Bing Speech Recognition in C Sharp for Windows in .NET](GetStartedCSharpDesktop.md)
+* [Get Started with Bing Speech Recognition in C Sharp for Windows in .NET](GetStartedCSharpDesktop.md)
 * [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
-* [Get started with Bing Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
-* [Get started with Bing Speech API in JavaScript](GetStartedJS.md)
+* [Get Started with Bing Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
+* [Get Started with Bing Speech API in JavaScript](GetStartedJS.md)
