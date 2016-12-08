@@ -2,7 +2,7 @@
 NavPath: QnA Maker/Guides
 LinkLabel: Update your knowledge base
 Url: QnAMaker/documentation/guides/updatekb
-Weight: 86 
+Weight: 78
 -->
 
 # Update your knowledge base #

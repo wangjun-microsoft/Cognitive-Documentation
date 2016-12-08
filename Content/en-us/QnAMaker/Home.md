@@ -2,7 +2,7 @@
 NavPath: QnA Maker
 LinkLabel: API Overview
 Url: QnAMaker/documentation/home
-Weight: 86 
+Weight: 100
 -->
 
 # QnA Maker Overview #
