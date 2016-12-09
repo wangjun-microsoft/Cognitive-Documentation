@@ -79,7 +79,6 @@ Eventhandlers are already pointed out in the code in form of code comments.
 
 <a name="RelatedTopics"></a>
 ##Related Topics
-* [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
 * [Get started with Bing Speech Recognition and/or intent in Java on Android](GetStartedJavaAndroid.md)
 * [Get started with Bing Speech Recognition and/or intent in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
 * [Get started with Bing Speech API in JavaScript](GetStartedJS.md)
