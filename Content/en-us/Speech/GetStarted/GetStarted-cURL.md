@@ -47,7 +47,6 @@ Before creating the example, you must subscribe to Speech API which is part of M
 
 ### <a name="Related">Related Topics</a>
 * [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Desktop](GetStartedCSharpDesktop.md)
-* [Get Started with Bing Speech Recognition in C Sharp for .Net on Windows Phone 8.1](GetStartedCSharpWinPhone.md)
 * [Get Started with Bing Speech Recognition in Java on Android](GetStartedJavaAndroid.md)
 * [Get Started with Bing Speech Recognition in JavaScript](GetStartedJS.md)
 * [Get Started with Bing Speech Recognition in Objective C on iOS](Get-Started-ObjectiveC-iOS.md)
