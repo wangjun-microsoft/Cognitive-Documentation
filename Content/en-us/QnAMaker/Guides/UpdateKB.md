@@ -29,7 +29,7 @@ There is also a way to replace your entire knowledge base at one go. This is ide
 
 You have an option to download the entire knowledge base by clicking on Download Knowledge Base, make changes, and then upload the knowledge base.
 
-Warning: Uploading a knowledge base overwrites the exisiting QnAs in the knowledge base.
+Warning: Uploading a knowledge base overwrites the existing QnAs in the knowledge base.
 
 ![alt text](../Images/kbDownloadLink.png)
 
