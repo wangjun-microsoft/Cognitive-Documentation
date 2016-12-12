@@ -1,8 +1,8 @@
 <!-- 
 NavPath: Content Moderator
-LinkLabel: Text Moderation - Languages
+LinkLabel: Text Moderation API - Languages
 Url: content-moderator/documentation/text-moderation-api-languages
-Weight: 165
+Weight: 160
 -->
 
 # Text Moderation API - Supported Languages #
