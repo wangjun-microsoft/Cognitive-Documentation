@@ -28,12 +28,16 @@ Cache-Control: no-cache
 ```javascript
 string responseString = string.Empty;
 
+var query = “hi”; //User Query
+var knowledgebaseId = “YOUR_KNOWLEDGE_BASE_ID”; // Use knowledge base id created.
+var qnamakerSubscriptionKey = “YOUR_SUBSCRIPTION_KEY”; //Use subscription key assigned to you.
+
 //Build the URI
 Uri qnamakerUriBase = new Uri("https://westus.api.cognitive.microsoft.com/qnamaker/v1.0");
 var builder = new UriBuilder($"{qnamakerUriBase}/knowledgebases/{knowledgebaseId}/generateAnswer");
 
 //Add the question as part of the body
-var postBody = $"{{\"question\": \"{Query}\"}}";
+var postBody = $"{{\"question\": \"{query}\"}}";
 
 //Send the POST request
 using (WebClient client = new WebClient())
@@ -51,11 +55,13 @@ The response to the above request will be a JSON with the answer and the confide
 ### JSON ###
 `{
   "Answer": "Sample response",
-  "Score": 0.0
+  "Score": "0"
 }`
 
 ### C# ###
 ```javascript
+using Newtonsoft.Json; 
+
 private class QnAMakerResult
 {
     /// <summary>

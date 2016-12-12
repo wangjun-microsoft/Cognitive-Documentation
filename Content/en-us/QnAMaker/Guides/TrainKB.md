@@ -6,16 +6,16 @@ Weight: 77
 -->
 
 # Test and train #
-The relevance of the responses is the most important part of your QnA service. The train feature lets you evaluate the correctness of the responses and also correct them and re-train the knowledge base.
+The relevance of the responses is the most important part of your QnA service. The train feature lets you evaluate the correctness of the responses and correct them and re-train the knowledge base.
 
-There are two ways you can improve the relevance of the responsese.
+There are two ways you can improve the relevance of the responses.
 
 ## Chat with your KB
 Chat with your knowledge base, to see the relevance of the responses. You can add a variation to an existing question as well as choose a different answer for a question
 
 ![alt text](../Images/kbTest.png)
 
-To bulk upload questions (so you don't need to type everytime), click on Upload chat logs. It expects one question per line.
+To bulk upload questions (so you don't need to type every time), click on Upload chat logs. It expects one question per line.
 
 Once uploaded, you can play the questions in order by clicking Show next question.
 
