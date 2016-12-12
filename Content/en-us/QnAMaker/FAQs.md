@@ -40,11 +40,11 @@ No, you don’t. However, QnA Maker is offered as one of several templates in [A
 The format in which upload expects the file is, tab separated columns of Question, Answer and Source.
 
 ### When should I refresh my subscription keys?
-You should refresh your subscription keys I you suspect that they have been compromised. Any requests with your subscription key will count towards your quota.
+You should refresh your subscription keys if you suspect that they have been compromised. Any requests with your subscription key will count towards your quota.
 
 ### How safe is my knowledge base data?
 Every knowledge base content is stored in Azure storage by the QnAMaker tool. You need a combination of knowledge base id and subscription key to access the knowledge base. The knowledge base contents are not used by the tool for any other purpose.
 
 ### Does the KB support rich data?
-The knowledge base supports Markdown. However, the auto-extraction from URLs has limited HTML to Markdown conversion capability. If you want to use full fledged Markdown, you can modify your content directly in the Table, or upload a KB with the rich content. 
+The knowledge base supports Markdown. However, the auto-extraction from URLs has limited HTML to Markdown conversion capability. If you want to use full-fledged Markdown, you can modify your content directly in the Table, or upload a KB with the rich content. 
 
