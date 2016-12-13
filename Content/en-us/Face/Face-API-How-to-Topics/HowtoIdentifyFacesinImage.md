@@ -23,7 +23,7 @@ This guide will demonstrate how to identify unknown faces using person groups, w
 
 ## <a name="concepts"></a> Concepts
 
-If you are not familiar with the following concepts in this guide, please search for the definitions in our [glossary](Glossary.md) at any time:
+If you are not familiar with the following concepts in this guide, please search for the definitions in our [glossary](../Glossary.md) at any time:
 
 - Face - Detect
 - Face - Identify
@@ -38,7 +38,7 @@ In this sample, we will demonstrate the following:
 
 To carry out the demonstration of this sample, you will need to prepare a bunch of pictures:
 
-- A few photos with the person's face. [Click here to download sample photos](https://github.com/Microsoft/ProjectOxford-ClientSDK/tree/master/Face/Windows/Data) for Anna, Bill and Clare.
+- A few photos with the person's face. [Click here to download sample photos](https://github.com/Microsoft/Cognitive-Face-Windows/tree/master/Data) for Anna, Bill and Clare.
 - A series of test photos, which may or may not contain the faces of Anna, Bill or Clare used to test their identification. You can also select some sample images from the link above.
 
 ## <a name="step1"></a> Step 1: Authorize the API call
@@ -71,7 +71,7 @@ First, you need to create a new person group. This is executed by using the [Per
 
 ```CSharp 
 // Create an empty person group
-string personGroupId = "MyFriends";
+string personGroupId = "myfriends";
 await faceServiceClient.CreatePersonGroupAsync(personGroupId, "My Friends");
  
 // Define Anna

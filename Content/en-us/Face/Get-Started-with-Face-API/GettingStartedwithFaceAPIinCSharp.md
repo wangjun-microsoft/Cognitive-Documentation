@@ -1,6 +1,6 @@
 <!-- 
 NavPath: Face API/Getting Started
-LinkLabel: Get Started With Face API in CSharp
+LinkLabel: Get Started in C#
 Url: face-api/documentation/get-started-with-face-api/GettingStartedwithFaceAPIinCSharp
 Weight: 50
 -->
@@ -193,8 +193,9 @@ Run this application and browse for an image containing a face. Please wait for 
 
 ## <a name="summary"></a> Summary
 
-In this tutorial, you have learned the basic process for using the Face API and created an application to display face marks in images. For more information on API details, please refer to the [How-To](../Face-API-How-to-Topics/Home.md) and [API Reference](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). 
+In this tutorial, you have learned the basic process for using the Face API and created an application to display face marks in images. For more information on API details, please refer to the How-To and [API Reference](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). 
 
 ## <a name="related"></a> Related Topics
 
-[Getting Started with Face API in Java for Android](GettingStartedwithFaceAPIinJavaforAndroid.md)
+- [Getting Started with Face API in Java for Android](GettingStartedwithFaceAPIinJavaforAndroid.md)
+- [Getting Started with Face API in Python](GettingStartedwithFaceAPIinPython.md)

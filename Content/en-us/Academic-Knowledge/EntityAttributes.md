@@ -14,6 +14,7 @@ Ti		|Paper title				|String		|Equals,<br/>StartsWith
 Y		|Paper year					|Int32		|Equals,<br/>IsBetween
 D		|Paper date					|Date		|Equals,<br/>IsBetween
 CC		|Citation count				|Int32		|none  
+ECC		|Estimated citation Count		|Int32		|none
 AA.AuN	|Author name				|String		|Equals,<br/>StartsWith
 AA.AuId	|Author ID					|Int64		|Equals
 AA.AfN	|Author affiliation name	|String		|Equals,<br/>StartsWith
@@ -21,11 +22,11 @@ AA.AfId	|Author affiliation ID		|Int64		|Equals
 F.FN	|Field of study name		|String		|Equals,<br/>StartsWith
 F.FId	|Field of study ID			|Int64		|Equals
 J.JN	|Journal name				|String		|Equals,<br/>StartsWith
-J.Id	|Journal ID					|Int64		|Equals
+J.JId	|Journal ID					|Int64		|Equals
 C.CN	|Conference series name		|String		|Equals,<br/>StartsWith
-C.Id	|Conference series ID		|Int64		|Equals
-RId	    |Reference ID				|Int64		|Equals
-W       |Words from paper title/abstract for full text search |String |Equals
+C.CId	|Conference series ID		|Int64		|Equals
+RId	    |Reference ID				|Int64[]		|Equals
+W       |Words from paper title/abstract for full text search |String[] |Equals
 E		|Extended metadata (see table below) |String |Equals  
 		
 

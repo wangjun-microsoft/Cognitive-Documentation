@@ -1,6 +1,6 @@
 <!-- 
 NavPath: Face API/Getting Started
-LinkLabel: Get Started With Face API in Java for Android
+LinkLabel: Get Started With Android
 Url: face-api/documentation/get-started-with-face-api/GettingStartedwithFaceAPIinJavaforAndroid
 Weight: 30
 -->
@@ -8,7 +8,7 @@ Weight: 30
 
 In this tutorial, you will learn to create and develop a simple Android application that invokes the Face API to detect human faces in an image; essentially by framing the face.     
 
-![GettingStartedAndroid](../Images/android_getstarted2.1.png)
+![GettingStartedAndroid](../Images/android_getstarted2.1.PNG)
 
 ## Table of Contents
 
@@ -294,12 +294,13 @@ Thirdly, add a call to the detectAndFrame method from onActivityResult method:
 
 Run this application and browse for an image containing a face. Please wait for a few seconds to allow the cloud API to respond. After that, you will get a result similar to the image below: 
 
-![GettingStartAndroid](../Images/android_getstarted2.1.png)
+![GettingStartAndroid](../Images/android_getstarted2.1.PNG)
 
 ## <a name="summary"></a> Summary
 
-In this tutorial, you have learned the basic process for using the Face API and created an application to display face marks in images. For more information on API details, please refer to the [How-To](../Face-API-How-to-Topics/Home.md) and [API Reference](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). 
+In this tutorial, you have learned the basic process for using the Face API and created an application to display face marks in images. For more information on API details, please refer to the How-To and [API Reference](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). 
 
 ## <a name="related"></a> Related Topics
 
-[Getting Started with Face API in CSharp](GettingStartedwithFaceAPIinCSharp.md)
+- [Getting Started with Face API in CSharp](GettingStartedwithFaceAPIinCSharp.md)
+- [Getting Started with Face API in Python](GettingStartedwithFaceAPIinPython.md)

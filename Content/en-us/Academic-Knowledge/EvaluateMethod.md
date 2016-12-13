@@ -19,7 +19,7 @@ https://api.projectoxford.ai/academic/v1.0/evaluate?
 Name     | Value | Required?  | Description
 -----------|-----------|---------|--------
 **expr**       | Text string | Yes | A query expression that specifies which entities should be returned.
-**model**      | Text string | No  | Name of the model that you wish to query.  Currently, the value defaults to *beta-2015*.        
+**model**      | Text string | No  | Name of the model that you wish to query.  Currently, the value defaults to *latest*.        
 **attributes** | Text string | No<br>default: Id | A comma-delimited list that specifies the attribute values that are included in the response. Attribute names are case-sensitive.
 **count**	     | Number | No<br>Default: 10 | Number of results to return.
 **offset**     | Number |	No<br>Default: 0	| Index of the first result to return.

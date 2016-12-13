@@ -26,7 +26,8 @@ This spell-checker can handle any word processing scenario:
 
 *) Words that sound the same but differ in meaning and spelling, for example “see” and “sea”.
  
-To help you get started with this supporting technology for all your word processing needs on PC or mobile apps, a new example application will soon be added. Check back soon.
+To help you get started with this supporting technology for all your word processing needs on PC or mobile apps, a new example application will soon be added. Check back soon. In the meantime, you can read our [Getting Started](https://msdn.microsoft.com/en-US/library/mt712546.aspx) guide, which describes how you can obtain your own subscription keys and start making calls to the API. If you already have a subscription, try our API Testing Console [API Testing Console](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/56e73036cf5ff81048ee6727/console) where you can easily craft API requests in a sandbox environment.
 
 ## Language support
-Bing Spell Check API currently supports U.S. English with other English locales as well as Chinese, Spanish, and other languages soon to follow. This page will be updated as new languages are added.
+
+Bing Spell Check API currently supports only U.S. English (en-US). Other English locales such as British English (en-GB), Canadian English (en-CA), Australian English (en-AU), New Zealand English (en-NZ), and Indian English (en-IN) plus Chinese and Spanish will be added in the near future. This page will be updated as new languages are added.

@@ -30,7 +30,7 @@ Returned Json
 {
 "type": "phrase",
 “text”: “a black and white photo of a large city”,
-          “confidence”: 0.0.607638706850331
+          “confidence”: 0.607638706850331
 }
 ]
 "captions": 

@@ -13,10 +13,10 @@ Through Computer Vision API a user can analyze and filter visual content in nume
 Tagging is a new way of analyzing an image. Computer Vision API can return tags based on objects, living beings, scenery or actions found in images. Tags are not returned according to a hierarchical classification system, but correspond to image content. Tags may contain hints to avoid ambiguity or provide context, for example the tag “zinnia” may be accompanied by the hint “flower”. All tags are in English.
 
 ###Generating descriptions
-A collection of content tags forms the foundation for an image “description” displayed as human readable language in complete sentences. More than one description will be generated for each image ordered by their confidence score. All descriptions are in English.
+A collection of content tags forms the foundation for an image “description” displayed as human readable language in complete sentences. More than one description will be generated for each image ordered by their confidence score. All descriptions are in English.[Here's](https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/intelligence-ImageCaption) an example of a bot that leverages this to generate image captions
 
 ###Categorizing images 
-In addition to tagging and descriptions, Computer Vision API continues returning the taxonomy-based categories defined in our previous version.  These categories are organized as a taxonomy with parent/child hereditary hierarchies. All categories are in English, and you can find the full taxonomy [here](https://www.projectoxford.ai/images/bright/vision/examples/86categories.txt).
+In addition to tagging and descriptions, Computer Vision API continues returning the taxonomy-based categories defined in our previous version.  These categories are organized as a taxonomy with parent/child hereditary hierarchies. All categories are in English.
 
 ###Recognizing domain-specific content: Celebrities model
 A new domain-specific model has been added to Computer Vision API, in this case a model that recognizes celebrities in your images. It can be implemented as a stand-alone method or in combination with the top-level image categorization. 
@@ -36,7 +36,8 @@ Computer Vision API detects human faces within a picture and generates face coor
 ###Demonstration images 
 #### The 86-category concept
 
-Based on a list of 86 concepts seen in the below diagram, visual features found in an image can be categorized ranging from broad to specific. For the full taxonomy in text format, follow this [link](https://www.projectoxford.ai/images/bright/vision/examples/86categories.txt).  
+Based on a list of 86 concepts seen in the below diagram, visual features found in an image can be categorized ranging from broad to specific. For the full taxonomy in text format, go [here](./Images/86categories.md).
+
 ![Analyze Categories](./Images/analyze_categories.jpg)  
 
 Image                                                                           | Response

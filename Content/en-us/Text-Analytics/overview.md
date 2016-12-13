@@ -1,6 +1,6 @@
 <!-- 
 NavPath: Text Analytics
-LinkLabel: Oveview
+LinkLabel: Overview
 Url: text-analytics/documentation
 Weight: 100
 -->

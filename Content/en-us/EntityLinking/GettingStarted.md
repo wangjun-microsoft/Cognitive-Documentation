@@ -1,6 +1,6 @@
 <!--
 NavPath: Entity Linking API
-LinkLabel: Get Started with EntityLinking API in C#
+LinkLabel: Get Started in C#
 Url: entitylinking-api/documentation/GettingStarted
 Weight: 1
 -->
@@ -28,7 +28,7 @@ This tutorial explores entity linking by using the Entity Linking Client Library
 - Get the client library and example
 - Microsoft Entity Linking NuGet Package
 
-You may download the Entity Linking Intelligence Service API Client Library via [GitHub](https://github.com/Microsoft/ProjectOxford-ClientSDK). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
+You may download the Entity Linking Intelligence Service API Client Library via [SDK](https://www.github.com/microsoft/cognitive-entitylinking-windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
 
 ### <a name="step-1-subscribe-entity-linking-intelligence-service-and-get-your-own-key">Step 1: Subscribe to Entity Linking Intelligence Service and get your key</a>
 Before using Entity Linking Intelligence Service, you must sign up for an API key. See [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial.
@@ -89,8 +89,8 @@ Below is example code, which adds the "wikipediaId" to the response by using Ent
 {
     var text = this.inputBox.Text;
     var client = new EntityLinkingServiceClient("Your subscription key");
-    var linkResponse = await client.RecognizeAsync(text);
-    var result = string.Join(", ", linkResponse.Select(i => i.WikipediaId).ToList());
+    var linkResponse = await client.LinkAsync(text);
+    var result = string.Join(", ", linkResponse.Select(i => i.WikipediaID).ToList());
     this.outputBlock.Text = result;
 }
  ```
