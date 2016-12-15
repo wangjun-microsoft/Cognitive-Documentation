@@ -1,6 +1,6 @@
 <!-- 
-NavPath: Content Moderator
-LinkLabel: Review Tool User Guide/Review Moderated Images
+NavPath: Content Moderator/Review Tool User Guide
+LinkLabel: Review Moderated Images
 Url: content-moderator/documentation/review-tool-user-guide/review-moderated-images
 Weight: 186
 -->
