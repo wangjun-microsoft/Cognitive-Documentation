@@ -1,6 +1,6 @@
 <!-- 
-NavPath: Content Moderator
-LinkLabel: Review Tool User Guide/View Reports
+NavPath: Content Moderator/Review Tool User Guide
+LinkLabel: View Reports
 Url: content-moderator/documentation/review-tool-user-guide/view-reports
 Weight: 183
 -->
