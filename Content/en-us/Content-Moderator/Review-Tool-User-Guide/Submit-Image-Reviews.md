@@ -1,6 +1,6 @@
 <!-- 
-NavPath: Content Moderator
-LinkLabel: Review Tool User Guide/Submit Image Reviews
+NavPath: Content Moderator/Review Tool User Guide
+LinkLabel: Submit Image Reviews
 Url: content-moderator/documentation/review-tool-user-guide/submit-image-reviews
 Weight: 185
 -->
