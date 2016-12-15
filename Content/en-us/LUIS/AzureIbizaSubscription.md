@@ -12,7 +12,7 @@ For unlimited traffic to your HTTP endpoint, you must create a metered key for y
 1. Sign in to the **[Microsoft Azure Portal](https://ms.portal.azure.com/)** 
 2. Click the green **+** sign in the upper left-hand panel and search for “Cognitive Services” in the marketplace, then click on **Cognitive Services APIs** and follow the **create experience** to create an API account you are interested in. 
 
-![Azure Search](./Images/azure_searchh.png) 
+![Azure Search](./Images/azure_search.png) 
 
   3.Choose the API you are interested in by clicking on the **API Type** to create a subscription. In this case, choose the **Language Understanding Intelligent Service (LUIS)** option. Configure the subscription with settings including account name, pricing tiers, etc. 
 
