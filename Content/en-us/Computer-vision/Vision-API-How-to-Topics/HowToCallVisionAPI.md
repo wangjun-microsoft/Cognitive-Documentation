@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/How-to Topics
 LinkLabel: How to call Computer Vision API
 Url: Computer-Vision-API/documentation/vision-api-how-to-topics/HowToCallVisionAPI
-Weight: 93
+Weight: 90
 -->
 
 #How to Call Computer Vision API
