@@ -53,3 +53,11 @@ The QnA Maker tool ingests and matches data in UTF-16 encoding. This means that 
 
 ### Where is the test web-chat URL from the old portal? How do I share my KB with others now?
 In the new Service, we do not have the test URL anymore. The reason being, as part of the cognitive services all call are being metered. Since the test URL exposes the subscription key and the KB ID, it is a security risk. However, it is still super easy to chat with your KB and share it. Check out the Azure Bot Templates for [Question and Answer Bot](https://blog.botframework.com/2016/12/13/More-Ways-to-Make-Smart-Bots/). You can light up the QnA Bot in Skype in a few clicks, and then share it with anyone.
+
+### How do I embed the QnA Maker service in my website?
+Follow the below steps to embed the QnA Maker service as a web chat control in your website:
+* Create your knowledge base at [https://qnamaker.ai](https://qnamaker.ai)
+* Create your Azure service bot : [https://docs.botframework.com/en-us/azure-bots/build/first-bot](https://docs.botframework.com/en-us/azure-bots/build/first-bot/#navtitle) 
+* Look for the Question and Answer Bot template. Select the KB ID you created in step 1
+* Then enable it on web chat channel. Get the embed keys.
+* Embed the webchat as shown in [https://docs.botframework.com/en-us/support/embed-chat-control2](https://docs.botframework.com/en-us/support/embed-chat-control2/#navtitle) 
