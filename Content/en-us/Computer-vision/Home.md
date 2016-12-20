@@ -32,7 +32,7 @@ After uploading an image or specifying an image URL, Computer Vision API’s alg
 ###Example
 ![House_Yard](./Images/house_yard.jpg)  
 
-```Json 
+```
 Returned Json
 {
 “tags”: [
@@ -143,7 +143,7 @@ Computer Vision API’s algorithms analyze the content found in an image, which 
 
 ### Example Description Generation
 ![B&W Buildings](./Images/bw_buildings.jpg)  
-```Json
+```
  Returned Json 
 
  “description”: 
