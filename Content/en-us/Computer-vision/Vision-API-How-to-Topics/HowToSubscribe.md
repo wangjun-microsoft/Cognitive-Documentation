@@ -14,3 +14,6 @@ The Computer Vision API offers two pricing tiers:
 To sign up for subscription keys, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up).
 
 **Note:** Free subscriptions that are not used for 90 days consecutively may expire. However, if your subscription expires you can request new keys.
+
+### Related Links:
+* [Pricing Options for Microsoft Cognitive APIs](https://www.microsoft.com/cognitive-services/en-us/pricing) 
