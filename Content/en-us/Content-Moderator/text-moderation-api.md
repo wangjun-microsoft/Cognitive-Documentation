@@ -2,7 +2,7 @@
 NavPath: Content Moderator
 LinkLabel: Text Moderation API
 Url: content-moderator/documentation/text-moderation-api
-Weight: 160
+Weight: 165
 -->
 
 # Text Moderation API #

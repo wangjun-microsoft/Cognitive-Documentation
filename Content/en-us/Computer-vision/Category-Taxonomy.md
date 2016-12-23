@@ -1,12 +1,11 @@
 <!-- 
 NavPath: Computer Vision API
-LinkLabel: Categories
-Url: Computer-Vision-API/documentation/Images/86categories
-Weight: 100
+LinkLabel: Category Taxonomy
+Url: Computer-Vision-API/documentation/Category-Taxonomy
+Weight: 55
 -->
 
-###86-Categories Taxonomy
-
+##86-Categories Taxonomy
 abstract_
 
 abstract_net
@@ -179,5 +178,4 @@ trans_car
 
 trans_trainstation
 
- * [Link to Analyze an Image](../AnalyzeImage.md)
- * [Link to How to Call Vision API](../HowToCallVisionAPI.md)
+

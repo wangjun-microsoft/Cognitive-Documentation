@@ -16,7 +16,7 @@ Note that you need to specify the language of the input string.
 
 **REST endpoint:**
 ```
-https://api.projectoxford.ai/linguistics/v1.0/analyze
+https://westus.api.cognitive.microsoft.com/linguistics/v1.0/analyze
 ```
 <br>
 
