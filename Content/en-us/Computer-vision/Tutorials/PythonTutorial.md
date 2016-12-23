@@ -1,11 +1,11 @@
 <!-- 
-NavPath: Computer Vision API/Get Started with Vision API
+NavPath: Computer Vision API/Tutorials
 LinkLabel: Python Tutorial
 Url: Computer-Vision-api/documentation/Tutorials/PythonTutorial
 Weight: 70
 -->
 
-Computer Vision API Python Tutorial
+#Computer Vision API Python Tutorial
 
 To make it easy to get started with Computer Vision API, the Jupyter notebook linked below shows you how to use the API in Python and how to visualize your results using some popular libraries. 
 
