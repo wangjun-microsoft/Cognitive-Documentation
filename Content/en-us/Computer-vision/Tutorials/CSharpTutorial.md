@@ -1,6 +1,6 @@
 <!-- 
-NavPath: Computer Vision API/Get Started with Vision API
-LinkLabel: Get Started in C#
+NavPath: Computer Vision API/Tutorials
+LinkLabel: C# Tutorial 
 Url: Computer-Vision-API/documentation/Tutorials/CSharpTutorial
 Weight: 75
 -->
