@@ -13,17 +13,16 @@ Weight: 50
 
 -----
 
-### Question
-Can Computer Vision be used locally without an internet connection?
-### Answer:
-We currently do not offer a on premise or local solution.
+**Question**: Can Computer Vision be used locally without an internet connection?
+
+**Answer**:We currently do not offer a on premise or local solution.
 
 -----
 
-### Question: 
-Which languages are supported with Computer Vision?
-### Answer:
-Supported locales include:
+**Question**: Which languages are supported with Computer Vision?
+
+**Answer**:
+Supported languages include:
 
 | | | Supported Languages | | |
 |---------------- |------------------ |------------------ |--------------------------- |-------------------- 
@@ -34,9 +33,8 @@ Supported locales include:
 
 -----
 
-### Question:
-Can Computer Vision be used to read license plates?
-### Answer:
-The Vision API offers good text-detection with OCR, but it is not currently optimized for license plates. We are constantly trying to improve our services and have added OCR for auto license plate recognition to our list of feature requests.
+**Question**: Can Computer Vision be used to read license plates?
+
+**Answer**: The Vision API offers good text-detection with OCR, but it is not currently optimized for license plates. We are constantly trying to improve our services and have added OCR for auto license plate recognition to our list of feature requests.
 
 -----
