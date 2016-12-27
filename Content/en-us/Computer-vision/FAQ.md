@@ -26,15 +26,10 @@ Which languages are supported with Computer Vision?
 ### Answer:
 Supported locales include:
 
-language-Country |language-Country | language-Country |language-Country 
----------|----------|--------|------------------
-de-DE    |   zh-TW  | zh-HK  |    ru-RU 
-es-ES    |   ja-JP  | ar-EG* |    da-DK 
-en-GB    |   en-IN  | fi-FI  |    nl-NL 
-en-US    |   pt-BR  | pt-PT  |    ca-ES
-fr-FR    |   ko-KR  | en-NZ  |    nb-NO
-it-IT    |   fr-CA  | pl-PL  |    es-MX
-zh-CN    |   en-AU  | en-CA  |    sv-SE  
+| Supported Languages | Supported Languages | Supported Languages | Supported Languages | Supported Languages |
+|-------------------- |-------------------- |-------------------- |-------------------- |-------------------- |
+|Danish (da-DK) | Dutch (nl-NL) | English           | Finnish (fi-FI) |French (fr-FR)
+|German (de-DE) | Greek (el-GR) | Hungarian (hu-HU) | Italian (it-IT) | Japanese (ja-JP)
 
 -----
 
