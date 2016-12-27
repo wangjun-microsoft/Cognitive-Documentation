@@ -7,10 +7,9 @@ Weight: 50
 
 # Computer Vision API Frequently Asked Questions
 
-### Question: 
-Can I train Computer Vision API to use custom tags.  For example, I would like to feed in pictures of cat breeds to 'train' the AI, then receive the breed value on an AI request.
-### Answer:
-This function is currently not available, however our engineers are working to bring this functionality to Computer Vision.
+**Question**: Can I train Computer Vision API to use custom tags.  For example, I would like to feed in pictures of cat breeds to 'train' the AI, then receive the breed value on an AI request.
+
+**Answer**: This function is currently not available, however our engineers are working to bring this functionality to Computer Vision.
 
 -----
 
@@ -26,10 +25,12 @@ Which languages are supported with Computer Vision?
 ### Answer:
 Supported locales include:
 
-| Supported Languages | Supported Languages | Supported Languages | Supported Languages | Supported Languages |
-|-------------------- |-------------------- |-------------------- |-------------------- |-------------------- |
-|Danish (da-DK) | Dutch (nl-NL) | English           | Finnish (fi-FI) |French (fr-FR)
-|German (de-DE) | Greek (el-GR) | Hungarian (hu-HU) | Italian (it-IT) | Japanese (ja-JP)
+| | | Supported Languages | | |
+|---------------- |------------------ |------------------ |--------------------------- |-------------------- 
+| Danish (da-DK)  | Dutch (nl-NL)     | English           | Finnish (fi-FI)            |French (fr-FR)
+| German (de-DE)  | Greek (el-GR)     | Hungarian (hu-HU) | Italian (it-IT)            | Japanese (ja-JP)
+| Korean (ko-KR)  | Norwegian (nb-NO) | Polish (pl-PL)    | Portuguese (pt-BR) (pt-PT) | Russian (ru-RU)
+| Spanish (es-ES)	| Swedish (sv-SV)	  | Turkish (tr-TU)   |                            |
 
 -----
 
