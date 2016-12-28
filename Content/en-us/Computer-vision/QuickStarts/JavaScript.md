@@ -5,8 +5,8 @@ Url: Computer-Vision-API/documentation
 Weight: 1000
 -->
 
-# Computer Vision JavaScript Quick Start
-... for quickly gettting started:
+# Computer Vision JavaScript Quick Starts
+This article describes ... for quickly gettting started using JavaScript and the Vision API:
 * [Generating a thumbnail](#GetAThumbnail)
 * [Generating a description for an Image](#GenerateADescription)
 * [Determining if an image contains adult content](#AdultContent) 
