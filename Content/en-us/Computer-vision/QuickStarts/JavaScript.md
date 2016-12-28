@@ -12,7 +12,7 @@ Weight: 1000
 * [Determining if an image contains adult content](#AdultContent) 
 
 ## Get a Thumbnail Using JavaScript <a name="GetAThumbnail"> </a>
-Generate a thumbnail image with the width and height you specify. The service analyzes the image, identifies the region of interest (ROI), and generates smart cropping coordinates based on the ROI. 
+Use the Computer Vision JavaScript API to generate smart cropping coordinates based on an image's region of interest (ROI). 
 
 #### Get a Thumbnail JavaScript Example
 ```
