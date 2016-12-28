@@ -15,6 +15,11 @@ This article describes ... for quickly gettting started using JavaScript and the
 Use the Computer Vision JavaScript API to generate smart cropping coordinates based on an image's region of interest (ROI). 
 
 #### Get a Thumbnail JavaScript Example
+
+* Enter the Height and Width desired for the cropped image.
+* Enter the [Subscription Key](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe)
+* Enter the path to the image being cropped in the body.
+
 ```
 <html>
 <head>
