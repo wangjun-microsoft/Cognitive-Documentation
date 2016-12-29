@@ -6,10 +6,11 @@ Weight: 1000
 -->
 
 # Computer Vision JavaScript Quick Starts
-This article describes ... for quickly gettting started using JavaScript and the Vision API:
-* [Analyze an Image](#AnalyzeImage) 
-* [Generating a thumbnail](#GetThumbnail)
-* [Generating a description for an Image](#GenerateDescription)
+This article provides information and code samples to help you quickly get started using JavaScript and the Vision API. With the Vision API you can:
+* [Analyze an image](#AnalyzeImage) 
+* [Intelligently generate a thumbnail](#GetThumbnail)
+* [Get a description of an image](#GenerateDescription)
+* [Detect and extract text from an Image](#OCR)
 
 ## Analyze an Image With Computer Vision API Using JavaScript <a name="AnalyzeImage"> </a>
 Analyze images to obtain:
@@ -159,5 +160,10 @@ Generate a description of an image in human readable language with complete sent
 </html>
 ```
 #### Generate a Thumbnail Response
+* Successful response
+* Error response
+
+## Optical Character Recognition (OCR) <a name="OCR"> </a>
+Optical Character Recognition (OCR) detects text in an image and extracts the recognized characters into a machine-usable character stream
 
 
