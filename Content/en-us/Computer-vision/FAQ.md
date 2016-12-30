@@ -6,7 +6,9 @@ Weight: 50
 -->
 
 # Computer Vision API Frequently Asked Questions
-* Join our community on [StackOverflow](https://stackoverflow.com/questions/tagged/project-oxford+or+microsoft-cognitive) and [UserVoice](https://cognitive.uservoice.com/) 
+### If you can't find answers to your questions in this FAQ, try asking the Computer Vision API community on [StackOverflow](https://stackoverflow.com/questions/tagged/project-oxford+or+microsoft-cognitive) and [UserVoice](https://cognitive.uservoice.com/) 
+
+-----
 
 **Question**: *Can I train Computer Vision API to use custom tags.  For example, I would like to feed in pictures of cat breeds to 'train' the AI, then receive the breed value on an AI request.*
 
@@ -16,7 +18,7 @@ Weight: 50
 
 **Question**: *Can Computer Vision be used locally without an internet connection?*
 
-**Answer**:We currently do not offer a on premise or local solution.
+**Answer**: We currently do not offer a on premise or local solution.
 
 -----
 
