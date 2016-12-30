@@ -23,7 +23,8 @@ Analyze images to obtain:
 * Whether the image contains pornographic or sexually suggestive content. 
 
 #### Analyze an Image JavaScript Example
-```javascript
+```html
+<!DOCTYPE html>
 <html>
 <head>
     <title>JSSample</title>
@@ -72,7 +73,8 @@ Intelligently generate a thumbnail based on an image's region of interest (ROI).
 * Enter the [Subscription Key](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe)
 * Enter the image URL; for example: {"url":"http://example.com/images/test.jpg"}
 
-```javascript
+```html
+<!DOCTYPE html>
 <html>
 <head>
     <title>JSSample</title>
@@ -120,7 +122,8 @@ Intelligently generate a thumbnail based on an image's region of interest (ROI).
 Generate a description of an image in human readable language with complete sentences.
 
 #### Generate a Description JavaScript Example 
-```javascript
+```html
+<!DOCTYPE html>
 <html>
 <head>
     <title>JSSample</title>
