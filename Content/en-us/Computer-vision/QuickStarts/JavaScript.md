@@ -129,8 +129,7 @@ A successful response will be returned in JSON. Following is an example of a suc
         "text": "Satya Nadella sitting on a bench",
         "confidence": 0.48293603002174407
       }
-    ]
-  },
+    ]  },
   "requestId": "0dbec5ad-a3d3-4f7e-96b4-dfd57efe967d",
   "metadata": {
     "width": 1500,
@@ -185,7 +184,7 @@ Use the [Get Thumbnail method](https://dev.projectoxford.ai/docs/services/56f91f
     $(function() {
         var params = {
             // Request parameters
-s            "width": "{number}",
+            "width": "{number}",
             "height": "{number}",
             "smartCropping": "true",
         };
