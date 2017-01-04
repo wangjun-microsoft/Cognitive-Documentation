@@ -168,7 +168,7 @@ A successful response will be returned in JSON. Following is an example of a suc
 ```
 
 ## Get a Thumbnail with Computer Vision API Using JavaScript <a name="GetThumbnail"> </a>
-With the [Get Thumbnail](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb) you can  crop an image based on its region of interest (ROI) to the height and width you desire, even if the aspect ratio differs from the input image. 
+Use the [Get Thumbnail method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb) to  crop an image based on its region of interest (ROI) to the height and width you desire, even if the aspect ratio differs from the input image. 
 
 #### Get a Thumbnail JavaScript Example Request
 
@@ -185,7 +185,7 @@ With the [Get Thumbnail](https://dev.projectoxford.ai/docs/services/56f91f2d778d
     $(function() {
         var params = {
             // Request parameters
-            "width": "{number}",
+s            "width": "{number}",
             "height": "{number}",
             "smartCropping": "true",
         };
@@ -216,7 +216,7 @@ With the [Get Thumbnail](https://dev.projectoxford.ai/docs/services/56f91f2d778d
 A successful response contains the thumbnail image binary. If the request failed, the response contains an error code and a message to help determine what went wrong.
 
 
-## Optical Character Recognition (OCR) <a name="OCR"> </a>
+## Optical Character Recognition (OCR) with Computer Vision API Using JavaScript<a name="OCR"> </a>
 Use the [Optical Character Recognition (OCR) method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fc) to detect text in an image and extract recognized characters into a machine-usable character stream.
 
 #### OCR JavaScript Example Request
