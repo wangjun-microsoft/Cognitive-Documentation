@@ -11,7 +11,7 @@ This article provides information and code samples to help you quickly get start
 * [Intelligently generate a thumbnail](#GetThumbnail)
 * [Detect and extract text from an Image](#OCR)
 
-## Analyze an Image With Computer Vision API Using JavaScript <a name="AnalyzeImage"> </a>
+## Analyze an Image With Computer Vision API Using C# <a name="AnalyzeImage"> </a>
 With the [Analyze Image method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa) you can extract visual features based on image content. You can upload an image or specify an image URL and choose which features to return, including:
 * The category defined in this [taxonomy](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy). 
 * A detailed list of tags related to the image content. 
@@ -21,47 +21,54 @@ With the [Analyze Image method](https://dev.projectoxford.ai/docs/services/56f91
 * The dominant color, the accent color, or whether an image is black & white.
 * Whether the image contains pornographic or sexually suggestive content. 
 
-#### Analyze an Image JavaScript Example Request
+#### Analyze an Image C# Example Request
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>JSSample</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-</head>
-<body>
+```c#
+using System;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Net.Http;
+using System.Web;
 
-<script type="text/javascript">
-    $(function() {
-        var params = {
+namespace CSHttpClientSample
+{
+    static class Program
+    {
+        static void Main()
+        {
+            MakeRequest();
+            Console.WriteLine("Hit ENTER to exit...");
+            Console.ReadLine();
+        }
+        
+        static async void MakeRequest()
+        {
+            var client = new HttpClient();
+            var queryString = HttpUtility.ParseQueryString(string.Empty);
+
+            // Request headers
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
+
             // Request parameters
-            "visualFeatures": "Categories",
-            "details": "{string}",
-            "language": "en",
-        };
-      
-        $.ajax({
-            url: "https://api.projectoxford.ai/vision/v1.0/analyze?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Content-Type","application/json");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","{subscription key}");
-            },
-            type: "POST",
+            queryString["visualFeatures"] = "Categories";
+            queryString["details"] = "{string}";
+            queryString["language"] = "en";
+            var uri = "https://api.projectoxford.ai/vision/v1.0/analyze?" + queryString;
+
+            HttpResponseMessage response;
+
             // Request body
-            data: "{body}",
-        })
-        .done(function(data) {
-            alert("success");
-        })
-        .fail(function() {
-            alert("error");
-        });
-    });
-</script>
-</body>
-</html>
+            byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+
+            using (var content = new ByteArrayContent(byteData))
+            {
+               content.Headers.ContentType = new MediaTypeHeaderValue("< your content type, i.e. application/json >");
+               response = await client.PostAsync(uri, content);
+            }
+
+        }
+    }
+}	
 ```
 #### Analyze an Image Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
