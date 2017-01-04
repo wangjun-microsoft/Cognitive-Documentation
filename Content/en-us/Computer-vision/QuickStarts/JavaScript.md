@@ -64,7 +64,7 @@ With the [Analyze Image method](https://dev.projectoxford.ai/docs/services/56f91
 </html>
 ```
 #### Analyze an Image Response
-A successful response will be returned in JSON. Following is an example response: 
+A successful response will be returned in JSON. Following is an example of a successful response: 
 
 ```json
 {
@@ -217,7 +217,7 @@ A successful response contains the thumbnail image binary. If the request failed
 
 
 ## Optical Character Recognition (OCR) <a name="OCR"> </a>
-Optical Character Recognition (OCR) detects text in an image and extracts the recognized characters into a machine-usable character stream
+Use the [Optical Character Recognition (OCR) method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fc) to detect text in an image and extract recognized characters into a machine-usable character stream.
 
 #### OCR JavaScript Example Request
 ```html
@@ -258,5 +258,75 @@ Optical Character Recognition (OCR) detects text in an image and extracts the re
 </script>
 </body>
 </html>
+
+```
+
+#### OCR Example Response
+Upon success, the OCR results are returned include include text, bounding box for regions, lines and words. 
+
+```html
+{
+  "language": "en",
+  "textAngle": -2.0000000000000338,
+  "orientation": "Up",
+  "regions": [
+    {
+      "boundingBox": "462,379,497,258",
+      "lines": [
+        {
+          "boundingBox": "462,379,497,74",
+          "words": [
+            {
+              "boundingBox": "462,379,41,73",
+              "text": "A"
+            },
+            {
+              "boundingBox": "523,379,153,73",
+              "text": "GOAL"
+            },
+            {
+              "boundingBox": "694,379,265,74",
+              "text": "WITHOUT"
+            }
+          ]
+        },
+        {
+          "boundingBox": "565,471,289,74",
+          "words": [
+            {
+              "boundingBox": "565,471,41,73",
+              "text": "A"
+            },
+            {
+              "boundingBox": "626,471,150,73",
+              "text": "PLAN"
+            },
+            {
+              "boundingBox": "801,472,53,73",
+              "text": "IS"
+            }
+          ]
+        },
+        {
+          "boundingBox": "519,563,375,74",
+          "words": [
+            {
+              "boundingBox": "519,563,149,74",
+              "text": "JUST"
+            },
+            {
+              "boundingBox": "683,564,41,72",
+              "text": "A"
+            },
+            {
+              "boundingBox": "741,564,153,73",
+              "text": "WISH"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
 
 ```
