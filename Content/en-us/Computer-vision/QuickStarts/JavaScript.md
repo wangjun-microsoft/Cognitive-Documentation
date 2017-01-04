@@ -1,6 +1,6 @@
 <!-- 
 NavPath: Computer Vision API/Quick Starts
-LinkLabel: Overview
+LinkLabel: JavaScript Quick Starts
 Url: Computer-Vision-API/documentation
 Weight: 500
 -->
