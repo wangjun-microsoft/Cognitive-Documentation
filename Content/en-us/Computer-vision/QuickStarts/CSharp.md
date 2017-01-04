@@ -174,104 +174,119 @@ A successful response will be returned in JSON. Following is an example of a suc
 
 ```
 
-## Get a Thumbnail with Computer Vision API Using JavaScript <a name="GetThumbnail"> </a>
+## Get a Thumbnail with Computer Vision API Using C# <a name="GetThumbnail"> </a>
 Use the [Get Thumbnail method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb) to  crop an image based on its region of interest (ROI) to the height and width you desire, even if the aspect ratio differs from the input image. 
 
-#### Get a Thumbnail JavaScript Example Request
+#### Get a Thumbnail C# Example Request
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>JSSample</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-</head>
-<body>
+```c#
+using System;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Net.Http;
+using System.Web;
 
-<script type="text/javascript">
-    $(function() {
-        var params = {
+namespace CSHttpClientSample
+{
+    static class Program
+    {
+        static void Main()
+        {
+            MakeRequest();
+            Console.WriteLine("Hit ENTER to exit...");
+            Console.ReadLine();
+        }
+        
+        static async void MakeRequest()
+        {
+            var client = new HttpClient();
+            var queryString = HttpUtility.ParseQueryString(string.Empty);
+
+            // Request headers
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
+
             // Request parameters
-s            "width": "{number}",
-            "height": "{number}",
-            "smartCropping": "true",
-        };
-      
-        $.ajax({
-            url: "https://api.projectoxford.ai/vision/v1.0/generateThumbnail?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Content-Type","application/json");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","{subscription key}");
-            },
-            type: "POST",
+            queryString["width"] = "{number}";
+            queryString["height"] = "{number}";
+            queryString["smartCropping"] = "true";
+            var uri = "https://api.projectoxford.ai/vision/v1.0/generateThumbnail?" + queryString;
+
+            HttpResponseMessage response;
+
             // Request body
-            data: "{body}",
-        })
-        .done(function(data) {
-            alert("success");
-        })
-        .fail(function() {
-            alert("error");
-        });
-    });
-</script>
-</body>
-</html>
+            byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+
+            using (var content = new ByteArrayContent(byteData))
+            {
+               content.Headers.ContentType = new MediaTypeHeaderValue("< your content type, i.e. application/json >");
+               response = await client.PostAsync(uri, content);
+            }
+
+        }
+    }
+}	
+
 ```
 #### Get a Thumbnail Response
 A successful response contains the thumbnail image binary. If the request failed, the response contains an error code and a message to help determine what went wrong.
 
 
-## Optical Character Recognition (OCR) with Computer Vision API Using JavaScript<a name="OCR"> </a>
+## Optical Character Recognition (OCR) with Computer Vision API Using C#<a name="OCR"> </a>
 Use the [Optical Character Recognition (OCR) method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fc) to detect text in an image and extract recognized characters into a machine-usable character stream.
 
-#### OCR JavaScript Example Request
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>JSSample</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-</head>
-<body>
+#### OCR C# Example Request
+```C#
+using System;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Net.Http;
+using System.Web;
 
-<script type="text/javascript">
-    $(function() {
-        var params = {
+namespace CSHttpClientSample
+{
+    static class Program
+    {
+        static void Main()
+        {
+            MakeRequest();
+            Console.WriteLine("Hit ENTER to exit...");
+            Console.ReadLine();
+        }
+        
+        static async void MakeRequest()
+        {
+            var client = new HttpClient();
+            var queryString = HttpUtility.ParseQueryString(string.Empty);
+
+            // Request headers
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
+
             // Request parameters
-            "language": "unk",
-            "detectOrientation ": "true",
-        };
-      
-        $.ajax({
-            url: "https://api.projectoxford.ai/vision/v1.0/ocr?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Content-Type","application/json");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","{subscription key}");
-            },
-            type: "POST",
+            queryString["language"] = "unk";
+            queryString["detectOrientation "] = "true";
+            var uri = "https://api.projectoxford.ai/vision/v1.0/ocr?" + queryString;
+
+            HttpResponseMessage response;
+
             // Request body
-            data: "{body}",
-        })
-        .done(function(data) {
-            alert("success");
-        })
-        .fail(function() {
-            alert("error");
-        });
-    });
-</script>
-</body>
-</html>
+            byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+
+            using (var content = new ByteArrayContent(byteData))
+            {
+               content.Headers.ContentType = new MediaTypeHeaderValue("< your content type, i.e. application/json >");
+               response = await client.PostAsync(uri, content);
+            }
+
+        }
+    }
+}	
 
 ```
 
 #### OCR Example Response
 Upon success, the OCR results are returned include include text, bounding box for regions, lines and words. 
 
-```html
+```json
 {
   "language": "en",
   "textAngle": -2.0000000000000338,
