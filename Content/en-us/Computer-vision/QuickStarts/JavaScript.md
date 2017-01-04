@@ -9,7 +9,6 @@ Weight: 1000
 This article provides information and code samples to help you quickly get started using JavaScript and the Vision API. With the Vision API you can:
 * [Analyze an image](#AnalyzeImage) 
 * [Intelligently generate a thumbnail](#GetThumbnail)
-* [Get a description of an image](#GenerateDescription)
 * [Detect and extract text from an Image](#OCR)
 
 ## Analyze an Image With Computer Vision API Using JavaScript <a name="AnalyzeImage"> </a>
@@ -22,7 +21,7 @@ Analyze images to obtain:
 * The dominant color, the accent color, or whether an image is black & white.
 * Whether the image contains pornographic or sexually suggestive content. 
 
-#### Analyze an Image JavaScript Example
+#### Analyze an Image JavaScript Example Request
 ```html
 <!DOCTYPE html>
 <html>
@@ -64,6 +63,7 @@ Analyze images to obtain:
 </html>
 ```
 #### Analyze an Image Response
+Following is an example JSON response: 
 
 ```json
 {
@@ -166,7 +166,6 @@ Analyze images to obtain:
 
 ```
 
-
 ## Get a Thumbnail with Computer Vision API Using JavaScript <a name="GetThumbnail"> </a>
 Intelligently generate a thumbnail based on an image's region of interest (ROI). 
 
@@ -224,7 +223,7 @@ Intelligently generate a thumbnail based on an image's region of interest (ROI).
 ## Generate a Description Using JavaScript <a name="GenerateDescription"> </a>
 Generate a description of an image in human readable language with complete sentences.
 
-#### Generate a Description JavaScript Example 
+#### Generate a Description JavaScript Example Request
 ```html
 <!DOCTYPE html>
 <html>
@@ -264,10 +263,49 @@ Generate a description of an image in human readable language with complete sent
 </html>
 ```
 #### Generate a Thumbnail Response
-* Successful response
-* Error response
+A successful response contains the thumbnail image binary. If the request failed, the response contains an error code and a message to help determine what went wrong.
 
 ## Optical Character Recognition (OCR) <a name="OCR"> </a>
 Optical Character Recognition (OCR) detects text in an image and extracts the recognized characters into a machine-usable character stream
 
+#### OCR JavaScript Example Request
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSSample</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+<body>
 
+<script type="text/javascript">
+    $(function() {
+        var params = {
+            // Request parameters
+            "language": "unk",
+            "detectOrientation ": "true",
+        };
+      
+        $.ajax({
+            url: "https://api.projectoxford.ai/vision/v1.0/ocr?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type","application/json");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","{subscription key}");
+            },
+            type: "POST",
+            // Request body
+            data: "{body}",
+        })
+        .done(function(data) {
+            alert("success");
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
+</script>
+</body>
+</html>
+
+```
