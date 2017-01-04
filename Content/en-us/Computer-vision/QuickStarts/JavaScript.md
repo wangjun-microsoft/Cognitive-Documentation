@@ -264,7 +264,7 @@ Use the [Optical Character Recognition (OCR) method](https://dev.projectoxford.a
 #### OCR Example Response
 Upon success, the OCR results are returned include include text, bounding box for regions, lines and words. 
 
-```html
+```json 
 {
   "language": "en",
   "textAngle": -2.0000000000000338,
