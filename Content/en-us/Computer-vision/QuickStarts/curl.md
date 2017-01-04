@@ -6,7 +6,8 @@ Weight: 480
 -->
 
 # Computer Vision curl Quick Starts
-This article provides information and code samples to help you quickly get started using the Computer Vision API with curl to accomplish the following tasks: * [Analyze an image](#AnalyzeImage) 
+This article provides information and code samples to help you quickly get started using the Computer Vision API with curl to accomplish the following tasks:
+* [Analyze an image](#AnalyzeImage) 
 * [Intelligently generate a thumbnail](#GetThumbnail)
 * [Detect and extract text from an Image](#OCR)
 
