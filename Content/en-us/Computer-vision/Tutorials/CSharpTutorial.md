@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/Tutorials
 LinkLabel: C# Tutorial 
 Url: Computer-Vision-API/documentation/Tutorials/CSharpTutorial
-Weight: 75
+Weight: 390
 -->
 
 # Computer Vision API C&#35; Tutorial
