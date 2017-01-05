@@ -63,4 +63,4 @@ Follow the below steps to embed the QnA Maker service as a web chat control in y
 * Embed the webchat as shown in [https://docs.botframework.com/en-us/support/embed-chat-control2](https://docs.botframework.com/en-us/support/embed-chat-control2/#navtitle) 
 
 ### What is the format of the downloaded chat logs?
-The chat logs are tab separated files, with the query and the frequency as the columns. Frequecy is the number of times the same query was seen. The file is sorted in descending order of frequency. Select questions from the downloaded file you want to test, and then upload it to see what responses the system returned for them.
+The chat logs are tab separated files, with the query and the frequency as the columns. Frequency is the number of times the same query was seen. The file is sorted in descending order of frequency. Select questions from the downloaded file you want to test, and then upload it to see what responses the system returned for them.
