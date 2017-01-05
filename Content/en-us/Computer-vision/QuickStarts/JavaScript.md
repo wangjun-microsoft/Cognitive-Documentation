@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Computer Vision API/Quick Starts
 LinkLabel: JavaScript Quick Starts
-Url: Computer-Vision-API/documentation/QuickStarts
+Url: Computer-Vision-API/documentation/QuickStarts/JavaScript
 Weight: 470
 -->
 
