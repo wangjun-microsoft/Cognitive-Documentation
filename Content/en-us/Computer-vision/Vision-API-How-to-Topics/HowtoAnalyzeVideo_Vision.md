@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/How-to Topics
 LinkLabel: How to Analyze Videos in Real-time
 Url: Computer-Vision-API/documentation/vision-api-how-to-topics/HowtoAnazlyzeVideo_Vision
-Weight: 80
+Weight: 85
 -->
 
 # How to Analyze Videos in Real-time

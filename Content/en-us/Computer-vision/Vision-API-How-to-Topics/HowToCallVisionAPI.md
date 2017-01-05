@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/How-to Topics
 LinkLabel: How to call Computer Vision API
 Url: Computer-Vision-API/documentation/vision-api-how-to-topics/HowToCallVisionAPI
-Weight: 93
+Weight: 90
 -->
 
 #How to Call Computer Vision API
@@ -36,10 +36,12 @@ In the examples below, the following features are demonstrated:
 Features are broken down on:
 
   * **Option One:** Scoped Analysis - Analyze only a given model
-  * **Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](./Images/86categories.md)
+  * **Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy)
   
 ###<a name="Step1">Step 1: Authorize the API call</a> 
 Every call to the Computer Vision API requires a subscription key. This key needs to be either passed through a query string parameter or specified in the request header. 
+
+To obtain a subscription key, see [How to Obtain Subscription Keys](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe).
 
 **1.** Passing the subscription key through a query string, see below as a Computer Vision API example:
 
@@ -52,8 +54,6 @@ Every call to the Computer Vision API requires a subscription key. This key need
 **3.** When using the client library, the subscription key is passed in through the constructor of VisionServiceClient:
 
 ```var visionClient = new VisionServiceClient(“Your subscriptionKey”);```
-
-To obtain a subscription key, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up).
 
 ###<a name="Step2">Step 2: Upload an image to the Computer Vision API service and get back tags, descriptions and celebrities</a>
 The basic way to perform the Computer Vision API call is by uploading an image directly. This is done by sending a "POST" request with application/octet-stream content type together with the data read from the image. For "Tags" and "Description", this upload method will be the same for all the Computer Vision API calls. The only difference will be the query parameters the user specifies. 
@@ -105,7 +105,7 @@ For this option, all other query parameters {visualFeatures, details} are not va
 GET https://api.projectoxford.ai/vision/v1.0/models 
 var models = await visionClient.ListModelsAsync();
 ```
-**Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](./Images/86categories.md)
+**Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy)
 
 For applications where you want to get generic image analysis in addition to details from one or more domain-specific models, we extend the v1 API with the models query parameter.
 ```
@@ -203,7 +203,7 @@ For domain-specific models using Option Two (Enhanced Analysis), the categories 
   }
 ```
 
-The categories field is a list of one or more of the [86-categories](./Images/86categories.md) in the original taxonomy. Note also that categories ending in an underscore will match that category and its children (for example, people_ as well as people_group, for celebrities model).
+The categories field is a list of one or more of the [86-categories](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy) in the original taxonomy. Note also that categories ending in an underscore will match that category and its children (for example, people_ as well as people_group, for celebrities model).
 
 Field	| Type	| Content
 ------|------|------|
@@ -216,8 +216,6 @@ Note that if multiple categories match (for example, 86-category classifier retu
 
 ###<a name="Errors">Errors Responses</a>
 These are identical to vision.analyze, with the additional error of NotSupportedModel error (HTTP 400), which may be returned in both Option One and Option Two scenarios. For Option Two (Enhanced Analysis), if any of the models specified in details are not recognized, the API will return a NotSupportedModel, even if one or more of them are valid.  Users can call listModels to find out what models are supported.
-
-The remainder of error values are listed [here](https://dev.projectoxford.ai/docs/services/54ef139a49c3f70a50e79b7d/operations/550a323849c3f70b34ba2f8d).
 
 ###<a name="Summary">Summary</a>
 

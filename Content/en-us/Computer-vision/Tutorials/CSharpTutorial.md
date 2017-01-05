@@ -1,11 +1,11 @@
 <!-- 
-NavPath: Computer Vision API/Get Started with Vision API
-LinkLabel: Get Started in C#
-Url: Computer-Vision-API/documentation/GetStarted/GetStartedVisionAPIforWindows
-Weight: 55
+NavPath: Computer Vision API/Tutorials
+LinkLabel: C# Tutorial 
+Url: Computer-Vision-API/documentation/Tutorials/CSharpTutorial
+Weight: 75
 -->
 
-#Get Started with Computer Vision API in C&#35;
+# Computer Vision API C&#35; Tutorial
 Explore a basic Windows application that uses Computer Vision API to perform optical character recognition (OCR), create smart-cropped thumbnails, plus detect, categorize, tag and describe visual features, including faces, in an image. The below example lets you submit an image URL or a locally stored file. You can use this open source example as a template for building your own app for Windows using the Vision API and WPF (Windows Presentation Foundation), a part of .NET Framework.
 
 ###Table of Contents
@@ -81,8 +81,7 @@ This code snippet shows how to use the Client Library to submit your subscriptio
 	{
 	    // -----------------------------------------------------------------------
 	    // KEY SAMPLE CODE STARTS HERE
-	    // -----------------------------------------------------------------------
-	
+	    // -----------------------------------------------------------------------	
 	    //
 	    // Create Project Oxford Computer Vision API Service client
 	    //
@@ -137,6 +136,8 @@ This code snippet shows how to use the Client Library to submit your subscriptio
 How to interact with the other endpoints exposed by the Computer Vision API service can be seen by looking at the other pages in the sample; for instance, the OCR endpoint is shown as part of the code contained in OCRPage.xaml.cs 
 
 ###<a name="Related">Related Topics</a>
- * Get started with Face API
+ * [Get started with Face API](https://www.microsoft.com/cognitive-services/en-us/face-api/documentation/get-started-with-face-api/GettingStartedwithFaceAPIinCSharp)
  
+ 
+
 

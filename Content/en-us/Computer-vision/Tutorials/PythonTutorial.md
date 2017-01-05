@@ -1,11 +1,11 @@
 <!-- 
-NavPath: Computer Vision API/Get Started with Vision API
-LinkLabel: Get Started in Python
-Url: Computer-Vision-api/documentation/GetStarted/GetStartedWithPython
-Weight: 55
+NavPath: Computer Vision API/Tutorials
+LinkLabel: Python Tutorial
+Url: Computer-Vision-api/documentation/Tutorials/PythonTutorial
+Weight: 70
 -->
 
-#Start Developing with Computer Vision API using Python
+#Computer Vision API Python Tutorial
 
 To make it easy to get started with Computer Vision API, the Jupyter notebook linked below shows you how to use the API in Python and how to visualize your results using some popular libraries. 
 
@@ -25,6 +25,5 @@ Python Example
 _url = 'https://api.projectoxford.ai/vision/v1/analyses'
 _key = None #Here you have to paste your primary key
 _maxNumRetries = 10
-
 
 ```
