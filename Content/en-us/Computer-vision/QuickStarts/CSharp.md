@@ -1,7 +1,7 @@
 <!-- 
-NavPath: Computer Vision API/Quick Starts
+NavPath: Computer Vision API/QuickStarts
 LinkLabel: C# Quick Starts
-Url: Computer-Vision-API/documentation
+Url: Computer-Vision-API/documentation/QuickStarts
 Weight: 480
 -->
 
