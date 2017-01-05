@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/Quick Starts
 LinkLabel: C# Quick Starts
 Url: Computer-Vision-API/documentation
-Weight: 490
+Weight: 480
 -->
 
 # Computer Vision C# Quick Starts
