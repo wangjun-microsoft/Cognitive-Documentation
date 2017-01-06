@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/Quick Starts
 LinkLabel: PHP Quick Starts
 Url: Computer-Vision-API/documentation/QuickStarts/PHP
-Weight: 460
+Weight: 450
 -->
 
 # Computer Vision PHP Quick Starts
