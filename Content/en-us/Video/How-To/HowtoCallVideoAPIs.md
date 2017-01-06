@@ -43,7 +43,7 @@ Every call to the Video API requires a subscription key. This key needs to be ei
 
 ```
 
-https://api.projectoxford.ai/video/v1.0/stabilize&subscription-key=<Your subscription key>
+https://westus.api.cognitive.microsoft.com/video/v1.0/stabilize&subscription-key=<Your subscription key>
   
 ```
 
