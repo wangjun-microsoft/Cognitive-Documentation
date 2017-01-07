@@ -40,8 +40,9 @@ The APIs in Cognitive Services are hosted on a growing network of Microsoft-mana
 | Recommendations API                      |        |    :ballot_box_with_check:    |
 | Speaker Recognition API                  |        |    :ballot_box_with_check:    |
 | Text Analytics API                       |        |    :ballot_box_with_check:    |
-| Video API                                |        |    :ballot_box_with_check:    |
-| Web Language Model API                   |        |    :ballot_box_with_check:    |
+| Translator API                           |    :ballot_box_with_check:  |         |
+| Video API                                |        |    :ballot_box_with_check:    |
+| Web Language Model API                   |        |    :ballot_box_with_check:    |
 	
 Looking for a region we don't support yet? Let us know by filing a feature request on our [UserVoice forum](https://cognitive.uservoice.com/).
 
