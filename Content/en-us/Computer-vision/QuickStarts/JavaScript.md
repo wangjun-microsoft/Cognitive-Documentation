@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/Quick Starts
 LinkLabel: JavaScript Quick Starts
 Url: Computer-Vision-API/documentation/QuickStarts/JavaScript
-Weight: 470
+Weight: 460
 -->
 
 # Computer Vision JavaScript Quick Starts
