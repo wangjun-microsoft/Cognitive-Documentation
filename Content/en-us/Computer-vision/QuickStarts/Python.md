@@ -1,17 +1,17 @@
 <!-- 
 NavPath: Computer Vision API/Quick Starts
-LinkLabel: curl Quick Starts
-Url: Computer-Vision-API/documentation/QuickStarts/curl
-Weight: 490
+LinkLabel: Python Quick Starts
+Url: Computer-Vision-API/documentation/QuickStarts/Python
+Weight: 430
 -->
 
-# Computer Vision curl Quick Starts
-This article provides information and code samples to help you quickly get started using the Computer Vision API with curl to accomplish the following tasks:
+# Computer Vision Python Quick Starts
+This article provides information and code samples to help you quickly get started using the Computer Vision API with Python to accomplish the following tasks:
 * [Analyze an image](#AnalyzeImage) 
 * [Intelligently generate a thumbnail](#GetThumbnail)
 * [Detect and extract text from an Image](#OCR)
 
-## Analyze an Image With Computer Vision API Using curl <a name="AnalyzeImage"> </a>
+## Analyze an Image With Computer Vision API Using Python <a name="AnalyzeImage"> </a>
 With the [Analyze Image method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa) you can extract visual features based on image content. You can upload an image or specify an image URL and choose which features to return, including:
 * The category defined in this [taxonomy](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy). 
 * A detailed list of tags related to the image content. 
@@ -21,19 +21,67 @@ With the [Analyze Image method](https://dev.projectoxford.ai/docs/services/56f91
 * The dominant color, the accent color, or whether an image is black & white.
 * Whether the image contains pornographic or sexually suggestive content. 
 
-#### Analyze an Image curl Example Request
+#### Analyze an Image Python Example Request
 
-```json
+```Python
+########### Python 2.7 #############
+import httplib, urllib, base64
 
-@ECHO OFF
+headers = {
+    # Request headers
+    'Content-Type': 'application/json',
+    'Ocp-Apim-Subscription-Key': '{subscription key}',
+}
 
-curl -v -X POST "https://api.projectoxford.ai/vision/v1.0/analyze?visualFeatures=Categories&details={string}&language=en"
--H "Content-Type: application/json"
--H "Ocp-Apim-Subscription-Key: {subscription key}"
+params = urllib.urlencode({
+    # Request parameters
+    'visualFeatures': 'Categories',
+    'details': '{string}',
+    'language': 'en',
+})
 
---data-ascii "{body}" 
+try:
+    conn = httplib.HTTPSConnection('api.projectoxford.ai')
+    conn.request("POST", "/vision/v1.0/analyze?%s" % params, "{body}", headers)
+    response = conn.getresponse()
+    data = response.read()
+    print(data)
+    conn.close()
+except Exception as e:
+    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+
+####################################
+
+########### Python 3.2 #############
+import http.client, urllib.request, urllib.parse, urllib.error, base64
+
+headers = {
+    # Request headers
+    'Content-Type': 'application/json',
+    'Ocp-Apim-Subscription-Key': '{subscription key}',
+}
+
+params = urllib.parse.urlencode({
+    # Request parameters
+    'visualFeatures': 'Categories',
+    'details': '{string}',
+    'language': 'en',
+})
+
+try:
+    conn = http.client.HTTPSConnection('api.projectoxford.ai')
+    conn.request("POST", "/vision/v1.0/analyze?%s" % params, "{body}", headers)
+    response = conn.getresponse()
+    data = response.read()
+    print(data)
+    conn.close()
+except Exception as e:
+    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+
+####################################
 
 ```
+
 #### Analyze an Image Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
 
@@ -138,36 +186,133 @@ A successful response will be returned in JSON. Following is an example of a suc
 
 ```
 
-## Get a Thumbnail with Computer Vision API Using curl <a name="GetThumbnail"> </a>
+## Get a Thumbnail with Computer Vision API Using Python <a name="GetThumbnail"> </a>
 Use the [Get Thumbnail method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb) to  crop an image based on its region of interest (ROI) to the height and width you desire, even if the aspect ratio differs from the input image. 
 
-#### Get a Thumbnail curl Example Request
+#### Get a Thumbnail Python Example Request
 
-```JSON
-@ECHO OFF
+```Python
+########### Python 2.7 #############
+import httplib, urllib, base64
 
-curl -v -X POST "https://api.projectoxford.ai/vision/v1.0/generateThumbnail?width={number}&height={number}&smartCropping=true"
--H "Content-Type: application/json"
--H "Ocp-Apim-Subscription-Key: {subscription key}"
+headers = {
+    # Request headers
+    'Content-Type': 'application/json',
+    'Ocp-Apim-Subscription-Key': '{subscription key}',
+}
 
---data-ascii "{body}" 
+params = urllib.urlencode({
+    # Request parameters
+    'width': '{number}',
+    'height': '{number}',
+    'smartCropping': 'true',
+})
+
+try:
+    conn = httplib.HTTPSConnection('api.projectoxford.ai')
+    conn.request("POST", "/vision/v1.0/generateThumbnail?%s" % params, "{body}", headers)
+    response = conn.getresponse()
+    data = response.read()
+    print(data)
+    conn.close()
+except Exception as e:
+    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+
+####################################
+
+########### Python 3.2 #############
+import http.client, urllib.request, urllib.parse, urllib.error, base64
+
+headers = {
+    # Request headers
+    'Content-Type': 'application/json',
+    'Ocp-Apim-Subscription-Key': '{subscription key}',
+}
+
+params = urllib.parse.urlencode({
+    # Request parameters
+    'width': '{number}',
+    'height': '{number}',
+    'smartCropping': 'true',
+})
+
+try:
+    conn = http.client.HTTPSConnection('api.projectoxford.ai')
+    conn.request("POST", "/vision/v1.0/generateThumbnail?%s" % params, "{body}", headers)
+    response = conn.getresponse()
+    data = response.read()
+    print(data)
+    conn.close()
+except Exception as e:
+    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+
+####################################
+
 ```
+
 #### Get a Thumbnail Response
 A successful response contains the thumbnail image binary. If the request failed, the response contains an error code and a message to help determine what went wrong.
 
 
-## Optical Character Recognition (OCR) with Computer Vision API Using curl <a name="OCR"> </a>
+## Optical Character Recognition (OCR) with Computer Vision API Using Python <a name="OCR"> </a>
 Use the [Optical Character Recognition (OCR) method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fc) to detect text in an image and extract recognized characters into a machine-usable character stream.
 
-#### OCR curl Example Request
+#### OCR Python Example Request
 ```JSON
-@ECHO OFF
+########### Python 2.7 #############
+import httplib, urllib, base64
 
-curl -v -X POST "https://api.projectoxford.ai/vision/v1.0/ocr?language=unk&detectOrientation =true"
--H "Content-Type: application/json"
--H "Ocp-Apim-Subscription-Key: {subscription key}"
+headers = {
+    # Request headers
+    'Content-Type': 'application/json',
+    'Ocp-Apim-Subscription-Key': '{subscription key}',
+}
 
---data-ascii "{body}" 
+params = urllib.urlencode({
+    # Request parameters
+    'language': 'unk',
+    'detectOrientation ': 'true',
+})
+
+try:
+    conn = httplib.HTTPSConnection('api.projectoxford.ai')
+    conn.request("POST", "/vision/v1.0/ocr?%s" % params, "{body}", headers)
+    response = conn.getresponse()
+    data = response.read()
+    print(data)
+    conn.close()
+except Exception as e:
+    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+
+####################################
+
+########### Python 3.2 #############
+import http.client, urllib.request, urllib.parse, urllib.error, base64
+
+headers = {
+    # Request headers
+    'Content-Type': 'application/json',
+    'Ocp-Apim-Subscription-Key': '{subscription key}',
+}
+
+params = urllib.parse.urlencode({
+    # Request parameters
+    'language': 'unk',
+    'detectOrientation ': 'true',
+})
+
+try:
+    conn = http.client.HTTPSConnection('api.projectoxford.ai')
+    conn.request("POST", "/vision/v1.0/ocr?%s" % params, "{body}", headers)
+    response = conn.getresponse()
+    data = response.read()
+    print(data)
+    conn.close()
+except Exception as e:
+    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+
+####################################
+
 ```
 
 #### OCR Example Response
