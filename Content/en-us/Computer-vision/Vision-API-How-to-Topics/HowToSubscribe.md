@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/How-to Topics
 LinkLabel: How to Obtain Subscription Keys
 Url: Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe
-Weight: 95
+Weight: 590
 -->
 
 ## Obtaining Subscription Keys
