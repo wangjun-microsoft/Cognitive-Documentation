@@ -258,7 +258,7 @@ A successful response contains the thumbnail image binary. If the request failed
 Use the [Optical Character Recognition (OCR) method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fc) to detect text in an image and extract recognized characters into a machine-usable character stream.
 
 #### OCR Python Example Request
-```JSON
+```Python
 ########### Python 2.7 #############
 import httplib, urllib, base64
 
