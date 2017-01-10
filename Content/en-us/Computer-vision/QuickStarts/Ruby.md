@@ -1,5 +1,5 @@
 <!-- 
-NavPath: Computer Vision API/QuickStarts
+NavPath: Computer Vision API/Quick Starts
 LinkLabel: Ruby Quick Starts
 Url: Computer-Vision-API/documentation/QuickStarts/Ruby
 Weight: 430
