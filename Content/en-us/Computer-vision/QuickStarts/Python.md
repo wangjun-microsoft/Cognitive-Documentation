@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/Quick Starts
 LinkLabel: Python Quick Starts
 Url: Computer-Vision-API/documentation/QuickStarts/Python
-Weight: 440
+Weight: 105
 -->
 
 # Computer Vision Python Quick Starts
