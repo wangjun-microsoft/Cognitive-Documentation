@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/Quick Starts
 LinkLabel: Java Quick Starts
 Url: Computer-Vision-API/documentation/QuickStarts/Java
-Weight: 470
+Weight: 108
 -->
 
 # Computer Vision Java Quick Starts
