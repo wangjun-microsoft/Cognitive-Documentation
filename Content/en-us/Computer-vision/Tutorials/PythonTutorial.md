@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/Tutorials
 LinkLabel: Python Tutorial
 Url: Computer-Vision-api/documentation/Tutorials/PythonTutorial
-Weight: 380 
+Weight: 98 
 -->
 
 #Computer Vision API Python Tutorial
