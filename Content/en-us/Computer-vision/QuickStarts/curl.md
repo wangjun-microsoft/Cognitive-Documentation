@@ -2,7 +2,7 @@
 NavPath: Computer Vision API/Quick Starts
 LinkLabel: curl Quick Starts
 Url: Computer-Vision-API/documentation/QuickStarts/curl
-Weight: 490
+Weight: 110
 -->
 
 # Computer Vision curl Quick Starts
