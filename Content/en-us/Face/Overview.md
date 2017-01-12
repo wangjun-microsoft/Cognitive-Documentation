@@ -73,7 +73,7 @@ This document is targeting **Microsoft Face API** service version 1.0.
 
 * **Bug fix** For [Face List - Add a Face to a Face List](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) and [Person - Add a Person Face](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b) APIs, algorithm is upgraded to makes sure that the face could be re-detected with rectangle returned from in [Face - Detect](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) as `targetFace`. 
 
-* **Bug fix** Smaller face rectangle than 36x36 could be returned by [Face - Detect](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), and fix is applied to avoid this.
+* **Bug fix** Make sure the detectable face size is strictly between 36x36 to 4096x4096 pixels.
 
 ### Release changes in November 2016
 
