@@ -51,10 +51,10 @@ After a person group has been created and trained, identification can be perform
 
 For more details about person identification, please refer to the API guides listed below:
 
-[Face - Identify](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)  
-[Person Group - Create a Person Group](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244)  
-[Person - Create a Person](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c)  
-[Person Group - Train Person Group](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) 
+- [Face - Identify](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)  
+- [Person Group - Create a Person Group](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244)  
+- [Person - Create a Person](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c)  
+- [Person Group - Train Person Group](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) 
 
 ### Face Storage 
 Face Storage allows a Standard subscription to store additional persisted faces when using Person objects ([Person - Add A Person Face](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b)) or Face Lists ([Face List - Add a Face to a Face List](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250)) for identification or similarity matching with the Face API. The stored images are charged at $0.5 per 1000 faces and this rate is prorated on a daily basis. Free tier subscriptions are free, but limited to 1,000 total persons. 
@@ -62,7 +62,6 @@ Face Storage allows a Standard subscription to store additional persisted faces 
 Pricing for Face Storage is prorated daily. For example, if your account used 10,000 persisted faces each day for the first half of the month and none the second half, you would be billed only for the 10,000 faces for the days stored. Alternatively, if each day during the month you persist 1,000 faces for a few hours and then delete them each night, you would still be billed for 1,000 persisted faces each day.
 
 ## Getting Started Tutorials
-
 The following tutorials demonstrate the Face API basic functionalities and subscriptions processes:
 - [Getting Started with Face API in CSharp Tutorial](Get-Started-with-Face-API/GettingStartedwithFaceAPIinCSharp.md)
 - [Getting Started with Face API in Java for Android Tutorial](Get-Started-with-Face-API/GettingStartedwithFaceAPIinJavaforAndroid.md)
@@ -70,7 +69,6 @@ The following tutorials demonstrate the Face API basic functionalities and subsc
 
 ## Sample Apps
 Take a look at these sample applications which make use of Face API.
-
 - [FamilyNotes UWP app](https://github.com/Microsoft/Windows-appsample-familynotes)
  - Universal Windows Platform (UWP) sample app that shows usage of speech, Cortana, ink, and camera through a family note sharing scenario. 
 - [Video Frame Analysis Sample](https://github.com/microsoft/cognitive-samples-videoframeanalysis)
