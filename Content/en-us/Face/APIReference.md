@@ -2,7 +2,7 @@
 NavPath: Face API
 LinkLabel: API Reference
 ExternalLink: https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d
-Weight: 15
+Weight: 20
 -->
 
 # API Reference
