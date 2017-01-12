@@ -2,7 +2,7 @@
 NavPath: Face API
 LinkLabel: Release Notes
 Url: face-api/documentation/ReleaseNotes
-Weight: 20
+Weight: 15
 -->
 
 # Face API Release Notes
