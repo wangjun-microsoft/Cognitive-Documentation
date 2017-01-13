@@ -1,8 +1,8 @@
 <!-- 
 NavPath: Face API/Tutorials
-LinkLabel: Get Started With Android Tutorial
-Url: face-api/documentation/get-started-with-face-api/FaceAPIinJavaForAndroidTutorial
-Weight: 30
+LinkLabel: Getting Started With Android Tutorial
+Url: face-api/documentation/Tutorials/FaceAPIinJavaForAndroidTutorial
+Weight: 40
 -->
 # Get Started with Face API in Java for Android
 
