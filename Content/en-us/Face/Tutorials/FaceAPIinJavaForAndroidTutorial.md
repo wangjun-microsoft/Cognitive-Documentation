@@ -1,10 +1,10 @@
 <!-- 
 NavPath: Face API/Tutorials
-LinkLabel: Getting Started With Android Tutorial
+LinkLabel: Getting Started in Java for Android Tutorial
 Url: face-api/documentation/Tutorials/FaceAPIinJavaForAndroidTutorial
 Weight: 40
 -->
-# Get Started with Face API in Java for Android
+# Getting Started with Face API in Java for Android Tutorial
 
 In this tutorial, you will learn to create and develop a simple Android application that invokes the Face API to detect human faces in an image; essentially by framing the face.     
 
