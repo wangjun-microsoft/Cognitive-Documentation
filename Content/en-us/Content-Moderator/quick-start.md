@@ -21,12 +21,12 @@ Use the File Upload feature to upload a set of sample images for moderation. The
 
 ![Upload files](images/QuickStart-3.PNG)
 
-## 4. Start automated moderation ##
+## 4. Submit for automated moderation ##
 Submit your uploaded content to start the auto-moderation step. Internally, the review tool will call the moderation APIs to scan your content for built-in tags. Once the scanning is complete, you will see a message informing you about the results waiting for your review.
 
 ![Moderate files](images/QuickStart-4.PNG)
 
-## 5. Review moderation results ##
+## 5. Review and confirm results ##
 As your business application calls the Moderator [image API](image-moderation-api.md "Image Moderation API"), the tagged content will start queuing up, ready to be reviewed by the human review teams. You can quickly review large volumes of content using this approach. You will be doing a few different things as part of your moderation workflow such as:
 
 - Adjusting the zoom level
@@ -35,12 +35,3 @@ As your business application calls the Moderator [image API](image-moderation-ap
 - Confirming or modifying the tags returned by the API
 
 ![Review results](images/QuickStart-5.PNG)
-
-## 6. Integrate with the review tool by using the review API ##
-Once you have explored the review tool, use the [review API](review-api.md "Content Moderator Review API") to integrate large number of images with the review tool in an automated way. The review API will scan your images and generate reviews in the review tool where you can resume the human review steps.
-
-## 7. Directly use the Moderate APIs for image and text moderation ##
-Use the [image](image-moderation-api.md "Image Moderation API") and [text](text-moderation-api.md "Text Moderation API") moderation APIs to directly scan your content and get back the detailed results. You can use the information to either implement your post-moderation workflow by either using your  systems and/or create reviews within the built-in review tool for your human moderation teams. You will find your Moderate API credentials listed within the "API" section under Settings in the review tool.
-
-## 8. Create and manage custom lists of content ##
-Enhance your moderation effectiveness by using the list management capabilities introduced in the [image](image-moderation-api.md "Image Moderation API") and [text](text-moderation-api.md "Text Moderation API") moderation APIs to create and manage custom lists of known (approved and blocked) text and images to the incoming content before moderating. The lists that you create can be used in the Moderate operations. You can use your Moderate API credentials for the list management API as well.
