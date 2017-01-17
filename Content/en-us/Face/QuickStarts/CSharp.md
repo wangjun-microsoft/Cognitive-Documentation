@@ -11,7 +11,7 @@ This article provides information and code samples to help you quickly get start
 * [Identify Faces in Images](#Identify)
 
 
-## DetectFaces in Images With Face API Using C# <a name="Detect"> </a>
+## Detect Faces in Images With Face API Using C# <a name="Detect"> </a>
 With the [Face- Detect method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
 
 how to detect faces from an image, with face attributes like gender, age, or pose extracted. The samples are written in C# using the Face API client library. 
@@ -214,3 +214,79 @@ A successful response will be returned in JSON. Following is an example of a suc
     }
 ]
 ```
+## Identify Faces in Images With Face API Using C# <a name="Identify"> </a>
+With the [Face- Identify method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
+For each face in the faceIds array, Face Identify will compute similarities between the query face and all the faces in the person group (given by personGroupId), and returns candidate person(s) for that face ranked by similarity confidence
+
+#### Face - Identify C# Example Request
+```C#
+using System;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Net.Http;
+using System.Web;
+
+namespace CSHttpClientSample
+{
+    static class Program
+    {
+        static void Main()
+        {
+            MakeRequest();
+            Console.WriteLine("Hit ENTER to exit...");
+            Console.ReadLine();
+        }
+        
+        static async void MakeRequest()
+        {
+            var client = new HttpClient();
+            var queryString = HttpUtility.ParseQueryString(string.Empty);
+
+            // Request headers
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
+
+            var uri = "https://api.projectoxford.ai/face/v1.0/identify?" + queryString;
+
+            HttpResponseMessage response;
+
+            // Request body
+            byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+
+            using (var content = new ByteArrayContent(byteData))
+            {
+               content.Headers.ContentType = new MediaTypeHeaderValue("< your content type, i.e. application/json >");
+               response = await client.PostAsync(uri, content);
+            }
+
+        }
+    }
+}	
+
+```
+#### Face - Identify Response
+A successful response will be returned in JSON. Following is an example of a successful response: 
+```json
+{
+    [
+        {
+            "faceId":"c5c24a82-6845-4031-9d5d-978df9175426",
+            "candidates":[
+                {
+                    "personId":"25985303-c537-4467-b41d-bdb45cd95ca1",
+                    "confidence":0.92
+                }
+            ]
+        },
+        {
+            "faceId":"65d083d4-9447-47d1-af30-b626144bf0fb",
+            "candidates":[
+                {
+                    "personId":"2ae4935b-9659-44c3-977f-61fac20d0538",
+                    "confidence":0.89
+                }
+            ]
+        }
+    ]
+}
+```
+
