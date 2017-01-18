@@ -2,7 +2,7 @@
 NavPath: Face API/Quick Starts
 LinkLabel: C# Quick Starts
 Url: Face/documentation/QuickStarts/CSharp
-Weight: 109
+Weight: 60
 -->
 
 # Face API C# Quick Starts
