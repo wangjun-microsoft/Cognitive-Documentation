@@ -20,7 +20,7 @@ to detect faces in an image and return face attributes including:
 * Facial attributes including age, gender, smile intensity, head pose, and facial hair. 
 
 #### Face Detect PHP Example Request
-The sample is written in C# using the Face API client library. 
+ 
 ```php
 <?php
 // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
