@@ -6,18 +6,18 @@ Weight: 185
 -->
 # Select or enter text to review #
 
-Click the **Try** TAB and select the "Text" option to bring up the Text Moderation start screen. Enter any text upto a maximum of 1024 characters or use the default sample text to submit to the text moderation API.
+Click the **Try** TAB and select the "Text" option to bring up the Text Moderation start screen. Enter any text upto a maximum of 1024 characters or use the default sample text to submit for automated text moderation.
 
-![Review Text](images/1-Try-Text.PNG)
+![Review Text](images/1-Try-Text-updated.PNG)
 
 # Get ready to review results
 
-When you submit the text, the review tool will call the text moderation API and generate text reviews with the detected tags and match scores results for your reviewers' attention. 
+The review tool will call the text moderation API and generate text reviews with the detected tags and match scores results within the review tool for your team's attention. 
 
 ![Ready for text reviews](images/2-Text-Submitted.PNG)
 
 # Review text results
 
-If you have thumbnails showing on your screen, click a thumbnail to bring up the detailed view. Click the tags to toggle their selection status. You can also select any custom tags that you may have created.
+You will see detailed results including the detected tags and terms returned by the text moderation API show up on your screen. Click the tags to toggle their selection status. You can also work with any custom tags that you may have created.
 
 ![Review text results](images/3-Review-Text-2.PNG)
