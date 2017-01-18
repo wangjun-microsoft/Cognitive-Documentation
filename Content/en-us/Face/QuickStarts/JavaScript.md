@@ -20,7 +20,7 @@ to detect faces in an image and return face attributes including:
 
 #### Face Detect JavaScript Example Request
 
-```html
+```html 
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,7 +63,7 @@ to detect faces in an image and return face attributes including:
 #### Face - Detect Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
 
-```json
+```php
 [
     {
         "faceId": "c5c24a82-6845-4031-9d5d-978df9175426",
@@ -248,7 +248,7 @@ identify people based on a detected face and people database (defined as a perso
 ```
 #### Face - Identify Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
-```json
+```php
 {
     [
         {
