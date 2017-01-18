@@ -9,7 +9,7 @@ Weight: 186
 
 Click the **Review** TAB to browse the auto-moderated images that are ready for review. Any labels assigned to the images are based on the default score thresholds for tagging the images. These thresholds are configurable.
 
-![Review Images](images/2-Image-Review.PNG)
+![Review Images](images/2-Image-Review-1.PNG)
 
 Note that the images that you see on your screen are not available to other reviewers in your team while you are reviewing them.
 
