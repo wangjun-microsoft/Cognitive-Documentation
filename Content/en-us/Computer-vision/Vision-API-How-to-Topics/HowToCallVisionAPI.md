@@ -62,7 +62,7 @@ Here’s how to get "Tags" and "Description" for a given image:
 
 **Option One:** Get list of "Tags" and one "Description"
 ```
-POST https://api.projectoxford.ai/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=<Your subscription key>
+POST https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=<Your subscription key>
 ```
 ```
 using Microsoft.ProjectOxford.Vision;
