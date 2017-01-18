@@ -42,7 +42,7 @@ With the [Analyze Image method](https://dev.projectoxford.ai/docs/services/56f91
         };
       
         $.ajax({
-            url: "https://api.projectoxford.ai/vision/v1.0/analyze?" + $.param(params),
+            url: "https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?" + $.param(params),
             beforeSend: function(xhrObj){
                 // Request headers
                 xhrObj.setRequestHeader("Content-Type","application/json");
@@ -190,7 +190,7 @@ Use the [Get Thumbnail method](https://dev.projectoxford.ai/docs/services/56f91f
         };
       
         $.ajax({
-            url: "https://api.projectoxford.ai/vision/v1.0/generateThumbnail?" + $.param(params),
+            url: "https://westus.api.cognitive.microsoft.com/vision/v1.0/generateThumbnail?" + $.param(params),
             beforeSend: function(xhrObj){
                 // Request headers
                 xhrObj.setRequestHeader("Content-Type","application/json");
@@ -237,7 +237,7 @@ Use the [Optical Character Recognition (OCR) method](https://dev.projectoxford.a
         };
       
         $.ajax({
-            url: "https://api.projectoxford.ai/vision/v1.0/ocr?" + $.param(params),
+            url: "https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr?" + $.param(params),
             beforeSend: function(xhrObj){
                 // Request headers
                 xhrObj.setRequestHeader("Content-Type","application/json");
