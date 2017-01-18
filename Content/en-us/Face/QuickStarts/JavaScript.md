@@ -2,7 +2,7 @@
 NavPath: Face API/Quick Starts
 LinkLabel: JavaScript Quick Starts
 Url: Face/documentation/QuickStarts/JavaScript
-Weight: 108
+Weight: 56
 -->
 
 # Face API JavaScript Quick Starts
