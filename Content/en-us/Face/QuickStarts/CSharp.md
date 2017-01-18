@@ -12,7 +12,7 @@ This article provides information and code samples to help you quickly get start
 
 
 ## Detect Faces in Images With Face API Using C# <a name="Detect"> </a>
-With the [Face- Detect method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
+With the [Face - Detect method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
 
 how to detect faces from an image, with face attributes like gender, age, or pose extracted. The samples are written in C# using the Face API client library. 
 
@@ -53,7 +53,7 @@ namespace CSHttpClientSample
             queryString["returnFaceId"] = "true";
             queryString["returnFaceLandmarks"] = "false";
             queryString["returnFaceAttributes"] = "{string}";
-            var uri = "https://api.projectoxford.ai/face/v1.0/detect?" + queryString;
+            var uri = "https://westus.api.cognitive.microsoft.com/face/v1.0/detect?" + queryString;
 
             HttpResponseMessage response;
 
@@ -245,7 +245,7 @@ namespace CSHttpClientSample
             // Request headers
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
 
-            var uri = "https://api.projectoxford.ai/face/v1.0/identify?" + queryString;
+            var uri = "https://westus.api.cognitive.microsoft.com/face/v1.0/identify?" + queryString;
 
             HttpResponseMessage response;
 
