@@ -45,7 +45,7 @@ To obtain a subscription key, see [How to Obtain Subscription Keys](https://www.
 
 **1.** Passing the subscription key through a query string, see below as a Computer Vision API example:
 
-```https://api.projectoxford.ai/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=<Your subscription key>```
+```https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=<Your subscription key>```
 
 **2.** Passing the subscription key can also be specified in the HTTP request header:
 
