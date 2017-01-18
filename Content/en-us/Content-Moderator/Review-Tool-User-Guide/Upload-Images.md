@@ -11,7 +11,8 @@ To explore the user interface, upload up to five images at a time, each image no
 
 ![Upload Images](images/1-Try-Image-1.PNG)
 
-If you end up uploading more than five images at a time, use the Trashcan icon to remove unwanted images.
+# Submit for Moderation #
+If you end up uploading more than five images at a time, use the Trashcan icon to remove unwanted images. Then, submit the images for automated moderation.
 
 ![Submit Images](images/1-Try-Image-2.PNG)
 
