@@ -21,7 +21,6 @@ to detect faces in an image and return face attributes including:
 
 #### Face Detect C# Example Request
 The sample is written in C# using the Face API client library. 
-
 ```c#
 using System;
 using System.Net.Http.Headers;
@@ -73,7 +72,7 @@ namespace CSHttpClientSample
 #### Face - Detect Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
 
-```json
+```php
 [
     {
         "faceId": "c5c24a82-6845-4031-9d5d-978df9175426",
@@ -264,7 +263,7 @@ namespace CSHttpClientSample
 ```
 #### Face - Identify Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
-```json
+```php
 {
     [
         {
