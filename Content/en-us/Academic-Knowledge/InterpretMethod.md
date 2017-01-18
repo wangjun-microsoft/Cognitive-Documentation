@@ -13,9 +13,7 @@ To provide an interactive experience, you can call this method repeatedly after 
 
 **REST endpoint:**
 
-    https://api.projectoxford.ai/academic/v1.0/interpret?
-
-<br>
+    https://westus.api.cognitive.microsoft.com/academic/v1.0/interpret?
 
 ## Request Parameters
 
@@ -32,21 +30,21 @@ Name     | Value | Required?  | Description
 ## Response (JSON)
 Name     | Description
 ---------|---------
-**query**	|The *query* parameter from the request.
-**interpretations**	|An array of 0 or more different ways of matching user input against the grammar.
-**interpretations[x].logprob**	|The relative natural log probability of the interpretation. Larger values are more likely.
-**interpretations[x].parse**	|An XML string that shows how each part of the query was interpreted.
-**interpretations[x].rules**	|An array of 1 or more rules defined in the grammar that were invoked during interpretation. For the Academic Knowledge API, there will always be 1 rule.
-**interpretations[x].rules[y].name**	|Name of the rule.
-**interpretations[x].rules[y].output**	|Output of the rule.
-**interpretations[x].rules[y].output.type**	|The data type of the output of the rule.  For the Academic Knowledge API, this will always be "query".
-**interpretations[x].rules[y].output.value**	|The output of the rule. For the Academic Knowledge API, this is a query expression string that can be passed to the evaluate and calchistogram methods.
+**query** |The *query* parameter from the request.
+**interpretations** |An array of 0 or more different ways of matching user input against the grammar.
+**interpretations[x].logprob**  |The relative natural log probability of the interpretation. Larger values are more likely.
+**interpretations[x].parse**  |An XML string that shows how each part of the query was interpreted.
+**interpretations[x].rules**  |An array of 1 or more rules defined in the grammar that were invoked during interpretation. For the Academic Knowledge API, there will always be 1 rule.
+**interpretations[x].rules[y].name**  |Name of the rule.
+**interpretations[x].rules[y].output**  |Output of the rule.
+**interpretations[x].rules[y].output.type** |The data type of the output of the rule.  For the Academic Knowledge API, this will always be "query".
+**interpretations[x].rules[y].output.value**  |The output of the rule. For the Academic Knowledge API, this is a query expression string that can be passed to the evaluate and calchistogram methods.
 **aborted** | True if the request timed out.
 
 <br>
 #### Example:
 ```
-https://api.projectoxford.ai/academic/v1.0/interpret?query=papers by jaime&complete=1&count=2
+https://westus.api.cognitive.microsoft.com/academic/v1.0/interpret?query=papers by jaime&complete=1&count=2
  ```
 <br>The response below contains the top two (because of the parameter *count=2*) most likely interpretations that complete the partial user input *papers by jaime*: *papers by jaime teevan* and *papers by jaime green*.  The service generated query completions instead of considering only exact matches for the author *jaime* because the request specified *complete=1*. Note that the canonical value *j l green* matched via the synonym *jamie green*, as indicated in the parse.
 
