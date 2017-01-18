@@ -11,12 +11,12 @@ Weight: 10
 **Question**: What factors can reduce Face API’s accuracy for Recognition, Verification, or Find Similar?
 
 **Answer**: Generally it is the same cases where humans have difficulty identifying someone including;
-* Obstructions blocking 1 or both eyes
+* Obstructions blocking one or both eyes
 * Harsh lighting, e.g. severe backlighting 
 * Changes to hair style or facial hair
 * Changes due to age 
 * Extreme facial expressions (e.g. screaming)
 
-Face API is often successful in challenging cases like these, but accuracy can be reduces. To make your recognitions more robust to these kind of challenges, train your Persons with photos that include a diversity of angles and lighting. 
+  Face API is often successful in challenging cases like these, but accuracy can be reduced. To make recognition more robust and address these challenges, train your Persons with photos that include a diversity of angles and lighting. 
 
 -----
