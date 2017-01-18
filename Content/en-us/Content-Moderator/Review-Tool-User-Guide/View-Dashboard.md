@@ -9,4 +9,4 @@ Weight: 184
 
 Click the **Dashboard** TAB to see key metrics for all content review in the tool. You can see total, completed, and in-progress reviews. The pie chart will show the percentage of reviews by user, and count of reviews by tag. More metrics and visualizations are coming soon.
 
-![View Dashboard](images/6-Dashboard-1.PNG)
+![View Dashboard](images/0-Dashboard.PNG)
