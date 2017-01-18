@@ -15,7 +15,7 @@ This article provides information and code samples to help you quickly get start
 Use the [Face - Detect method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
 to detect faces in an image and return face attributes including:
 * Face ID: Unique ID used in a number of Face API scenarios. 
-* Face Rectangle: The left, top, width, and Heightindicating the location of the face in the image.
+* Face Rectangle: The left, top, width, and height indicating the location of the face in the image.
 * Landmarks: An array of 27-point face landmarks pointing to the important positions of face components.
 * Facial attributes including age, gender, smile intensity, head pose, and facial hair. 
 
