@@ -12,16 +12,15 @@ This article provides information and code samples to help you quickly get start
 
 
 ## Detect Faces in Images With Face API Using C# <a name="Detect"> </a>
-With the [Face - Detect method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
-
-how to detect faces from an image, with face attributes like gender, age, or pose extracted. The samples are written in C# using the Face API client library. 
-
-* Face ID... used by other Face API scenarios... . 
-* Face Rectangle. 
-* Landmarks ??? 
-* Facial attributes including age, gender, smile intensity, and facial hair. 
+Use the [Face - Detect method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
+to detect faces in an image and return face attributes including:
+* Face ID: Unique ID used in a number of Face API scenarios. 
+* Face Rectangle: The left, top, width, and Heightindicating the location of the face in the image.
+* Landmarks: An array of 27-point face landmarks pointing to the important positions of face components.
+* Facial attributes including age, gender, smile intensity, head pose, and facial hair. 
 
 #### Face Detect C# Example Request
+The sample is written in C# using the Face API client library. 
 
 ```c#
 using System;
@@ -215,8 +214,8 @@ A successful response will be returned in JSON. Following is an example of a suc
 ]
 ```
 ## Identify Faces in Images With Face API Using C# <a name="Identify"> </a>
-With the [Face- Identify method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
-For each face in the faceIds array, Face Identify will compute similarities between the query face and all the faces in the person group (given by personGroupId), and returns candidate person(s) for that face ranked by similarity confidence
+Use the [Face - Identify method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
+identify people based on a detected face and people database (defined as a person group) which needs to be created in advance and can be edited over time
 
 #### Face - Identify C# Example Request
 ```C#
