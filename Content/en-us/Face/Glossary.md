@@ -2,7 +2,7 @@
 NavPath: Face API
 LinkLabel: Glossary
 Url: face-api/documentation/glossary
-Weight: 10
+Weight: 15
 -->
 # Glossary
 

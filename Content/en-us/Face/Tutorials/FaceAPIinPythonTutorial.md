@@ -1,10 +1,11 @@
-<!-- NavPath: Face API/Getting Started
-LinkLabel: Get Started in Python
-Url: face-api/documentation/get-started-with-face-api/GettingStartedwithFaceAPIinPython
-Weight: 99
+<!-- 
+NavPath: Face API/Tutorials
+LinkLabel: Getting Started in Python Tutorial
+Url: face-api/documentation/get-started-with-face-api/FaceAPIinPythonTutorial
+Weight: 30
 -->
 
-# Getting Started with Face API in Python
+# Getting Started with Face API in Python Tutorial
 
 In this tutorial, you will learn to invoke the Face API via the Python SDK to detect human faces in an image.
 

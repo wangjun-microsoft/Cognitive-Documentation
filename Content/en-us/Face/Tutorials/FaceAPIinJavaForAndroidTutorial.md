@@ -1,10 +1,10 @@
 <!-- 
-NavPath: Face API/Getting Started
-LinkLabel: Get Started With Android
-Url: face-api/documentation/get-started-with-face-api/GettingStartedwithFaceAPIinJavaforAndroid
-Weight: 30
+NavPath: Face API/Tutorials
+LinkLabel: Getting Started in Java for Android Tutorial
+Url: face-api/documentation/Tutorials/FaceAPIinJavaForAndroidTutorial
+Weight: 40
 -->
-# Get Started with Face API in Java for Android
+# Getting Started with Face API in Java for Android Tutorial
 
 In this tutorial, you will learn to create and develop a simple Android application that invokes the Face API to detect human faces in an image; essentially by framing the face.     
 
@@ -300,7 +300,7 @@ Run this application and browse for an image containing a face. Please wait for 
 
 In this tutorial, you have learned the basic process for using the Face API and created an application to display face marks in images. For more information on API details, please refer to the How-To and [API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). 
 
-## <a name="related"></a> Related Topics
+## <a name="related"></a> Related Tutorials
 
-- [Getting Started with Face API in CSharp](GettingStartedwithFaceAPIinCSharp.md)
-- [Getting Started with Face API in Python](GettingStartedwithFaceAPIinPython.md)
+- [Getting Started with Face API in CSharp Tutorial](GettingStartedwithFaceAPIinCSharp.md)
+- [Getting Started with Face API in Python Tutorial](GettingStartedwithFaceAPIinPython.md)
