@@ -1,8 +1,8 @@
-!-- 
+<!-- 
 NavPath: Content Moderator/Review Tool User Guide
 LinkLabel: View Dashboard
 Url: content-moderator/documentation/review-tool-user-guide/view-dashboard
-Weight: 184
+Weight: 182
 -->
 
 # View Dashboard #
