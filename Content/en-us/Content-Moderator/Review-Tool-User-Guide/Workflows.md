@@ -46,6 +46,9 @@ Once you have defined the condition, you will tell Content Moderator what action
 
 ![Connectors](images/2-Workflows-5.PNG)
 
+## Optionally, define the Else section ##
+
+
 ## Save the workflow ##
 
 Finally, save your workflow.
