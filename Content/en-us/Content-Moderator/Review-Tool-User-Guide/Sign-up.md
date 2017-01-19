@@ -2,7 +2,7 @@
 NavPath: Content Moderator/Review Tool User Guide
 LinkLabel: Sign up
 Url: content-moderator/documentation/review-tool-user-guide/sign-up
-Weight: 189
+Weight: 20
 -->
 
 # Sign Up #
