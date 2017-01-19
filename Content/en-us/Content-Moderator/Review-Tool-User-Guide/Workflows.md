@@ -48,11 +48,15 @@ Once you have defined the condition, you will tell Content Moderator what action
 
 ## Optionally, define the Else section ##
 
+Optionally, expand the **Else** section to provide similar information like you did for the **If** section.
+
+![Connectors](images/2-Workflows-6.PNG)
 
 ## Save the workflow ##
 
 Finally, save your workflow.
 
+![Connectors](images/2-Workflows-7.PNG)
 
 
 
