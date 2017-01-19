@@ -10,7 +10,7 @@ Navigate to the [Content Moderator sign up](http://contentmoderator.cognitive.mi
 
 ![Sign up](images/0-Signup-1.PNG)
 
-# Name Your Team #
+## Name Your Team ##
 Provide a name for your review team. Optionally, you can invite your colleagues to join your team.
 
 ![Create Team](images/1-Team-Name.PNG)
