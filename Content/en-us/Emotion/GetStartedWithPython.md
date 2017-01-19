@@ -22,7 +22,7 @@ Python Example
 
 #Variables
 
-_url = 'https://api.projectoxford.ai/emotion/v1.0/recognize'
+_url = 'https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize'
 _key = None #Here you have to paste your primary key
 _maxNumRetries = 10
 

@@ -41,7 +41,7 @@ params = urllib.urlencode({
 })
 
 try:
-    conn = httplib.HTTPSConnection('api.projectoxford.ai')
+    conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
     conn.request("POST", "/vision/v1.0/analyze?%s" % params, "{body}", headers)
     response = conn.getresponse()
     data = response.read()
@@ -69,7 +69,7 @@ params = urllib.parse.urlencode({
 })
 
 try:
-    conn = http.client.HTTPSConnection('api.projectoxford.ai')
+    conn = http.client.HTTPSConnection('westus.api.cognitive.microsoft.com')
     conn.request("POST", "/vision/v1.0/analyze?%s" % params, "{body}", headers)
     response = conn.getresponse()
     data = response.read()
@@ -209,7 +209,7 @@ params = urllib.urlencode({
 })
 
 try:
-    conn = httplib.HTTPSConnection('api.projectoxford.ai')
+    conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
     conn.request("POST", "/vision/v1.0/generateThumbnail?%s" % params, "{body}", headers)
     response = conn.getresponse()
     data = response.read()
@@ -237,7 +237,7 @@ params = urllib.parse.urlencode({
 })
 
 try:
-    conn = http.client.HTTPSConnection('api.projectoxford.ai')
+    conn = http.client.HTTPSConnection('westus.api.cognitive.microsoft.com')
     conn.request("POST", "/vision/v1.0/generateThumbnail?%s" % params, "{body}", headers)
     response = conn.getresponse()
     data = response.read()
@@ -275,7 +275,7 @@ params = urllib.urlencode({
 })
 
 try:
-    conn = httplib.HTTPSConnection('api.projectoxford.ai')
+    conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
     conn.request("POST", "/vision/v1.0/ocr?%s" % params, "{body}", headers)
     response = conn.getresponse()
     data = response.read()
@@ -302,7 +302,7 @@ params = urllib.parse.urlencode({
 })
 
 try:
-    conn = http.client.HTTPSConnection('api.projectoxford.ai')
+    conn = http.client.HTTPSConnection('westus.api.cognitive.microsoft.com')
     conn.request("POST", "/vision/v1.0/ocr?%s" % params, "{body}", headers)
     response = conn.getresponse()
     data = response.read()

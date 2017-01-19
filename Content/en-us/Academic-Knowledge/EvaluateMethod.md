@@ -12,7 +12,7 @@ The **evaluate** REST API is used to return a set of academic entities based on 
 
 **REST endpoint:**  
 ```
-https://api.projectoxford.ai/academic/v1.0/evaluate? 
+https://westus.api.cognitive.microsoft.com/academic/v1.0/evaluate? 
 ```   
 <br>
 ## Request Parameters  
@@ -36,7 +36,7 @@ Name | Description
 <br>
 #### Example:
 ```
-https://api.projectoxford.ai/academic/v1.0/evaluate?expr=
+https://westus.api.cognitive.microsoft.com/academic/v1.0/evaluate?expr=
 Composite(AA.AuN=='jaime teevan')&count=2&attributes=Ti,Y,CC,AA.AuN,AA.AuId
 ```
 <br>Typically, an expression will be obtained from a response to the **interpret** method.  But you can also compose query expressions yourself (see [Query Expression Syntax](QueryExpressionSyntax.md)).  

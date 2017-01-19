@@ -17,12 +17,12 @@ To use the notebook interactively, you will need to clone it and run it in Jupyt
 
 To use this notebook, you will need a subscription key for the Computer Vision API. Visit the [Subscription page](https://www.microsoft.com/cognitive-services/en-us/sign-up) to sign up. On the “Sign in” page, use your Microsoft account to sign in and you will be able to subscribe and get free keys. After completing the sign-up process, paste your key into the variables section shown below. Either the primary or the secondary key works.
 
-```
+```python
 Python Example 
 
 # Variables
 
-_url = 'https://api.projectoxford.ai/vision/v1/analyses'
+_url = 'https://westus.api.cognitive.microsoft.com/vision/v1/analyses'
 _key = None #Here you have to paste your primary key
 _maxNumRetries = 10
 

@@ -28,7 +28,7 @@ With the [Analyze Image method](https://dev.projectoxford.ai/docs/services/56f91
 // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
 require_once 'HTTP/Request2.php';
 
-$request = new Http_Request2('https://api.projectoxford.ai/vision/v1.0/analyze');
+$request = new Http_Request2('https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze');
 $url = $request->getUrl();
 
 $headers = array(
@@ -180,7 +180,7 @@ Use the [Get Thumbnail method](https://dev.projectoxford.ai/docs/services/56f91f
 // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
 require_once 'HTTP/Request2.php';
 
-$request = new Http_Request2('https://api.projectoxford.ai/vision/v1.0/generateThumbnail');
+$request = new Http_Request2('https://westus.api.cognitive.microsoft.com/vision/v1.0/generateThumbnail');
 $url = $request->getUrl();
 
 $headers = array(
@@ -231,7 +231,7 @@ Use the [Optical Character Recognition (OCR) method](https://dev.projectoxford.a
 // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
 require_once 'HTTP/Request2.php';
 
-$request = new Http_Request2('https://api.projectoxford.ai/vision/v1.0/ocr');
+$request = new Http_Request2('https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr');
 $url = $request->getUrl();
 
 $headers = array(

@@ -25,6 +25,7 @@ Pre-built entity   |   Example utterance   |   JSON
  builtin.money     |   $ 67.5 B   |```{ "type": "builtin.money", "entity": "$ 67.5" }```|
  builtin.age   |   100 year old   |```{ "type": "builtin.age", "entity": "100 year old" }```|  
  builtin.age   |   19 years old   |```{ "type": "builtin.age", "entity": "19 years old" }```|
+ builtin.percentage   |   The stock price increase by 7 $ this year   |```{ "type": "builtin.percentage", "entity": "7 %" }```|
  builtin.datetime | See separate table | See separate table below |
  builtin.geography | See separate table | See separate table below |
  builtin.encyclopedia | See separate table | See separate table below |

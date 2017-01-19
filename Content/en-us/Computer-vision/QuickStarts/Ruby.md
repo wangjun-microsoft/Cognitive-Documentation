@@ -25,7 +25,7 @@ With the [Analyze Image method](https://dev.projectoxford.ai/docs/services/56f91
 ```Ruby
 require 'net/http'
 
-uri = URI('https://api.projectoxford.ai/vision/v1.0/analyze')
+uri = URI('https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze')
 uri.query = URI.encode_www_form({
     # Request parameters
     'visualFeatures' => 'Categories',
@@ -159,7 +159,7 @@ Use the [Get Thumbnail method](https://dev.projectoxford.ai/docs/services/56f91f
 ```Ruby
 require 'net/http'
 
-uri = URI('https://api.projectoxford.ai/vision/v1.0/generateThumbnail')
+uri = URI('https://westus.api.cognitive.microsoft.com/vision/v1.0/generateThumbnail')
 uri.query = URI.encode_www_form({
     # Request parameters
     'width' => '{number}',
@@ -192,7 +192,7 @@ Use the [Optical Character Recognition (OCR) method](https://dev.projectoxford.a
 ```Ruby
 require 'net/http'
 
-uri = URI('https://api.projectoxford.ai/vision/v1.0/ocr')
+uri = URI('https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr')
 uri.query = URI.encode_www_form({
     # Request parameters
     'language' => 'unk',

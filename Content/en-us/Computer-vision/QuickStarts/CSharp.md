@@ -53,7 +53,7 @@ namespace CSHttpClientSample
             queryString["visualFeatures"] = "Categories";
             queryString["details"] = "{string}";
             queryString["language"] = "en";
-            var uri = "https://api.projectoxford.ai/vision/v1.0/analyze?" + queryString;
+            var uri = "https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?" + queryString;
 
             HttpResponseMessage response;
 
@@ -209,7 +209,7 @@ namespace CSHttpClientSample
             queryString["width"] = "{number}";
             queryString["height"] = "{number}";
             queryString["smartCropping"] = "true";
-            var uri = "https://api.projectoxford.ai/vision/v1.0/generateThumbnail?" + queryString;
+            var uri = "westus.api.cognitive.microsoft.com/vision/v1.0/generateThumbnail?" + queryString;
 
             HttpResponseMessage response;
 
@@ -264,7 +264,7 @@ namespace CSHttpClientSample
             // Request parameters
             queryString["language"] = "unk";
             queryString["detectOrientation "] = "true";
-            var uri = "https://api.projectoxford.ai/vision/v1.0/ocr?" + queryString;
+            var uri = "https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr?" + queryString;
 
             HttpResponseMessage response;
 
