@@ -1,4 +1,4 @@
-<!-- 
+!-- 
 NavPath: Content Moderator/Review Tool User Guide
 LinkLabel: Using Workflows
 Url: content-moderator/documentation/review-tool-user-guide/workflows
@@ -44,14 +44,11 @@ As a first step, enter all the information needed to define your criteria for ex
 
 Once you have defined the condition, you will tell Content Moderator what action to perform if the condition is met. The example shown below creates an image review and assigns it to a subteam. It also specifies an aditional criteria that must be fulfilled for the assigned 'a' tag to be selected. In this way, you can combine multiple conditions to get the results you want.
 
-![Connectors](images/2-Workflows-4.PNG)
+![Connectors](images/2-Workflows-5.PNG)
 
 ## Save the workflow ##
 
 Finally, save your workflow.
-
-
-![Connectors](images/2-Workflows-5.PNG)
 
 
 
