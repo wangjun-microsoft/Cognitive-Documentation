@@ -46,4 +46,7 @@ V		| Volume - journal volume
 I 		| Issue - journal issue
 FP		| FirstPage - first page of paper
 LP 		| LastPage - last page of paper
-DOI		| Digital Object Identifier		
+DOI		| Digital Object Identifier
+IA		| Inverted Abstract
+IA.Index| Length	Number of items in the index
+IA.InvertedIndex| List of abstract words and their corresponding position in the original abstract (e.g. [{“the”:[0, 15, 30]}, {“brown”:[1]}, {“fox”:[2]}])
