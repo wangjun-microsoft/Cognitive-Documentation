@@ -4,9 +4,9 @@ LinkLabel: Review Moderated Text
 Url: content-moderator/documentation/review-tool-user-guide/review-moderated-text
 Weight: 185
 -->
-# Reviewing Text Moderation Results #
+# Text Moderation Reviews #
 
-## Select or enter text to review ##
+## Select or enter the text to review ##
 
 Click the **Try** TAB and select the "Text" option to bring up the Text Moderation start screen. Enter any text upto a maximum of 1024 characters or use the default sample text to submit for automated text moderation.
 
