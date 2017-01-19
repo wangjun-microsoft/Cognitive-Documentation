@@ -2,7 +2,7 @@
 NavPath: Content Moderator/Review Tool User Guide
 LinkLabel: Review Moderated Images
 Url: content-moderator/documentation/review-tool-user-guide/review-moderated-images
-Weight: 186
+Weight: 187
 -->
 
 # Review moderated images #
