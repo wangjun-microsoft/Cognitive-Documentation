@@ -63,9 +63,9 @@ Pricing for Face Storage is prorated daily. For example, if your account used 10
 
 ## Getting Started Tutorials
 The following tutorials demonstrate the Face API basic functionalities and subscriptions processes:
-- [Getting Started with Face API in CSharp Tutorial](Get-Started-with-Face-API/GettingStartedwithFaceAPIinCSharp.md)
-- [Getting Started with Face API in Java for Android Tutorial](Get-Started-with-Face-API/GettingStartedwithFaceAPIinJavaforAndroid.md)
-- [Getting Started with Face API in Python Tutorial](Get-Started-with-Face-API/GettingStartedwithFaceAPIinPython.md)
+- [Getting Started with Face API in CSharp Tutorial](Tutorials/FaceAPIinCSharpTutorial.md)
+- [Getting Started with Face API in Java for Android Tutorial](Tutorials/FaceAPIinJavaForAndroidTutorial.md)
+- [Getting Started with Face API in Python Tutorial](Tutorials/FaceAPIinPythonTutorial.md)
 
 ## Sample Apps
 Take a look at these sample applications which make use of Face API.

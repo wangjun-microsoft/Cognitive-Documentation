@@ -1,7 +1,7 @@
-<!-- 
+<!--
 NavPath: Face API/Tutorials
 LinkLabel: Getting Started in Python Tutorial
-Url: face-api/documentation/get-started-with-face-api/FaceAPIinPythonTutorial
+Url: face-api/documentation/Tutorials/FaceAPIinPythonTutorial
 Weight: 30
 -->
 

@@ -1,10 +1,10 @@
-<!-- 
+<!--
 NavPath: Face API/Tutorials
 LinkLabel: Getting Started in C# Tutorial
 Url: face-api/documentation/Tutorials/FaceAPIinCSharpTutorial
 Weight: 50
 -->
-# Getting Started with Face API in C&#35;
+# Getting Started with Face API in C&#35; Tutorial
 
 In this tutorial, you will learn to create and develop a simple Windows application that invokes the Face API to detect faces in an image; essentially by framing the faces.
 
