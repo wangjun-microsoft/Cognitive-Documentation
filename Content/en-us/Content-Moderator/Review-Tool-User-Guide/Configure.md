@@ -29,7 +29,7 @@ It also supports integrating other APIs as long as a connector is available. We 
 
 ## Workflows ##
 
-This is where you can see the **default** workflow. You can also define custom workflows for image and text by using the API Connectors available under the Connectors section. For a detailed example of how to define custom workflows, please see the ![Workflows](workflows.md) section.
+This is where you can see the **default** workflow. You can also define custom workflows for image and text by using the API Connectors available under the Connectors section. For a detailed example of how to define custom workflows, please see the **[Workflows](workflows.md)** section.
 
 ![Connectors Settings](images/7-Settings-Workflows.PNG)
 
