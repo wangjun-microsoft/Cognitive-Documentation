@@ -221,5 +221,5 @@ These are identical to vision.analyze, with the additional error of NotSupported
 
 These are the basic functionalities of the Computer Vision API: how you can upload images and retrieve valuable metadata in return.
 
-To use the REST API, go to [Computer Vision API Reference](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739).
+To use the REST API, go to [Computer Vision API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739).
  

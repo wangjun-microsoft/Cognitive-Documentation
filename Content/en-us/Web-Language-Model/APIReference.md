@@ -2,9 +2,9 @@
 NavPath: Web Language Model API
 LinkLabel: API Reference
 Weight: 50
-ExternalLink: https://dev.projectoxford.ai/docs/services/55de9ca4e597ed1fd4e2f104
+ExternalLink: https://westus.dev.cognitive.microsoft.com/docs/services/55de9ca4e597ed1fd4e2f104
 -->
 
 # API Reference
 
-[WebLM API Reference](https://dev.projectoxford.ai/docs/services/55de9ca4e597ed1fd4e2f104)
+[WebLM API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/55de9ca4e597ed1fd4e2f104)

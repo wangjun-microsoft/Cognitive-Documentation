@@ -12,7 +12,7 @@ This article provides information and code samples to help you quickly get start
 * [Detect and extract text from an Image](#OCR)
 
 ## Analyze an Image With Computer Vision API Using C# <a name="AnalyzeImage"> </a>
-With the [Analyze Image method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa) you can extract visual features based on image content. You can upload an image or specify an image URL and choose which features to return, including:
+With the [Analyze Image method](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa) you can extract visual features based on image content. You can upload an image or specify an image URL and choose which features to return, including:
 * The category defined in this [taxonomy](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy). 
 * A detailed list of tags related to the image content. 
 * A description of image content in a complete sentence. 
@@ -175,7 +175,7 @@ A successful response will be returned in JSON. Following is an example of a suc
 ```
 
 ## Get a Thumbnail with Computer Vision API Using C# <a name="GetThumbnail"> </a>
-Use the [Get Thumbnail method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb) to  crop an image based on its region of interest (ROI) to the height and width you desire, even if the aspect ratio differs from the input image. 
+Use the [Get Thumbnail method](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb) to  crop an image based on its region of interest (ROI) to the height and width you desire, even if the aspect ratio differs from the input image. 
 
 #### Get a Thumbnail C# Example Request
 
@@ -232,7 +232,7 @@ A successful response contains the thumbnail image binary. If the request failed
 
 
 ## Optical Character Recognition (OCR) with Computer Vision API Using C#<a name="OCR"> </a>
-Use the [Optical Character Recognition (OCR) method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fc) to detect text in an image and extract recognized characters into a machine-usable character stream.
+Use the [Optical Character Recognition (OCR) method](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fc) to detect text in an image and extract recognized characters into a machine-usable character stream.
 
 #### OCR C# Example Request
 ```C#

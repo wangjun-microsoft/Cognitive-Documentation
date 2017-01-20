@@ -7,7 +7,7 @@ Weight: 98
 
 #Get Started with LUIS: The Basics
 
-LUIS lets you build your applications by using the LUIS web interface. No coding needed other than the ability to interpret and use the returned JSON in your application. It is also possible to use the [LUIS REST API](https://dev.projectoxford.ai/docs/services/56d95961e597ed0f04b76e58/) for automation of applications.
+LUIS lets you build your applications by using the LUIS web interface. No coding needed other than the ability to interpret and use the returned JSON in your application. It is also possible to use the [LUIS REST API](https://westus.dev.cognitive.microsoft.com/docs/services/56d95961e597ed0f04b76e58/) for automation of applications.
 
 ###Using LUIS for the first time
 

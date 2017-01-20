@@ -1,10 +1,10 @@
 <!--
 NavPath: Entity Linking API
 LinkLabel: API Reference
-ExternalLink: https://dev.projectoxford.ai/docs/services/56f0eabfca730713cc392442
+ExternalLink: https://westus.dev.cognitive.microsoft.com/docs/services/56f0eabfca730713cc392442
 Weight: 80
 -->
 
 #API Reference
 
-[EntityLinking API](https://dev.projectoxford.ai/docs/services/56f0eabfca730713cc392442) 
+[EntityLinking API](https://westus.dev.cognitive.microsoft.com/docs/services/56f0eabfca730713cc392442) 
