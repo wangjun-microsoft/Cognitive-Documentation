@@ -7,7 +7,7 @@ Weight: 25
 
 # Defining and using workflows  #
 
-In addition to default workflows for creating reviews, you can define custom workflows and thresholds based on content policies that are specific to your business. Content Moderator allows you to use other APIs in addition to its own API as long as a connector for that API is available.
+In addition to default workflow used for generating reviews, you can define custom workflows and thresholds based on content policies that are specific to your business. Content Moderator allows you to use other APIs in addition to its own API as long as a connector for that API is available.
 
 ## Make sure you have valid credentials ##
 
@@ -54,9 +54,11 @@ Optionally, expand the **Else** section to provide similar information like you 
 
 ## Save the workflow ##
 
-Finally, save your workflow.
+Finally, save your workflow and note the workflow name. You will need it to invoke the workflow with the Review API.
 
 ![Connectors](images/2-Workflows-7.PNG)
 
+## Use the Review API ##
 
+Now that you have a custom workflow defined, use the [**Review API**](https://westus.dev.cognitive.microsoft.com/docs/services/580519463f9b070e5c591178/operations/580519483f9b0709fc47f9c5) to start a moderation job with the workflow name as one of the parameters. This should be the workflow name that you noted in the previous step.
 
