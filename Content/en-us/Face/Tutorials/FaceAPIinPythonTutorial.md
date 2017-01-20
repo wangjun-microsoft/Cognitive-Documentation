@@ -1,4 +1,4 @@
-<!-- 
+<!--
 NavPath: Face API/Tutorials
 LinkLabel: Getting Started in Python Tutorial
 Url: face-api/documentation/Tutorials/FaceAPIinPythonTutorial
