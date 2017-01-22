@@ -27,7 +27,7 @@ This article pertains to Microsoft Face API Service version 1.0.
 **Note**: *All of these changes are compatible with the last version service, and using the default value for the newly added parameters will not cause any changes to users' code*. 
 
 ### V1.0 changes from V0
-* **API Signature**: In Face API V1.0, Service root endpoint changes from ```https://api.projectoxford.ai/face/v0/``` to ```https://api.projectoxford.ai/face/v1.0/```. There are several signature changes for API, including:
+* **API Signature**: In Face API V1.0, Service root endpoint changes from ```https://westus.api.cognitive.microsoft.com/face/v0/``` to ```https://westus.api.cognitive.microsoft.com/face/v1.0/```. There are several signature changes for API, including:
  * [Face - Detect](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)
  * [Face - Identify](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)
  * [Face - Find Similar](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)
