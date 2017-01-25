@@ -36,7 +36,6 @@ E		|Extended metadata (see table below) |String |Equals
 Name    | Description               
 --------|---------------------------	
 DN		| Display Name of the paper 
-D		| Description 
 S		| Sources - list of web sources of the paper, sorted by static rank
 S.Ty	| Source Type (1:HTML, 2:Text, 3:PDF, 4:DOC, 5:PPT, 6:XLS, 7:PS)
 S.U		| Source URL
@@ -47,6 +46,7 @@ I 		| Issue - journal issue
 FP		| FirstPage - first page of paper
 LP 		| LastPage - last page of paper
 DOI		| Digital Object Identifier
+CC 		| Citation Contexts – List of referenced paper ID’s and the corresponding context in the paper (e.g. [{123:[“brown foxes are known for jumping as referenced in paper 123”, “the lazy dogs are a historical misnomer as shown in paper 123”]})
 IA		| Inverted Abstract
 IA.Index| Length	Number of items in the index
 IA.InvertedIndex| List of abstract words and their corresponding position in the original abstract (e.g. [{“the”:[0, 15, 30]}, {“brown”:[1]}, {“fox”:[2]}])
