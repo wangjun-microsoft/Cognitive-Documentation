@@ -2,7 +2,7 @@
 NavPath: Face API/How-to Topics
 LinkLabel: How to Identify Faces in Image
 Url: face-api/documentation/face-api-how-to-topics/howtoidentifyfacesinimage
-Weight: 40
+Weight: 240
 -->
 # How to Identify Faces in Image
 
