@@ -5,5 +5,5 @@ ExternalLink: https://www.microsoft.com/cognitive-services/en-us/SDK-Sample?api=
 Weight: 25
 -->
 
-## SDK & Samples
+## SDKs & Samples
 [Face API SDKs & Samples](https://www.microsoft.com/cognitive-services/en-us/SDK-Sample?api=face)
