@@ -2,7 +2,7 @@
 NavPath: Emotion API/Quick Starts
 LinkLabel: Python Quick Start
 Url: Emotion-api/documentation/QuickStarts/Python
-Weight: 60
+Weight: 55
 -->
 
 # Emotion API Python Quick Start
