@@ -2,7 +2,7 @@
 NavPath: Computer Vision API
 LinkLabel: Frequently Asked Questions
 Url: Computer-Vision-API/FAQ
-Weight: 10
+Weight: 15
 -->
 
 # Computer Vision API Frequently Asked Questions
