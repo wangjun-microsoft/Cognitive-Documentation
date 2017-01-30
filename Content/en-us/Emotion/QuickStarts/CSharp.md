@@ -13,7 +13,7 @@ This article provides information and code samples to help you quickly get start
 * Get your free Subscription Key [here](https://www.microsoft.com/cognitive-services/en-us/sign-up)
 
 ## Recognize Emotions C# Example Request
-Console Application sample:
+
 ```c#
 using System;
 using System.Net.Http.Headers;
