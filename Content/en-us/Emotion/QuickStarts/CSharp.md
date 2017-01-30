@@ -59,7 +59,7 @@ namespace CSHttpClientSample
 
 ```
 
-## Recognize Emotions C# Sample Response
+## Recognize Emotions Sample Response
 A successful call returns an array of face entries and their associated emotion scores, ranked by face rectangle size in descending order. An empty response indicates that no faces were detected. An emotion entry contains the following fields:
 * faceRectangle - Rectangle location of face in the image.
 * scores - Emotion scores for each face in the image. 
