@@ -12,7 +12,7 @@ This article provides information and code samples to help you quickly get start
 * Get the Microsoft Cognitive Emotion API Windows SDK [here](https://www.nuget.org/packages/Microsoft.ProjectOxford.Emotion/)
 * Get your free Subscription Key [here](https://www.microsoft.com/cognitive-services/en-us/sign-up)
 
-## Recognize Emotions C# Example Request
+## Emotion Recognition C# Example Request
 
 ```c#
 using System;
