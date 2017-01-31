@@ -2,7 +2,7 @@
 NavPath: Emotion API/How-to Topics
 LinkLabel: How to Call Emotion API for Video
 Url: Emotion-api/documentation/emotion-api-how-to-topics/HowtoCallEmotionForVideo
-Weight: 90
+Weight: 340
 -->
 
 # How to Call Emotion API for Video

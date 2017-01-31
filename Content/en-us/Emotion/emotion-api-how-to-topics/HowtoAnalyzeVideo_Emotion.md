@@ -2,7 +2,7 @@
 NavPath: Emotion API/How-to Topics
 LinkLabel: How to Analyze Videos in Real-time
 Url: Emotion-api/documentation/emotion-api-how-to-topics/HowtoAnazlyzeVideo_Emotion
-Weight: 30
+Weight: 330
 -->
 
 # How to Analyze Videos in Real-time

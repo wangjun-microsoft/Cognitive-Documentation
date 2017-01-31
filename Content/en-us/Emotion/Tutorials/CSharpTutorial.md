@@ -1,15 +1,14 @@
 <!--
-NavPath: Emotion API
-LinkLabel: Get Started in C#
-Url: Emotion-api/documentation/GetStarted
-Weight: 99
+NavPath: Emotion API/Tutorials
+LinkLabel: Get Started in C# Tutorial
+Url: Emotion-api/documentation/Tutorials/CSharpTutorial
+Weight: 50
 -->
 
-# Get Started with Emotion API in C&#35;
- 
- 
+# Emotion API in C&#35; Tutorial
 
 Explore a basic Windows application that uses Emotion API to recognize the emotions expressed by the faces in an image. The below example lets you submit an image URL or a locally stored file. You can use this open source example as a template for building your own app for Windows using the Emotion API and WPF (Windows Presentation Foundation), a part of .NET Framework.
+
 ## Table of Contents
 [Prerequisites](#Prerequisites)  
 [Step 1: Open the example](#Step1)  
@@ -19,15 +18,13 @@ Explore a basic Windows application that uses Emotion API to recognize the emoti
 
 ## <a name="Prerequisites">Prerequisites</a>
 #### Platform requirements  
+The below example has been developed for the .NET Framework using [Visual Studio 2015, Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs).  
 
-  The below example has been developed for the .NET Framework using [Visual Studio 2015, Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs).  
 #### Subscribe to Emotion API and get a subscription key  
+Before creating the example, you must subscribe to Emotion API which is part of the Microsoft Cognitive Services (previously Project Oxford). See [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial. Make sure to follow best practices for keeping your API key secret and secure.  
 
-  Before creating the example, you must subscribe to Emotion API which is part of the Microsoft Cognitive Services (previously Project Oxford). See [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial. Make sure to follow best practices for keeping your API key secret and secure.  
 #### Get the client library and example  
-
-  You may download the Emotion API client library via [SDK](https://www.github.com/microsoft/cognitive-emotion-windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
-
+You may download the Emotion API client library via [SDK](https://www.github.com/microsoft/cognitive-emotion-windows). The downloaded zip file needs to be extracted to a folder of your choice, many users choose the Visual Studio 2015 folder.
 ## <a name="Step1">Step 1: Open the example</a>
 1.	Start Microsoft Visual Studio 2015 and click **File**, select **Open**, then **Project/Solution**.
 2.	Browse to the folder where you saved the downloaded Emotion API files. Click on **Emotion**, then **Windows**, and then the **Sample-WPF** folder.
@@ -36,24 +33,22 @@ Explore a basic Windows application that uses Emotion API to recognize the emoti
 ## <a name="Step2">Step 2: Build the example</a>
 1. In **Solution Explorer**, right click **References** and select **Manage NuGet Packages**.
 
-![Open Nuget Package Manager](./Images/EmotionNuget.png)
+  ![Open Nuget Package Manager](../Images/EmotionNuget.png)
 
 2.	The **NuGet Package Manager** window opens. First select **Browse** in the upper left corner, then in the search box type “Newtonsoft.Json”, select the **Newtonsoft.Json** package and click **Install**.  
 
-![Browse to NuGet Package](./Images/EmotionNugetBrowse.png)  
+  ![Browse to NuGet Package](../Images/EmotionNugetBrowse.png)  
 
 3.	Press Ctrl+Shift+B, or click **Build** on the ribbon menu, then select **Build Solution**.
 
 ## <a name="Step3">Step 3: Run the example</a>
 1.	After the build is complete, press **F5** or click **Start** on the ribbon menu to run the example.
-2.	Locate the Emotion API window with the **text box** reading "**Paste your subscription key here to start**". Paste your subscription key into the text box as shown in below screenshot. You can choose to persist your subscription key on your PC or laptop by clicking the "Save Key" button. When you want to delete the subscription key from the system, click "Delete Key" to remove it from your PC or laptop.  
-
-![Emotion Functionality Interface](./Images/EmotionKey.png)
+2.	Locate the Emotion API window with the **text box** reading "**Paste your subscription key here to start**". Paste your subscription key into the text box as shown in below screenshot. You can choose to persist your subscription key on your PC or laptop by clicking the "Save Key" button. When you want to delete the subscription key from the system, click "Delete Key" to remove it from your PC or laptop.
+  
+  ![Emotion Functionality Interface](../Images/EmotionKey.png)
 
 3.	Under "**Select Scenario**" click to use either of the two scenarios, “**Detect emotion using a stream**” or “**Detect emotion using a URL**”, then follow the instructions on the screen. Microsoft receives the images you upload and may use them to improve Emotion API and related services. By submitting an image, you confirm that you have followed our [Developer Code of Conduct](http://research.microsoft.com/en-us/UM/legal/ProjectOxford_CodeOfConduct.htm).
 4.	There are example images to be used with this example application. You can find these images on [the Face API Github repo](https://github.com/Microsoft/Cognitive-Face-Windows/tree/master/Data) under the **Data** folder. Please note the use of these images is licensed under Fair Use agreement meaning they are OK to use for testing this example, but not for republishing.
-
-
 
 ## <a name="Review">Review and Learn</a>
 Now that you have a running application, let us review how this example app integrates with Microsoft Cognitive Services. This will make it easier to either continue building onto this app or develop your own app using Microsoft Emotion API. 
@@ -65,8 +60,6 @@ You can also find out how to use the Client Library code in **Solution Explorer*
 Reviewing how the Emotion Client Library gets used in our example app, let's look at two code snippets from **DetectEmotionUsingStreamPage.xaml.cs** and **DetectEmotionUsingURLPage.xaml.cs**. Each file contains code comments indicating “KEY SAMPLE CODE STARTS HERE” and “KEY SAMPLE CODE ENDS HERE” to help you locate the code snippets reproduced below.
 
 The Emotion API is able to work with either an image URL or binary image data (in form of an octet stream) as input. The two options are reviewed below. In both cases, you first find a using directive, which lets you use the Emotion Client Library. 
-
-
 ```csharp
 
             // ----------------------------------------------------------------------- 
@@ -158,8 +151,3 @@ Shown below is how to submit your subscription key and a locally stored image to
 ## <a name="Related">Related Topics</a>
 [Emotion API Overview](.)
 -->
-
-
-
-
-
