@@ -6,7 +6,7 @@ Weight: 70
 -->
 
 # Emotion API Java for Android Quick Start
-This article provides information and code samples to help you quickly get started with the [Emotion Recognize method](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/563b31ea778daf121cc3a5fa) in the Computer Vision API Android client library to recognize the emotions expressed by people in an image using Java. 
+This article provides information and code samples to help you quickly get started with the [Emotion Recognize method](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/563b31ea778daf121cc3a5fa) in the Emotion API Android client library to recognize the emotions expressed by people in an image using Java. 
 
 ## Prerequisites
 * Get the Emotion API Java for Android SDK [here](https://github.com/Microsoft/Cognitive-emotion-android)
