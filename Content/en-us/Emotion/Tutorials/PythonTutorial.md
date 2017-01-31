@@ -1,5 +1,5 @@
 <!--
-NavPath: Emotion API/Totorials
+NavPath: Emotion API/Tutorials
 LinkLabel: Get Started in Python Tutorial
 Url: Emotion-api/documentation/tutorials/GetStartedWithPython
 Weight: 45
