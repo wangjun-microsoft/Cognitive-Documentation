@@ -2,7 +2,7 @@
 NavPath: Content Moderator/Review Tool User Guide
 LinkLabel: Human in the Loop
 Url: content-moderator/documentation/review-tool-user-guide/human-in-the-loop
-Weight: 31
+Weight: 25
 -->
 
 # Human-in-the-Loop #
