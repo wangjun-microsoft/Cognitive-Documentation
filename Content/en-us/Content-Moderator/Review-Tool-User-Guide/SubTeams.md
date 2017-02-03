@@ -2,7 +2,7 @@
 NavPath: Content Moderator/Review Tool User Guide
 LinkLabel: Team and Subteams
 Url: content-moderator/documentation/review-tool-user-guide/subteams
-Weight: 26
+Weight: 20
 -->
 
 # Team and Subteams #
