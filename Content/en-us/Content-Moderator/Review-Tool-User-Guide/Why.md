@@ -9,6 +9,17 @@ Weight: 25
 
 Why do we need a human review tool with automated content moderation powered by machine learning and AI? 
 
-This is because you get the best results when humans and machines work together on harder cases. Humans can effectively augment machine learning models in cases where the prediction confidence has to be assisted or tempered with real world context. 
+We feel that you get the best results when humans and machines work together on harder cases. Humans can effectively augment machine learning models in cases where the prediction confidence has to be assisted or tempered with real world context. 
 
 Humans focus on the edge cases and help the models learn and get better over time. The result is a hybrid, automated content moderation process that's better than if the humans or machines were working alone.
+
+## How the Review tool helps ##
+
+The human review tool when used in conjunction with our automated moderation APIs allows you to accomplish these tasks:
+
+1. Automate the creation of human reviews from the underlying moderation API results
+2. Use one tool (Review Tool and API) to moderate multiple formats (text, image, and video - coming soon)
+3. Assign or escalate content reviews to multiple review teams by category or experience level.
+4. Use default workflows or define custom workflows with flexible rules, and without writing any code.
+4. Add human review to any API or business process by simply building a connector (ships with connectors for PhotoDNA, Text Analytics, and Face APIs)
+5. Get key metrics on your content moderation processes.
