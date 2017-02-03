@@ -15,11 +15,12 @@ Humans focus on the edge cases and help the models learn and get better over tim
 
 ## How the Review tool helps ##
 
-The human review tool when used in conjunction with our automated moderation APIs allows you to accomplish these tasks:
+The human review tool when used in conjunction with our automated moderation APIs allows you to accomplish these important tasks in relation to the content moderation life cycle.
 
 1. Automate the creation of human reviews from the underlying moderation API results
 2. Use one tool (Review Tool and API) to moderate multiple formats (text, image, and video - coming soon)
-3. Assign or escalate content reviews to multiple review teams by category or experience level.
+3. Assign or escalate content reviews to multiple review teams organized by content category or experience level.
 4. Use default workflows or define custom workflows with flexible rules, and without writing any code.
-4. Add human review to any API or business process by simply building a connector (ships with connectors for PhotoDNA, Text Analytics, and Face APIs)
-5. Get key metrics on your content moderation processes.
+5. Add human review to any API or business process by simply building a connector.
+6. Use the default connectors to review results from Microsoft PhotoDNA, Text Analytics, and Face APIs.
+7. Get key performance metrics on your content moderation processes.
