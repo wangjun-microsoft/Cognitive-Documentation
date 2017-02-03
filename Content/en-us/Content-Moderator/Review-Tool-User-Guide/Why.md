@@ -9,9 +9,9 @@ Weight: 25
 
 Why do we need a human review tool with automated content moderation powered by machine learning and AI? 
 
-We feel that you get the best results when humans and machines work together on harder cases. Humans can effectively augment machine learning models in cases where the prediction confidence has to be assisted or tempered with real world context. 
+We think you get the best results when humans and machines work together on harder cases. Humans can effectively augment machine learning models in situations where the prediction confidence has to be assisted or tempered within a real world context. 
 
-Humans focus on the edge cases and help the models learn and get better over time. The result is a hybrid, automated content moderation process that's better than if the humans or machines were working alone.
+Humans can focus on the edge cases and help the models learn and get better over time. The result is a hybrid, automated content moderation process that performs better than if the humans or machines were working alone.
 
 ## How the Review tool helps ##
 
