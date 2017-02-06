@@ -1,7 +1,7 @@
 ﻿<!-- 
 NavPath: Custom Speech Service
 LinkLabel: Overview
-Url: Custom-Speech-Service/documentation/Home
+Url: Custom-Speech-Service/Home
 Weight: 100
 -->
 

@@ -1,7 +1,7 @@
 ﻿<!-- 
 NavPath: Custom Speech Service
 LinkLabel: Glossary
-Url: Custom-Speech-Service/documentation/GetStarted
+Url: Custom-Speech-Service/GetStarted
 Weight: 85
 -->
 

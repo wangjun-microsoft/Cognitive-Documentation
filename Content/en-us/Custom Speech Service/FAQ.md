@@ -1,7 +1,7 @@
-<!-- 
+﻿<!-- 
 NavPath: Custom Speech Service
 LinkLabel: Frequently Asked Questions
-Url: Custom-Speech-Service/documentation/FAQ
+Url: Custom-Speech-Service/FAQ
 Weight: 10
 -->
 # Custom Speech Service Frequently Asked Questions
