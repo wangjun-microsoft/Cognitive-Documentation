@@ -79,17 +79,7 @@ Weight: 10
 
 **Question**: How much acoustic data do I need?
 
-**Answer**: This is a difficult question to answer. The simple but not very useful answer is "more is always better". 
-* We have seen situations where noticeable improvements were obtained with only 30 min or 1 hour of data. In general, to be robust, 
-* we'd recommend a minimum of 1 hour and 5 hours is better. However, the type of data that's collected as important as the amount.
-* The acoustic model customization process will learn to optimize performance for the data provided. 
-* That means that if the acoustic data is only from a single speaker the system will do really well for that speaker but not necessarily other speakers. 
-* So, for the situation where you are trying to customize for a particular environment, you want the acoustic data to contain 
-* as many talkers as possible in that environment. As an example, if you are going to collect 1 hour of data in a noisy factory, 
-* you are better off collection 1 minute from 60 users, rather than 10 minutes from 6 talkers.  
-* That will enable the system to learn what speech from a variety of speakers sounds like in that environment. 
-* If you truly want to customize the voice for a particular speaker (e.g. you have a project to transcribe all of FDR's Fireside chats) 
-* then you should supply examples only from that one speaker.
+**Answer**: We recommend starting with 30 minutes to one hour of acoustic data
 
 **Question**: What sort of data should I collect?
 
@@ -143,7 +133,7 @@ Weight: 10
 
 **Answer**: This is a difficult question to give a precise answer to, as it depends on how different the vocabulary and phrases 
 * used in your application are from the starting language models. For all new words, it is useful to provide 
-* as many examples as possible of the usage of those words. For * common phrases that are used in your application, 
+* as many examples as possible of the usage of those words. For common phrases that are used in your application, 
 * including those in the languuage data is also useful as it tells the system to listen for these terms as well. 
 * It is common to have at least one hundred and typically several hundred utterances in the language data set or more. 
 * Also if certain types * of queries are expected to be more common than others, you can insert multiple copies of the common queries in the data set.
