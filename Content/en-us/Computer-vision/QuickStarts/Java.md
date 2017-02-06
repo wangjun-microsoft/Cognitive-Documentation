@@ -11,7 +11,11 @@ This article provides information and code samples to help you quickly get start
 * [Intelligently generate a thumbnail](#GetThumbnail)
 * [Detect and extract text from an Image](#OCR)
 
-## Analyze an Image With Computer Vision API Using Java <a name="AnalyzeImage"> </a>
+## Prerequisites
+* Get the Microsoft Computer Vision Android SDK [here](https://github.com/Microsoft/Cognitive-vision-android)
+* Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe)
+
+## Analyze an Image with Computer Vision API Using Java <a name="AnalyzeImage"> </a>
 With the [Analyze Image method](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa) you can extract visual features based on image content. You can upload an image or specify an image URL and choose which features to return, including:
 * The category defined in this [taxonomy](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy). 
 * A detailed list of tags related to the image content. 

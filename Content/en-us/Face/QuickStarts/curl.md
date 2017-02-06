@@ -10,6 +10,8 @@ This article provides information and code samples to help you quickly get start
 * [Detect Faces in Images](#Detect) 
 * [Identify Faces in Images](#Identify)
 
+Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe). 
+
 ## Detect Faces in Images With Face API Using curl <a name="Detect"> </a>
 Use the [Face - Detect method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
 to detect faces in an image and return face attributes including:

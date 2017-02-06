@@ -1,11 +1,11 @@
 <!--
-NavPath: Emotion API
-LinkLabel: Get Started in Python
-Url: Emotion-api/documentation/GetStartedWithPython
-Weight: 99
+NavPath: Emotion API/Tutorials
+LinkLabel: Get Started in Python Tutorial
+Url: Emotion-api/documentation/tutorials/GetStartedWithPython
+Weight: 45
 -->
 
-#Start Developing with Emotion API using Python
+#Emotion API using Python Tutorial
 
 To make it easy to get started with Emotion API, the Jupyter notebook linked below shows you how to use the API in Python and how to visualize your results using some popular libraries. 
 
