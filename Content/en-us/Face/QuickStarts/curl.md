@@ -1,67 +1,37 @@
 <!-- 
 NavPath: Face API/Quick Starts
-LinkLabel: JavaScript Quick Starts
-Url: Face/documentation/QuickStarts/JavaScript
-Weight: 56
+LinkLabel: curl Quick Starts
+Url: Face/documentation/QuickStarts/curl
+Weight: 62
 -->
 
-# Face API JavaScript Quick Starts
-This article provides information and code samples to help you quickly get started using the Face API with JavaScript to accomplish the following tasks: 
+# Face API curl Quick Starts
+This article provides information and code samples to help you quickly get started using the Face API with curl to accomplish the following tasks: 
 * [Detect Faces in Images](#Detect) 
 * [Identify Faces in Images](#Identify)
 
-Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe)
+Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe). 
 
-## Detect Faces in Images With Face API Using JavaScript <a name="Detect"> </a>
-Use the [Face - Detect method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
+## Detect Faces in Images With Face API Using curl <a name="Detect"> </a>
+Use the [Face - Detect method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
 to detect faces in an image and return face attributes including:
 * Face ID: Unique ID used in a number of Face API scenarios. 
 * Face Rectangle: The left, top, width, and height indicating the location of the face in the image.
 * Landmarks: An array of 27-point face landmarks pointing to the important positions of face components.
 * Facial attributes including age, gender, smile intensity, head pose, and facial hair. 
 
-#### Face Detect JavaScript Example Request
+#### Face Detect curl Example Request
 
-```html 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>JSSample</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-</head>
-<body>
+```javascript  
+@ECHO OFF
 
-<script type="text/javascript">
-    $(function() {
-        var params = {
-            // Request parameters
-            "returnFaceId": "true",
-            "returnFaceLandmarks": "false",
-            "returnFaceAttributes": "{string}",
-        };
-      
-        $.ajax({
-            url: "https://westus.api.cognitive.microsoft.com/face/v1.0/detect?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Content-Type","application/json");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","{subscription key}");
-            },
-            type: "POST",
-            // Request body
-            data: "{body}",
-        })
-        .done(function(data) {
-            alert("success");
-        })
-        .fail(function() {
-            alert("error");
-        });
-    });
-</script>
-</body>
-</html> 
+curl -v -X POST "https://westus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes={string}"
+-H "Content-Type: application/json"
+-H "Ocp-Apim-Subscription-Key: {subscription key}"
+
+--data-ascii "{body}"
 ```
+
 #### Face - Detect Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
 
@@ -205,48 +175,20 @@ A successful response will be returned in JSON. Following is an example of a suc
     }
 ]
 ```
-## Identify Faces in Images With Face API Using JavaScript <a name="Identify"> </a>
-Use the [Face - Identify method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
+
+## Identify Faces in Images With Face API Using curl <a name="Identify"> </a>
+Use the [Face - Identify method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
 identify people based on a detected face and people database (defined as a person group) which needs to be created in advance and can be edited over time
 
-#### Face - Identify JavaScript Example Request
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>JSSample</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-</head>
-<body>
+#### Face - Identify curl Example Request
+```javascript
+@ECHO OFF
 
-<script type="text/javascript">
-    $(function() {
-        var params = {
-            // Request parameters
-        };
-      
-        $.ajax({
-            url: "https://westus.api.cognitive.microsoft.com/face/v1.0/identify?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Content-Type","application/json");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","{subscription key}");
-            },
-            type: "POST",
-            // Request body
-            data: "{body}",
-        })
-        .done(function(data) {
-            alert("success");
-        })
-        .fail(function() {
-            alert("error");
-        });
-    });
-</script>
-</body>
-</html>
+curl -v -X POST "https://westus.api.cognitive.microsoft.com/face/v1.0/identify"
+-H "Content-Type: application/json"
+-H "Ocp-Apim-Subscription-Key: {subscription key}"
 
+--data-ascii "{body}" 
 ```
 #### Face - Identify Response
 A successful response will be returned in JSON. Following is an example of a successful response: 

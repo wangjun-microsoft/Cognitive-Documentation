@@ -1,4 +1,4 @@
-<!-- 
+<!--
 NavPath: Face API/Tutorials
 LinkLabel: Getting Started in Java for Android Tutorial
 Url: face-api/documentation/Tutorials/FaceAPIinJavaForAndroidTutorial

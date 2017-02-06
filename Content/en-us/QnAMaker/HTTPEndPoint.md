@@ -17,7 +17,7 @@ You need the following two GUIDs to access your knowledge base via the HTTP endp
 ### HTTP ###
 ```Markdown
 POST /knowledgebases/<Your KB ID>/generateAnswer HTTP/1.1
-Host: qnaservice-ppe.cloudapp.net
+Host: https://westus.api.cognitive.microsoft.com/qnamaker/v1.0
 Ocp-Apim-Subscription-Key: <Your Subscription key>
 Content-Type: application/json
 Cache-Control: no-cache

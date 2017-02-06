@@ -1,67 +1,53 @@
 <!-- 
 NavPath: Face API/Quick Starts
-LinkLabel: JavaScript Quick Starts
-Url: Face/documentation/QuickStarts/JavaScript
-Weight: 56
+LinkLabel: Ruby Quick Starts
+Url: Face/documentation/QuickStarts/Ruby
+Weight: 48
 -->
 
-# Face API JavaScript Quick Starts
-This article provides information and code samples to help you quickly get started using the Face API with JavaScript to accomplish the following tasks: 
+# Face API Ruby Quick Starts
+This article provides information and code samples to help you quickly get started using the Face API with Ruby to accomplish the following tasks: 
 * [Detect Faces in Images](#Detect) 
 * [Identify Faces in Images](#Identify)
 
-Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe)
+Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe).
 
-## Detect Faces in Images With Face API Using JavaScript <a name="Detect"> </a>
-Use the [Face - Detect method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
+## Detect Faces in Images With Face API Using Ruby <a name="Detect"> </a>
+Use the [Face - Detect method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
 to detect faces in an image and return face attributes including:
 * Face ID: Unique ID used in a number of Face API scenarios. 
 * Face Rectangle: The left, top, width, and height indicating the location of the face in the image.
 * Landmarks: An array of 27-point face landmarks pointing to the important positions of face components.
 * Facial attributes including age, gender, smile intensity, head pose, and facial hair. 
 
-#### Face Detect JavaScript Example Request
+#### Face Detect Ruby Example Request
 
-```html 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>JSSample</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-</head>
-<body>
+```Ruby 
+require 'net/http'
 
-<script type="text/javascript">
-    $(function() {
-        var params = {
-            // Request parameters
-            "returnFaceId": "true",
-            "returnFaceLandmarks": "false",
-            "returnFaceAttributes": "{string}",
-        };
-      
-        $.ajax({
-            url: "https://westus.api.cognitive.microsoft.com/face/v1.0/detect?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Content-Type","application/json");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","{subscription key}");
-            },
-            type: "POST",
-            // Request body
-            data: "{body}",
-        })
-        .done(function(data) {
-            alert("success");
-        })
-        .fail(function() {
-            alert("error");
-        });
-    });
-</script>
-</body>
-</html> 
+uri = URI('https://westus.api.cognitive.microsoft.com/face/v1.0/detect')
+uri.query = URI.encode_www_form({
+    # Request parameters
+    'returnFaceId' => 'true',
+    'returnFaceLandmarks' => 'false',
+    'returnFaceAttributes' => '{string}'
+})
+
+request = Net::HTTP::Post.new(uri.request_uri)
+# Request headers
+request['Content-Type'] = 'application/json'
+# Request headers
+request['Ocp-Apim-Subscription-Key'] = '{subscription key}'
+# Request body
+request.body = "{body}"
+
+response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+    http.request(request)
+end
+
+puts response.body
 ```
+
 #### Face - Detect Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
 
@@ -205,49 +191,35 @@ A successful response will be returned in JSON. Following is an example of a suc
     }
 ]
 ```
-## Identify Faces in Images With Face API Using JavaScript <a name="Identify"> </a>
-Use the [Face - Identify method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
+
+## Identify Faces in Images With Face API Using Ruby <a name="Identify"> </a>
+Use the [Face - Identify method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
 identify people based on a detected face and people database (defined as a person group) which needs to be created in advance and can be edited over time
 
-#### Face - Identify JavaScript Example Request
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>JSSample</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-</head>
-<body>
+#### Face - Identify Ruby Example Request
+```ruby
+require 'net/http'
 
-<script type="text/javascript">
-    $(function() {
-        var params = {
-            // Request parameters
-        };
-      
-        $.ajax({
-            url: "https://westus.api.cognitive.microsoft.com/face/v1.0/identify?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Content-Type","application/json");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","{subscription key}");
-            },
-            type: "POST",
-            // Request body
-            data: "{body}",
-        })
-        .done(function(data) {
-            alert("success");
-        })
-        .fail(function() {
-            alert("error");
-        });
-    });
-</script>
-</body>
-</html>
+uri = URI('https://westus.api.cognitive.microsoft.com/face/v1.0/identify')
+uri.query = URI.encode_www_form({
+})
 
+request = Net::HTTP::Post.new(uri.request_uri)
+# Request headers
+request['Content-Type'] = 'application/json'
+# Request headers
+request['Ocp-Apim-Subscription-Key'] = '{subscription key}'
+# Request body
+request.body = "{body}"
+
+response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+    http.request(request)
+end
+
+puts response.body
+ 
 ```
+
 #### Face - Identify Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
 ```php
