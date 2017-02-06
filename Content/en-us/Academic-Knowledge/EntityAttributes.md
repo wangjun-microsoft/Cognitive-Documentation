@@ -48,5 +48,5 @@ LP 		| LastPage - last page of paper
 DOI		| Digital Object Identifier
 CC 		| Citation Contexts – List of referenced paper ID’s and the corresponding context in the paper (e.g. [{123:[“brown foxes are known for jumping as referenced in paper 123”, “the lazy dogs are a historical misnomer as shown in paper 123”]})
 IA		| Inverted Abstract
-IA.Index| Length	Number of items in the index
+IA.IndexLength|	Number of items in the index (abstract's word count)
 IA.InvertedIndex| List of abstract words and their corresponding position in the original abstract (e.g. [{“the”:[0, 15, 30]}, {“brown”:[1]}, {“fox”:[2]}])
