@@ -2,7 +2,7 @@
 NavPath: Custom Speech Service
 LinkLabel: Glossary
 Url: Custom-Speech-Service/GetStarted
-Weight: 85
+Weight: 20
 -->
 
 # Glossary

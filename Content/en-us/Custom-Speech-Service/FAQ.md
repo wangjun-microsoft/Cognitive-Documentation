@@ -2,7 +2,7 @@
 NavPath: Custom Speech Service
 LinkLabel: Frequently Asked Questions
 Url: Custom-Speech-Service/FAQ
-Weight: 10
+Weight: 40
 -->
 # Custom Speech Service Frequently Asked Questions
 ##### If you can't find answers to your questions in this FAQ, try asking the Custom Speech Service community on [StackOverflow](https://stackoverflow.com/questions/tagged/project-oxford+or+microsoft-cognitive) and [UserVoice](https://cognitive.uservoice.com/) 
