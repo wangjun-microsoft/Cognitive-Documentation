@@ -2,7 +2,7 @@
 NavPath: Content Moderator/Review Tool User Guide
 LinkLabel: Settings
 Url: content-moderator/documentation/review-tool-user-guide/settings
-Weight: 15
+Weight: 18
 -->
 
 # Configure Settings #

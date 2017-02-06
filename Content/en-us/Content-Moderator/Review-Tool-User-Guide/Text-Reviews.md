@@ -1,8 +1,8 @@
 <!-- 
 NavPath: Content Moderator/Review Tool User Guide
-LinkLabel: Review Text Moderation
+LinkLabel: Text Reviews
 Url: content-moderator/documentation/review-tool-user-guide/review-moderated-text
-Weight: 27
+Weight: 21
 -->
 # Text Moderation Reviews #
 
