@@ -1,7 +1,7 @@
 ﻿<!-- 
 NavPath: Custom Speech Service
 LinkLabel: Overview
-Url: Custom-Speech-Service/documentation/GetStarted
+Url: Custom-Speech-Service/documentation/Home
 Weight: 100
 -->
 
@@ -28,6 +28,10 @@ The acoustic model is a classifier that labels short fragments of audio into one
 The language model is a probability distribution over sequences of words. The language model helps the system decide among sequences of words that sound similar, based on the likelihood of the word sequences themselves. For example, “recognize speech” and “wreck a nice beach” sound alike but the first hypothesis is far more likely to occur, and therefore will be assigned a higher score by the language model.
 
 For more details about how to use the Custom Speech Service, refer to the [Custom Speech Service Portal] (https://cris.ai).
+
+ * [Link back to Get Started](GetStarted.md)
+ * [Link back to FAQ](FAQ.md) 
+ * [Link back to Glossary](Glossary.md)
 
 
 
