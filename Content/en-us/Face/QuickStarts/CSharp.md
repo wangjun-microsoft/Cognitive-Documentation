@@ -15,7 +15,7 @@ This article provides information and code samples to help you quickly get start
 * Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe)
 
 ## Detect Faces in Images With Face API Using C# <a name="Detect"> </a>
-Use the [Face - Detect method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
+Use the [Face - Detect method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
 to detect faces in an image and return face attributes including:
 * Face ID: Unique ID used in a number of Face API scenarios. 
 * Face Rectangle: The left, top, width, and height indicating the location of the face in the image.
@@ -216,7 +216,7 @@ A successful response will be returned in JSON. Following is an example of a suc
 ]
 ```
 ## Identify Faces in Images With Face API Using C# <a name="Identify"> </a>
-Use the [Face - Identify method](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
+Use the [Face - Identify method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
 identify people based on a detected face and people database (defined as a person group) which needs to be created in advance and can be edited over time
 
 #### Face - Identify C# Example Request

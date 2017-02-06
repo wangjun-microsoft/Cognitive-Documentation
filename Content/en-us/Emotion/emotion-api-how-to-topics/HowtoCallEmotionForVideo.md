@@ -25,7 +25,7 @@ In order to use the Emotion API for Video, you will need a video that includes p
 Every call to the Emotion API for Video requires a subscription key. This key needs to be either passed through a query string parameter or specified in the request header. To pass the subscription key through a query string, refer to the request URL below for the Emotion API for Video as an example:
 
 ```
-https://westus.cognitive.microsoft.com/emotion/v1.0/recognizeInVideo&subscription-key=<Your subscription key>
+https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognizeInVideo&subscription-key=<Your subscription key>
 ```
 
 As an alternative, the subscription key can also be specified in the HTTP request header:
@@ -139,4 +139,4 @@ Because emotions are smoothed over time, if you ever build a visualization to ov
 ### <a name="Summary">Summary</a>
 In this guide you have learned about the functionalities of the Emotion API for Video: how you can upload a video, check its status, retrieve emotion recognition metadata.
 
-For more information about API details, see the API reference guide “[Emotion API for Video Reference](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/56f8d40e1984551ec0a0984e)”.
+For more information about API details, see the API reference guide “[Emotion API for Video Reference](https://westus.dev.cognitive.microsoft.com/docs/services/5639d931ca73072154c1ce89/operations/56f8d40e1984551ec0a0984e)”.

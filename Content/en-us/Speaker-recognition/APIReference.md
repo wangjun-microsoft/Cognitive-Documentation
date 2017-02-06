@@ -2,9 +2,9 @@
 NavPath: Speaker Recognition API
 LinkLabel: API Reference
 Weight: 50
-ExternalLink: https://dev.projectoxford.ai/docs/services/563309b6778daf02acc0a508
+ExternalLink: https://westus.dev.cognitive.microsoft.com/docs/services/563309b6778daf02acc0a508
 -->
 
 # Speaker Recognition API
 
-[Speaker Recognition API Reference](https://dev.projectoxford.ai/docs/services/563309b6778daf02acc0a508)
+[Speaker Recognition API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/563309b6778daf02acc0a508)
