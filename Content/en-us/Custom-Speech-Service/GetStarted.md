@@ -1,4 +1,4 @@
-﻿<!-- 
+<!-- 
 NavPath: Custom Speech Service
 LinkLabel: Get Started
 Url: Custom-Speech-Service/GetStarted
