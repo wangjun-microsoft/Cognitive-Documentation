@@ -1,4 +1,4 @@
-<!-- 
+﻿<!-- 
 NavPath: Custom Speech Service
 LinkLabel: Get Started
 Url: Custom-Speech-Service/GetStarted
@@ -51,6 +51,6 @@ Please note that the endpoints created via CRIS can process different numbers of
 
 Note: We are assuming that data is transmitted in real-time. If it is sent faster, we will consider the request as running until its audio duration in real-time has passed.
 
- * [Link back to Overview](Home.md)
- * [Link back to FAQ](FAQ.md)
- * [Link back to Glossary](Glossary.md)
+ * [Overview](Home.md)
+ * [FAQ](FAQ.md)
+ * [Glossary](Glossary.md)

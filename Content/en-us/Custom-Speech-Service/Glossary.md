@@ -95,6 +95,6 @@ Trascription: The piece of text that results from the process of a piece of audi
 
 ## Z
 
- * [Link back to Overview](Home.md)
- * [Link back to Get Started](GetStarted.md)
- * [Link back to FAQ](FAQ.md)
+ * [Overview](Home.md)
+ * [Get Started](GetStarted.md)
+ * [FAQ](FAQ.md)

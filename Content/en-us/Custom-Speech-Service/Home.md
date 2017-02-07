@@ -29,9 +29,9 @@ The language model is a probability distribution over sequences of words. The la
 
 For more details about how to use the Custom Speech Service, refer to the [Custom Speech Service Portal] (https://cris.ai).
 
- * [Link back to Get Started](GetStarted.md)
- * [Link back to FAQ](FAQ.md) 
- * [Link back to Glossary](Glossary.md)
+ * [Get Started](GetStarted.md)
+ * [FAQ](FAQ.md) 
+ * [Glossary](Glossary.md)
 
 
 

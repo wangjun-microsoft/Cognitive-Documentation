@@ -8,7 +8,7 @@ Weight: 40
 ##### If you can't find answers to your questions in this FAQ, try asking the Custom Speech Service community on [StackOverflow](https://stackoverflow.com/questions/tagged/project-oxford+or+microsoft-cognitive) and [UserVoice](https://cognitive.uservoice.com/) 
 
 -----
-**General**
+##General
 
 **Question**: How will I know when the processing of my data set or model is complete?
 
@@ -59,7 +59,7 @@ Please contact us if you require higher than that.
 **Answer**: Requests are typically logged in Azure in secure storage. 
 If you have privacy concerns that prohibit you from using the Custom Speech Service please contact us and we can discuss logging/tracing alternatives.
 
-**Importing Data**
+##Importing Data
 
 **Question**: What is the limit on the size of the data set? Why? 
 
@@ -76,7 +76,7 @@ If the vast majority of the utterances in an acoustic or language data set (e.g.
 the data set can be usable. However, it is recommended that you try to understand why the utterances failed and fix the problems. 
 Most common problems, such as formatting errors, are easy to fix. 
 
-**Creating AM**
+##Creating AM
 
 **Question**: How much acoustic data do I need?
 
@@ -104,7 +104,7 @@ use crowdsourcing. 
 **Answer**: The processing time for creating a custom acoustic model is about the same as the length of the acoustic data set. 
 So, a customized acoustic model created from a five hour data set will take about five hours to process. 
 
-**Offline Testing**
+##Offline Testing
 
 **Question**: Can I perform offline testing of my custom acoustic model using a custom lanugage model?
 
@@ -128,7 +128,7 @@ You should aim to beat the baseline model to make the customization worthwhile
 
 **Answer**: The offline test results show accuracy of baseline accuracy of the custom model and the improvement over baseline
 
-**Creating LM**
+##Creating LM
 
 **Question**: How much text data do I need to upload
 
@@ -149,6 +149,6 @@ but also for adjusting the likelihood of known words for your application. Provi
 -----
 
 
- * [Link back to Overview](Home.md)
- * [Link back to Get Started](GetStarted.md)
- * [Link back to Glossary](Glossary.md)
+ * [Overview](Home.md)
+ * [Started](GetStarted.md)
+ * [Glossary](Glossary.md)
