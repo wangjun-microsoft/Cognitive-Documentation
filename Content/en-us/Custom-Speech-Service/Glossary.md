@@ -69,7 +69,7 @@ Normalization (Text) : Transformation of resulting text (i.e. transcription) int
 
 ## S
 
-### Serch and Dictate Model
+### Search and Dictate Model
 
 An acoustic model appropriate for processing commands. The Microsoft Search and Dictation AM is appropriate for speech directed at an application or device, such as such as commands
 

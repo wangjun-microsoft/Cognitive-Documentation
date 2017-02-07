@@ -11,9 +11,9 @@ Welcome to Microsoft's Custom Speech Service. Custom Speech Service is a cloud-b
 To use the Custom Speech Service refer to the [Custom Speech Service Portal](https://cris.ai)
 
 ## What is the Custom Speech Service
-Nowadays, you can find speech recognition everywhere, such as your phone or your PC. The Custom Recognition Intelligent Service (CRIS) enables you to create customized language models and acoustic models tailored to your application and your users. By uploading your specific speech and/or text data to CRIS, you can create custom models that can be used in conjunction with Microsoft’s existing state-of-the-art speech models.
+The Custom Speech Service enables you to create customized language models and acoustic models tailored to your application and your users. By uploading your specific speech and/or text data to Custom Speech Service, you can create custom models that can be used in conjunction with Microsoft’s existing state-of-the-art speech models.
  
-For example, if you’re adding voice interaction to a mobile phone, tablet or PC app, you can create a custom language model that can be combined with Microsoft’s acoustic model to create a speech-to-text endpoint designed especially for your app. If your application is designed for use in a particular environment or by a particular user population, you can also create and deploy a custom acoustic model with CRIS.
+For example, if you’re adding voice interaction to a mobile phone, tablet or PC app, you can create a custom language model that can be combined with Microsoft’s acoustic model to create a speech-to-text endpoint designed especially for your app. If your application is designed for use in a particular environment or by a particular user population, you can also create and deploy a custom acoustic model with the Custom Speech Service.
 
 ## Why use the Custom Speech Service
 While the Microsoft Speech-To-Text engine is world-class, it is targeted toward the scenarios described above. However, if you expect voice queries to your application to contain particular vocabulary items, such as product names or jargon that rarely occur in typical speech, it is likely that you can obtain improved performance by customizing the language model.
