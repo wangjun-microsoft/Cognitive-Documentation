@@ -33,9 +33,10 @@ Weight: 40
 * Imported data can be deleted after the import has been completed
 
 **Question**: What is the difference between the Search & Dictation Models and the Conversational Models
-* There are two Base Acoustic & Language Models to choose from in the Custom Speech Service. 
-* ,
-* search queries, or dictation. The Microsoft Conversational AM is appropriate for recognizing speech spoken in a conversational style. This type of speech is typically directed at another person, such as in call centers or meetings.
+
+**Answer**: There are two Base Acoustic & Language Models to choose from in the Custom Speech Service. 
+* search queries, or dictation. The Microsoft Conversational AM is appropriate for recognizing speech spoken in a conversational style. 
+* This type of speech is typically directed at another person, such as in call centers or meetings.
 
 **Question**: Can I update my existing model (model stacking)
 
