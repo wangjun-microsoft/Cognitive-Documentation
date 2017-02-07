@@ -7,7 +7,7 @@ Weight: 95
 
 # Get Started with Custom Speech Service
 
-Explore the main features of the Custom Speech Service and learn how to build, deploy and use acoustic and language models for your application needs.
+Explore the main features of the Custom Speech Service and learn how to build, deploy and use acoustic and language models for your application needs. More extensive documentation and step-by-step instructions can be found after you sign up on the Custom Speech Services portal.
 
 ## Table of Contents
 * 	[Prerequisites](#Subscription)
@@ -18,13 +18,13 @@ Explore the main features of the Custom Speech Service and learn how to build, d
 
 ## <a name="Subscription">Subscription</a>  
 #### 
-In order to be able to upload data, to train a model or to do a deployment you need to link your Custom Speech Service activities to an Azure subscription. This can either be a free-tier or paid tier subsription. For further information please visit the pricing page.
+In order to be able to upload data, to train a model or to do a deployment you need to link your Custom Speech Service activities to an Azure subscription. This can either be a free-tier or paid tier subsription. For further information please visit the [pricing page](https://www.microsoft.com/cognitive-services/en-us/pricing).
 To get a subscription id please go to your Azure portal and search for cognitive services and Custom Speech Service and follow the instructions there.
 
 The subscrition key is required later in this process.
  
 #### Subscribe to Custom Speech Service and get a subscription key 
-There is a nice sample that we provide to get you going which you can fine [here](https://github.com/Microsoft/Cognitive-Custom-Speech-Service) 
+There is a nice sample that we provide to get you going which you can find [here](https://github.com/Microsoft/Cognitive-Custom-Speech-Service) 
 
 Before playing with the above the example, you must subscribe to Custom Speech Service and get a subscription key, see [Subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both the primary and secondary key can be used in this tutorial. Make sure to follow best practices for keeping your API key secret and secure. 
 
@@ -47,9 +47,9 @@ When you have created custom acoustic models and/or language models, they can be
 ## <a name="Using">Step 4: Using a custom speech endpoint</a>
 Requests can be sent to a CRIS speech-to-text endpoint in a very similar manner as the default Microsoft Cognitive Services speech endpoint. Note that these endpoints are functionally identical to the default endpoints of the Speech API. Thus, the same functionality available via the client library or REST API for the Speech API is also the available for your custom endpoint.
 
-Please note that the endpoints created via CRIS can process different numbers of concurrent requests depending on the tier the subscription is associated to. If more recognitions than that are requested, they will return the error code 429 (Too many requests). For more information please visit the pricing information. In addition, there is a monthly quota of requests for the free tier. In cases you access your endpoint in the free tier above your monthly quota the service returns the error code 403 Forbidden.
+Please note that the endpoints created via CRIS can process different numbers of concurrent requests depending on the tier the subscription is associated to. If more recognitions than that are requested, they will return the error code 429 (Too many requests). For more information please visit the [pricing information](https://www.microsoft.com/cognitive-services/en-us/pricing). In addition, there is a monthly quota of requests for the free tier. In cases you access your endpoint in the free tier above your monthly quota the service returns the error code 403 Forbidden.
 
-Note: We are assuming that data is transmitted in real-time. If it is sent faster, we will consider the request as running until its audio duration in real-time has passed.
+The service assumes audio is transmitted in real-time. If it is sent faster, the request will be considered running until its duration in real-time has passed.
 
  * [Overview](Home.md)
  * [FAQ](FAQ.md)
