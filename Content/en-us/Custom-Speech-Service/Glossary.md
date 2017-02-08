@@ -75,7 +75,7 @@ An acoustic model appropriate for processing commands. The Microsoft Search and 
 
 ### Subscription key
 
-Subscription key is a string that you need to specify as a query string parameter in order to invoke any Custom Speech Service model. A subscription key is obtained from Azure Portal and once obtained it can be found in "My Subscriptions" in the Custom Speech Service portal. 
+Subscription key is a string that you need to specify as a query string parameter in order to invoke any Custom Speech Service model. A subscription key is obtained from [Azure Portal](https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/CustomSpeech) and once obtained it can be found in "My Subscriptions" in the Custom Speech Service portal. 
 
 ## T
 
