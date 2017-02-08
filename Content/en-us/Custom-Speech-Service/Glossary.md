@@ -19,7 +19,7 @@ The acoustic model is a classifier that labels short fragments of audio into one
 
 ### Conversational Model
 
-A model appropriate for recognizing speech spoken in a conversational style. The Microsoft Conversational AM is adapted for speech typically directed at another person, such as in call centers or meetings.
+A model appropriate for recognizing speech spoken in a conversational style. The Microsoft Conversational AM is adapted for speech typically directed at another person.
 
 ## D
 
@@ -75,13 +75,13 @@ An acoustic model appropriate for processing commands. The Microsoft Search and 
 
 ### Subscription key
 
-Subscription key is a string that you need to specify as a query string parameter in order to invoke any Face API. The subscription key can be found in My Subscriptions page after you sign in the Microsoft Cognitive Services portal. There will be two keys associated with each subscription: one primary key and one secondary key. Both can be used to invoke API identically. You need to keep the subscription keys secure, and you can regenerate subscription keys at any time from My Subscriptions page as well. 
+Subscription key is a string that you need to specify as a query string parameter in order to invoke any Custom Speech Service model. A subscription key is obtained from Azure Portal and once obtained it can be found in "My Subscriptions" in the Custom Speech Service portal. 
 
 ## T
 
 ### Transcription
 
-Trascription: The piece of text that results from the process of a piece of audio .wav file 
+Transcription: The piece of text that results from the process of a piece of audio .wav file 
 
 ## U
 
