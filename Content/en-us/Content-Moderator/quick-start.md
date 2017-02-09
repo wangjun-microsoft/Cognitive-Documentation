@@ -8,7 +8,7 @@ Weight: 190
 # Get Started #
 Start by signing up for the [review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool") and uploading images to explore the automated moderation and review the  results right within your web browser. 
 
-Also read: [Review Tool User Guide](review-tool-user-guide/signup.md)
+Also read: [Review Tool User Guide](review-tool-user-guide/why.md)
 
 You can take actions such as changing the highlighted tags and submitting your decisions to the default workflow. You can then move on to using the review API to integrate your content (images) with the tool, and finally, use the underlying moderation APIs directly for automated moderation and custom list management.
 
