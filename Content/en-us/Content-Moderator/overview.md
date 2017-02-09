@@ -26,7 +26,7 @@ Microsoft Content Moderator enables all three scenarios.
 You can subscribe to the [Moderator APIs](api-reference.md) for text, images and videos to automatically moderate large amount of content cost-effectively, at scale with only a few lines of code.
 
 ## The human review tool ##
-The [review tool](review-tool-user-guide/signup.md) enables the human-in-the-loop capability with it’s support for human review teams. You can invite other users, track pending invites, and assign permissions to your team members. It will internally call the automated moderation APIs and make the reviews available right within your web browser.
+The review tool enables the human-in-the-loop capability with it’s support for human review teams. You can invite other users, track pending invites, and assign permissions to your team members. It will internally call the automated moderation APIs and make the reviews available right within your web browser.
 
 ## Combining the APIs with the review tool ##
 Combine the image moderation APIs with the human review tool to quickly implement an end-to-end hybrid moderation solution for images. Use the review tool’s API to auto-moderate images in bulk and review the tagged images within the review tool. Provide your API callback point so that you get notified when the reviewers submit their decisions. This allows you to automate the post-review workflow by integrating with your own systems.
