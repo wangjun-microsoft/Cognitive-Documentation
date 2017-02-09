@@ -8,14 +8,14 @@ Url: Bing-image-search-API/useanddisplayrequirements
 # Bing Search API Use and Display Requirements
 These use and display requirements apply to your implementation of the content and associated information (for example, relationships, metadata and other signals) available through calls to the Bing Web Search, Image Search, Video Search, and News Search APIs, Bing Spell Check and Bing Autosuggest APIs. Implementation details related to these requirements can be found in documentation for specific features and results.
 
-1. BING SPELL CHECK API and BING AUTOSUGGEST API.  You must not:
+BING SPELL CHECK API and BING AUTOSUGGEST API.  You must not:
 
 • copy, store, or cache any data you receive from the Bing Spell Check or Bing Autosuggest APIs; or
 use data you receive from the Bing Spell Check or Bing Autosuggest APIs as part of any machine learning or similar algorithmic activity to train, evaluate, or improve new or existing services which you or third parties may offer.
 
 • use data you receive from the Bing Spell Check or Bing Autosuggest APIs as part of any machine learning or similar algorithmic activity to train, evaluate, or improve new or existing services which you or third parties may offer.
 
-2. BING WEB SEARCH, IMAGE SEARCH, NEWS SEARCH and VIDEO SEARCH APIs (the “Search APIs”):
+BING WEB SEARCH, IMAGE SEARCH, NEWS SEARCH and VIDEO SEARCH APIs (the “Search APIs”):
 
 Definitions. The following definitions apply in Sections 2 through 5 of these use and display requirements:
 “answer” refers to a category of results returned in a response. For example, a response from the Bing Web Search API may include answers in the categories of webpage results, image, video, and news;
