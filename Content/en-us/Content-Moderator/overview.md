@@ -22,11 +22,11 @@ Content moderation for all three types of content has several benefits.They are
 
 Microsoft Content Moderator enables all three scenarios.
 
-## Automated moderation APIs ##
-You can subscribe to the [Moderator APIs](api-reference.md) for text, images and videos to automatically moderate large amount of content cost-effectively, at scale with only a few lines of code.
+## Get started quickly with the human review tool ##
+The review tool enables the human-in-the-loop capability. It will internally call the automated moderation APIs and make the reviews available right within your web browser. You can invite other users, track pending invites, and assign permissions to your team members. 
 
-## The human review tool ##
-The review tool enables the human-in-the-loop capability with it’s support for human review teams. You can invite other users, track pending invites, and assign permissions to your team members. It will internally call the automated moderation APIs and make the reviews available right within your web browser.
+Use the review tool’s API to auto-moderate content in bulk and review the tagged images or text within the review tool. Provide your API callback point so that you get notified when the reviewers submit their decisions. This allows you to automate the post-review workflow by integrating with your own systems.
 
-## Combining the APIs with the review tool ##
-Combine the image moderation APIs with the human review tool to quickly implement an end-to-end hybrid moderation solution for images. Use the review tool’s API to auto-moderate images in bulk and review the tagged images within the review tool. Provide your API callback point so that you get notified when the reviewers submit their decisions. This allows you to automate the post-review workflow by integrating with your own systems.
+## Directly use the automated moderation APIs ##
+You can sign up for the free tiers of [text-moderation-api.md](text moderation) and [image-moderation-api.md ](image moderation) APIs and apply to use the private preview of the [video-moderation-api.md](video moderation) APIs to automatically moderate large amount of content and integrate with your review tools and processes. 
+
