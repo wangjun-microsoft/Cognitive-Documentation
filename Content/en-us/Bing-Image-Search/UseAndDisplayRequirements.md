@@ -9,31 +9,47 @@ Url: Bing-image-search-API/useanddisplayrequirements
 These use and display requirements apply to your implementation of the content and associated information (for example, relationships, metadata and other signals) available through calls to the Bing Web Search, Image Search, Video Search, and News Search APIs, Bing Spell Check and Bing Autosuggest APIs. Implementation details related to these requirements can be found in documentation for specific features and results.
 
 1. BING SPELL CHECK API and BING AUTOSUGGEST API.  You must not:
-ï copy, store, or cache any data you receive from the Bing Spell Check or Bing Autosuggest APIs; or
-ï use data you receive from the Bing Spell Check or Bing Autosuggest APIs as part of any machine learning or similar algorithmic activity to train, evaluate, or improve new or existing services which you or third parties may offer.
 
-2. BING WEB SEARCH, IMAGE SEARCH, NEWS SEARCH and VIDEO SEARCH APIs (the ìSearch APIsî):
+‚Ä¢ copy, store, or cache any data you receive from the Bing Spell Check or Bing Autosuggest APIs; or
+use data you receive from the Bing Spell Check or Bing Autosuggest APIs as part of any machine learning or similar algorithmic activity to train, evaluate, or improve new or existing services which you or third parties may offer.
+
+‚Ä¢ use data you receive from the Bing Spell Check or Bing Autosuggest APIs as part of any machine learning or similar algorithmic activity to train, evaluate, or improve new or existing services which you or third parties may offer.
+
+2. BING WEB SEARCH, IMAGE SEARCH, NEWS SEARCH and VIDEO SEARCH APIs (the ‚ÄúSearch APIs‚Äù):
 
 Definitions. The following definitions apply in Sections 2 through 5 of these use and display requirements:
-ìanswerî refers to a category of results returned in a response. For example, a response from the Bing Web Search API may include answers in the categories of webpage results, image, video, and news;
-ìresponseî means any and all answers and associated data received in response to a single call to a Search API;
-ìresultî refers to an item of information in an answer.  For example, the set of data connected with a single news article is a result in a news answer.
+‚Äúanswer‚Äù refers to a category of results returned in a response. For example, a response from the Bing Web Search API may include answers in the categories of webpage results, image, video, and news;
+‚Äúresponse‚Äù means any and all answers and associated data received in response to a single call to a Search API;
+‚Äúresult‚Äù refers to an item of information in an answer.  For example, the set of data connected with a single news article is a result in a news answer.
 Internet search experience. All data returned in responses may only be used in Internet search experiences. An Internet search experience means the content displayed, as applicable:
-ï is relevant and responsive to the end userís direct query or other indication of the userís search interest and intent (e.g., user-indicated search query); 
-ï helps users find and navigate to the sources of data (e.g., the provided URLs are implemented as hyperlinks so the content or attribution is a clickable link conspicuously displayed with the data); 
-ï includes multiple results for the end user to select from (e.g., several results from the news answer are displayed, or all results if fewer than several are returned); 
-ï is limited to an amount appropriate to serve the search purpose (e.g., image thumbnails are thumbnail-sized in proportion to the userís display); 
-ï includes visible indication to the end user that the content is Internet search results (e.g., a statement that the content is ìFrom the webî); and
-ï includes any other combination of measures appropriate to ensure your use of data received from the Search APIs does not violate any applicable laws or third party rights.  Please consult your legal advisors to determine what measures may be appropriate.
+
+‚Ä¢ is relevant and responsive to the end user‚Äôs direct query or other indication of the user‚Äôs search interest and intent (e.g., user-indicated search query); 
+
+‚Ä¢ helps users find and navigate to the sources of data (e.g., the provided URLs are implemented as hyperlinks so the content or attribution is a clickable link conspicuously displayed with the data); 
+
+‚Ä¢ includes multiple results for the end user to select from (e.g., several results from the news answer are displayed, or all results if fewer than several are returned); 
+
+‚Ä¢ is limited to an amount appropriate to serve the search purpose (e.g., image thumbnails are thumbnail-sized in proportion to the user‚Äôs display); 
+
+‚Ä¢ includes visible indication to the end user that the content is Internet search results (e.g., a statement that the content is ‚ÄúFrom the web‚Äù); and
+
+‚Ä¢ includes any other combination of measures appropriate to ensure your use of data received from the Search APIs does not violate any applicable laws or third party rights.  Please consult your legal advisors to determine what measures may be appropriate.
 
 General. You must not: 
-ï copy, store, or cache any data from responses (except retention to the extent permitted by the ìContinuity of Serviceî section below); 
-ï modify content of results (other than to reformat them in a way that does not violate any other requirement); 
-ï omit attribution and URLs associated with result content;
-ï re-order (including by omission) results displayed in an answer when an order or ranking is provided;
-ï display other content within any part of a response in a way that would lead an end user to believe that the other content is part of the response; 
-ï display advertising that is not provided by Microsoft on any page that displays any part of a response;
-ï use data received from the Search APIs as part of any machine learning or similar algorithmic activity to train, evaluate, or improve new or existing services which you or third parties may offer.
+
+‚Ä¢ copy, store, or cache any data from responses (except retention to the extent permitted by the ‚ÄúContinuity of Service‚Äù section below); 
+
+‚Ä¢ modify content of results (other than to reformat them in a way that does not violate any other requirement); 
+
+‚Ä¢ omit attribution and URLs associated with result content;
+
+‚Ä¢ re-order (including by omission) results displayed in an answer when an order or ranking is provided;
+
+‚Ä¢ display other content within any part of a response in a way that would lead an end user to believe that the other content is part of the response; 
+
+‚Ä¢ display advertising that is not provided by Microsoft on any page that displays any part of a response;
+
+‚Ä¢ use data received from the Search APIs as part of any machine learning or similar algorithmic activity to train, evaluate, or improve new or existing services which you or third parties may offer.
 
 3. Advertising. Advertising (whether provided by Microsoft or another provider) must not be displayed with responses (i) from the Image, News or Video Search APIs; or (ii) that are filtered or limited primarily (or solely) to image, news and/or video results from other Search APIs.
 
@@ -42,17 +58,25 @@ General. You must not:
 5. Continuity of Service.  You must not copy, store or cache any data from responses. However, to enable continuity of service access and data rendering, you may retain results solely under the following conditions:
 
 Device.  You may enable an end user to retain results on a device for the lesser of (i) 24 hours from the time of the query or (ii) until an end user submits another query for updated results, provided that retained results may be used only:
-ï to enable the end user to access results previously returned to that end user on that device (e.g., in case of service interruption); or
-ï to store results returned for your proactive query personalized in anticipation of the end userís needs based on that end userís signals (e.g., in case of anticipated service interruption).
+
+‚Ä¢ to enable the end user to access results previously returned to that end user on that device (e.g., in case of service interruption); or
+
+‚Ä¢ to store results returned for your proactive query personalized in anticipation of the end user‚Äôs needs based on that end user‚Äôs signals (e.g., in case of anticipated service interruption).
 
 Server.  You may retain results specific to a single end user securely on a server you control and display the retained results only:
-ï to enable the end user to access a historical report of results previously returned to that user in your solution, provided that the results may not be (i) retained for more than 21 days from the time of the end userís initial query and (ii) displayed in response to an end userís new or repeated query; or
-ï to store results returned for your proactive query personalized in anticipation of an end userís needs based on that end userís signals for the lesser of (i) 24 hours from the time of the query or (ii) until an end user submits another query for updated results.
+
+‚Ä¢ to enable the end user to access a historical report of results previously returned to that user in your solution, provided that the results may not be (i) retained for more than 21 days from the time of the end user‚Äôs initial query and (ii) displayed in response to an end user‚Äôs new or repeated query; or
+
+‚Ä¢ to store results returned for your proactive query personalized in anticipation of an end user‚Äôs needs based on that end user‚Äôs signals for the lesser of (i) 24 hours from the time of the query or (ii) until an end user submits another query for updated results.
 
 Whenever retained, results for a specific user cannot be commingled with results for another user, i.e., the results of each user must be retained and delivered separately.
 
 General. For all presentation of retained results, you must:
-ï include a clear, visible notice of the time the query was sent,
-ï present the user a button or similar means to re-query and obtain updated results, 
-ï retain the Bing branding in the presentation of the results, and
-ï delete (and refresh with a new query if needed) the stored results within the timeframes specified.
+
+‚Ä¢ include a clear, visible notice of the time the query was sent,
+
+‚Ä¢ present the user a button or similar means to re-query and obtain updated results, 
+
+‚Ä¢ retain the Bing branding in the presentation of the results, and
+
+‚Ä¢ delete (and refresh with a new query if needed) the stored results within the timeframes specified.
