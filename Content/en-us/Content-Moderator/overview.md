@@ -22,10 +22,10 @@ Content moderation for all three types of content has several benefits.They are
 
 Microsoft Content Moderator enables all three scenarios.
 
-## Get started quickly with the human review tool ##
-The review tool enables the human-in-the-loop capability. It will internally call the automated moderation APIs and make the reviews available right within your web browser. You can invite other users, track pending invites, and assign permissions to your team members. 
+## Get started with the human review tool ##
+The online [human review tool](quickstart.md) makes it easy to try the automated moderation APIS. It helps augment automated moderation with human-in-the-loop capabilities. It internally calls the automated moderation APIs and make the reviews available right within your web browser. You can invite other users, track pending invites, and assign permissions to your team members. 
 
-Use the review tool’s API to auto-moderate content in bulk and review the tagged images or text within the review tool. Provide your API callback point so that you get notified when the reviewers submit their decisions. This allows you to automate the post-review workflow by integrating with your own systems.
+Use the [review API](review-api.md) to auto-moderate content in bulk and review the tagged images or text within the review tool. Provide your API callback point so that you get notified when the reviewers submit their decisions. This allows you to automate the post-review workflow by integrating with your own systems.
 
 ## Directly use the automated moderation APIs ##
 You can sign up for the free tiers of [text moderation](text-moderation-api.md) and [image moderation](image-moderation-api.md) APIs and apply to use the private preview of the [video moderation](video-moderation-api.md) APIs to automatically moderate large amount of content and integrate with your review tools and processes. 
