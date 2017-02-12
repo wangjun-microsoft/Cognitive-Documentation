@@ -8,7 +8,7 @@ Weight: 130
 # API Reference #
 
 ## Review API ##
-When you sign up for the [human review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool"), you can use the team credentials available within the Settings section on the **Credentials** TAB. You will also find your Content Moderator API keys on the **Connectors** TAB under Settings. Together, they allow you to use the review API to internally use the image or text moderation APIs to scan your content and create reviews in the online tool for human moderation.
+When you sign up for the [human review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool"), you can use the team credentials available within the **Settings** section on the **Credentials** TAB. You will also find your Content Moderator API keys on the **Connectors** TAB under **Settings**. Together, they allow you to use the review API to internally use the image or text moderation APIs to scan your content and create reviews in the online tool for human moderation.
 
 [**Review API**](https://westus.dev.cognitive.microsoft.com/docs/services/580519463f9b070e5c591178/operations/580519483f9b0709fc47f9c5 "Content Moderator Review API")
 
