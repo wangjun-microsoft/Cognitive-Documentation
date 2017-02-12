@@ -10,10 +10,10 @@ Start by signing up for the [review tool](http://contentmoderator.cognitive.micr
 
 Also read: [Review Tool User Guide](review-tool-user-guide/why.md)
 
-**What if I want to try the APIs instead?**
+## What if I want to try the APIs instead? ##
 You will see your free trial key for the Content Moderator APIs in the **Settings** section on the **Connectors** screen. When you are ready to purchase, you can [upgrade to a paid subscription](https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/ContentModerator) and swap out the keys. 
 
-![Your Content Moderator API Key](images/Moderator-API-Key.png)
+![Your Content Moderator API Key](images/Moderator-API-Key.PNG)
 
 ## 1. Sign up and invite others ##
 Sign up to try the [review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool") by either using your existing Microsoft account or create a new account within the review tool. Optionally, invite your colleagues by entering their email addresses.
