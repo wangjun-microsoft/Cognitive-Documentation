@@ -1,5 +1,5 @@
 <!-- 
-NavPath: Academic Knowledge API
+NavPath: Academic Knowledge API/Graph Search Method
 LinkLabel: Lambda Search Syntax
 Url: Academic-Knowledge-API/documentation/LambdaSearchSyntax
 Weight: 90
