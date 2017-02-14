@@ -19,7 +19,7 @@ Once your application is deployed and traffic starts to flow into the system, LU
 
 #####Localization support 
 
-The LUIS UI is always in English, but several languages such as English, German, French, Italian, Spanish, Portogues, Japanese and Chinese are supported when it comes to understanding utterances.
+The LUIS UI is always in English, but several languages such as English, German, Korean, French, Italian, Spanish, Portogues, Japanese and Chinese are supported when it comes to understanding utterances.
 
 #####Accessing LUIS programmatically 
 
