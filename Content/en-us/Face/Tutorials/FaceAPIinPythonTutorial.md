@@ -70,5 +70,5 @@ In this tutorial, you have learned the basic process for using the Face API via 
 
 ## <a name="related"></a> Related Topics
 
-- [Getting Started with Face API in CSharp](GettingStartedwithFaceAPIinCSharp.md)
-- [Getting Started with Face API in Java for Android](GettingStartedwithFaceAPIinJavaforAndroid.md)
+- [Getting Started with Face API in CSharp](FaceAPIinCSharpTutorial.md)
+- [Getting Started with Face API in Java for Android](FaceAPIinJavaForAndroidTutorial.md)
