@@ -29,10 +29,10 @@ With the [Analyze Image method](https://westus.dev.cognitive.microsoft.com/docs/
 
 ```c#
 using System;
-using System.Net.Http.Headers;
-using System.Text;
+using System.IO;
 using System.Net.Http;
-using System.Web;
+using System.Net.Http.Headers;
+using System.Collections.Specialized;
 
 namespace CSHttpClientSample
 {
@@ -40,39 +40,50 @@ namespace CSHttpClientSample
     {
         static void Main()
         {
-            MakeRequest();
+            Console.Write("Enter image file path: ");
+            string imageFilePath = Console.ReadLine();
+
+            MakeRequest(imageFilePath);
+
             Console.WriteLine("Hit ENTER to exit...");
             Console.ReadLine();
         }
-        
-        static async void MakeRequest()
+
+        static byte[] GetImageAsByteArray(string imageFilePath)
+        {
+            FileStream fileStream = new FileStream(imageFilePath, FileMode.Open, FileAccess.Read);
+            BinaryReader binaryReader = new BinaryReader(fileStream);
+            return binaryReader.ReadBytes((int)fileStream.Length);
+        }
+
+        static async void MakeRequest(string imageFilePath)
         {
             var client = new HttpClient();
-            var queryString = HttpUtility.ParseQueryString(string.Empty);
+            NameValueCollection queryString = new NameValueCollection();
 
-            // Request headers
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
+            // Request headers. Replace the second parameter with a valid subscription key.
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "13hc77781f7e4b19b5fcdd72a8df7156");
 
-            // Request parameters
-            queryString["visualFeatures"] = "Categories";
-            queryString["details"] = "{string}";
+            // Request parameters. A third optional parameter is "details".
+            queryString["visualFeatures"] = "Tags";
             queryString["language"] = "en";
             var uri = "https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?" + queryString;
 
             HttpResponseMessage response;
 
-            // Request body
-            byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+            // Request body. Try this sample with a locally stored JPEG image.
+            byte[] byteData = GetImageAsByteArray(imageFilePath);
 
             using (var content = new ByteArrayContent(byteData))
             {
-               content.Headers.ContentType = new MediaTypeHeaderValue("< your content type, i.e. application/json >");
-               response = await client.PostAsync(uri, content);
+                // This example uses content type "application/octet-stream".
+                // The other content types you can use are "application/json" and "multipart/form-data".
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+                response = await client.PostAsync(uri, content);
             }
-
         }
     }
-}	
+}
 ```
 #### Analyze an Image Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
