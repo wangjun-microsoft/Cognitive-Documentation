@@ -1,5 +1,5 @@
 <!-- 
-NavPath: Academic Knowledge API
+NavPath: Academic Knowledge API/Entity Attributes
 LinkLabel: Author Entity
 Url: Academic-Knowledge-API/documentation/EntityAttributes/AuthorEntity
 Weight: 60
