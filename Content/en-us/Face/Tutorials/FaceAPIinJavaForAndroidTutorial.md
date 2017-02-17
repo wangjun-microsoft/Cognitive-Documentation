@@ -302,5 +302,5 @@ In this tutorial, you have learned the basic process for using the Face API and 
 
 ## <a name="related"></a> Related Tutorials
 
-- [Getting Started with Face API in CSharp Tutorial](GettingStartedwithFaceAPIinCSharp.md)
-- [Getting Started with Face API in Python Tutorial](GettingStartedwithFaceAPIinPython.md)
+- [Getting Started with Face API in CSharp Tutorial](FaceAPIinCSharpTutorial.md)
+- [Getting Started with Face API in Python Tutorial](FaceAPIinPythonTutorial.md)
