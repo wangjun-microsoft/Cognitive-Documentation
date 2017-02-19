@@ -10,8 +10,8 @@ Start by signing up for the [review tool](http://contentmoderator.cognitive.micr
 
 Also read: [Review Tool User Guide](review-tool-user-guide/why.md)
 
-## What if I want to try the APIs instead? ##
-You will see your free trial key for the Content Moderator APIs on the **Connectors** TAB in the **Settings** section. When you are ready to purchase, you can [upgrade to a paid subscription](https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/ContentModerator) and swap out the keys. 
+## What if I want to directly try the image and text moderation APIs? ##
+Use your free trial key for the Content Moderator APIs from the **Connectors** TAB in the **Settings** section. When you are ready to purchase, you can [upgrade to a paid subscription](https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/ContentModerator) and swap out the keys. 
 
 ![Your Content Moderator API Key](images/Moderator-API-Key2.PNG)
 
