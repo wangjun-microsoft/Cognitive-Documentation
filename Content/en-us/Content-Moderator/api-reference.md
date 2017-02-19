@@ -16,8 +16,9 @@ When you sign up for the [human review tool](http://contentmoderator.cognitive.m
 
 ## Image and Text Moderation APIs ##
 You can get started on trying out the image and text moderation APIs in two ways:
-1. [Subscribe to the Content Moderator API](https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/ContentModerator) on the Microsoft Azure portal
-1. Sign up for the online [content moderator review tool](http://contentmoderator.cognitive.microsoft.com/). 
+
+  1. [Subscribe to the Content Moderator API](https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/ContentModerator) on the Microsoft Azure portal
+  1. Sign up for the online [content moderator review tool](http://contentmoderator.cognitive.microsoft.com/). 
 
 If you sign up for the review tool, you will find your Content Moderator API keys listed on the **Connectors** TAB in the **Settings** section as shown below.
 
