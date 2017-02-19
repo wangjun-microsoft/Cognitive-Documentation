@@ -8,7 +8,9 @@ Weight: 130
 # API Reference #
 
 ## Review API ##
-When you sign up for the [human review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool"), you can use the team credentials, **Client Id** and **Client Secret** available within the **Credentials** TAB under the **Settings** section as shown below. Also see: [How to authenticate your Review API calls](review-api-authentication.md). 
+When you sign up for the [human review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool"), you can use the team credentials, **Client Id** and **Client Secret** available within the **Credentials** TAB under the **Settings** section as shown below. 
+
+Also see: [How to authenticate your Review API calls](review-api-authentication.md). 
 
 ![Content Moderator Review API Credentials](images/Moderator-Review-API-Credentials.PNG)
 
@@ -17,7 +19,7 @@ When you sign up for the [human review tool](http://contentmoderator.cognitive.m
 ## Image and Text Moderation APIs ##
 You can get started on trying out the image and text moderation APIs in two ways:
 
-  1. [Subscribe to the Content Moderator API](https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/ContentModerator) on the Microsoft Azure portal
+  1. [Subscribe to the Content Moderator API](https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/ContentModerator) on the Microsoft Azure portal.
   1. Sign up for the online [content moderator review tool](http://contentmoderator.cognitive.microsoft.com/). 
 
 If you sign up for the review tool, you will find your Content Moderator API keys listed on the **Connectors** TAB in the **Settings** section as shown below.
@@ -31,4 +33,4 @@ The image and text moderation APIs scan your content and send the results with r
 ## List Management API ##
 You can use your Content Moderator API credentials (for image, text and reviews) for the list management API as well. Use this API to create and manage your custom lists of Images and Text. The lists that you create can be used in the **Image/Match** and **Text/Screen** operations. 
 
-[**List Management API**](https://westus.dev.cognitive.microsoft.com/docs/services/57cf755e3f9b070c105bd2c2/operations/57cf755e3f9b070868a1f675 "Content Moderator List Management API")
+[**List Management API Reference**](https://westus.dev.cognitive.microsoft.com/docs/services/57cf755e3f9b070c105bd2c2/operations/57cf755e3f9b070868a1f675 "Content Moderator List Management API")
