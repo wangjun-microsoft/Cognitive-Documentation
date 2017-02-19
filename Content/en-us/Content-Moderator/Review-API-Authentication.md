@@ -11,7 +11,7 @@ Weight: 100
 The Review API is protected using Azure Active Directory. This section describes how you can generate the Azure Active Directory tokens to use for authenticating your review API calls.
 
 ## Where do I get my credentials? ##
-Once you have created your team in the [review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool"), navigate to the **Credentials** TAB under **Settings** as shown below to find your Client Id and Client Secret.
+Once you have created your team in the [review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool"), navigate to the **Credentials** TAB under **Settings** as shown below to find your **Client Id** and **Client Secret**.
 
 The Keys section allows you to generate the client secrets(keys) that you would need to use to authenticate while using the Review API. The secrets are time bound and can have lifetime of either 1 or 2 years.
 
@@ -20,9 +20,11 @@ You can generate multiple secrets(keys) to cycle through them in your production
 ![Content Moderator Review API Credentials](images/Moderator-Review-API-Credentials.PNG)
 
 ## Using the Client Id and Client Secret to Authenticate ##
-Use the credentials generated on the Settings.API page to authenticate the Review API.
+Use the credentials from the previously mentioned page to generate authentication tokens for your Review API calls.
 
-The following samples requests show how you will use you the Client Id and Client Secret(key) to generate time bound tokens.
+You can do so by either [using the interactive Postman tool](https://github.com/MicrosoftContentModerator/Docs/blob/master/UsingPostman.md) or by using code. 
+
+The following samples show how to use the Client Id and Client Secret(key) to generate time bound tokens.
 
 ## Request Samples ##
 
