@@ -20,8 +20,8 @@ With the [Analyze Image method](https://westus.dev.cognitive.microsoft.com/docs/
 * The category defined in this [taxonomy](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy). 
 * A detailed list of tags related to the image content. 
 * A description of image content in a complete sentence. 
-* The coordinates, gender and age of any faces contained in the image.
-* The ImageType (clipart or a line drawing)
+* The coordinates, gender, and age of any faces contained in the image.
+* The ImageType (clipart or a line drawing).
 * The dominant color, the accent color, or whether an image is black & white.
 * Whether the image contains pornographic or sexually suggestive content. 
 
@@ -32,7 +32,6 @@ using System;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Collections.Specialized;
 
 namespace CSHttpClientSample
 {
@@ -43,9 +42,9 @@ namespace CSHttpClientSample
             Console.Write("Enter image file path: ");
             string imageFilePath = Console.ReadLine();
 
-            MakeRequest(imageFilePath);
+            MakeAnalysisRequest(imageFilePath);
 
-            Console.WriteLine("Hit ENTER to exit...");
+            Console.WriteLine("\n\n\nHit ENTER to exit...");
             Console.ReadLine();
         }
 
@@ -56,18 +55,17 @@ namespace CSHttpClientSample
             return binaryReader.ReadBytes((int)fileStream.Length);
         }
 
-        static async void MakeRequest(string imageFilePath)
+        static async void MakeAnalysisRequest(string imageFilePath)
         {
             var client = new HttpClient();
-            NameValueCollection queryString = new NameValueCollection();
 
             // Request headers. Replace the second parameter with a valid subscription key.
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "13hc77781f7e4b19b5fcdd72a8df7156");
 
             // Request parameters. A third optional parameter is "details".
-            queryString["visualFeatures"] = "Tags";
-            queryString["language"] = "en";
-            var uri = "https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?" + queryString;
+            string requestParameters = "visualFeatures=Categories&language=en";
+            string uri = "https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?" + requestParameters;
+            Console.WriteLine(uri);
 
             HttpResponseMessage response;
 
@@ -190,16 +188,15 @@ A successful response will be returned in JSON. Following is an example of a suc
 ```
 
 ## Get a Thumbnail with Computer Vision API Using C# <a name="GetThumbnail"> </a>
-Use the [Get Thumbnail method](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb) to  crop an image based on its region of interest (ROI) to the height and width you desire, even if the aspect ratio differs from the input image. 
+Use the [Get Thumbnail method](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb) to crop an image based on its region of interest (ROI) to the height and width you desire, even if the aspect ratio differs from the input image. 
 
 #### Get a Thumbnail C# Example Request
 
 ```c#
 using System;
-using System.Net.Http.Headers;
-using System.Text;
+using System.IO;
 using System.Net.Http;
-using System.Web;
+using System.Net.Http.Headers;
 
 namespace CSHttpClientSample
 {
@@ -207,43 +204,51 @@ namespace CSHttpClientSample
     {
         static void Main()
         {
-            MakeRequest();
-            Console.WriteLine("Hit ENTER to exit...");
+            Console.Write("Enter image file path: ");
+            string imageFilePath = Console.ReadLine();
+
+            MakeThumbNailRequest(imageFilePath);
+
+            Console.WriteLine("\n\n\nHit ENTER to exit...");
             Console.ReadLine();
         }
-        
-        static async void MakeRequest()
+
+        static byte[] GetImageAsByteArray(string imageFilePath)
+        {
+            FileStream fileStream = new FileStream(imageFilePath, FileMode.Open, FileAccess.Read);
+            BinaryReader binaryReader = new BinaryReader(fileStream);
+            return binaryReader.ReadBytes((int)fileStream.Length);
+        }
+
+        static async void MakeThumbNailRequest(string imageFilePath)
         {
             var client = new HttpClient();
-            var queryString = HttpUtility.ParseQueryString(string.Empty);
 
             // Request headers
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "13hc77781f7e4b19b5fcdd72a8df7156");
 
-            // Request parameters
-            queryString["width"] = "{number}";
-            queryString["height"] = "{number}";
-            queryString["smartCropping"] = "true";
-            var uri = "westus.api.cognitive.microsoft.com/vision/v1.0/generateThumbnail?" + queryString;
+            // Request parameters and URI
+            string requestParameters = "width=200&height=150&smartCropping=true";
+            string uri = "https://westus.api.cognitive.microsoft.com/vision/v1.0/generateThumbnail?" + requestParameters;
 
             HttpResponseMessage response;
 
-            // Request body
-            byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+            // Request body. Try this sample with a locally stored JPEG image.
+            byte[] byteData = GetImageAsByteArray(imageFilePath);
 
             using (var content = new ByteArrayContent(byteData))
             {
-               content.Headers.ContentType = new MediaTypeHeaderValue("< your content type, i.e. application/json >");
-               response = await client.PostAsync(uri, content);
+                // This example uses content type "application/octet-stream".
+                // The other content types you can use are "application/json" and "multipart/form-data".
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+                response = await client.PostAsync(uri, content);
             }
-
         }
     }
-}	
-
+}
 ```
 #### Get a Thumbnail Response
-A successful response contains the thumbnail image binary. If the request failed, the response contains an error code and a message to help determine what went wrong.
+A successful response contains the thumbnail image binary. If the request fails, the response will contain an error code and a message to help determine what went wrong.
 
 
 ## Optical Character Recognition (OCR) with Computer Vision API Using C#<a name="OCR"> </a>
@@ -252,10 +257,9 @@ Use the [Optical Character Recognition (OCR) method](https://westus.dev.cognitiv
 #### OCR C# Example Request
 ```C#
 using System;
-using System.Net.Http.Headers;
-using System.Text;
+using System.IO;
 using System.Net.Http;
-using System.Web;
+using System.Net.Http.Headers;
 
 namespace CSHttpClientSample
 {
@@ -263,43 +267,52 @@ namespace CSHttpClientSample
     {
         static void Main()
         {
-            MakeRequest();
-            Console.WriteLine("Hit ENTER to exit...");
+            Console.Write("Enter image file path: ");
+            string imageFilePath = Console.ReadLine();
+
+            MakeOCRRequest(imageFilePath);
+
+            Console.WriteLine("\n\n\nHit ENTER to exit...");
             Console.ReadLine();
         }
-        
-        static async void MakeRequest()
+
+        static byte[] GetImageAsByteArray(string imageFilePath)
+        {
+            FileStream fileStream = new FileStream(imageFilePath, FileMode.Open, FileAccess.Read);
+            BinaryReader binaryReader = new BinaryReader(fileStream);
+            return binaryReader.ReadBytes((int)fileStream.Length);
+        }
+
+        static async void MakeOCRRequest(string imageFilePath)
         {
             var client = new HttpClient();
-            var queryString = HttpUtility.ParseQueryString(string.Empty);
 
             // Request headers
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "13hc77781f7e4b19b5fcdd72a8df7156");
 
-            // Request parameters
-            queryString["language"] = "unk";
-            queryString["detectOrientation "] = "true";
-            var uri = "https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr?" + queryString;
+            // Request parameters and URI
+            string requestParameters = "language=unk&detectOrientation =true";
+            string uri = "https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr?" + requestParameters;
 
             HttpResponseMessage response;
 
-            // Request body
-            byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+            // Request body. Try this sample with a locally stored JPEG image.
+            byte[] byteData = GetImageAsByteArray(imageFilePath);
 
             using (var content = new ByteArrayContent(byteData))
             {
-               content.Headers.ContentType = new MediaTypeHeaderValue("< your content type, i.e. application/json >");
-               response = await client.PostAsync(uri, content);
+                // This example uses content type "application/octet-stream".
+                // The other content types you can use are "application/json" and "multipart/form-data".
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+                response = await client.PostAsync(uri, content);
             }
-
         }
     }
-}	
-
+}
 ```
 
 #### OCR Example Response
-Upon success, the OCR results are returned include include text, bounding box for regions, lines and words. 
+Upon success, the OCR results returned include text, bounding box for regions, lines, and words. 
 
 ```json
 {
