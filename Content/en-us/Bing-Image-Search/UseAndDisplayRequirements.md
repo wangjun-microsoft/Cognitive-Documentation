@@ -1,8 +1,8 @@
 <!-- 
-NavPath: Bing Autosuggest API
-LinkLabel: Bing Autosuggest Use and Display Requirements
+NavPath: Bing Image Search API
+LinkLabel: Bing Image Search Use and Display Requirements
 Weight: 10
-Url: Bing-autosuggest-API/useanddisplayrequirements
+Url: Bing-image-search-API/useanddisplayrequirements
 -->
 
 #Bing Search API Use and Display Requirements
