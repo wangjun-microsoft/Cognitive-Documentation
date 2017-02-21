@@ -54,5 +54,5 @@ en-AU    |   fr-CA  | ru-RU
 en-CA    |   fr-FR  | zh-CN    
 en-GB    |   hi-IN  | zh-HK    
 en-IN    |   it-IT  |  zh-TW 
-en-US    |   ko-KR  |      
+en-US    |   ja-JP  |      
 *ar-EG supports Modern Standard Arabic (MSA)
