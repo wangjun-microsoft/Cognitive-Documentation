@@ -48,11 +48,11 @@ Locales supported by Text to Speech API include:
 
 language-Country |language-Country | language-Country 
 ---------|----------|------------
-ar-EG*   |   es-ES  | pt-BR     
-de-DE    |   es-MX  | ru-RU 
-en-AU    |   fr-CA  | zh-CN    
-en-CA    |   fr-FR  | zh-HK    
-en-GB    |   hi-IN  | zh-TW    
-en-IN    |   it-IT  |   
-en-US    |   ja-JP  |      
+ar-EG*   |   es-ES  | ko-KR    
+de-DE    |   es-MX  | pt-BR 
+en-AU    |   fr-CA  | ru-RU   
+en-CA    |   fr-FR  | zh-CN    
+en-GB    |   hi-IN  | zh-HK    
+en-IN    |   it-IT  |  zh-TW 
+en-US    |   ko-KR  |      
 *ar-EG supports Modern Standard Arabic (MSA)
