@@ -9,7 +9,7 @@ Weight: 105
 This article provides information and code samples to help you quickly get started using the Computer Vision API with Python to accomplish the following tasks:
 * [Analyze an image](#AnalyzeImage) 
 * [Intelligently generate a thumbnail](#GetThumbnail)
-* [Detect and extract text from an Image](#OCR)
+* [Detect and extract text from an image](#OCR)
 
 Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe).
 
@@ -18,8 +18,8 @@ With the [Analyze Image method](https://westus.dev.cognitive.microsoft.com/docs/
 * The category defined in this [taxonomy](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy). 
 * A detailed list of tags related to the image content. 
 * A description of image content in a complete sentence. 
-* The coordinates, gender and age of any faces contained in the image.
-* The ImageType (clipart or a line drawing)
+* The coordinates, gender, and age of any faces contained in the image.
+* The ImageType (clipart or a line drawing).
 * The dominant color, the accent color, or whether an image is black & white.
 * Whether the image contains pornographic or sexually suggestive content. 
 
@@ -30,21 +30,24 @@ With the [Analyze Image method](https://westus.dev.cognitive.microsoft.com/docs/
 import httplib, urllib, base64
 
 headers = {
-    # Request headers
+    # Request headers. Replace the key below with your subscription key.
     'Content-Type': 'application/json',
-    'Ocp-Apim-Subscription-Key': '{subscription key}',
+    'Ocp-Apim-Subscription-Key': '13hc77781f7e4b19b5fcdd72a8df7156',
 }
 
 params = urllib.urlencode({
-    # Request parameters
+    # Request parameters. All of them are optional.
     'visualFeatures': 'Categories',
-    'details': '{string}',
+    'details': 'Celebrities',
     'language': 'en',
 })
 
+# Replace the three dots below with the URL of a JPEG image of a celebrity.
+body = "{'url':'...'}"
+
 try:
     conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/vision/v1.0/analyze?%s" % params, "{body}", headers)
+    conn.request("POST", "/vision/v1.0/analyze?%s" % params, body, headers)
     response = conn.getresponse()
     data = response.read()
     print(data)
@@ -58,28 +61,30 @@ except Exception as e:
 import http.client, urllib.request, urllib.parse, urllib.error, base64
 
 headers = {
-    # Request headers
+    # Request headers. Replace the key below with your subscription key.
     'Content-Type': 'application/json',
-    'Ocp-Apim-Subscription-Key': '{subscription key}',
+    'Ocp-Apim-Subscription-Key': '13hc77781f7e4b19b5fcdd72a8df7156',
 }
 
 params = urllib.parse.urlencode({
-    # Request parameters
+    # Request parameters. All of them are optional.
     'visualFeatures': 'Categories',
-    'details': '{string}',
+    'details': 'Celebrities',
     'language': 'en',
 })
 
+# Replace the three dots below with the URL of a JPEG image of a celebrity.
+body = "{'url':'...'}"
+
 try:
     conn = http.client.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/vision/v1.0/analyze?%s" % params, "{body}", headers)
+    conn.request("POST", "/vision/v1.0/analyze?%s" % params, body, headers)
     response = conn.getresponse()
     data = response.read()
     print(data)
     conn.close()
 except Exception as e:
     print("[Errno {0}] {1}".format(e.errno, e.strerror))
-
 ####################################
 
 ```
@@ -198,21 +203,24 @@ Use the [Get Thumbnail method](https://westus.dev.cognitive.microsoft.com/docs/s
 import httplib, urllib, base64
 
 headers = {
-    # Request headers
+    # Request headers. Replace the key below with your subscription key.
     'Content-Type': 'application/json',
-    'Ocp-Apim-Subscription-Key': '{subscription key}',
+    'Ocp-Apim-Subscription-Key': '13hc77781f7e4b19b5fcdd72a8df7156',
 }
 
 params = urllib.urlencode({
-    # Request parameters
-    'width': '{number}',
-    'height': '{number}',
+    # Request parameters. The smartCropping flag is optional.
+    'width': '150',
+    'height': '100',
     'smartCropping': 'true',
 })
 
+# Replace the three dots below with the URL of the JEPG image for which you want a thumbnail.
+body = "{'url':'...'}"
+
 try:
     conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/vision/v1.0/generateThumbnail?%s" % params, "{body}", headers)
+    conn.request("POST", "/vision/v1.0/generateThumbnail?%s" % params, body, headers)
     response = conn.getresponse()
     data = response.read()
     print(data)
@@ -226,34 +234,35 @@ except Exception as e:
 import http.client, urllib.request, urllib.parse, urllib.error, base64
 
 headers = {
-    # Request headers
+    # Request headers. Replace the key below with your subscription key.
     'Content-Type': 'application/json',
-    'Ocp-Apim-Subscription-Key': '{subscription key}',
+    'Ocp-Apim-Subscription-Key': '13hc77781f7e4b19b5fcdd72a8df7156',
 }
 
 params = urllib.parse.urlencode({
-    # Request parameters
-    'width': '{number}',
-    'height': '{number}',
+    # Request parameters. The smartCropping flag is optional.
+    'width': '150',
+    'height': '100',
     'smartCropping': 'true',
 })
 
+# Replace the three dots below with the URL of the JEPG image for which you want a thumbnail.
+body = "{'url':'...'}"
+
 try:
     conn = http.client.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/vision/v1.0/generateThumbnail?%s" % params, "{body}", headers)
+    conn.request("POST", "/vision/v1.0/generateThumbnail?%s" % params, body, headers)
     response = conn.getresponse()
     data = response.read()
     print(data)
     conn.close()
 except Exception as e:
     print("[Errno {0}] {1}".format(e.errno, e.strerror))
-
 ####################################
-
 ```
 
 #### Get a Thumbnail Response
-A successful response contains the thumbnail image binary. If the request failed, the response contains an error code and a message to help determine what went wrong.
+A successful response contains the thumbnail image binary. If the request fails, the response will contain an error code and a message to help determine what went wrong.
 
 
 ## Optical Character Recognition (OCR) with Computer Vision API Using Python <a name="OCR"> </a>
@@ -265,20 +274,23 @@ Use the [Optical Character Recognition (OCR) method](https://westus.dev.cognitiv
 import httplib, urllib, base64
 
 headers = {
-    # Request headers
+    # Request headers. Replace the key below with your subscription key.
     'Content-Type': 'application/json',
-    'Ocp-Apim-Subscription-Key': '{subscription key}',
+    'Ocp-Apim-Subscription-Key': '13hc77781f7e4b19b5fcdd72a8df7156',
 }
 
 params = urllib.urlencode({
-    # Request parameters
+    # Request parameters. The language setting "unk" means automatically detect the language.
     'language': 'unk',
     'detectOrientation ': 'true',
 })
 
+# Replace the three dots below with the URL of a JEPG image containing text.
+body = "{'url':'...'}"
+
 try:
     conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/vision/v1.0/ocr?%s" % params, "{body}", headers)
+    conn.request("POST", "/vision/v1.0/ocr?%s" % params, body, headers)
     response = conn.getresponse()
     data = response.read()
     print(data)
@@ -292,33 +304,35 @@ except Exception as e:
 import http.client, urllib.request, urllib.parse, urllib.error, base64
 
 headers = {
-    # Request headers
+    # Request headers. Replace the key below with your subscription key.
     'Content-Type': 'application/json',
-    'Ocp-Apim-Subscription-Key': '{subscription key}',
+    'Ocp-Apim-Subscription-Key': '13hc77781f7e4b19b5fcdd72a8df7156',
 }
 
 params = urllib.parse.urlencode({
-    # Request parameters
+    # Request parameters. The language setting "unk" means automatically detect the language.
     'language': 'unk',
     'detectOrientation ': 'true',
 })
 
+# Replace the three dots below with the URL of a JEPG image containing text.
+body = "{'url':'...'}"
+
 try:
     conn = http.client.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/vision/v1.0/ocr?%s" % params, "{body}", headers)
+    conn.request("POST", "/vision/v1.0/ocr?%s" % params, body, headers)
     response = conn.getresponse()
     data = response.read()
     print(data)
     conn.close()
 except Exception as e:
     print("[Errno {0}] {1}".format(e.errno, e.strerror))
-
 ####################################
 
 ```
 
 #### OCR Example Response
-Upon success, the OCR results are returned include include text, bounding box for regions, lines and words. 
+Upon success, the OCR results include the text from the image, as well as bounding boxes for regions, lines, and words. 
 
 ```json
 {
