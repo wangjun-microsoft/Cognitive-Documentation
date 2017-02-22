@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API/Entity Attributes
 LinkLabel: Conference Series Entity
 Url: Academic-Knowledge-API/documentation/EntityAttributes/ConferenceSeriesEntity
-Weight: 70
+Weight: 650
 -->
 
 # Conference Series Entity

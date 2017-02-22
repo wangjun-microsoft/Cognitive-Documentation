@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API/Entity Attributes
 LinkLabel: Paper Entity
 Url: Academic-Knowledge-API/documentation/EntityAttributes/PaperEntity
-Weight: 60
+Weight: 690
 -->
 # Paper Entity
 

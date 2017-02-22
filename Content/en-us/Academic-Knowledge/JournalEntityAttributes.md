@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API/Entity Attributes
 LinkLabel: Journal Entity
 Url: Academic-Knowledge-API/documentation/EntityAttributes/JournalEntity
-Weight: 65
+Weight: 630
 -->
 
 # Journal Entity

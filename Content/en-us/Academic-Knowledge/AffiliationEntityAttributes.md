@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API/Entity Attributes
 LinkLabel: Affiliation Entity
 Url: Academic-Knowledge-API/documentation/EntityAttributes/AffiliationEntity
-Weight: 80
+Weight: 670
 -->
 
 # Affiliation Entity

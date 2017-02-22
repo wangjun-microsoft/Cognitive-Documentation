@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API
 LinkLabel: Overview
 Url: Academic-Knowledge-API/documentation/overview
-Weight: 100
+Weight: 1000
 -->
 
 # Academic Knowledge API
