@@ -1,7 +1,7 @@
 <!-- 
 NavPath: Content Moderator
 LinkLabel: Get Started
-Url: content-moderator/documentation/quickstart
+Url: content-moderator/documentation/quick-start
 Weight: 190
 -->
 
