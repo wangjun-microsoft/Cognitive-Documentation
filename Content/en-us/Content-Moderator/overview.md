@@ -1,7 +1,7 @@
 <!--
 NavPath: Content Moderator
 LinkLabel: Overview
-Url: Content-Moderator/documentation
+Url: Content-Moderator/documentation/overview
 Weight: 200
 -->
 
