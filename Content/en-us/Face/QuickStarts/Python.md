@@ -8,7 +8,7 @@ Weight: 52
 # Face API Python Quick Starts
 This article provides information and code samples to help you quickly get started using the Face API with Python to accomplish the following tasks: 
 * [Detect Faces in Images](#Detect) 
-* [Identify Faces in Images](#Identify)
+* [Create a Person Group](#Create)
 
 Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe)
 
@@ -223,86 +223,72 @@ A successful response will be returned in JSON. Following is an example of a suc
     }
 ]
 ```
-## Identify Faces in Images With Face API Using Python <a name="Identify"> </a>
-Use the [Face - Identify method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
-identify people based on a detected face and people database (defined as a person group) which needs to be created in advance and can be edited over time
+## Create a Person Group With Face API Using Python <a name="Create"> </a>
+Use the [Person Group - Create a Person Group method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) 
+to create a new person group with specified personGroupId, name, and user-provided userData. A person group is one of the most important parameters for the Face - Identify API. The Identify API searches for persons' faces in a specified person group. 
 
-#### Face - Identify Python Example Request
+#### Person Group - Create a Person Group Example
 ```python
 ########### Python 2.7 #############
 import httplib, urllib, base64
 
 headers = {
-    # Request headers
+    # Request headers. Replace the placeholder key below with your subscription key.
     'Content-Type': 'application/json',
-    'Ocp-Apim-Subscription-Key': '{subscription key}',
+    'Ocp-Apim-Subscription-Key': '13hc77781f7e4b19b5fcdd72a8df7156',
 }
 
-params = urllib.urlencode({
-})
+# Replace 'examplegroupid' with an ID you haven't used for creating a group before.
+# The valid characters for the ID include numbers, English letters in lower case, '-' and '_'. 
+# The maximum length of the ID is 64.
+personGroupId = 'examplegroupid'
+
+# The userData field is optional. The size limit for it is 16KB.
+body = "{ 'name':'group1', 'userData':'user-provided data attached to the person group' }"
 
 try:
     conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/face/v1.0/identify?%s" % params, "{body}", headers)
+    conn.request("POST", "/face/v1.0/persongroups/%s" % personGroupId, body, headers)
     response = conn.getresponse()
-    data = response.read()
-    print(data)
+
+	# 'OK' indicates success. 'Conflict' means a group with this ID already exists.
+	# If you get 'Conflict', change the value of personGroupId above and try again.
+	# If you get 'Access Denied', verify the validity of the subscription key above and try again.
+    print(response.reason)
+
     conn.close()
 except Exception as e:
     print("[Errno {0}] {1}".format(e.errno, e.strerror))
-
 ####################################
 
 ########### Python 3.2 #############
-import http.client, urllib.request, urllib.parse, urllib.error, base64
+import http.client, urllib.request, urllib.parse, urllib.error, base64, sys
 
 headers = {
-    # Request headers
+    # Request headers. Replace the placeholder key below with your subscription key.
     'Content-Type': 'application/json',
-    'Ocp-Apim-Subscription-Key': '{subscription key}',
+    'Ocp-Apim-Subscription-Key': '13hc77781f7e4b19b5fcdd72a8df7156',
 }
 
-params = urllib.parse.urlencode({
-})
+# Replace 'examplegroupid' with an ID you haven't used for creating a group before.
+# The valid characters for the ID include numbers, English letters in lower case, '-' and '_'. 
+# The maximum length of the ID is 64.
+personGroupId = 'examplegroupid'
+
+# The userData field is optional. The size limit for it is 16KB.
+body = "{ 'name':'group1', 'userData':'user-provided data attached to the person group' }"
 
 try:
     conn = http.client.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/face/v1.0/identify?%s" % params, "{body}", headers)
+    conn.request("PUT", "/face/v1.0/persongroups/%s" % personGroupId, body, headers)
     response = conn.getresponse()
-    data = response.read()
-    print(data)
+
+	# 'OK' indicates success. 'Conflict' means a group with this ID already exists.
+	# If you get 'Conflict', change the value of personGroupId above and try again.
+	# If you get 'Access Denied', verify the validity of the subscription key above and try again.
+    print(response.reason)
+
     conn.close()
 except Exception as e:
-    print("[Errno {0}] {1}".format(e.errno, e.strerror))
-
+    print(e.args)
 ####################################
-
-```
-
-#### Face - Identify Response
-A successful response will be returned in JSON. Following is an example of a successful response: 
-```php
-{
-    [
-        {
-            "faceId":"c5c24a82-6845-4031-9d5d-978df9175426",
-            "candidates":[
-                {
-                    "personId":"25985303-c537-4467-b41d-bdb45cd95ca1",
-                    "confidence":0.92
-                }
-            ]
-        },
-        {
-            "faceId":"65d083d4-9447-47d1-af30-b626144bf0fb",
-            "candidates":[
-                {
-                    "personId":"2ae4935b-9659-44c3-977f-61fac20d0538",
-                    "confidence":0.89
-                }
-            ]
-        }
-    ]
-}
-```
-
