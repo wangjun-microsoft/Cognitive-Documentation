@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API
 LinkLabel: Interpret Method
 Url: Academic-Knowledge-API/documentation/InterpretMethod
-Weight: 95
+Weight: 990
 -->
 
 # Interpret Method

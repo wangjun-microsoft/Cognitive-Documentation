@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API/Entity Attributes
 LinkLabel: Conference Instance Entity
 Url: Academic-Knowledge-API/documentation/EntityAttributes/ConferenceInstanceEntity
-Weight: 75
+Weight: 640
 -->
 
 # Conference Instance Entity
