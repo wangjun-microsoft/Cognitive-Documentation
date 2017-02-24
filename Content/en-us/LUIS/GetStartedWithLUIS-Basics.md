@@ -43,6 +43,10 @@ Click **Save**, and the utterance will be presented for labeling. The intent "Bo
 
 Next, add a second intent called "GetWeather", with the example command that triggers the intent as "How is the weather in London". Click **Save**, then continue by accepting the presented utterance as a "GetWeather" intent and click **Submit**.
 
+######Important note on intent limit
+
+Up to 80 intents can be used in a single LUIS application.
+
 ######Defining entities
   
 On the left-hand panel, you will see an option to add entities. We'd like to be able to say what kind of travels we are interested in, and also, for planning purposes, to get an idea of what the weather is like at our travel destination. In order to capture the topic of "location", let's create the entity type: "Location". To do this, click the "**+**" button on the **Entities** bar, and fill in the resulting text entry box by typing "Location". You have now created a simple generic entity called "Location", often that is all you may need, but there are more advanced options.
