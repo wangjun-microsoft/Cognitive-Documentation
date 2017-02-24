@@ -8,7 +8,7 @@ Weight: 60
 # Face API C# Quick Starts
 This article provides information and code samples to help you quickly get started using the Face API with C# to accomplish the following tasks: 
 * [Detect Faces in Images](#Detect) 
-* [Identify Faces in Images](#Identify)
+* [Create a Person Group](#Create)
 
 ## Prerequisites
 * Get the Microsoft Face API Windows SDK [here](https://github.com/Microsoft/Cognitive-face-windows)
@@ -26,10 +26,9 @@ to detect faces in an image and return face attributes including:
 The sample is written in C# using the Face API client library. 
 ```c#
 using System;
+using System.IO;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Net.Http;
-using System.Web;
 
 namespace CSHttpClientSample
 {
@@ -37,40 +36,53 @@ namespace CSHttpClientSample
     {
         static void Main()
         {
-            MakeRequest();
-            Console.WriteLine("Hit ENTER to exit...");
+            Console.Write("Enter the path to the JPEG image with faces to identify:");
+            string imageFilePath = Console.ReadLine();
+
+            MakeDetectRequest(imageFilePath);
+
+            Console.WriteLine("\n\n\nWait for the result below, then hit ENTER to exit...\n\n\n");
             Console.ReadLine();
         }
-        
-        static async void MakeRequest()
+
+        static byte[] GetImageAsByteArray(string imageFilePath)
+        {
+            FileStream fileStream = new FileStream(imageFilePath, FileMode.Open, FileAccess.Read);
+            BinaryReader binaryReader = new BinaryReader(fileStream);
+            return binaryReader.ReadBytes((int)fileStream.Length);
+        }
+
+        static async void MakeDetectRequest(string imageFilePath)
         {
             var client = new HttpClient();
-            var queryString = HttpUtility.ParseQueryString(string.Empty);
 
-            // Request headers
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
+            // Request headers - replace this example key with your valid key.
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "6726adbabb494773a28a7a5a21d5974a");
 
-            // Request parameters
-            queryString["returnFaceId"] = "true";
-            queryString["returnFaceLandmarks"] = "false";
-            queryString["returnFaceAttributes"] = "{string}";
-            var uri = "https://westus.api.cognitive.microsoft.com/face/v1.0/detect?" + queryString;
+            // Request parameters and URI string.
+            string queryString = "returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age,gender";
+            string uri = "https://westus.api.cognitive.microsoft.com/face/v1.0/detect?" + queryString;
 
             HttpResponseMessage response;
+            string responseContent;
 
-            // Request body
-            byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+            // Request body. Try this sample with a locally stored JPEG image.
+            byte[] byteData = GetImageAsByteArray(imageFilePath);
 
             using (var content = new ByteArrayContent(byteData))
             {
-               content.Headers.ContentType = new MediaTypeHeaderValue("< your content type, i.e. application/json >");
-               response = await client.PostAsync(uri, content);
+                // This example uses content type "application/octet-stream".
+                // The other content types you can use are "application/json" and "multipart/form-data".
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+                response = await client.PostAsync(uri, content);
+                responseContent = response.Content.ReadAsStringAsync().Result;
             }
 
+            //A peak at the JSON response.
+            Console.WriteLine(responseContent);
         }
     }
-}	
-
+}
 ```
 #### Face - Detect Response
 A successful response will be returned in JSON. Following is an example of a successful response: 
@@ -215,17 +227,15 @@ A successful response will be returned in JSON. Following is an example of a suc
     }
 ]
 ```
-## Identify Faces in Images With Face API Using C# <a name="Identify"> </a>
-Use the [Face - Identify method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
-identify people based on a detected face and people database (defined as a person group) which needs to be created in advance and can be edited over time
+## Create a Person Group With Face API Using C# <a name="Create"> </a>
+Use the [Person Group - Create a Person Group method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) to
+create a new person group with specified personGroupId, name, and user-provided userData.
 
-#### Face - Identify C# Example Request
+#### Person Group - Create a Person Group C# Example Request
 ```C#
 using System;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Net.Http;
-using System.Web;
 
 namespace CSHttpClientSample
 {
@@ -233,61 +243,38 @@ namespace CSHttpClientSample
     {
         static void Main()
         {
-            MakeRequest();
-            Console.WriteLine("Hit ENTER to exit...");
+            Console.WriteLine("Enter an ID for the group you wish to create:");
+            Console.WriteLine("(Use numbers, lower case letters, '-' and '_'. The maximum length of the personGroupId is 64.)");
+
+            string personGroupId = Console.ReadLine();
+            MakeCreateGroupRequest(personGroupId);
+
+            Console.WriteLine("\n\n\nWait for the result below, then hit ENTER to exit...\n\n\n");
             Console.ReadLine();
         }
-        
-        static async void MakeRequest()
+
+
+        static async void MakeCreateGroupRequest(string personGroupId)
         {
             var client = new HttpClient();
-            var queryString = HttpUtility.ParseQueryString(string.Empty);
 
-            // Request headers
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
+            // Request headers - replace this example key with your valid key.
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "6726adbabb494773a28a7a5a21d5974a");
 
-            var uri = "https://westus.api.cognitive.microsoft.com/face/v1.0/identify?" + queryString;
+            // Request URI string.
+            string uri = "https://westus.api.cognitive.microsoft.com/face/v1.0/persongroups/" + personGroupId;
 
-            HttpResponseMessage response;
+            // Here "name" is for display and doesn't have to be unique. Also, "userData" is optional.
+            string json = "{\"name\":\"My Group\", \"userData\":\"Some data related to my group.\"}";
+            HttpContent content = new StringContent(json);
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            // Request body
-            byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+            HttpResponseMessage response = await client.PutAsync(uri, content);
 
-            using (var content = new ByteArrayContent(byteData))
-            {
-               content.Headers.ContentType = new MediaTypeHeaderValue("< your content type, i.e. application/json >");
-               response = await client.PostAsync(uri, content);
-            }
-
+            // If the group was created successfully, you'll see "OK".
+            // Otherwise, if a group with the same personGroupId has been created before, you'll see "Conflict".
+            Console.WriteLine("Response status: " + response.StatusCode);
         }
     }
-}	
-
-```
-#### Face - Identify Response
-A successful response will be returned in JSON. Following is an example of a successful response: 
-```php
-{
-    [
-        {
-            "faceId":"c5c24a82-6845-4031-9d5d-978df9175426",
-            "candidates":[
-                {
-                    "personId":"25985303-c537-4467-b41d-bdb45cd95ca1",
-                    "confidence":0.92
-                }
-            ]
-        },
-        {
-            "faceId":"65d083d4-9447-47d1-af30-b626144bf0fb",
-            "candidates":[
-                {
-                    "personId":"2ae4935b-9659-44c3-977f-61fac20d0538",
-                    "confidence":0.89
-                }
-            ]
-        }
-    ]
 }
 ```
-
