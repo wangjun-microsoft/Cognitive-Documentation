@@ -39,20 +39,20 @@ To select a period to display its hits:
   
 ##Intent Breakdown
 The dashboard displays a breakdown of intents based on labeled utterances or endpoint hits. It visualizes the distribution of intents across labeled utterances/endpoint hits, so that you can see the relative importance of each intent in the app. The intent breakdown is visualized by a pie chart with the slices representing intents. When you hover your mouse pointer over a slice, you'll see the intent name and the percentage it represents of the total count of labeled utterances/endpoint hits. 
-![Intent Breakdown](/Content/en-us/LUIS/Images/Dashboard-IntentBreakdown.JPG)
+![Intent Breakdown](/Content/en-us/LUIS/Images/Dashboard-IntentBreakdown.jpg)
 
 To control whether the breakdown is based on labeled utterances or endpoint hits:
 
 1. Click the **Additional Settings** icon ![Additional Settings button](/Content/en-us/LUIS/Images/Dashboard-Settings-btn.JPG).
-![Intent Breakdown List](/Content/en-us/LUIS/Images/Dashboard-IntentBreakdownlist.JPG)
+![Intent Breakdown List](/Content/en-us/LUIS/Images/Dashboard-IntentBreakdownlist.jpg)
 2. Select a value from the list and then click the back arrow ![Back Arrow](/Content/en-us/LUIS/Images/Dashboard-backArrow.JPG) to display the chart accordingly.
 
 ##Entity Breakdown
 The dashboard displays a breakdown of entities based on labeled utterances or endpoint hits. It visualizes the distribution of entities across labeled utterances/endpoint hits, showing the usage of each entity in labeled utterances/endpoint hits compared to the other entities. The entity breakdown is visualized by a column chart where entities are displayed along the horizontal axis while their count in labeled utterances/endpoint hits along the vertical axis. When you hover your mouse pointer over a rectangular bar, you'll see the entity name and its count (number of occurrences) in labeled utterances/endpoint hits. 
-![Entity Breakdown](/Content/en-us/LUIS/Images/Dashboard-EntityBreakdown.JPG)
+![Entity Breakdown](/Content/en-us/LUIS/Images/Dashboard-EntityBreakdown.jpg)
 
 To control whether the breakdown is based on labeled utterances or endpoint hits:
 
 1. Click the **Additional Settings** icon ![Additional Settings button](/Content/en-us/LUIS/Images/Dashboard-Settings-btn.JPG).
-![Entity Breakdown List](/Content/en-us/LUIS/Images/Dashboard-EntityBreakdownlist.JPG)
+![Entity Breakdown List](/Content/en-us/LUIS/Images/Dashboard-EntityBreakdownlist.jpg)
 2. Select a value from the list and then click the back arrow ![Back Arrow](/Content/en-us/LUIS/Images/Dashboard-backArrow.JPG) to display the chart accordingly.
