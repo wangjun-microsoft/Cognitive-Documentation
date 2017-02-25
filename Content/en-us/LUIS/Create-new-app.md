@@ -14,7 +14,7 @@ We are going to create the TravelAgent app and use it as an example application 
 
 1.	On **My Apps** page, click **New App**.
 2.	In the dialog box, name your application "TravelAgent".
-![A new app form](/Content/en-us/LUIS/NewApp-Form.PNG)
+![A new app form](/Content/en-us/LUIS/images/NewApp-Form.PNG)
 3. Choose your application culture (for TravelAgent app, we’ll choose English).
 4. Choose a usage scenario, and then click **Next**.
  A usage scenario describes how your LUIS app will be used.
