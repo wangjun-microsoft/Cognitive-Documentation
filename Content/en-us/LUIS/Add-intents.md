@@ -21,6 +21,7 @@ In the following procedure, we'll start adding the "Bookflight" intent in the Tr
 ![Intents List](/Content/en-us/LUIS/Images/IntentsList.JPG)
 3. In the **Add Intent** dialog box, type the intent name "BookFlight" and click **Save**.
 ![Add Intent](/Content/en-us/LUIS/Images/Addintent-dialogbox.JPG)
+
 This will take you directly to the intent details page of the newly added intent "Bookflight", like the screenshot below, in order to add utterances for this intent. For instructions on adding utterances, see [Add example utterances](Add-example-utterances.md). 
 ![Intent Details page](/Content/en-us/LUIS/Images/IntentDetails-UtterancesTab1.JPG)
 
