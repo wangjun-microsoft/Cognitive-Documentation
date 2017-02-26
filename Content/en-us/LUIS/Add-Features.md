@@ -7,7 +7,7 @@ Weight: 85
 
 #Add Features
 
-Features help you improve the detection/prediction of intents and entities in utterances. For example, when your app fails to identify an entity, adding a “phrase list” feature with some or all of the entity’s potential values will improve the detection of this entity. Also, adding a “pattern” feature helps your application easily recognize regular patterns that are frequently used in your application's domain, such as the pattern of flight numbers in a travel app or product codes in a shopping app. 
+Features help you improve the detection or prediction of intents and entities in utterances. For example, when your app fails to identify an entity, adding a “phrase list” feature with some or all of the entity’s potential values will improve the detection of this entity. Also, adding a “pattern” feature helps your application easily recognize regular patterns that are frequently used in your application's domain, such as the pattern of flight numbers in a travel app or product codes in a shopping app. 
 
 
 ##Phrase list features
@@ -19,7 +19,7 @@ LUIS may be unable to recognize rare and proprietary words, as well as foreign w
 
 1. Open your app by clicking its name on **My Apps** page, and then click **Features** in your app's left panel. 
 2. On the **Features** page, click **Add phrase list**. 
- ![Features page - Phrase List Features tab](/Content/en-us/LUIS/Images/features.JPG)
+ ![Features page - Phrase List Features tab](/Content/en-us/LUIS/Images/Features.JPG)
 3. In the **Add Phrase List** dialog box, type "Cities" as the name of the phrase list in the **Phrase list name** text box.
 5. In **Phrase list values**, type the values you want to include in the phrase list, separated by **commas** (e.g. London, Paris, Seattle, Berlin, Dubai, Cairo)  
 ![Add phrase list dialog box](/Content/en-us/LUIS/Images/Features-AddPhraseList.JPG)
