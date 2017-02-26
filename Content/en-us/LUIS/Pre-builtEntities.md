@@ -9,9 +9,9 @@ Weight: 79
 
 LUIS includes a set of pre-built entities. When a pre-built entity is included in your application, its predictions will be included in your published application and be available to you in the LUIS web UI while labeling utterances. The behavior of pre-built entities **cannot** be modified. Unless otherwise noted, pre-built entities are available in all LUIS application locales (cultures). Below is a table of pre-built entities supported per culture.
 
-Pre-built entity   |   en-US   |   fr-FR   |   it-IT   |   es-ES   |   zh-CN   |   de-DE   |   pt-BR   |   ja-JP   |   ko-kr   
-------|------|------|------|------|------|------|------|------|
-Datetime   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   -   |   -   |   -   |   -   |
+Pre-built entity   |   en-US   |   fr-FR   |   it-IT   |   es-ES   |   zh-CN   |   de-DE   |   pt-BR   |   ja-JP   |   ko-kr
+------|------|------|------|------|------|------|------|------|------|
+ Datetime   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   -   |   -   |   -   |   -   |
 Number   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   -   |   -   |   -   |   -   |
 Ordinal   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   -   |   -   |   -   |   -   |
 Percentage   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   :ballot_box_with_check:   |   -   |   -   |   -   |   -   |
