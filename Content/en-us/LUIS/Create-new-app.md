@@ -6,7 +6,7 @@ Weight: 95
 -->
 
 #Create a New App
-You can create an manage your applications on **My Apps** page. You can always access this page by clicking **My Apps** on the top navigation bar of LUIS web page. We are going to create the TravelAgent app and use it as an example application to work on throughout LUIS help topics.
+You can create and manage your applications on **My Apps** page. You can always access this page by clicking **My Apps** on the top navigation bar of LUIS web page. We are going to create the TravelAgent app and use it as an example application to work on throughout LUIS help topics.
 
 **To create a new app:**
 
@@ -26,4 +26,4 @@ You can create an manage your applications on **My Apps** page. You can always a
 ![Domains](/Content/en-us/LUIS/Images/NewApp-Domains.jpg)
 
 LUIS creates the TravelAgent app and opens its main page which looks like the following screen. Use the navigation links in the left panel to move through your app pages to define data and work on your app. Your first task in the app is to add intents. For more info on how to add intents, see [Add intents](Add-intents.md).
-  ![TravelAgent app created and Opened](/Content/en-us/LUIS/Images/AppCreated&Opened.jpg)
+  ![TravelAgent app created and Opened](/Content/en-us/LUIS/Images/AppCreated_Opened.jpg)
