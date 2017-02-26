@@ -6,9 +6,7 @@ Weight: 95
 -->
 
 #Create a New App
-You can always access this page by clicking **My Apps** on the top navigation bar of LUIS web page.
-
-We are going to create the TravelAgent app and use it as an example application to work on throughout LUIS help topics.
+You can create an manage your applications on **My Apps** page. You can always access this page by clicking **My Apps** on the top navigation bar of LUIS web page. We are going to create the TravelAgent app and use it as an example application to work on throughout LUIS help topics.
 
 **To create a new app:**
 
