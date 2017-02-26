@@ -56,6 +56,7 @@ You can create a structured “pattern” to represent a certain class of object
 **To edit a pattern:**
 
 * Click the pattern name in the list of pattern features. In the **Edit Pattern** dialog box that opens, make the required editing changes and then click **Save**.
+
 ![Edit Pattern dialog box](/Content/en-us/LUIS/Images/Features-EditPattern.JPG)
 
 **To delete a pattern:** 
