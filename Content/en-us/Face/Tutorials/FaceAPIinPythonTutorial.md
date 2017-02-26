@@ -11,52 +11,49 @@ In this tutorial, you will learn to invoke the Face API via the Python SDK to de
 
 ## Table of Contents
 
-- [Preparation](#preparation)
-- [Install Python SDK for the Face API](#sdk-install)
-- [Subscribe for Face API and get your subscription key](#subscription)
-- [Play with Python SDK to detect faces](#sdk-play)
-- [Further Postprocess](#further)
+- [Prerequisites](#prerequisites)
+- [Detect a Face in an Image](#sdk-example)
+- [Further Exploration](#further)
 - [Summary](#summary)
 - [Related Topics](#related)
 
-## <a name="preparation"></a> Preparation
+## <a name="prerequisites"></a> Prerequisites
 
-To use the tutorial, you will need the following prerequisites:
+To use the tutorial, you will need to do the following:
 
-- Python environment (Python 2.7+ and Python 3.5+ is recommended)
-
-## <a name="sdk-install"></a> Install Python SDK for the Face API
+- Install either Python 2.7 or Python 3.5.
+- Install pip for Windows.
+- Install the Python SDK for the Face API as follows:
 
 ```bash
 pip install cognitive_face
 ```
 
-## <a name="subscription"></a> Subscribe for Face API and get your subscription key
+- Obtain a [subscription key](https://www.microsoft.com/cognitive-services/en-us/sign-up) for Microsoft Cognitive Services (formerly Project Oxford). You can use either your primary or your secondary key in this tutorial. (Note that to use any Face API, you must have a valid subscription key.)
 
-Before using any Face API, you must sign up to subscribe to Face API in the Microsoft Cognitive Services (formerly Project Oxford) portal. See [subscriptions](https://www.microsoft.com/cognitive-services/en-us/sign-up). Both primary and secondary key can be used in this tutorial.
-
-## <a name="sdk-play"></a> Play with Python SDK to detect faces
+## <a name="sdk-example"></a> Detect a Face in an Image
 
 ```python
 import cognitive_face as CF
 
-KEY = 'subscription key'  # Replace with a valid Subscription Key here.
+KEY = 'subscription key'  # Replace with a valid subscription key (keeping the quotes in place).
 CF.Key.set(KEY)
 
+# You can use this example JPG or replace the URL below with your own URL to a JPEG image.
 img_url = 'https://raw.githubusercontent.com/Microsoft/Cognitive-Face-Windows/master/Data/detection1.jpg'
 result = CF.face.detect(img_url)
 print result
 ```
 
-This code snippet should show something similar as following. It's a `list` of detected faces and each item is a `dict` instance where `faceId` is a unique ID of the detected face expired in 24 hours and `faceRectangle` describes the postion of the detected face.
+Below is an example result. It's a `list` of detected faces. Each item in the list is a `dict` instance where `faceId` is a unique ID for the detected face and `faceRectangle` describes the postion of the detected face. A face ID expires in 24 hours.
 
 ```python
 [{u'faceId': u'68a0f8cf-9dba-4a25-afb3-f9cdf57cca51', u'faceRectangle': {u'width': 89, u'top': 66, u'height': 89, u'left': 446}}]
 ```
 
-## <a name='further'></a> Further Postprocess
+## <a name='further'></a> Further Exploration
 
-For further postprocess, A GUI sample built with wxPython is also provided.  Before execution, please install [wxPython](https://wxpython.org/) as well as Python and the SDK metioned above.
+To help you further explore the Face API, this tutorial provides a GUI sample. To run it, first install [wxPython](https://wxpython.org/) then run the commands below.
 
 ```bash
 git clone https://github.com/Microsoft/Cognitive-Face-Python.git
