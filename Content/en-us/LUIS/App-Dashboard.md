@@ -24,6 +24,7 @@ The dashboard displays the total numbers of intents, entities & labeled utteranc
 
 ##Endpoint Hits
 The dashboard displays the total endpoint hits received to the app and enables you to display hits within a period that you specify.
+
 ![Endpoint Hits](/Content/en-us/LUIS/Images/Dashboard-endpointHits.JPG)
  
  * **Total endpoint hits:** The total number of endpoint hits received to your app since app creation up to the current date.
