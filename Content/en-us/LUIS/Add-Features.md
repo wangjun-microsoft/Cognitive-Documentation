@@ -46,7 +46,7 @@ You can create a structured “pattern” to represent a certain class of object
 2. On the **Features** page, click the **Pattern Features** tab, and then click **Add Pattern Feature**.
 ![Features page - Pattern Features tab](/Content/en-us/LUIS/Images/Features-patternTab.JPG)
 3. In the **Add Pattern** dialog box, type "Flight number" in the **Pattern name** text box.
-4.  To learn about the supported regex syntax, click**learn about supported regex syntax** to expand the dialog and display it, as in the screen below. To collapse the dialog and hide syntax, click it again.
+4.  To learn about the supported regex syntax, click **learn about supported regex syntax** to expand the dialog and display it, as in the screen below. To collapse the dialog and hide syntax, click it again.
 ![The supported regex syntax](/Content/en-us/LUIS/Images/Features-Pattern-RegexSyntax.JPG)
 5. In the **Pattern value** text box, type [A-Za-z]{2}[0-9]{3} as the value of the flight number pattern.
 ![Add pattern feature](/Content/en-us/LUIS/Images/Features-AddPattern.JPG)
