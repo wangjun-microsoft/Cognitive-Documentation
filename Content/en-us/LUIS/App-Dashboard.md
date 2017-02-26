@@ -30,10 +30,13 @@ The dashboard displays the total endpoint hits received to the app and enables y
  * **Total endpoint hits:** The total number of endpoint hits received to your app since app creation up to the current date.
 
  * **Endpoint hits per period:** The number of hits received within a past period, displayed per day. A visualized line chart shows the period span from the calculated start date up to the current date (end date). The points between the start and end dates represent the days falling in this period. Hover your mouse pointer over each point to see the hits count in each day within the period. The screenshot below shows the .
-![Hits per Period](/Content/en-us/LUIS/Images/Dashboard-PeriodHitsChart.JPG)
+![Hits per Period](/Content/en-us/LUIS/Images/Dashboard-PeriodhitsChart.JPG)
+
 To select a period to display its hits:
 1. Click the **Additional Settings** icon ![Additional Settings button](/Content/en-us/LUIS/Images/Dashboard-Settings-btn.JPG) to access the periods list. You can select periods ranging from one week up to one year beforehand. 
+
 ![Endpoint Hits per Period](/Content/en-us/LUIS/Images/Dashboard-hitsPerPeriod.JPG)
+
 2. Select a period from the list and then click the back arrow ![Back Arrow](/Content/en-us/LUIS/Images/Dashboard-backArrow.JPG) to display it.
 
  * **Key usage**: The number of hits consumed from the application's subscription key. For more details about subscription keys, see [Manage Keys](manage-keys.md). 
