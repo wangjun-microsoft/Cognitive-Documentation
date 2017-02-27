@@ -1,7 +1,7 @@
 <!-- 
 NavPath: LUIS API
-LinkLabel: Cortana Prebuilt App
-Url: LUIS-api/documentation/home
+LinkLabel: Prebuilt App
+Url: LUIS-api/documentation/Cortana-Prebuilt-App
 Weight: 75
 -->
 
