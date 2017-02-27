@@ -1,8 +1,8 @@
 <!-- 
 NavPath: LUIS API
 LinkLabel: Active learning
-Url: LUIS-api/documentation/home
-Weight: 85
+Url: LUIS-api/documentation/Label-Suggested-Utterances
+Weight: 81
 -->
 
 #Label Suggested Utterances
