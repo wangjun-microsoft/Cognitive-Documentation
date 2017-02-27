@@ -17,7 +17,7 @@ use data you receive from the Bing Spell Check or Bing Autosuggest APIs as part 
 
 ##2.  BING WEB SEARCH, IMAGE SEARCH, NEWS SEARCH and VIDEO SEARCH APIs (the “Search APIs”):
 
-**Definitions.** The following definitions apply in Sections 2 through 5 of these use and display requirements:
+**Definitions.** The following definitions apply in Sections 2 through 7 of these use and display requirements:
 “answer” refers to a category of results returned in a response. For example, a response from the Bing Web Search API may include answers in the categories of webpage results, image, video, and news;
 “response” means any and all answers and associated data received in response to a single call to a Search API;
 “result” refers to an item of information in an answer.  For example, the set of data connected with a single news article is a result in a news answer.
