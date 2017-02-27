@@ -2,7 +2,7 @@
 NavPath: LUIS API
 LinkLabel: Training & Testing
 Url: LUIS-api/documentation/home
-Weight: 93
+Weight: 85
 -->
 
 #Train and test your app
@@ -15,7 +15,7 @@ You should continuously work on your application to refine it and improve its la
 1. Access your app (e.g. TravelAgent) by clicking its name on **My Apps** page. 
 2. In your app, click **Train & Test** in the left panel. 
 3. On the **Test App** page, click **Train Application** to train the current model on the latest updates.
-![Train & Test App page](/Content/en-us/LUIS/Images/train&test-app.JPG)
+![Train & Test App page](/Content/en-us/LUIS/Images/Train_Test-app.JPG)
 
  > **Note:**
 If you have one or more intents in your app which do not contain example utterances, you'll not be able to train your app until you add utterances for all your intents. For more information, see [Add example utterances](Add-example-utterances.md).
@@ -31,14 +31,14 @@ LUIS provides two types of testing; interactive testing and batch testing. You c
 - If you haven't already trained your current model on recent updates, then your test page will look like this screenshot:
 ![Train app before testing](/Content/en-us/LUIS/Images/TestApp-trainfirst.JPG)
 - If your model is trained, your test page will look like this screenshot:
-![Train & Test App page](/Content/en-us/LUIS/Images/train&Test-app.JPG)
+![Train & Test App page](/Content/en-us/LUIS/Images/Train_Test-app.JPG)
 
  
 ###Interactive Testing
 Interactive testing enables you to test both the current and published versions of your app and compare their results in one screen. Interactive testing runs by default on the current trained model only. For a published model, interactive testing is disabled and needs your action to enable it, because it is counted in hits and will be deducted from your key balance. 
 
 The **Interactive Testing** tab is divided into two sections (as in the screenshot):
-![Train & Test App page](/Content/en-us/LUIS/Images/train&Test-app.JPG)
+![Train & Test App page](/Content/en-us/LUIS/Images/Train_Test-app.JPG)
 
 * **The test view**, on the left side of the screen, where you can type the test utterance in the text box and press Enter to submit it to your app. 
 
