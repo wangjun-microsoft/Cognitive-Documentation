@@ -91,27 +91,27 @@ Utterances which contain unsaved changes are highlighted in light yellow. You ca
 
 **To apply filter(s):**
 
-1. Click the filter button ![Filter button](/Content/en-us/LUIS/Images/Filter-button.JPG), at the top right corner of the utterances list, to display all filters.
+1. Click the filter button ![Filter button](/Content/en-us/LUIS/Images/Filter-button.jpg), at the top right corner of the utterances list, to display all filters.
 2. Click on the filter(s) that you want to apply on utterances. For the **Entity** filter, select the entity by which you want to filter utterances. 
-![Filtering utterances](/Content/en-us/LUIS/Images/filtering-utterances.JPG)
+![Filtering utterances](/Content/en-us/LUIS/Images/Filtering-utterances.JPG)
 
 The applied filters appear as green buttons at the top left corner of the utterances list. 
 
 * To clear an applied filter, click its button at the top left corner.
-* To clear all applied filters, click all their corresponding buttons, or just click the filter button ![Filter button](/Content/en-us/LUIS/Images/Filter-button.JPG).
+* To clear all applied filters, click all their corresponding buttons, or just click the filter button ![Filter button](/Content/en-us/LUIS/Images/Filter-button.jpg).
 
 
 ##Choose labels view in utterances
 You can control how you see the words labeled as entities in the utterances by selecting one of the available views for labeled entities.  At the top of the utterances list, select a view from the **Labels view** list. These are the available views:
 
  * **Entities:** Shows entity-labeled words in tagged format (entity labels), enclosed in square brackets, with only composite entities displayed as normal text between curly brackets. 
-  ![Entities View](/Content/en-us/LUIS/Images/labels-view1.JPG)
+  ![Entities View](/Content/en-us/LUIS/Images/lLabels-view1.JPG)
   
  * **Tokens:** Shows all entity-labeled words in text format (normal text), enclosed in square brackets except composite entities in curly brackets. 
- ![Tokens View](/Content/en-us/LUIS/Images/labels-view2.JPG)
+ ![Tokens View](/Content/en-us/LUIS/Images/Labels-view2.JPG)
  
  * **Composite entities:** Shows only the words labeled as composite entities in tagged format (entity labels), enclosed in curly brackets.
-   ![Composite Entities View](/Content/en-us/LUIS/Images/labels-view3.JPG)
+   ![Composite Entities View](/Content/en-us/LUIS/Images/Labels-view3.JPG)
 
 
 You can press <kbd>Ctrl+E</kbd>to quickly switch between views. 
