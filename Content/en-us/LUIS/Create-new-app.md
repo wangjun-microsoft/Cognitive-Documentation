@@ -1,7 +1,7 @@
 <!-- 
 NavPath: LUIS API
-LinkLabel: Create-new-app
-Url: LUIS-api/documentation/home
+LinkLabel: Applications
+Url: LUIS-api/documentation/Create-new-app
 Weight: 95
 -->
 
