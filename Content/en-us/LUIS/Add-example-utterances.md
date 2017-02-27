@@ -105,7 +105,7 @@ The applied filters appear as green buttons at the top left corner of the uttera
 You can control how you see the words labeled as entities in the utterances by selecting one of the available views for labeled entities.  At the top of the utterances list, select a view from the **Labels view** list. These are the available views:
 
  * **Entities:** Shows entity-labeled words in tagged format (entity labels), enclosed in square brackets, with only composite entities displayed as normal text between curly brackets. 
-  ![Entities View](/Content/en-us/LUIS/Images/lLabels-view1.JPG)
+  ![Entities View](/Content/en-us/LUIS/Images/Labels-view1.JPG)
   
  * **Tokens:** Shows all entity-labeled words in text format (normal text), enclosed in square brackets except composite entities in curly brackets. 
  ![Tokens View](/Content/en-us/LUIS/Images/Labels-view2.JPG)
