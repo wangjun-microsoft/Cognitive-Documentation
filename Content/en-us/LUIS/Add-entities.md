@@ -1,8 +1,8 @@
 <!-- 
 NavPath: LUIS API
-LinkLabel: Add Entities
-Url: LUIS-api/documentation/home
-Weight: 91
+LinkLabel: Entities
+Url: LUIS-api/documentation/Add-entities
+Weight: 89
 -->
 
 #Add Entities
