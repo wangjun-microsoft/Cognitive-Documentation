@@ -20,7 +20,7 @@ For example, the TravelAgent app may receive a request like "Book me a flight to
 
 As another example, a travel booking request like “Book me the first flight to Boston” might be sent to your app. This requires understanding of ordinal words (e.g. first, second). Therefore, you must add a prebuilt entity called "ordinal", for your app to recognize ordinal numbers.
 
-For a full list of prebuilt entities and their use, see [Prebuilt Entities List](prebuilt-list.md).
+For a full list of prebuilt entities and their use, see [Prebuilt Entities List](Pre-builtEntities.md).
 
 **To add a prebuilt entity:**
 
@@ -47,7 +47,7 @@ A simple entity is a generic entity that describes a single concept. In the exam
 1. Open the TravelAgent app by clicking its name on **My Apps** page, and then click **Entities** in the left panel. 
 2. On the **Entities** page, click **Add custom entity**.
 2. In the **Add Entity** dialog box, type "Airline" in the **Entity name** box,  select **Simple** from the **Entity type** list, and then click **Save**.
-![Add Entity Dialog box - Simple](/Content/en-us/LUIS/Images/AddSimpleEntity.JPG)
+![Add Entity Dialog box - Simple](/Content/en-us/LUIS/Images/AddSimpleEntity.jpg)
 
 
 ###Hierarchical Entities
@@ -90,7 +90,7 @@ In the TravelAgent app example, a user may say “Book 2 adult business tickets 
 3. In **Child #1**, select the entity "number" from the list.
 4. In **Child #2**, select the parent entity "Category" from the list. 
 5. In **Child #3**, select the parent entity "TravelClass" from the list. 
-![Add composite entity](/Content/en-us/LUIS/Images/AddCompositeEntity.JPG)
+![Add composite entity](/Content/en-us/LUIS/Images/AddCompositeEntity.jpg)
 
 5.	Click **Save**.
 
@@ -110,7 +110,7 @@ You can edit or delete entities from the **Entities list** on the **Entities** p
 **To delete an entity:**
 
 * In the **Entities list**, click the trash bin icon next to the entity you want to delete. Then, click **OK** in the confirmation message to confirm deletion.
- ![Delete Entity](/Content/en-us/LUIS/Images/DeleteEntity-Confirmation.JPG)
+ ![Delete Entity](/Content/en-us/LUIS/Images/DeleteEntity-Confirmation.jpg)
 
 > **Notes:**
  > 
