@@ -1,8 +1,8 @@
 <!-- 
 NavPath: LUIS API
-LinkLabel: Add-Features
-Url: LUIS-api/documentation/home
-Weight: 85
+LinkLabel: Features
+Url: LUIS-api/documentation/Add-Features
+Weight: 87
 -->
 
 #Add Features
