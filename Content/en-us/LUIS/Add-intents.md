@@ -1,8 +1,8 @@
 <!-- 
 NavPath: LUIS API
-LinkLabel: Add-intents
-Url: LUIS-api/documentation/home
-Weight: 91
+LinkLabel: Intents
+Url: LUIS-api/documentation/Add-intents
+Weight: 93
 -->
 
 #Add Intents 
