@@ -1,8 +1,8 @@
 <!-- 
 NavPath: LUIS API
 LinkLabel: Label Utterances
-Url: LUIS-api/documentation/home
-Weight: 97
+Url: LUIS-api/documentation/Add-example-utterances
+Weight: 91
 -->
 
 #Add example utterances
