@@ -1,8 +1,8 @@
 <!-- 
 NavPath: LUIS API
-LinkLabel: Plan-your-app
-Url: LUIS-api/documentation/home
-Weight: 99
+LinkLabel: Before you start
+Url: LUIS-api/documentation/Plan-your-app
+Weight: 97
 -->
 
 #Plan Your Application
