@@ -6,33 +6,40 @@ Weight: 81
 -->
 
 #Publish your app
-When you finish building and testing your app, you can publish it as a web service. Also, if you make significant changes to your app make sure to re-publish.
+When you finish building and testing your app, you can publish it as a web service that interprets the sentences sent to it. Also, if you make significant changes to your app, make sure to re-publish it.
 
-**Before you publish, make sure to:**
+Optionally, it would be better to test your app before publishing it. For instructions, see [Train and test your app](Train-Test.md).
 
-* Assign a subscription key to your app, otherwise you’ll not be able to publish. For information on how to set up and manage Azure subscription keys, see [Manage your keys](Manage-Keys.md).
+You can either publish your app directly to the **Production Slot** where end users can access and use your model, or you can publish to a **Staging Slot** to use as a development workstation where you can work on your app and go through trials and tests to validate any changes before publishing to the production slot. 
 
-* (Optional) It would be better to test your app before publishing it. For instructions, see [Train and test your app](Train-Test.md).
+**To publish your app to an HTTP endpoint:**
 
-* Train your app by clicking the **Train** button on the **Publish App** page. 
+1. Open your app (e.g. TravelAgent) by clicking its name on **My Apps** page, and then click **Publish App** in the left panel to access the **Publish App** page. The screenshot below shows the Publish page if you haven't published your app yet.
 
+ ![Publish page-](/Content/en-us/LUIS/Content/en-us/LUIS/Images/PublishApp-FirstPublish.JPG)
+ 
+ If you have previously published this app, this page will look like the following screenshot: 
+ 
+  ![Publish page](/Content/en-us/LUIS/Content/en-us/LUIS/Images/PublishApp-RePublish.JPG)
+2. From the **Endpoint Key** list, select an existing endpoint key to assign to the app, or click **Add a new key to your account** to add a new one. For more information on how to create and add endpoint keys to your account, see [Manage your keys](Manage-Keys.md).
+3. Choose whether to publish to **Production** or to **Staging** slot by selecting the corresponding value from the **Endpoint Slot** list. 
+4. If you will use an external service with your LUIS app (e.g. Bing Spell Check):
+- Click **Add Key Association** to assign the external service key to the app by selecting the key type and key value in the following dialog box.
+![Assign External Key](/Content/en-us/LUIS/Content/en-us/LUIS/Images/PublishApp-KeyAssociation.JPG)
+ - Click **Enable Bing Spell Checker** check box. 
+5. If you want the JSON response of your published app to include all intents defined in your app and their prediction scores, click **Add Verbose Flag** checkbox. Otherwise, it will include only the top scoring intent.
+6. Click **Train** if the app wasn't trained already. The app must be trained before published. 
 
-##Publish your app as a web service
-You can publish your app to an HTTP endpoint to make it available as a web service that interprets the sentences sent to it. 
+7. Click **Publish**. The endpoint URL of your published app is displayed. 
 
-**To publish your app as a web service:**
-
-1. Open your app (e.g. TravelAgent) by clicking its name on **My Apps** page, and then click **Publish App** in your app's left panel.
-![Train before publishing](/Content/en-us/LUIS/Images/PublishApp-TrainFirst.JPG)
-2. In the **Publish App** page, click **Train** (if the app wasn't trained already).
-![Publish your app](/Content/en-us/LUIS/Images/PublishApp-enabled.JPG)
-3. Click **Publish**. After few moments, the endpoint URL of your published app will be displayed.  
-![Application Published to HTTP endpoint](/Content/en-us/LUIS/Images/PublishApp-URL.JPG)
+ ![HTTP endpoint URL](/Content/en-us/LUIS/Content/en-us/LUIS/Images/PublishApp-URL.JPG)
 
  > **Note:**
-> If the **Publish** button is disabled, then either your app does not have an assigned subscription key, or you have not trained your app yet.
+> If the **Publish** button is disabled, then either your app does not have an assigned an endpoint key, or you have not trained your app yet.
+
 
 To test how your published app works, you can access the test console by clicking **Train & Test** in the left panel. For instructions on how to test your app using the test console, see [Train and test your app](Train-Test.md).
 
 If you want to test your published endpoint in a browser using the generated URL, you can click the URL to open it in your browser, then set the URL parameter "&q" to your test query (for example: "&q=Book me a flight to Boston on May 4"), and then press Enter. You will get the JSON response of your HTTP endpoint. 
-![JSON response of published HTTP endpoint](/Content/en-us/LUIS/Images/PublishApp-JSONresponse.JPG)
+
+![JSON response of published HTTP endpoint](/Content/en-us/LUIS/Content/en-us/LUIS/Images/PublishApp-JSONresponse.JPG)
