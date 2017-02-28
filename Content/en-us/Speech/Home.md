@@ -29,7 +29,7 @@ Bing Speech Recognition API provides the ability to convert spoken audio to text
 ####Supported languages
 Locales supported by the Speech Recognition API include:
 
-language-Country |language-Country | language-Country |language-Country 
+language-Country |language-Country | language-Country |language-Country |language-Country
 ---------|----------|--------|------------------
 ar-EG*   |   en-IN  | fr-FR  |    pl-PL | zh-TW
 ca-ES    |   en-NZ  | hi-IN  |    pt-BR
