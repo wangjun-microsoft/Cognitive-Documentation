@@ -19,7 +19,6 @@ Weight: 90
 * [REST API Implmentation Sample](#SampleImplementation)  
 * [Example Speech Recognition Request](#SampleVoiceRR)  
 * [Supported Codecs](#Codecs) 
-* [Supported Locales](#SupLocales)
 
 [Speech Recognition Responses](#VoiceRecResponse)
 * [Normal Response](#NormalResponse)  
@@ -117,20 +116,6 @@ The Speech Recognition API supports audio/wav using the following codecs:
 * PCM single channel
 * Siren
 * SirenSR
-
-### <a name="SupLocales">Supported Locales</a>
-Supported locales include:
-
-language-Country |language-Country | language-Country |language-Country 
----------|----------|--------|------------------
-de-DE    |   zh-TW  | zh-HK  |    ru-RU 
-es-ES    |   ja-JP  | ar-EG* |    da-DK 
-en-GB    |   en-IN  | fi-FI  |    nl-NL 
-en-US    |   pt-BR  | pt-PT  |    ca-ES
-fr-FR    |   ko-KR  | en-NZ  |    nb-NO
-it-IT    |   fr-CA  | pl-PL  |    es-MX
-zh-CN    |   en-AU  | en-CA  |    sv-SE  
-*ar-EG supports Modern Standard Arabic (MSA)
 
 ## <a name="VoiceRecResponse">Speech Recognition Responses</a>
 The API response is returned in JSON format. The value of the “name” tag has the post-inverse text normalization result. The value of the “lexical” tag has the pre-inverse text normalization result. 
