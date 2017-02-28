@@ -29,15 +29,16 @@ Bing Speech Recognition API provides the ability to convert spoken audio to text
 ####Supported languages
 Locales supported by the Speech Recognition API include:
 
-language-Country |language-Country | language-Country |language-Country |language-Country
+language-Country |language-Country | language-Country |language-Country 
 ---------|----------|--------|------------------
-ar-EG*   |   en-IN  | fr-FR  |    pl-PL | zh-TW
-ca-ES    |   en-NZ  | hi-IN  |    pt-BR
-da-DK    |   en-US  | it-IT  |    pt-PT
-de-DE    |   es-ES  | ja-JP  |    ru-RU
-en-AU    |   es-MX  | ko-KR  |    sv-SE
-en-CA    |   fi-FI  | nb-NO  |    zh-CN
-en-GB    |   fr-CA  | nl-NL  |    zh-HK  
+ar-EG*   |  en-NZ    | hi-IN  |   pt-BR
+ca-ES    |   en-US  | it-IT  |    pt-PT
+da-DK    |   es-ES  | ja-JP  |    ru-RU
+de-DE    |   es-MX  | ko-KR  |    sv-SE
+en-AU    |   fi-FI  | nb-NO  |    zh-CN
+en-CA    |   fr-CA  | nl-NL  |    zh-HK
+en-GB    |   fr-CA  | pl-PL  |    zh-TW  
+en-IN    |   fr-FR  | pt-BR  |
 *ar-EG supports Modern Standard Arabic (MSA)
 
 <a name="TextToSpeech"></a>
