@@ -37,7 +37,7 @@ To control how you see the words classified as entities in suggested utterances,
  * **Entities:** show entity-classified words in a tagged format (entity labels enclosed in square brackets). This is the default view.
  * **Composite entities:** show the words classified as composite entities in their entity labels.
 
-To filter suggested utterances, click the filter button ![Filter button](/Content/en-us/LUIS/Images/Filter-button.JPG) to display all filters, and then click the filter(s) that you want to apply. For the **Entity** filter, select the entity by which you want to filter the suggested utterances.
+To filter suggested utterances, click the filter button ![Filter button](/Content/en-us/LUIS/Images/Filter-button.jpg) to display all filters, and then click the filter(s) that you want to apply. For the **Entity** filter, select the entity by which you want to filter the suggested utterances.
 
 
 ##Label suggested utterances
@@ -48,11 +48,14 @@ The following are the possible cases you may have, along with the actions you ca
  * If the predicted intent is correct and entities are correctly detected and labeled, then just select the utterance and click **Save** without making any changes to accept and save the utterance.
  
  * If the predicted intent is incorrect, you need to change it. For example, in the screenshot below note that the predicted intent in the last suggested utterance "reserve a ticket to London" is "GetWeather", which is incorrect. Click **Reassign Intent** and choose the correct intent "Bookflight" from the list. 
- ![Reassign intent for a suggested utterance](/Content/en-us/LUIS/Images/SuggUtter-ReassignIntent.JPG)
+ 
+ ![Reassign intent for a suggested utterance](/Content/en-us/LUIS/Images/SuggUtter-ReassignIntent.jpg)
+
 You will get a confirmation message. Click **OK** to confirm this action, and then click **Save** to save your changes.
  ![Reassign intent confirmation](/Content/en-us/LUIS/Images/SuggUtter-ConfirmReassign.jpg)
 
  * If a phrase is unlabeled, click it and select an entity label from the list. For example, "KSA" in the screenshot below is unlabeled. Click it and select "To Location" as its entity label and then click **Save**.
  ![Label unlabeled entity in suggested utterances](/Content/en-us/LUIS/Images/SuggUtter-labelentity.jpg)
  * If an entity is mislabeled, click it and then you can either select the correct label or click **Remove Label** to remove its label. Then, click **Save**.
+ 
  ![Edit or remove entity label](/Content/en-us/LUIS/Images/SuggUtter-entitylabeling.JPG)
