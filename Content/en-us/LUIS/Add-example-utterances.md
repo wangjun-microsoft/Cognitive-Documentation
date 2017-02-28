@@ -11,7 +11,7 @@ Utterances are sentences representing examples of user queries or commands that 
 
 For each intent, add example utterances that trigger this intent and include as many utterance variations as you expect users to say. The more relevant & diverse examples you add to the intent, the better intent prediction you’ll get from your app. For example, the utterance “book me a flight to Paris” may have variations such as “Reserve me a flight to Paris”, "book me a ticket to Paris", "Get me a ticket to Paris”, "Fly me to Paris", and "Take me on a flight to Paris".
 
-Utterances are added to an intent on the **Utterances** tab of the intent page. The following steps describe how to add example utterances to an intent (e.g. "BookFlight"intent in the TravelAgent app). 
+Utterances are added to an intent on the **Utterances** tab of the intent page. The following steps describe how to add example utterances to an intent (e.g. "BookFlight" intent in the TravelAgent app). 
 
 **To add utterance:**
 
@@ -40,12 +40,15 @@ To Learn more about prebuilt entities and how to add them, see [Add entities](Ad
 In the following procedure, we'll label custom entities (simple, hierarchical and composite entities) in the utterance "book me 2 adult business tickets to Paris tomorrow on Air France".
 
 1. Select "Air France" in the utterance mentioned above to label it as entity.
+
 > **Note:** 
 When selecting words to label them as entities:
 * For a single word, just click it. 
-* For a set of two or more words, click at the beginning and then at the end of the set. 
+* For a set of two or more words, click at the beginning and then at the end of the set.
+
 2. In the entity drop-down box that appears, you can either click an existing entity (if available) to select it, or add a new entity by typing its name in the text box and clicking **Create entity**. Now, we'll create the simple entity "Airline". Type "Airline" in the text box and then click **Create entity**.
  ![Simple Entity Labeling](/Content/en-us/LUIS/Images/LabelingEntities-CreateSimple.JPG)
+ 
 > **Note:** This way is used to create a simple entity on the spot (while labeling utterances). More complicated entities (e.g. hierarchical and composite) can only be created from the **Entities** page. For more instructions, see [Add entities](Add-entities.md). 
 
 3. Click "Paris" in the same utterance, then click "ToLocation" in the entity drop-down box as the entity label. "ToLocation" is a hierarchical entity that must be added on the **Entities** page. To learn more about hierarchical entities and how to add them, see [Add entities](Add-entities.md).
@@ -63,13 +66,14 @@ When selecting words to label them as entities:
 
 **To remove an entity label:**
 
-1. Click the entity you want to remove its label and click **Remove label** in the entity drop-down box that appears. Then, click **Save** to save this change.
+* Click the entity you want to remove its label and click **Remove label** in the entity drop-down box that appears. Then, click **Save** to save this change.
 
 ##Search in utterances
 Searching allows you to find utterances that contain a specific text (words/phrases). For example, sometimes you will notice an error that involves a particular word, and may want to find all the examples including it. 
+
 **To search in utterances:**
 
-* Type the search text in the search box at the top right corner of the utterances list and press Enter. The utterances list will be updated to display only the utterances including your search text. For example, in the following screenshot, the only utterance which contains the search word "reserve" is displayed. 
+* Type the search text in the search box at the top right corner of the utterances list and press Enter. The utterances list will be updated to display only the utterances including your search text. For example, in the following screenshot, only the utterances which contain the search word "reserve" is displayed. 
 
  ![Search in utterances](/Content/en-us/LUIS/Images/Search-Utter.JPG)
 
@@ -81,10 +85,10 @@ When you have a large number of utterances, it is useful to filter utterances  i
 
 You can apply one or more filters on utterances, as needed. These are the available filters that you can use:
 
-- **Selected:** display only the currently selected utterances.
-- **Changed:** display only utterances which contain unsaved changes. 
-- **Errors:** display only utterances which contain errors.
-- **Entity:** display only utterances that contain a specific entity. 
+- **Selected:** displays only the currently selected utterances.
+- **Changed:** displays only utterances which contain unsaved changes. 
+- **Errors:** displays only utterances which contain errors.
+- **Entity:** displays only utterances that contain a specific entity. 
 
   > **Note:**
 Utterances which contain unsaved changes are highlighted in light yellow. You can click **Save** to save changes or **Discard** to discard changes.
