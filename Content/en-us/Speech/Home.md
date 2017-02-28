@@ -31,7 +31,7 @@ Locales supported by the Speech Recognition API include:
 
 language-Country |language-Country | language-Country |language-Country 
 ---------|----------|--------|------------------
-ar-EG*   |   en-NZ   | it-IT  |   ru-RU
+ar-EG*   |   en-NZ   | it-IT |   ru-RU
 ca-ES    |   en-US  | ja-JP  |    sv-SE
 da-DK    |   es-ES  | ko-KR  |    zh-CN
 de-DE    |   es-MX  | nb-NO  |    zh-HK
