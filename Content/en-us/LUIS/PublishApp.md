@@ -25,9 +25,9 @@ You can either publish your app directly to the **Production Slot** where end us
 2. From the **Endpoint Key** list, select an existing endpoint key to assign to the app, or click **Add a new key to your account** to add a new one. For more information on how to create and add endpoint keys to your account, see [Manage your keys](Manage-Keys.md).
 3. Choose whether to publish to **Production** or to **Staging** slot by selecting the corresponding value from the **Endpoint Slot** list. 
 4. If you will use an external service with your LUIS app (e.g. Bing Spell Check):
-- Click **Add Key Association** to assign the external service key to the app by selecting the key type and key value in the following dialog box.
- - Click **Enable Bing Spell Checker** check box. 
- ![Assign External Key](/Content/en-us/LUIS/Images/PublishApp-KeyAssociation.JPG)
+   - Click **Add Key Association** to assign the external service key to the app by selecting the key type and key value in the following dialog box.
+   - Click **Enable Bing Spell Checker** check box. 
+  ![Assign External Key](/Content/en-us/LUIS/Images/PublishApp-KeyAssociation.JPG)
 5. If you want the JSON response of your published app to include all intents defined in your app and their prediction scores, click **Add Verbose Flag** checkbox. Otherwise, it will include only the top scoring intent.
 6. Click **Train** if the app wasn't trained already.  
 
