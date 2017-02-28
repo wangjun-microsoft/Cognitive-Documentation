@@ -7,7 +7,7 @@ Weight: 81
 
 
 #Publish your app
-When you finish building and testing your app, you can publish it as a web service that interprets the sentences sent to it. Also, if you make significant changes to your app, make sure to re-publish it.
+When you finish building and testing your app, you can publish your it as webservice on azure and get an HTTP endpoint that can be integrated in any backend code. 
 
 Optionally, it would be better to test your app before publishing it. For instructions, see [Train and test your app](Train-Test.md).
 
@@ -26,10 +26,10 @@ You can either publish your app directly to the **Production Slot** where end us
 3. Choose whether to publish to **Production** or to **Staging** slot by selecting the corresponding value from the **Endpoint Slot** list. 
 4. If you will use an external service with your LUIS app (e.g. Bing Spell Check):
 - Click **Add Key Association** to assign the external service key to the app by selecting the key type and key value in the following dialog box.
-![Assign External Key](/Content/en-us/LUIS/Images/PublishApp-KeyAssociation.JPG)
  - Click **Enable Bing Spell Checker** check box. 
+ ![Assign External Key](/Content/en-us/LUIS/Images/PublishApp-KeyAssociation.JPG)
 5. If you want the JSON response of your published app to include all intents defined in your app and their prediction scores, click **Add Verbose Flag** checkbox. Otherwise, it will include only the top scoring intent.
-6. Click **Train** if the app wasn't trained already. The app must be trained before published. 
+6. Click **Train** if the app wasn't trained already.  
 
 7. Click **Publish**. The endpoint URL of your published app is displayed. 
 
