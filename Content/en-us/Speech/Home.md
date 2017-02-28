@@ -31,11 +31,11 @@ Locales supported by the Speech Recognition API include:
 
 language-Country |language-Country | language-Country |language-Country 
 ---------|----------|--------|------------------
-ar-EG*   |  en-NZ  | it-IT  |    ru-RU
-ca-ES    |  en-US  | ja-JP  |    sv-SE
-da-DK    |  es-ES  | ko-KR  |    zh-CN
-de-DE    |  es-MX  | nb-NO  |    zh-HK
-en-AU    |  fi-FI  | nl-NL  |    zh-TW
+ar-EG*   |  en-NZ  | it-IT  |  ru-RU
+ca-ES    |  en-US  | ja-JP  |  sv-SE
+da-DK    |  es-ES  | ko-KR  |  zh-CN
+de-DE    |  es-MX  | nb-NO  |  zh-HK
+en-AU    |  fi-FI  | nl-NL  |  zh-TW
 en-CA    |  fr-CA  | pl-PL  |    
 en-GB    |  fr-FR  | pt-BR  |      
 en-IN    |  hi-IN  | pt-PT  |
