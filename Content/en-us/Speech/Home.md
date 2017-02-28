@@ -31,13 +31,13 @@ Locales supported by the Speech Recognition API include:
 
 language-Country |language-Country | language-Country |language-Country 
 ---------|----------|--------|------------------
-ar-EG*   |   en-IN  | fr-FR  |    pt-BR
-ca-ES    |   en-NZ  | it-IT  |    pt-PT 
-da-DK    |   en-US  | ja-JP  |    ru-RU 
-de-DE    |   es-ES  | ko-KR  |    sv-SE
-en-AU    |   es-MX  | nb-NO  |    zh-CN
-en-CA    |   fi-FI  | nl-NL  |    zh-HK
-en-GB    |   fr-CA  | pl-PL  |    zh-TW  
+ar-EG*   |   en-IN  | fr-FR  |    pl-PL | zh-TW
+ca-ES    |   en-NZ  | hi-IN  |    pt-BR
+da-DK    |   en-US  | it-IT  |    pt-PT
+de-DE    |   es-ES  | ja-JP  |    ru-RU
+en-AU    |   es-MX  | ko-KR  |    sv-SE
+en-CA    |   fi-FI  | nb-NO  |    zh-CN
+en-GB    |   fr-CA  | nl-NL  |    zh-HK  
 *ar-EG supports Modern Standard Arabic (MSA)
 
 <a name="TextToSpeech"></a>
