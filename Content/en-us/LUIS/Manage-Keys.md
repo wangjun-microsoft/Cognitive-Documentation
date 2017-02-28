@@ -6,12 +6,12 @@ Weight: 73
 -->
 
 #Manage your keys
-A key is your passport to the server allowing you to publish your app to be used by end users. LUIS requires these types of keys:
+A key is your passport to the server allowing you to publish your app to be used by end users. LUIS has three different types of keys:
 
 * **Programmatic API Key:** Created automatically per LUIS account and you don't have to buy it. It enables you to author and edit your application using LUIS programmatic APIs. 
 [Click here for a complete API Reference](APIReference.md).
 
-* **Endpoint Key(s):** You need to buy it from Microsoft Azure portal. It is essential for publishing your app and accessing its HTTP endpoint. This key reflects your quota of endpoint hits based on the usage plan you specified for creating the key. 
+* **Endpoint Key(s):** You need to buy it from Microsoft Azure portal. It is essential for publishing your app and accessing your HTTP endpoint. This key reflects your quota of endpoint hits based on the usage plan you specified while creating the key. 
 
 * **External Key(s):** You need to buy an external key only if you want to use any external services with LUIS (e.g. Bing Spell Check service).
  
@@ -62,12 +62,11 @@ In the list of added keys, you can edit a key name, or delete a key (if no longe
 
 
 ##Create and use external keys
-External keys are the keys required for any external services that you want to use with your LUIS app to enhance the language understanding experience. One of these services, which is currently available, is Bing Spell Check. It can be used with LUIS to detect and correct any spelling mistakes in end-user queries submitted to your application's endpoint.
+External keys are the keys required for any external services that you want to use with your LUIS app to enhance the language understanding experience. One of these services, which is currently available, is [Bing Spell Check](https://www.microsoft.com/cognitive-services/en-us/bing-spell-check-api/documentation). It can be used with LUIS to detect and correct any spelling mistakes in end-user queries submitted to your application's endpoint.
 
 **To create and add an external key to your LUIS account:**
 
-1. On **My Keys** page, **External Keys** tab, click **Buy Key on Azure**. This will take you directly to Microsoft Azure portal. Create an external key for Bing Spell Check on Azure.
-2. On **My Keys** page, **External Keys**, click **Add a new key**. The following dialog box appears.
+1. On **My Keys** page, **External Keys**, click **Add a new key**. The following dialog box appears.
 
  ![Add a new external key](/Content/en-us/LUIS/Images/MyKeys-AddExternal.JPG)
 2. From the **Key Type** list, select "BingSpellCheck".
