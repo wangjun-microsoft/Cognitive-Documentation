@@ -5,7 +5,18 @@ Url: QnAMaker/documentation/httpendpoint
 Weight: 70
 -->
 
-# API Reference #
+# API V2.0 Reference #
+The new [V2.0 APIs](https://westus.dev.cognitive.microsoft.com/docs/services/58994a073d9e04097c7ba6fe/operations/58994a073d9e041ad42d9baa) let you programmatically manage your knowledge base. Now you can do the following with the APIs
+
+  * Create knowledge base
+  * Delete knowledge base
+  * Update knowledge base
+  * Download knowledge base
+  * Publish knowledge base
+
+Refer [here](https://westus.dev.cognitive.microsoft.com/docs/services/58994a073d9e04097c7ba6fe/operations/58994a073d9e041ad42d9baa) for detailed documentaion.
+
+# API V1.0 Reference #
 Each published QnA Maker service is exposed as an HTTP endpoint that will take in a question and respond back with the best matched answer and a confidence score.
 You need the following two GUIDs to access your knowledge base via the HTTP endpoint
 
