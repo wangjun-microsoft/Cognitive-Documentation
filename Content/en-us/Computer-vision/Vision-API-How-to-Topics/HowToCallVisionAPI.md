@@ -1,8 +1,8 @@
 <!-- 
 NavPath: Computer Vision API/How-to Topics
-LinkLabel: How to call Computer Vision API
+LinkLabel: How to Call Computer Vision API
 Url: Computer-Vision-API/documentation/vision-api-how-to-topics/HowToCallVisionAPI
-Weight: 90
+Weight: 300
 -->
 
 #How to Call Computer Vision API
@@ -45,7 +45,7 @@ To obtain a subscription key, see [How to Obtain Subscription Keys](https://www.
 
 **1.** Passing the subscription key through a query string, see below as a Computer Vision API example:
 
-```https://api.projectoxford.ai/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=<Your subscription key>```
+```https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=<Your subscription key>```
 
 **2.** Passing the subscription key can also be specified in the HTTP request header:
 
@@ -62,7 +62,7 @@ Here’s how to get "Tags" and "Description" for a given image:
 
 **Option One:** Get list of "Tags" and one "Description"
 ```
-POST https://api.projectoxford.ai/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=<Your subscription key>
+POST https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=<Your subscription key>
 ```
 ```
 using Microsoft.ProjectOxford.Vision;
@@ -81,13 +81,13 @@ using (var fs = new FileStream(@"C:\Vision\Sample.jpg", FileMode.Open))
 
 ######Tags-only:
 ```
-POST https://api.projectoxford.ai/vision/v1.0/tag&subscription-key=<Your subscription key>
+POST https://westus.api.cognitive.microsoft.com/vision/v1.0/tag&subscription-key=<Your subscription key>
 var analysisResult = await visionClient.GetTagsAsync("http://contoso.com/example.jpg");
 ```
 
 ######Description-only:
 ```
-POST https://api.projectoxford.ai/vision/v1.0/describe&subscription-key=<Your subscription key>
+POST https://westus.api.cognitive.microsoft.com/vision/v1.0/describe&subscription-key=<Your subscription key>
 using (var fs = new FileStream(@"C:\Vision\Sample.jpg", FileMode.Open))
 {
   analysisResult = await visionClient.DescribeAsync(fs);
@@ -97,19 +97,19 @@ using (var fs = new FileStream(@"C:\Vision\Sample.jpg", FileMode.Open))
 
 **Option One:** Scoped Analysis - Analyze only a given model
 ```
-POST https://api.projectoxford.ai/vision/v1.0/models/celebrities/analyze
+POST https://westus.api.cognitive.microsoft.com/vision/v1.0/models/celebrities/analyze
 var celebritiesResult = await visionClient.AnalyzeImageInDomainAsync(url, "celebrities");
 ```
 For this option, all other query parameters {visualFeatures, details} are not valid. If you want to see all supported models, use: 
 ```
-GET https://api.projectoxford.ai/vision/v1.0/models 
+GET https://westus.api.cognitive.microsoft.com/vision/v1.0/models 
 var models = await visionClient.ListModelsAsync();
 ```
 **Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy)
 
 For applications where you want to get generic image analysis in addition to details from one or more domain-specific models, we extend the v1 API with the models query parameter.
 ```
-POST https://api.projectoxford.ai/vision/v1.0/analyze?details=celebrities
+POST https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?details=celebrities
 ```
 When this method is invoked, we will call the 86-category classifier first. If any of the categories match that of a known/matching model, a second pass of classifier invocations will occur. For example, if "details=all", or "details" include ‘celebrities’, we will call the celebrities model after the [86-category](./Images/86categories.md) classifier is called and the result includes the category person. This will increase latency for users interested in celebrities, compared to Option One.
 
@@ -221,5 +221,5 @@ These are identical to vision.analyze, with the additional error of NotSupported
 
 These are the basic functionalities of the Computer Vision API: how you can upload images and retrieve valuable metadata in return.
 
-To use the REST API, go to [Computer Vision API Reference](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739).
+To use the REST API, go to [Computer Vision API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739).
  

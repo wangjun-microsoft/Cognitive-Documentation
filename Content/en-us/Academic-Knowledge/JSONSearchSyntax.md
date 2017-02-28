@@ -1,8 +1,8 @@
 <!-- 
-NavPath: Academic Knowledge API
+NavPath: Academic Knowledge API/Graph Search Method
 LinkLabel: JSON Search Syntax
 Url: Academic-Knowledge-API/documentation/JSONSearchSyntax
-Weight: 90
+Weight: 75
 -->
 
 # JSON Search Syntax

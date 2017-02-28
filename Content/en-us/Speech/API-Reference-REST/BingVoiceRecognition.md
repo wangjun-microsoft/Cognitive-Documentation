@@ -85,7 +85,7 @@ format     |  UTF-8       |      Specifies the desired format of the returned da
 locale     |    UTF-8 (IETF Language Tag)     |    Language code of the audio content in IETF RFC 5646. Case does not matter. **Example:** locale=en-US. 
 device.os    |     UTF-8    |     Operating system the client is running on. This is an open field but we encourage clients to use it consistently across devices and applications. Suggested values: Windows OS, Windows Phone OS, XBOX, Android, iPhone OS. **Example:** device.os=Windows Phone OS.
 scenarios     |    UTF-8     |    The context for performing a recognition. The supported values are: ulm, websearch. **Example:** scenarios=ulm.     
-instanceid      |    GUID     |      A globally unique device identifier of the device making the request. **Example:** instanceid=b2c95ede-97eb-4c88-81e4-80f32d6aee5
+instanceid      |    GUID     |      A globally unique device identifier of the device making the request. **Example:** instanceid=b2c95ede-97eb-4c88-81e4-80f32d6aee54
   
 #### <a name="OptParam">Optional Parameters</a>
 

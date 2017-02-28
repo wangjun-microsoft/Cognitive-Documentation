@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API
 LinkLabel: Graph Search Method
 Url: Academic-Knowledge-API/documentation/GraphSearchMethod
-Weight: 90
+Weight: 80
 -->
 
 # Graph Search Method
@@ -12,7 +12,7 @@ The **graph search** REST API is used to return a set of academic entities based
 
 **REST endpoint:**  
 ```
-https://api.projectoxford.ai/academic/graph/v1.0/search?
+https://westus.api.cognitive.microsoft.com/academic/graph/v1.0/search?
 ```   
 <br>
 
@@ -47,7 +47,7 @@ If a query cannot be processed within _800 ms_, a _timeout_ error will be return
 
 ##### JSON Search
 ```
-https://api.projectoxford.ai/academic/graph/v1.0/search?mode=json
+https://westus.api.cognitive.microsoft.com/academic/graph/v1.0/search?mode=json
 ```
 <br>
 For the *json* search, if we want to get the papers whose titles contain "graph engine" and written by "bin shao", we can specify the query as follows.
@@ -119,7 +119,7 @@ The output of a query is an array of graph paths. A graph path is an array of no
 ##### Lambda Search 
 
 ```
-https://api.projectoxford.ai/academic/graph/v1.0/search?mode=lambda
+https://westus.api.cognitive.microsoft.com/academic/graph/v1.0/search?mode=lambda
 ```
 <br>
 For the *lambda* search, if we want to get the author IDs of a given paper, we can write a query like the following one.

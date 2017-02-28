@@ -2,7 +2,7 @@
 NavPath: Emotion API
 LinkLabel: Overview
 Url: Emotion-api/documentation
-Weight: 100
+Weight: 1000
 -->
 
 # Emotion API
@@ -16,9 +16,10 @@ The Emotion API beta takes an image as an input, and returns the confidence acro
 **Interpreting Results:** 
 
 In interpreting results from the Emotion API, the emotion detected should be interpreted as the emotion with the highest score, as scores are normalized to sum to one. Users may choose to set a higher confidence threshold within their application, depending on their needs. 
+
 For more details about emotion detection, please refer to the API Reference: 
-  * Basic: If a user has already called the Face API, they can submit the face rectangle as an input and use the basic tier. [API Reference](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/56f23eb019845524ec61c4d7)
-  * Standard: If a user does not submit a face rectangle, they should use standard mode.  [API Reference](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/563b31ea778daf121cc3a5fa)
+  * Basic: If a user has already called the Face API, they can submit the face rectangle as an input and use the basic tier. [API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/5639d931ca73072154c1ce89/operations/56f23eb019845524ec61c4d7)
+  * Standard: If a user does not submit a face rectangle, they should use standard mode.  [API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/5639d931ca73072154c1ce89/operations/563b31ea778daf121cc3a5fa)
 
 ### Emotion in Video
 
@@ -31,5 +32,5 @@ Emotion API for Video provides two types of aggregate results for the emotions o
 Because emotions are smoothed over time, if you ever build a visualization to overlay your results on top of the original video, subtract 250 milliseconds from the provided timestamps. 
 
 For more detail on how to parse the format of Emotion for Video API results, you may also want to view  <link to Glossary from Video API>
-For more details about emotion detection in video, please refer to the [API Reference](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89).
+For more details about emotion detection in video, please refer to the [API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/5639d931ca73072154c1ce89).
 

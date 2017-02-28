@@ -1,6 +1,6 @@
 <!-- 
 NavPath: LUIS API
-LinkLabel: Azure Ibiza Subscription
+LinkLabel: Azure Subscription
 Url: LUIS-api/documentation/AzureIbizaSubscription
 Weight: 85 
 -->

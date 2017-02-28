@@ -6,26 +6,38 @@ Weight: 50
 -->
 
 # Computer Vision API Frequently Asked Questions
+### If you can't find answers to your questions in this FAQ, try asking the Computer Vision API community on [StackOverflow](https://stackoverflow.com/questions/tagged/project-oxford+or+microsoft-cognitive) or contact [Help and Support on UserVoice](https://cognitive.uservoice.com/) 
 
-### Question: 
-The Computer Vision API offers at least two ways of obtaining tags for an image. According to the documentation there's a list of tags for "description", as well as a top level "tags" list. The "tags" list additionally contains confidence-levels, the "description tags" list does not. However, the description tag list seems to be much more exhaustive than the top level tags list, usually showing 5 to 10 times as many tags. Why are there two different lists of tags and what's the use case for each list? Also, is there a reason why the description-tags list shows way more tags than the top-level tags list? 
-### Answer:
-Although the list is similar today, there is no guarantee for now or for the future that these lists remain this way. The idea for the tags inside the description was to give API users an option to construct a sentence of their liking using these tags if the confidence for the natural-language sentence was low.
+-----
 
-**Note:** In both the tags and description.tags cases, the terms are in descending confidence order.
+**Question**: *Can I train Computer Vision API to use custom tags.  For example, I would like to feed in pictures of cat breeds to 'train' the AI, then receive the breed value on an AI request.*
 
----
+**Answer**: This function is currently not available, however our engineers are working to bring this functionality to Computer Vision.
 
-### Question:
-When calling postAsync with particular image url, I get the below error in json response.
-"Invalid image URL or error downloading from target server. Remote server error returned: "An error occurred while sending the request.""
-The image URL is http://localhost:3942/WebImages/test1.jpg
-### Answer:
-When you make a request to the Cognitive Service API with an image URL as you've specified, you're instructing the service running in the cloud to load the image from that location. The service cannot locate your localhost, hence the error.
+-----
 
-You have two options: (a) if your image is already available at a public-reachable URL, use the URL instead. If you're unsure whether the URL is publicly reachable, try entering it in a browser on your phone, for example. Alternatively, (b) Upload the image in the HTTP request body. You'll need to also set the MediaTypeHeaderValue to application/octet-stream.
+**Question**: *Can Computer Vision be used locally without an internet connection?*
 
-If you're using a managed language (like C#) with Visual Studio, consider using the [NuGet](https://www.nuget.org/packages/Microsoft.ProjectOxford.Face) package. This will take care of the details for you. The source for that NuGet package is on [GitHub](https://github.com/Microsoft/Cognitive-Face-Windows/tree/master/ClientLibrary)
+**Answer**: We currently do not offer a on premise or local solution.
 
----
+-----
 
+**Question**: *Which languages are supported with Computer Vision?*
+
+**Answer**:
+Supported languages include:
+
+| | | Supported Languages | | |
+|---------------- |------------------ |------------------ |--------------------------- |-------------------- 
+| Danish (da-DK)  | Dutch (nl-NL)     | English           | Finnish (fi-FI)            |French (fr-FR)
+| German (de-DE)  | Greek (el-GR)     | Hungarian (hu-HU) | Italian (it-IT)            | Japanese (ja-JP)
+| Korean (ko-KR)  | Norwegian (nb-NO) | Polish (pl-PL)    | Portuguese (pt-BR) (pt-PT) | Russian (ru-RU)
+| Spanish (es-ES)	| Swedish (sv-SV)	  | Turkish (tr-TU)   |                            |
+
+-----
+
+**Question**: *Can Computer Vision be used to read license plates?* 
+
+**Answer**: The Vision API offers good text-detection with OCR, but it is not currently optimized for license plates. We are constantly trying to improve our services and have added OCR for auto license plate recognition to our list of feature requests.
+
+-----

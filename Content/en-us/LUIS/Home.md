@@ -19,10 +19,10 @@ Once your application is deployed and traffic starts to flow into the system, LU
 
 #####Localization support 
 
-The LUIS UI is always in English, but several languages such as English, French, Italian, Spanish, and Chinese are supported when it comes to understanding utterances. 
+The LUIS UI is always in English, but several languages such as English, German, Korean, French, Italian, Spanish, Portogues, Japanese and Chinese are supported when it comes to understanding utterances.
 
 #####Accessing LUIS programmatically 
 
 LUIS offers a programmatic REST API that can be used to automate the application creation process. This API allows you to author and publish your application by using LUIS endpoints. 
 
-Click here for a complete [API reference](https://dev.projectoxford.ai/docs/services/56d95961e597ed0f04b76e58/operations/56f8a55119845511c81de488). 
+Click here for a complete [API reference](https://westus.dev.cognitive.microsoft.com/docs/services/56d95961e597ed0f04b76e58/operations/56f8a55119845511c81de488). 

@@ -2,28 +2,26 @@
 NavPath: Academic Knowledge API
 LinkLabel: Similarity Method
 Url:Academic-Knowledge-API/documentation/SimilarityMethod
-Weight: 75
+Weight: 65
 -->
 
 # Similarity Method
 
-The **similarity** REST API is used to calculate the academic similarity between two texts. 
+The **similarity** REST API is used to calculate the academic similarity between two strings. 
 <br>
 
 **REST endpoint:**
 ```
-https://api.projectoxford.ai/academic/v1.0/similarity?
+https://westus.api.cognitive.microsoft.com/academic/v1.0/similarity?
 ```
 
 ## Request Parameters
 Parameter        |Data Type      |Required | Description
 ----------|----------|----------|------------
-**s1**        |String   |Yes  |String to be compared
-**s2**        |String   |Yes  |String to be compared
+**s1**        |String   |Yes  |String* to be compared
+**s2**        |String   |Yes  |String* to be compared
 <sub>
-GET requests' input length is bounded by URL length limitation.
-<br>
-POST requests have a input string length limitation of 1MB.
+*Strings to compare have a maxium length of 1MB.
 </sub>
 <br>
 ## Response
@@ -40,11 +38,10 @@ HTTP Status | Reason | Response
 **500**         |Internal server error | Error message
 **Timed out**     | Request timed out.  | Error message
 <br>
-
-*Example: Calculate similarity of two partial abstracts*
+##Example: Calculate similarity of two partial abstracts
 ####Request:
 ```
-https://api.projectoxford.ai/academic/v1.0/similarity?s1=Using complementary priors, we derive a fast greedy algorithm that can learn deep directed belief networks one layer at a time, provided the top two layers form an undirected associative memory
+https://westus.api.cognitive.microsoft.com/academic/v1.0/similarity?s1=Using complementary priors, we derive a fast greedy algorithm that can learn deep directed belief networks one layer at a time, provided the top two layers form an undirected associative memory
 &s2=Deepneural nets with a large number of parameters are very powerful machine learning systems. However, overfitting is a serious problem in such networks
 ```
 In this example, we generate the similarity score between two partial abstracts using the **similarity** API.

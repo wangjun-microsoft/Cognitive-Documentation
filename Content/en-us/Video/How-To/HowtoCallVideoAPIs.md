@@ -43,7 +43,7 @@ Every call to the Video API requires a subscription key. This key needs to be ei
 
 ```
 
-https://api.projectoxford.ai/video/v1.0/stabilize&subscription-key=<Your subscription key>
+https://westus.api.cognitive.microsoft.com/video/v1.0/stabilize&subscription-key=<Your subscription key>
   
 ```
 
@@ -220,7 +220,7 @@ var motionDetection = JsonConvert.DeserializeObject<MotionDetectionResult>(motio
 ## <a name="summary">Summary</a>
 You have now learned about the functionalities of the Video API: how you can upload a video, check its status, retrieve a stabilized video, and retrieve face detection/tracking and motion detection metadata.
 
-For more information about API details, see the API reference guide “[Video API Reference](https://dev.projectoxford.ai/docs/services/565d6516778daf15800928d5)”.
+For more information about API details, see the API reference guide “[Video API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/565d6516778daf15800928d5)”.
  
 ---
 
