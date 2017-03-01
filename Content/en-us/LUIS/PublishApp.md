@@ -1,7 +1,7 @@
 <!-- 
 NavPath: LUIS API
-LinkLabel: PublishApp
-Url: LUIS-api/documentation/home
+LinkLabel: Publish
+Url: LUIS-api/documentation/PublishApp
 Weight: 81
 -->
 
