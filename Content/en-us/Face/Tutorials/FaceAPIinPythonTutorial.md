@@ -21,8 +21,8 @@ In this tutorial, you will learn to invoke the Face API via the Python SDK to de
 
 To use the tutorial, you will need to do the following:
 
-- Install either Python 2.7 or Python 3.5.
-- Install pip for Windows.
+- Install either Python 2.7+ or Python 3.5+.
+- Install pip.
 - Install the Python SDK for the Face API as follows:
 
 ```bash
