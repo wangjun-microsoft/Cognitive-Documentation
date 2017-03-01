@@ -1,7 +1,7 @@
 <!-- 
 NavPath: LUIS API
 LinkLabel: Training & Testing
-Url: LUIS-api/documentation/home
+Url: LUIS-api/documentation/Train-Test
 Weight: 85
 -->
 
