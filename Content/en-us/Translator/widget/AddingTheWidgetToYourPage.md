@@ -29,7 +29,7 @@ The color of the Widget can be further customized by customizing the parameters 
 
 
 ##Advanced Customization of the Translator Widget 
-Advanced customization such as showing only specific languages on the language list, adjusting the color of the Widget, and changing when the Widget starts translating can be done through the use of custom parameters. See the full list of parameters here. 
+Advanced customization such as showing only specific languages on the language list, adjusting the color of the Widget, and changing when the Widget starts translating can be done through the use of custom parameters. See the full list of parameters [here](https://www.microsoft.com/cognitive-services/en-us/translator-api/documentation/widget/CusomizingTheWebWidget).
 
 ##Translator Widget API 
-The Translator Widget API allows you to programmatically control aspects of the Widget and listen on its events. If you have some coding experience, you will be able to use the API to create your own "Translate" button and use it to invoke the Widget. You may also decide to trigger an event when the page translation is complete. See the API reference here. 
+The Translator Widget API allows you to programmatically control aspects of the Widget and listen on its events. If you have some coding experience, you will be able to use the API to create your own "Translate" button and use it to invoke the Widget. You may also decide to trigger an event when the page translation is complete. See the API reference [here](https://www.microsoft.com/cognitive-services/en-us/translator-api/documentation/widget/TheTranslatorWebWidgetAPI).
