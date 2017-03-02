@@ -9,21 +9,22 @@ Weight: 108
 This article provides information and code samples to help you quickly get started using Java and the Computer Vision API to accomplish the following tasks: 
 * [Analyze an image](#AnalyzeImage) 
 * [Intelligently generate a thumbnail](#GetThumbnail)
-* [Detect and extract text from an Image](#OCR)
+* [Detect and extract text from an image](#OCR)
 
 ## Analyze an Image With Computer Vision API Using Java <a name="AnalyzeImage"> </a>
 With the [Analyze Image method](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa) you can extract visual features based on image content. You can upload an image or specify an image URL and choose which features to return, including:
-
-## Prerequisites
-* Get the Microsoft Computer Vision Android SDK [here](https://github.com/Microsoft/Cognitive-vision-android)
-* Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe)
 * The category defined in this [taxonomy](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Category-Taxonomy). 
 * A detailed list of tags related to the image content. 
 * A description of image content in a complete sentence. 
 * The coordinates, gender and age of any faces contained in the image.
-* The ImageType (clipart or a line drawing)
+* The ImageType (clipart or a line drawing).
 * The dominant color, the accent color, or whether an image is black & white.
 * Whether the image contains pornographic or sexually suggestive content. 
+
+## Prerequisites
+* Get the Microsoft Computer Vision Android SDK [here](https://github.com/Microsoft/Cognitive-vision-android).
+* Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe).
+
 
 #### Analyze an Image Java Example Request
 
@@ -33,39 +34,41 @@ import java.net.URI;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
-public class JavaSample 
+public class Main
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
-        HttpClient httpclient = HttpClients.createDefault();
+        HttpClient httpclient = new DefaultHttpClient();
 
         try
         {
             URIBuilder builder = new URIBuilder("https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze");
 
             builder.setParameter("visualFeatures", "Categories");
-            builder.setParameter("details", "{string}");
+            builder.setParameter("details", "Celebrities");
             builder.setParameter("language", "en");
 
             URI uri = builder.build();
             HttpPost request = new HttpPost(uri);
+
+            // Request headers. Replace the example key with a valid subscription key.
             request.setHeader("Content-Type", "application/json");
-            request.setHeader("Ocp-Apim-Subscription-Key", "{subscription key}");
+            request.setHeader("Ocp-Apim-Subscription-Key", "13hc77781f7e4b19b5fcdd72a8df7156");
 
-
-            // Request body
-            StringEntity reqEntity = new StringEntity("{body}");
+            // Request body. Replace the example URL with the URL for the JPEG image of a celebrity.
+            StringEntity reqEntity = new StringEntity("{\"url\":\"http://example.com/images/test.jpg\"}");
             request.setEntity(reqEntity);
 
             HttpResponse response = httpclient.execute(request);
             HttpEntity entity = response.getEntity();
 
-            if (entity != null) 
+            if (entity != null)
             {
                 System.out.println(EntityUtils.toString(entity));
             }
@@ -76,10 +79,9 @@ public class JavaSample
         }
     }
 }
-
 ```
 #### Analyze an Image Response
-A successful response will be returned in JSON. Following is an example of a successful response: 
+A successful response will be returned in JSON. The following is an example of a successful response: 
 
 ```json
 {
@@ -188,58 +190,85 @@ Use the [Get Thumbnail method](https://westus.dev.cognitive.microsoft.com/docs/s
 
 ```Java
 // // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
+import java.awt.*;
+import javax.swing.*;
 import java.net.URI;
+import java.io.InputStream;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
+import org.apache.http.impl.client.DefaultHttpClient;
 
-public class JavaSample 
+public class Main
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
-        HttpClient httpclient = HttpClients.createDefault();
+        HttpClient httpClient = new DefaultHttpClient();
 
         try
         {
-            URIBuilder builder = new URIBuilder("https://westus.api.cognitive.microsoft.com/vision/v1.0/generateThumbnail");
+            URIBuilder uriBuilder = new URIBuilder("https://westus.api.cognitive.microsoft.com/vision/v1.0/generateThumbnail");
 
-            builder.setParameter("width", "{number}");
-            builder.setParameter("height", "{number}");
-            builder.setParameter("smartCropping", "true");
+            uriBuilder.setParameter("width", "100");
+            uriBuilder.setParameter("height", "150");
+            uriBuilder.setParameter("smartCropping", "true");
 
-            URI uri = builder.build();
+            URI uri = uriBuilder.build();
             HttpPost request = new HttpPost(uri);
+
+            // Request headers. Replace the example key with a valid subscription key.
             request.setHeader("Content-Type", "application/json");
-            request.setHeader("Ocp-Apim-Subscription-Key", "{subscription key}");
+            request.setHeader("Ocp-Apim-Subscription-Key", "13hc77781f7e4b19b5fcdd72a8df7156");
 
+            // Request body. Replace the example URL with the URL for the JPEG image of a person.
+            StringEntity requestEntity = new StringEntity("{\"url\":\"http://example.com/images/test.jpg\"}");
+            request.setEntity(requestEntity);
 
-            // Request body
-            StringEntity reqEntity = new StringEntity("{body}");
-            request.setEntity(reqEntity);
+            HttpResponse response = httpClient.execute(request);
+            System.out.println(response);
 
-            HttpResponse response = httpclient.execute(request);
-            HttpEntity entity = response.getEntity();
-
-            if (entity != null) 
-            {
-                System.out.println(EntityUtils.toString(entity));
-            }
+            // Display the thumbnail.
+            HttpEntity httpEntity = response.getEntity();
+            displayImage(httpEntity.getContent());
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
         }
     }
-}
 
+    private static void displayImage(InputStream inputStream)
+    {
+        try {
+            BufferedImage bufferedImage = ImageIO.read(inputStream);
+
+            ImageIcon imageIcon = new ImageIcon(bufferedImage);
+
+            JLabel jLabel = new JLabel();
+            jLabel.setIcon(imageIcon);
+
+            JFrame jFrame = new JFrame();
+            jFrame.setLayout(new FlowLayout());
+            jFrame.setSize(100, 150);
+
+            jFrame.add(jLabel);
+            jFrame.setVisible(true);
+            jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
 ```
 
 #### Get a Thumbnail Response
-A successful response contains the thumbnail image binary. If the request failed, the response contains an error code and a message to help determine what went wrong.
+A successful response contains the thumbnail image binary. If the request fails, the response will contain an error code and a message to help determine what went wrong.
 
 
 ## Optical Character Recognition (OCR) with Computer Vision API Using Java<a name="OCR"> </a>
@@ -252,38 +281,40 @@ import java.net.URI;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
-public class JavaSample 
+public class Main
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
-        HttpClient httpclient = HttpClients.createDefault();
+        HttpClient httpClient = new DefaultHttpClient();
 
         try
         {
-            URIBuilder builder = new URIBuilder("https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr");
+            URIBuilder uriBuilder = new URIBuilder("https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr");
 
-            builder.setParameter("language", "unk");
-            builder.setParameter("detectOrientation ", "true");
+            uriBuilder.setParameter("language", "unk");
+            uriBuilder.setParameter("detectOrientation ", "true");
 
-            URI uri = builder.build();
+            URI uri = uriBuilder.build();
             HttpPost request = new HttpPost(uri);
+
+            // Request headers. Replace the example key below with your valid subscription key.
             request.setHeader("Content-Type", "application/json");
-            request.setHeader("Ocp-Apim-Subscription-Key", "{subscription key}");
+            request.setHeader("Ocp-Apim-Subscription-Key", "13hc77781f7e4b19b5fcdd72a8df7156");
 
+            // Request body. Replace the example URL with the URL of a JPEG image containing text.
+            StringEntity requestEntity = new StringEntity("{\"url\":\"http://example.com/images/test.jpg\"}");
+            request.setEntity(requestEntity);
 
-            // Request body
-            StringEntity reqEntity = new StringEntity("{body}");
-            request.setEntity(reqEntity);
-
-            HttpResponse response = httpclient.execute(request);
+            HttpResponse response = httpClient.execute(request);
             HttpEntity entity = response.getEntity();
 
-            if (entity != null) 
+            if (entity != null)
             {
                 System.out.println(EntityUtils.toString(entity));
             }
@@ -294,11 +325,10 @@ public class JavaSample
         }
     }
 }
-
 ```
 
 #### OCR Example Response
-Upon success, the OCR results are returned include include text, bounding box for regions, lines and words. 
+Upon success, the OCR results returned include the detected text and bounding boxes for regions, lines, and words. 
 
 ```json 
 {
