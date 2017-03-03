@@ -6,11 +6,11 @@ Weight: 70
 -->
 
 # Emotion API Java for Android Quick Start
-This article provides information and code samples to help you quickly get started with the [Emotion Recognize method](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/563b31ea778daf121cc3a5fa) in the Emotion API Android client library to recognize the emotions expressed by people in an image using Java. 
+This article provides information and a code sample to help you quickly get started with the [Emotion Recognize method](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/563b31ea778daf121cc3a5fa) in the Emotion API Android client library. The sample demonstrates how you can use Java to recognize the emotions expressed by people. 
 
 ## Prerequisites
 * Get the Emotion API Java for Android SDK [here](https://github.com/Microsoft/Cognitive-emotion-android)
-* Get your free Subscription Key [here](https://www.microsoft.com/cognitive-services/en-us/sign-up)
+* Get your free subscription key [here](https://www.microsoft.com/cognitive-services/en-us/sign-up)
 
 ## Recognize Emotions Java for Android Example Request
 
@@ -20,36 +20,37 @@ import java.net.URI;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
-public class JavaSample 
+public class Main
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
-        HttpClient httpclient = HttpClients.createDefault();
+        HttpClient httpClient = new DefaultHttpClient();
 
         try
         {
-            URIBuilder builder = new URIBuilder("https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize");
+            URIBuilder uriBuilder = new URIBuilder("https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize");
 
-
-            URI uri = builder.build();
+            URI uri = uriBuilder.build();
             HttpPost request = new HttpPost(uri);
+
+            // Request headers. Replace the example key below with your valid subscription key.
             request.setHeader("Content-Type", "application/json");
-            request.setHeader("Ocp-Apim-Subscription-Key", "{subscription key}");
+            request.setHeader("Ocp-Apim-Subscription-Key", "13hc77781f7e4b19b5fcdd72a8df7156");
 
-
-            // Request body
-            StringEntity reqEntity = new StringEntity("{body}");
+            // Request body. Replace the example URL below with the URL of the image you want to analyze.
+            StringEntity reqEntity = new StringEntity("{ \"url\": \"http://example.com/images/test.jpg\" }");
             request.setEntity(reqEntity);
 
-            HttpResponse response = httpclient.execute(request);
+            HttpResponse response = httpClient.execute(request);
             HttpEntity entity = response.getEntity();
 
-            if (entity != null) 
+            if (entity != null)
             {
                 System.out.println(EntityUtils.toString(entity));
             }
@@ -60,7 +61,6 @@ public class JavaSample
         }
     }
 }
-
 ```
 
 ## Recognize Emotions Sample Response
