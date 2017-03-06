@@ -9,7 +9,7 @@ Weight: 73
 A key is your passport to the server allowing you to publish your app to be used by end users. LUIS has three different types of keys:
 
 * **Programmatic API Key:** Created automatically per LUIS account and you don't have to buy it. It enables you to author and edit your application using LUIS programmatic APIs. 
-[Click here for a complete API Reference](APIReference.md).
+[Click here for a complete API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/5890b47c39e2bb17b84a55ff/operations/5890b47c39e2bb052c5b9c2f).
 
 * **Endpoint Key(s):** You need to buy it from Microsoft Azure portal. It is essential for publishing your app and accessing your HTTP endpoint. This key reflects your quota of endpoint hits based on the usage plan you specified while creating the key. 
 
