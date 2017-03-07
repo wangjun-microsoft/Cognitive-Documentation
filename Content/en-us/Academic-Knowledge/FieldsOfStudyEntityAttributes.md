@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API/Entity Attributes
 LinkLabel: Field Of Study Entity
 Url: Academic-Knowledge-API/documentation/EntityAttributes/FieldsOfStudyEntity
-Weight: 85
+Weight: 660
 -->
 
 # Field Of Study Entity

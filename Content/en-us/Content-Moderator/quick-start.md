@@ -1,17 +1,17 @@
 <!-- 
 NavPath: Content Moderator
 LinkLabel: Get Started
-Url: content-moderator/documentation/quickstart
+Url: content-moderator/documentation/quick-start
 Weight: 190
 -->
 
 # Get Started #
 Start by signing up for the [review tool](http://contentmoderator.cognitive.microsoft.com/ "Content Moderator Review Tool") and uploading images or entering text to explore the automated moderation and review the results right within your web browser. 
 
-Also read: [Review Tool User Guide](review-tool-user-guide/why.md)
+Also read: [Review Tool User Guide](review-tool-user-guide/human-in-the-loop.md)
 
-## What if I want to try the APIs instead? ##
-You will see your free trial key for the Content Moderator APIs on the **Connectors** TAB in the **Settings** section. When you are ready to purchase, you can [upgrade to a paid subscription](https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/ContentModerator) and swap out the keys. 
+## What if I want to directly try the image and text moderation APIs? ##
+Use your free trial key for the Content Moderator APIs from the **Connectors** TAB in the **Settings** section. When you are ready to purchase, you can [upgrade to a paid subscription](https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/ContentModerator) and swap out the keys. 
 
 ![Your Content Moderator API Key](images/Moderator-API-Key2.PNG)
 

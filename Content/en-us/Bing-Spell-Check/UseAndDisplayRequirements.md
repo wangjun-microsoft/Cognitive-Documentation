@@ -1,8 +1,8 @@
 <!-- 
-NavPath: Bing Autosuggest API
-LinkLabel: Bing Autosuggest Use and Display Requirements
+NavPath: Bing Spell Check API
+LinkLabel: Bing Spell Check Use and Display Requirements
 Weight: 10
-Url: Bing-autosuggest-API/useanddisplayrequirements
+Url: Bing-spell-check-API/useanddisplayrequirements
 -->
 
 #Bing Search API Use and Display Requirements

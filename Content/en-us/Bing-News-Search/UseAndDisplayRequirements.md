@@ -1,8 +1,8 @@
 <!-- 
-NavPath: Bing Autosuggest API
-LinkLabel: Bing Autosuggest Use and Display Requirements
+NavPath: Bing News Search API
+LinkLabel: Bing News Search Use and Display Requirements
 Weight: 10
-Url: Bing-autosuggest-API/useanddisplayrequirements
+Url: Bing-news-search-API/useanddisplayrequirements
 -->
 
 #Bing Search API Use and Display Requirements

@@ -6,7 +6,7 @@ Weight: 75
 -->
 
 # Emotion API C# Quick Start
-This article provides information and code samples to help you quickly get started using the [Emotion API Recognize method](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/563b31ea778daf121cc3a5fa) with C# to recognize the emotions expressed by one or more people in an image. 
+This article provides information and a code sample to help you quickly get started using the [Emotion API Recognize method](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/563b31ea778daf121cc3a5fa) with C# to recognize the emotions expressed by one or more people in an image. 
 
 ## Prerequisites
 * Get the Microsoft Cognitive Emotion API Windows SDK [here](https://www.nuget.org/packages/Microsoft.ProjectOxford.Emotion/)
@@ -16,10 +16,9 @@ This article provides information and code samples to help you quickly get start
 
 ```c#
 using System;
+using System.IO;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Net.Http;
-using System.Web;
 
 namespace CSHttpClientSample
 {
@@ -27,36 +26,50 @@ namespace CSHttpClientSample
     {
         static void Main()
         {
-            MakeRequest();
-            Console.WriteLine("Hit ENTER to exit...");
+            Console.Write("Enter the path to a JPEG image file:");
+            string imageFilePath = Console.ReadLine();
+
+            MakeRequest(imageFilePath);
+
+            Console.WriteLine("\n\n\nWait for the result below, then hit ENTER to exit...\n\n\n");
             Console.ReadLine();
         }
-        
-        static async void MakeRequest()
+
+        static byte[] GetImageAsByteArray(string imageFilePath)
+        {
+            FileStream fileStream = new FileStream(imageFilePath, FileMode.Open, FileAccess.Read);
+            BinaryReader binaryReader = new BinaryReader(fileStream);
+            return binaryReader.ReadBytes((int)fileStream.Length);
+        }
+
+        static async void MakeRequest(string imageFilePath)
         {
             var client = new HttpClient();
-            var queryString = HttpUtility.ParseQueryString(string.Empty);
 
             // Request headers
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{subscription key}");
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "40d7576afa7e4f82b38315516d55cb5e");
 
-            var uri = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize?" + queryString;
-
+            string uri = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize?";
             HttpResponseMessage response;
+            string responseContent;
 
-            // Request body
-            byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+            // Request body. Try this sample with a locally stored JPEG image.
+            byte[] byteData = GetImageAsByteArray(imageFilePath);
 
             using (var content = new ByteArrayContent(byteData))
             {
-               content.Headers.ContentType = new MediaTypeHeaderValue("< your content type, i.e. application/json >");
-               response = await client.PostAsync(uri, content);
+                // This example uses content type "application/octet-stream".
+                // The other content types you can use are "application/json" and "multipart/form-data".
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+                response = await client.PostAsync(uri, content);
+                responseContent = response.Content.ReadAsStringAsync().Result;
             }
 
+            //A peak at the JSON response.
+            Console.WriteLine(responseContent);
         }
     }
-}	
-
+}
 ```
 
 ## Recognize Emotions Sample Response
