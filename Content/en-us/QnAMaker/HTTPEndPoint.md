@@ -14,7 +14,7 @@ The new [V2.0 APIs](https://westus.dev.cognitive.microsoft.com/docs/services/589
   * Download knowledge base
   * Publish knowledge base
 
-Refer [here](https://westus.dev.cognitive.microsoft.com/docs/services/58994a073d9e04097c7ba6fe/operations/58994a073d9e041ad42d9baa) for detailed documentaion.
+Refer [here](https://westus.dev.cognitive.microsoft.com/docs/services/58994a073d9e04097c7ba6fe/operations/58994a073d9e041ad42d9baa) for detailed documentation.
 
 # API V1.0 Reference #
 Each published QnA Maker service is exposed as an HTTP endpoint that will take in a question and respond back with the best matched answer and a confidence score.
