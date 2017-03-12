@@ -6,14 +6,14 @@ Weight: 40
 -->
 # Getting Started with Face API in Java for Android Tutorial
 
-In this tutorial, you will learn to create and develop a simple Android application that invokes the Face API to detect human faces in an image; essentially by framing the face.     
+In this tutorial, you will learn to create and develop a simple Android application that invokes the Face API to detect human faces in an image. The application shows the result by framing the faces that it detects.     
 
 ![GettingStartedAndroid](../Images/android_getstarted2.1.PNG)
 
 ## Table of Contents
 
 - [Preparation](#preparation)
-- [Step 1: Subscribe for Face API and get your subscription key](#step1)
+- [Step 1: Subscribe to Face API and get your subscription key](#step1)
 - [Step 2: Create the application framework](#step2)
 - [Step 3: Configure the Face API client library](#step3)
 - [Step 4: Upload images to detect faces](#step4)
@@ -46,7 +46,7 @@ In this step you will create an Android application project to implement the bas
 
 ![GettingStartAndroidNewProject2](../Images/AndroidNewProject2.png)
 
-5. Select "Blank Activity" and then click Next.
+5. Select "Basic Activity" and then click Next.
 6. Name the activity as follows, and then click Finish. 
 
 ![GettingStartAndroidNewProject4](../Images/AndroidNewProject4.png)
@@ -75,7 +75,7 @@ In this step you will create an Android application project to implement the bas
             android:layout_alignParentBottom="true" />
     </RelativeLayout>  
 
-9. Open MainActivity.java, insert the following import directives at the beginning of the file:			 
+9. Open MainActivity.java and insert the following import directives at the beginning of the file:			 
 
 		import java.io.*; 
 		import android.app.*; 
@@ -123,13 +123,13 @@ In this step you will create an Android application project to implement the bas
 		    }
 		}  
 
-Now your app can browse for a photo from gallery and display it in the window similar to the image below:
+Now your app can browse for a photo from the gallery and display it in the window similar to the image below:
 
 ![GettingStartAndroidUI](../Images/android_getstarted1.1.PNG)
 
 ## <a name="step3"></a>Step 3: Configure the Face API client library
 
-Face API is a cloud API which is invoked by HTTPS requests. For a more convenient using Face API in .NET platform applications, a client library is also provided to encapsulate the web requests. In this example, we use the client library to simplify our work. 
+The Face API is a cloud API which you can invoke using HTTPS requests. For a more convenient way of using the Face API in .NET platform applications, a client library is also provided to encapsulate the web requests. In this example, we use the client library to simplify our work. 
 
 Follow the instructions below to configure the client library: 
 
@@ -143,15 +143,15 @@ Follow the instructions below to configure the client library:
 		    }
 		}
 
-3. Open build.gradle file in your 'app' project.
-4. Add a dependency for our client library stored in maven central repository
+3. Open the build.gradle file in your 'app' project.
+4. Add a dependency for our client library stored in the Maven Central Repository:
 
 		dependencies {  
 		    ...  
 		    compile 'com.microsoft.projectoxford:face:1.0.0'  
 		}  
 
-5. Open MainActivity.java in your 'app' project, insert the following import directives: 
+5. Open MainActivity.java in your 'app' project and insert the following import directives: 
 	
 		import com.microsoft.projectoxford.face.\*;  
 		import com.microsoft.projectoxford.face.contract.\*;  
@@ -161,8 +161,8 @@ Follow the instructions below to configure the client library:
 	    private FaceServiceClient faceServiceClient =  
 	                new FaceServiceRestClient("your subscription key");  
 
-   Please set the subscription key obtained from step 1.  
-6. Open AndroidManifest.xml of you 'app' project (in the directory of app/src/main). Insert the following element into the manifest element:  
+   Replace the string above with the subscription key you obtained in step 1.  
+6. Open the file called AndroidManifest.xml in your 'app' project (in the app/src/main directory). Insert the following element into the manifest element:  
 
 		<uses-permission android:name="android.permission.INTERNET" />  
 
@@ -225,7 +225,7 @@ The most straightforward way to detect faces is by calling the [Face – Detect]
 
 ## <a name="step5"></a>Step 5: Mark faces in the image
 
-In this last step, we combined all the above steps together and marked the detected faces with frames in the image.		First, open MainActivity.java, insert a helper method to MainActivity.java to draw rectangles: 
+In this last step, we combine all the above steps together and mark the detected faces with frames in the image. First, open MainActivity.java and insert a helper method in MainActivity.java to draw rectangles: 
 
     private static Bitmap drawFaceRectanglesOnBitmap(Bitmap originalBitmap, Face[] faces) {
         Bitmap bitmap = originalBitmap.copy(Bitmap.Config.ARGB_8888, true);
@@ -250,7 +250,7 @@ In this last step, we combined all the above steps together and marked the detec
         return bitmap;
     }
 
-Secondly, finish the TODO parts in the detectAndFrame method in order to frame faces as well as reporting status.   
+Now finish the TODO parts in the detectAndFrame method in order to frame faces and report status.   
 
     @Override
     protected void onPreExecute() {
@@ -272,7 +272,7 @@ Secondly, finish the TODO parts in the detectAndFrame method in order to frame f
         imageBitmap.recycle();
     }
  
-Thirdly, add a call to the detectAndFrame method from onActivityResult method:	 
+Finally, add a call to the detectAndFrame method from the onActivityResult method, as shown below. (Note that the asterisks are only intended to highlight the new addition. You must remove them before attempting to build the code.)	 
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -298,7 +298,7 @@ Run this application and browse for an image containing a face. Please wait for 
 
 ## <a name="summary"></a> Summary
 
-In this tutorial, you have learned the basic process for using the Face API and created an application to display face marks in images. For more information on API details, please refer to the How-To and [API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). 
+In this tutorial, you learned the basic process for using the Face API and created an application to display face marks in images. For more information on the Face API, refer to the How-To and [API Reference](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). 
 
 ## <a name="related"></a> Related Tutorials
 

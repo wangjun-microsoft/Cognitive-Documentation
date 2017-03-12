@@ -8,13 +8,13 @@ Weight: 58
 # Face API Java Quick Starts
 This article provides information and code samples to help you quickly get started using the Face API with Java to accomplish the following tasks: 
 * [Detect Faces in Images](#Detect) 
-* [Identify Faces in Images](#Identify)
+* [Create a Person Group](#Create)
 
 ## Prerequisites
 * Get the Microsoft Face API Android SDK [here](https://github.com/Microsoft/Cognitive-face-android)
-* Learn more about obtaining free Subscription Keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe)
+* Learn more about obtaining free subscription keys [here](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToSubscribe)
 
-## Detect Faces in Images With Face API Using Java <a name="Detect"> </a>
+## Detect Faces in Images with Face API Using Java <a name="Detect"> </a>
 Use the [Face - Detect method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) 
 to detect faces in an image and return face attributes including:
 * Face ID: Unique ID used in a number of Face API scenarios. 
@@ -30,39 +30,41 @@ import java.net.URI;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
-public class JavaSample 
+public class Main
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
-        HttpClient httpclient = HttpClients.createDefault();
+        HttpClient httpClient = new DefaultHttpClient();
 
         try
         {
-            URIBuilder builder = new URIBuilder("https://westus.api.cognitive.microsoft.com/face/v1.0/detect");
+            URIBuilder uriBuilder = new URIBuilder("https://westus.api.cognitive.microsoft.com/face/v1.0/detect");
 
-            builder.setParameter("returnFaceId", "true");
-            builder.setParameter("returnFaceLandmarks", "false");
-            builder.setParameter("returnFaceAttributes", "{string}");
+            uriBuilder.setParameter("returnFaceId", "true");
+            uriBuilder.setParameter("returnFaceLandmarks", "false");
+            uriBuilder.setParameter("returnFaceAttributes", "age");
 
-            URI uri = builder.build();
+            URI uri = uriBuilder.build();
             HttpPost request = new HttpPost(uri);
+
+            // Request headers. Replace the example key below with your valid subscription key.
             request.setHeader("Content-Type", "application/json");
-            request.setHeader("Ocp-Apim-Subscription-Key", "{subscription key}");
+            request.setHeader("Ocp-Apim-Subscription-Key", "13hc77781f7e4b19b5fcdd72a8df7156");
 
-
-            // Request body
-            StringEntity reqEntity = new StringEntity("{body}");
+            // Request body. Replace the example URL below with the URL of the image you want to analyze.
+            StringEntity reqEntity = new StringEntity("{\"url\":\"http://example.com/1.jpg\"}");
             request.setEntity(reqEntity);
 
-            HttpResponse response = httpclient.execute(request);
+            HttpResponse response = httpClient.execute(request);
             HttpEntity entity = response.getEntity();
 
-            if (entity != null) 
+            if (entity != null)
             {
                 System.out.println(EntityUtils.toString(entity));
             }
@@ -73,11 +75,10 @@ public class JavaSample
         }
     }
 }
-
 ```
 
 #### Face - Detect Response
-A successful response will be returned in JSON. Following is an example of a successful response: 
+A successful response will be returned in JSON. The following is an example of a successful response: 
 
 ```php
 [
@@ -219,47 +220,56 @@ A successful response will be returned in JSON. Following is an example of a suc
     }
 ]
 ```
-## Identify Faces in Images With Face API Using Java <a name="Identify"> </a>
-Use the [Face - Identify method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) 
-identify people based on a detected face and people database (defined as a person group) which needs to be created in advance and can be edited over time
+## Create a Person Group with Face API Using Java <a name="Create"> </a>
+Use the [Person Group - Create a Person Group method](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) 
+to create a new person group with specified personGroupId, name, and user-provided userData. A person group is one of the most important parameters for the Face - Identify API. The Identify API searches for persons' faces in a specified person group.
 
-#### Face - Identify Java Example Request
+#### Person Group - Create a Person Group Example
 ```java
 // // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
 import java.net.URI;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPut;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
-public class JavaSample 
+public class Main
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
-        HttpClient httpclient = HttpClients.createDefault();
+        HttpClient httpClient = new DefaultHttpClient();
 
         try
         {
-            URIBuilder builder = new URIBuilder("https://westus.api.cognitive.microsoft.com/face/v1.0/identify");
+            // The valid characters for the ID below include numbers, English letters in lower case, '-', and '_'.
+            // The maximum length of the personGroupId is 64.
+            String personGroupId = "example-group-00";
 
+            URIBuilder builder = new URIBuilder("https://westus.api.cognitive.microsoft.com/face/v1.0/persongroups/" +
+                                                personGroupId);
 
             URI uri = builder.build();
-            HttpPost request = new HttpPost(uri);
+            HttpPut request = new HttpPut(uri);
+
+            // Request headers. Replace the example key with your valid subscription key.
             request.setHeader("Content-Type", "application/json");
-            request.setHeader("Ocp-Apim-Subscription-Key", "{subscription key}");
+            request.setHeader("Ocp-Apim-Subscription-Key", "13hc77781f7e4b19b5fcdd72a8df7156");
 
+            // Request body. The name field is the display name you want for the group (must be under 128 characters).
+            // The size limit for what you want to include in the userData field is 16KB.
+            String body = "{ \"name\":\"My Group\",\"userData\":\"User-provided data attached to the person group.\" }";
 
-            // Request body
-            StringEntity reqEntity = new StringEntity("{body}");
+            StringEntity reqEntity = new StringEntity(body);
             request.setEntity(reqEntity);
 
-            HttpResponse response = httpclient.execute(request);
+            HttpResponse response = httpClient.execute(request);
             HttpEntity entity = response.getEntity();
 
-            if (entity != null) 
+            if (entity != null)
             {
                 System.out.println(EntityUtils.toString(entity));
             }
@@ -270,33 +280,4 @@ public class JavaSample
         }
     }
 }
-
 ```
-
-#### Face - Identify Response
-A successful response will be returned in JSON. Following is an example of a successful response: 
-```php
-{
-    [
-        {
-            "faceId":"c5c24a82-6845-4031-9d5d-978df9175426",
-            "candidates":[
-                {
-                    "personId":"25985303-c537-4467-b41d-bdb45cd95ca1",
-                    "confidence":0.92
-                }
-            ]
-        },
-        {
-            "faceId":"65d083d4-9447-47d1-af30-b626144bf0fb",
-            "candidates":[
-                {
-                    "personId":"2ae4935b-9659-44c3-977f-61fac20d0538",
-                    "confidence":0.89
-                }
-            ]
-        }
-    ]
-}
-```
-
