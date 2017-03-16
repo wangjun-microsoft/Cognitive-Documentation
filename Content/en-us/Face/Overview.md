@@ -67,7 +67,7 @@ Pricing for Face Storage is prorated daily. For example, if your account used 10
 
 This document is targeting **Microsoft Face API** service version 1.0.
 
-### Release changes in February 2017
+### Release changes in March 2017
 
 * **New Attribute** Emotion attribute could be returned from [Face - Detect](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) if `emotion` is specified in `returnFaceAttributes`.
 
