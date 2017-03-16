@@ -14,7 +14,7 @@ Face API detects up to 64 human faces with high precision face location in an im
 
 ![Overview - Face Detection](./Images/Face.detection.jpg)
 
-Face rectangle (left, top, width and height) indicating the face location in the image is returned along with each detected face. Optionally, face detection extracts a series of face related attributes such as pose, gender, age, head pose, facial hair and glasses. Refer to [Face - Detect](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) for more details.
+Face rectangle (left, top, width and height) indicating the face location in the image is returned along with each detected face. Optionally, face detection extracts a series of face related attributes such as pose, gender, age, head pose, facial hair, glasses and emotion. Refer to [Face - Detect](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) for more details.
 
 ## Face Recognition
 
@@ -66,6 +66,14 @@ Pricing for Face Storage is prorated daily. For example, if your account used 10
 ## Changes
 
 This document is targeting **Microsoft Face API** service version 1.0.
+
+### Release changes in February 2017
+
+* **New Attribute** Emotion attribute could be returned from [Face - Detect](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) if `emotion` is specified in `returnFaceAttributes`.
+
+* **Bug fix** For [Face List - Add a Face to a Face List](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) and [Person - Add a Person Face](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b) APIs, algorithm is upgraded to make sure that the face could be re-detected with rectangle returned from [Face - Detect](https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) as `targetFace`. 
+
+* **Bug fix** Make sure the detectable face size is strictly between 36x36 to 4096x4096 pixels.
 
 ### Release changes in November 2016
 
